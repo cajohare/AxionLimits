@@ -1,5 +1,7 @@
 # AxionLimits
-This page contains my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations.
+This page contains my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations. All the limit data can be found in the limit_data folder, at the very least I hope it can save you some time digitising plots.
+
+Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
 ## To do:
 Add plots for axion-electron, nuclei, dipole moment, etc. 
@@ -13,13 +15,16 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 
 ---
 
-## Dimensionless Axion-photon coupling (with projected limits):
+## Axion-photon coupling (with projected limits):
 <img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000" height="600">
 
 [Click here for the notebook](https://github.com/cajohare/DarkShards/blob/master/AxionPhoton.ipynb)
 
-## Axion-photon coupling:
-<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000" height="600">
+---
+
+## Dimensionless Axion-photon coupling (with projected limits):
+
+<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000" height="350">
 
 [Click here for the notebook](https://github.com/cajohare/DarkShards/blob/master/AxionPhoton.ipynb)
 
@@ -27,7 +32,7 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 
 # Limits currently included:
 ## Haloscopes:
-*ABRACADABRA
+* ABRACADABRA
 * ADMX 
 * CAPP
 * BRASS
