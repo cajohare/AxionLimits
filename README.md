@@ -9,30 +9,30 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 ---
 
 ## Axion-photon coupling:
-<img src="plots/plots_png/AxionPhoton.png" width="1000" height="600">
+<img src="plots/plots_png/AxionPhoton.png" width="1000">
 
-[Click here for the notebook](https://github.com/cajohare/DarkShards/blob/master/AxionPhoton.ipynb)
+[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
 ## Axion-photon coupling (with projected limits):
-<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000" height="600">
+<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">
 
-[Click here for the notebook](https://github.com/cajohare/DarkShards/blob/master/AxionPhoton.ipynb)
+[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
 ## Dimensionless Axion-photon coupling (with projected limits):
 
-<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000" height="350">
+<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">
 
-[Click here for the notebook](https://github.com/cajohare/DarkShards/blob/master/AxionPhoton.ipynb)
+[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
 # Limits currently included:
 ## Haloscopes:
-* ABRACADABRA, [data](https://github.com/cajohare/DarkShards/blob/master/limit_data/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
+* ABRACADABRA, [data (result)](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ABRACADABRA.txt), [data (projection)](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
 * ADMX 
 * CAPP
 * BRASS
