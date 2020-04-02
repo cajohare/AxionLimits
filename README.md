@@ -32,7 +32,7 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 
 # Limits currently included:
 ## Haloscopes:
-* ABRACADABRA
+* ABRACADABRA, [data](https://github.com/cajohare/DarkShards/blob/master/limit_data/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
 * ADMX 
 * CAPP
 * BRASS
