@@ -1,28 +1,24 @@
-# AxionLimits
-This page contains my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations. All the limit data can be found in the limit_data folder, at the very least I hope it can save you some time digitising plots.
+This page showcases my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations. All the limit data can be found in the limit_data folder, at the very least I hope it can save you some time digitising plots.
 
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
-## To do:
-Add plots for axion-electron, nuclei, dipole moment, etc. 
+# Examples
 
----
-
-## Axion-photon coupling:
+### Axion-photon coupling:
 <img src="plots/plots_png/AxionPhoton.png" width="1000">
 
 [Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
-## Axion-photon coupling (with projected limits):
+### Axion-photon coupling (with projected limits):
 <img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">
 
 [Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
-## Dimensionless Axion-photon coupling (with projected limits):
+### Dimensionless Axion-photon coupling (with projected limits):
 
 <img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">
 
@@ -74,3 +70,6 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 ## Cosmology 
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/blob/master/limit_data/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/blob/master/limit_data/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/blob/master/limit_data/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)
 * Planck (BBN + N_eff): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/BBN_Neff.txt), [reference](https://arxiv.org/abs/2002.08370)
+
+## To do:
+Add plots for axion-electron, nuclei, dipole moment, etc. 
