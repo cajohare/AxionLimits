@@ -31,7 +31,7 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 ---
 
 # Limits currently included:
-## Haloscopes (r:
+## Haloscopes:
 * ABRACADABRA: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ABRACADABRA.txt), [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
 * ADBC: [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ADBC.txt), [reference](https://arxiv.org/abs/arXiv:1809.01656)
 * ADMX (2010): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX.txt), [reference](https://arxiv.org/abs/arXiv:0910.5914)
@@ -64,6 +64,7 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Chandra.txt), [reference](https://arxiv.org/abs/arXiv:1907.05475)
 * Fermi-LAT (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Fermi_bound.txt), [hole](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Fermi_hole.txt), [reference](https://arxiv.org/abs/arXiv:1603.06978)
 * Fermi-LAT (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/FermiSN.txt), [reference](https://arxiv.org/abs/arXiv:1609.02350)
+* Green Bank and Effelsberg (neutron stars): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/NeutronStars.txt), [reference](https://arxiv.org/abs/arXiv:2004.00011)
 * Horizontal branch stars: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/HorizontalBranch.txt), [reference](https://arxiv.org/abs/arXiv:1406.6053)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/SolarNu.txt), [reference](https://arxiv.org/abs/arXiv:1501.01639)
 * SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/SN-gamma.txt), [reference](https://arxiv.org/abs/arXiv:1410.3747)
