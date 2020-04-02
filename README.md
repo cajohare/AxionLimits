@@ -12,13 +12,13 @@ Click to see the notebook to make each plot
 
 ### Axion-photon coupling (with projected limits)
 
-[<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">]((https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+[<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
-### Dimensionless Axion-photon coupling (with projected limits
+### Dimensionless Axion-photon coupling (with projected limits)
 
-[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">]((https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
