@@ -27,7 +27,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 
 # Limits currently included:
 ## Haloscopes:
-* ABRACADABRA: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ABRACADABRA.txt), [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
+* ABRACADABRA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ABRACADABRA.txt), [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ABRACADABRA.txt), [reference](https://arxiv.org/abs/arXiv:1810.12257)
 * ADBC: [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ADBC.txt), [reference](https://arxiv.org/abs/arXiv:1809.01656)
 * ADMX (2010): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX.txt), [reference](https://arxiv.org/abs/arXiv:0910.5914)
 * ADMX 2018: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2018.txt), [reference](https://arxiv.org/abs/arXiv:1804.05750)
