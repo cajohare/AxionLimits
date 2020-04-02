@@ -191,7 +191,7 @@ class AxionPhoton():
                 plt.text(0.9e-6,0.15,r'{\bf ADMX}',fontsize=fs,color=col,rotation=0,ha='left',va='top')
         else:
             if rs1==0:
-                plt.text(0.9e-6,1e-13,r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top')
+                plt.text(0.7e-6,1e-13,r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top')
 
         return
 
@@ -234,7 +234,7 @@ class AxionPhoton():
 
         return
 
-    def HAYSTAC(ax,col=[0.88, 0.07, 0.37],fs=13,RescaleByMass=False):
+    def HAYSTAC(ax,col=[0.88, 0.07, 0.37],fs=13,RescaleByMass=False,projection=True):
         # HAYSTAC arXiv:[1803.03690]
         if RescaleByMass:
             rs1 = 1.0
@@ -248,7 +248,10 @@ class AxionPhoton():
         dat = loadtxt("limit_data/HAYSTAC.txt")
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            plt.text(2.4e-5,4e-12,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+            if projection:
+                plt.text(2.4e-5,4e-12,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+            else:
+                plt.text(2.4e-5,5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -561,7 +564,7 @@ class AxionPhoton():
     def Haloscopes(ax,projection=True,fs=20):
         AxionPhoton.ADMX(ax,projection=projection,fs=fs)
         AxionPhoton.RBF_UF(ax,fs=fs-2)
-        AxionPhoton.HAYSTAC(ax)
+        AxionPhoton.HAYSTAC(ax,projection=projection)
         AxionPhoton.ABRACADABRA(ax,fs=fs,projection=projection)
         AxionPhoton.SHAFT(ax)
         AxionPhoton.CAPP(ax,fs=fs-4)
