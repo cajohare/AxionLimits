@@ -36,7 +36,7 @@ Add plots for axion-electron, nuclei, dipole moment, etc.
 * ADBC: [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/ADBC.txt), [reference](https://arxiv.org/abs/arXiv:1809.01656)
 * ADMX (2010): [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX.txt), [reference](https://arxiv.org/abs/arXiv:0910.5914)
 * ADMX 2018: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2018.txt), [reference](https://arxiv.org/abs/arXiv:1804.05750)
-* ADMX 2019: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2019_1.txt), [data2](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2019_2.txt), [reference](https://arxiv.org/abs/arXiv:1910.08638)
+* ADMX 2019: [limit1](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2019_1.txt), [limit2](https://github.com/cajohare/AxionLimits/blob/master/limit_data/ADMX2019_2.txt), [reference](https://arxiv.org/abs/arXiv:1910.08638)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/arXiv:1903.02017)
 * BRASS: [projection](https://github.com/cajohare/AxionLimits/blob/master/limit_data/Projections/BRASS.txt), [reference](http://www.iexp.uni-hamburg.de/groups/astroparticle/brass/brassweb.htm)
 * CAPP-8TB: [limit](https://github.com/cajohare/AxionLimits/blob/master/limit_data/CAPP-8TB.txt), [reference](https://arxiv.org/abs/arXiv:2001.05102)
