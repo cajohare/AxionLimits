@@ -2,27 +2,23 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
-# Examples
+# Examples 
+Click to see the notebook to make each plot
 
-### Axion-photon coupling:
-<img src="plots/plots_png/AxionPhoton.png" width="1000">
-
-[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
-
----
-
-### Axion-photon coupling (with projected limits):
-<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">
-
-[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### Axion-photon coupling
+[<img src="plots/plots_png/AxionPhoton.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
-### Dimensionless Axion-photon coupling (with projected limits):
+### Axion-photon coupling (with projected limits)
 
-<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">
+[<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">]((https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
-[Click here for the notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+---
+
+### Dimensionless Axion-photon coupling (with projected limits
+
+[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">]((https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 
 ---
 
