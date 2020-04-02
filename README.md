@@ -7,18 +7,21 @@ Click to see the notebook to make each plot
 
 ### Axion-photon coupling
 [<img src="plots/plots_png/AxionPhoton.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.pdf), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
 
 ---
 
 ### Axion-photon coupling (with projected limits)
 
 [<img src="plots/plots_png/AxionPhoton_with_Projections.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.pdf), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.pdf)
 
 ---
 
 ### Dimensionless Axion-photon coupling (with projected limits)
 
 [<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.pdf), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
 
 ---
 
