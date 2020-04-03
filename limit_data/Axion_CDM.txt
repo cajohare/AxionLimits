@@ -1,2 +1,4 @@
+# Axion pre/post inflationary mass bound
+# m_a [eV]  g_ap [GeV^-1]
 0.00092396	6.3096e-15
 0.00092396	1e-12

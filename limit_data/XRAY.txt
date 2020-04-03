@@ -1,3 +1,5 @@
+# XRAY (Cadamuro and Redondo)
+# m_a [eV]  g_ap [GeV^-1]
 390.63	1.175e-13
 386.88	3.6199e-15
 398.42	2.6595e-15

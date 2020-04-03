@@ -1,3 +1,5 @@
+# Rochester-Brookhaven-Fermilab haloscope
+# m_a [eV]  g_ap [GeV^-1]
 4.5417e-06	2.5309e-14
 5.0646e-06	2.5501e-14
 5.063e-06	5.2639e-14

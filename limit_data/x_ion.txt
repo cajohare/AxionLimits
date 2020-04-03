@@ -1,3 +1,5 @@
+# Ionisation fraction (Cadamuro and Redondo)
+# m_a [eV]  g_ap [GeV^-1]
 27.012	1e0
 27.012	1.6467e-12
 26.395	1.2306e-12

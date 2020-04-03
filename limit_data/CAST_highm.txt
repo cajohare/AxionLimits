@@ -1,3 +1,5 @@
+# CAST older high mass limit (2007ish)
+# m_a [eV]  g_ap [GeV^-1]
 3.6216e-13	8.8297e-11
 0.0036216	8.8297e-11
 0.0045964	8.8297e-11

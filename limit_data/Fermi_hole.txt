@@ -1,8 +1,8 @@
 # 95% confidence limit on photon-ALP coupling
 # ALP mass (eV) vs photon-ALP coupling (GeV^-1)
 # Source: Ajello et al., Fermi-LAT Collaboration, Phys. Rev. Let. 116.16, 161101 (2016)
-# Hole feature, ALP parameters not exlcuded within this region
-# 
+# Hole feature, ALP parameters not excluded within this region
+#
 4.61503e-09 2.89755e-11
 4.61947e-09 2.92251e-11
 4.62675e-09 2.97151e-11
