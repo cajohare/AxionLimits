@@ -72,5 +72,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)
 * Planck (BBN + N_eff): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BBN_Neff.txt), [reference](https://arxiv.org/abs/2002.08370)
 
+---
+
 ## To do:
 Add plots for axion-electron, nuclei, dipole moment, etc. 
