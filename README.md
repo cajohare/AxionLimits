@@ -42,10 +42,10 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * MADMAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Projections/MADMAX.txt), [reference](https://arxiv.org/abs/2003.10894)
 * ORGAN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
 * QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
-* RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/RBF_UF.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
+* RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/QUAX.txt), [reference](https://arxiv.org/abs/2003.03348)
 * TOORAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Projections/TOORAD.txt), [reference](https://arxiv.org/abs/1807.08810)
-* UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/RBF_UF.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
+* UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
 ## Helioscopes/LSW
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)
 * CAST (2007): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/CAST_highm.txt), [reference](https://arxiv.org/abs/hep-ex/0702006)
