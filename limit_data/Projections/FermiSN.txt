@@ -1,3 +1,5 @@
+# Fermi-LAT gammma ray observation of galactic SN
+# m_a [eV]  g_ap [GeV^-1]
 1e-13	 1.8478110589944615e-13
 1e-10	 1.8478110589944615e-13
 1.4897127334769501e-10	 1.8483147219074573e-13
