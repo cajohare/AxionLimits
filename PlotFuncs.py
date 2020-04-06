@@ -137,7 +137,7 @@ class AxionPhoton():
                 plt.text(1e-8,g_x(KSVZ,1e-8)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor')
             if DFSZ_on:
                 plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
-                plt.text(5e-8,g_x(DFSZ,5e-8)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
+                plt.text(5e-8,g_x(DFSZ,5e-8)/1.5,r'{\bf DFSZ II}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
         else:
             C_min,C_max = ax.get_ylim()
             n = 200
@@ -155,7 +155,7 @@ class AxionPhoton():
             #plt.plot([1e-9,1e0],[1.92,1.92],'-',lw=2,color='k')
             plt.plot([1e-9,1e0],[0.75,0.75],'-',lw=2,color='k')
             #plt.text(2e-1,1.92*1.2,r'{\bf KSVZ}',fontsize=fs,color='k')
-            plt.text(1e-2,0.75/3,r'{\bf DFSZ}',fontsize=fs,color='k')
+            plt.text(1e-2,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k')
         return
 
 

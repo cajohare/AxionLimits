@@ -1,0 +1,4 @@
+# LUX (Solar axions)
+# m_a [eV]  g_ae [dimensionless]
+1e-10 3.5e-12
+1.0e3 3.5e-12

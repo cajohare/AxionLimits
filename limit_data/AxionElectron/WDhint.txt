@@ -1,0 +1,6 @@
+# WD hint
+# m_a [eV]  g_ae [dimensionless]
+1e-10 1.89e-13
+1.3e3 1.89e-13
+1.3e3 1.26e-13
+1e-10 1.26e-13
