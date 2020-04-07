@@ -3,8 +3,8 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
 # Contents
-* [Axion-photon coupling](#axionphoton)
-* [Axion-electron coupling](#axionelectron)
+### [Axion-photon coupling](#axionphoton)
+### [Axion-electron coupling](#axionelectron)
 
 ---
 
