@@ -3,9 +3,9 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
 # Contents
-
 * [Axion-photon coupling](#axionphoton)
 * [Axion-electron coupling](#axionelectron)
+
 ---
 
 ### <a name="axionphoton"></a>
@@ -86,8 +86,10 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Semiconductors (absorption): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/SemiconductorAbsorption.txt), [reference](https://arxiv.org/abs/1608.02123)
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * XENON1T: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T.txt), [reference](https://arxiv.org/abs/1907.11485)
+
 ### Haloscopes:
 * Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)
+
 ### Astro bounds:
 * Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/1708.02111)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SolarNu.txt), [reference](https://arxiv.org/abs/0807.2926)
