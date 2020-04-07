@@ -122,4 +122,4 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 ---
 
 ## To do:
-Add plots for axion-electron, nuclei, dipole moment, etc.
+Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
