@@ -2,6 +2,12 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
+# Contents
+* [Axion-photon coupling](# Axion-photon coupling)
+* [Axion-electron coupling](# Axion-electron coupling)
+
+---
+
 # Axion-photon coupling
 Click to see the notebook to make each plot
 
@@ -18,9 +24,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 [<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
 
-
-# Axion-photon coupling limits currently included:
-## Haloscopes:
+### Haloscopes:
 * ABRACADABRA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ABRACADABRA.txt), [reference](https://arxiv.org/abs/1810.12257)
 * ADBC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADBC.txt), [reference](https://arxiv.org/abs/1809.01656)
 * ADMX (2010): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX.txt), [reference](https://arxiv.org/abs/0910.5914)
@@ -40,7 +44,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/2003.03348)
 * TOORAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD.txt), [reference](https://arxiv.org/abs/1807.08810)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
-## Helioscopes/LSW
+### Helioscopes/LSW
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)
 * CAST (2007): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST_highm.txt), [reference](https://arxiv.org/abs/hep-ex/0702006)
 * CAST (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST.txt), [reference](https://arxiv.org/abs/1705.02290)
@@ -48,7 +52,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * IAXO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO.txt), [reference](https://arxiv.org/abs/1212.4633)
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
-## Astro bounds
+### Astro bounds
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/M87.txt), [reference](https://arxiv.org/abs/1703.07354)
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra.txt), [reference](https://arxiv.org/abs/1907.05475)
@@ -62,7 +66,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
 * SN1987A neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_neutrinos.txt), [reference](https://arxiv.org/abs/1808.10136)
 * VLT (Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)
-## Cosmology 
+### Cosmology 
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)
 * Planck (BBN + N_eff): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BBN_Neff.txt), [reference](https://arxiv.org/abs/2002.08370)
 
@@ -73,8 +77,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 [<img src="plots/plots_png/AxionElectron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
 
-# Axion-electron coupling limits currently included:
-## Underground detectors
+### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
 * EDELWEISS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/EDELWEISS.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/EDELWEISS.txt), [reference](https://arxiv.org/abs/1808.02340)
 * LUX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/LUX.txt), [reference](https://arxiv.org/abs/1704.02297)
@@ -82,9 +85,9 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Semiconductors (absorption): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/SemiconductorAbsorption.txt), [reference](https://arxiv.org/abs/1608.02123)
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * XENON1T: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T.txt), [reference](https://arxiv.org/abs/1907.11485)
-## Haloscopes:
+### Haloscopes:
 * Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)
-## Astro bounds:
+### Astro bounds:
 * Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/1708.02111)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SolarNu.txt), [reference](https://arxiv.org/abs/0807.2926)
 * White dwarf hint: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/WDhint.txt), [reference](https://arxiv.org/abs/1708.02111)
