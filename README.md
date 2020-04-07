@@ -8,8 +8,8 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 * [Axion-electron coupling](#axionelectron)
 ---
 
-# Axion-photon coupling
 ### <a name="axionphoton"></a>
+# Axion-photon coupling
 Click to see the notebook to make each plot
 
 [<img src="plots/plots_png/AxionPhoton.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
@@ -73,8 +73,8 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 
 ---
 
-# Axion-electron coupling
 ### <a name="axionelectron"></a>
+# Axion-electron coupling
 [<img src="plots/plots_png/AxionElectron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
 
