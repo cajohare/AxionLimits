@@ -3,13 +3,13 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
 # Contents
-* [Axion-photon coupling](# Axion-photon-coupling)
-* [Axion-electron coupling](# Axion-electron-coupling)
-Take me to [pookie](#pookie)
+
+* [Axion-photon coupling](#axionphoton)
+* [Axion-electron coupling](#axionelectron)
 ---
 
 # Axion-photon coupling
-### <a name="pookie"></a>
+### <a name="axionphoton"></a>
 Click to see the notebook to make each plot
 
 [<img src="plots/plots_png/AxionPhoton.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
@@ -74,7 +74,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 ---
 
 # Axion-electron coupling
-
+### <a name="axionelectron"></a>
 [<img src="plots/plots_png/AxionElectron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
 
