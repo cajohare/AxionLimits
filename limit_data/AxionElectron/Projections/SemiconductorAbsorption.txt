@@ -1,4 +1,5 @@
 # ALP Absorption in semiconductor targets
+# Projection for mainly SuperCDMS Ge and GaAs
 # m_a [eV]  g_ae [dimensionless]
 0.8847923520172161	5.656494205048697e-11
 0.8912106775440187	5.185806391918766e-11
