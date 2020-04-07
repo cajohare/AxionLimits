@@ -24,7 +24,6 @@ pltdir = 'plots/'
 pltdir_png = pltdir+'plots_png/'
 
 #==============================================================================#
-#==============================================================================#
 class AxionPhoton():
     def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
                      g_min = 1.0e-19,g_max = 1.0e-6,\
@@ -703,12 +702,9 @@ class AxionPhoton():
         plt.text(0.4e6,6e-7,r'{\bf SN1987A}',fontsize=fs-9,color='w',rotation=-60,ha='left',va='top')
         plt.text(1e1,3e-9,r'{\bf Solar} $\nu$',fontsize=fs+3,color='w')
         plt.text(1.4e0,1.5e-10,r'{\bf Horizontal branch}',fontsize=fs-7,color='w')
-
-#==============================================================================#
 #==============================================================================#
 
 
-#==============================================================================#
 #==============================================================================#
 class AxionElectron():
     def FigSetup(xlab=r'$m_a$ [eV]',ylab='$|g_{ae}|$',\
@@ -922,12 +918,229 @@ class AxionElectron():
             dat = loadtxt("limit_data/AxionElectron/WDhint.txt")
             plt.fill_between(dat[:,0],dat[:,1],color=col,edgecolor=None,lw=0.001,zorder=0.1,alpha=0.3)
             plt.text(5e-6,1.4e-13,r'{\bf White dwarf hint}',fontsize=fs-10)
-
-#==============================================================================#
 #==============================================================================#
 
 
+#==============================================================================#
+class AxionNeutron():
+    # Warning: often couplings are actually given as g_an/m_n (this is what is in the limit_data files)
+    # But we are using the dimensionless coupling, so will multiply by the neutron mass
+    # this makes essentially no observable difference to the plot but it useful to remember.
+    m_n = 0.93957
 
+    def FigSetup(xlab=r'$m_a$ [eV]',ylab='$|g_{an}|$',\
+                     g_min = 1.0e-17,g_max = 1.0e-3,\
+                     m_min = 1.0e-22,m_max = 1.0e-2,\
+                     lw=2.5,lfs=45,tfs=25,tickdir='out',\
+                     Grid=False,Shape='Rectangular',mathpazo=False,
+                     TopAndRightTicks=False,FrequencyAxis=True):
+
+            plt.rcParams['axes.linewidth'] = lw
+            plt.rc('text', usetex=True)
+            plt.rc('font', family='serif',size=tfs)
+
+            if mathpazo:
+                mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+
+            if Shape=='Wide':
+                fig = plt.figure(figsize=(16.5,5))
+            elif Shape=='Rectangular':
+                fig = plt.figure(figsize=(16.5,11))
+
+            ax = fig.add_subplot(111)
+
+            ax.set_xlabel(xlab,fontsize=lfs)
+            ax.set_ylabel(ylab,fontsize=lfs)
+
+            ax.tick_params(which='major',direction=tickdir,width=2.5,length=13,right=TopAndRightTicks,top=TopAndRightTicks,pad=7)
+            ax.tick_params(which='minor',direction=tickdir,width=1,length=10,right=TopAndRightTicks,top=TopAndRightTicks)
+
+
+            ax.set_yscale('log')
+            ax.set_xscale('log')
+            ax.set_xlim([m_min,m_max])
+            ax.set_ylim([g_min,g_max])
+
+            locmaj = mpl.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=50)
+            locmin = mpl.ticker.LogLocator(base=10.0, subs=arange(2, 10)*.1,numticks=100)
+            ax.xaxis.set_major_locator(locmaj)
+            ax.xaxis.set_minor_locator(locmin)
+            ax.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+
+            locmaj = mpl.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=100)
+            locmin = mpl.ticker.LogLocator(base=10.0, subs=arange(2, 10)*.1,numticks=100)
+            ax.yaxis.set_major_locator(locmaj)
+            ax.yaxis.set_minor_locator(locmin)
+            ax.yaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+
+            if Shape=='Rectangular':
+                plt.xticks(rotation=20)
+
+            if Grid:
+                ax.grid(zorder=0)
+
+            if FrequencyAxis:
+                ax2 = ax.twiny()
+                ax2.set_xlim([m_min*241.8*1e12,m_max*241.8*1e12])
+                ax2.set_xlabel(r"$\nu_a$ [Hz]")
+                ax2.set_xscale('log')
+                plt.xticks(rotation=20)
+                ax2.tick_params(which='major',direction=tickdir,width=2.5,length=13,pad=7)
+                ax2.tick_params(which='minor',direction=tickdir,width=1,length=10)
+                locmaj = mpl.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=50)
+                locmin = mpl.ticker.LogLocator(base=10.0, subs=arange(2, 10)*.1,numticks=100)
+                ax2.xaxis.set_major_locator(locmaj)
+                ax2.xaxis.set_minor_locator(locmin)
+                ax2.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+                plt.sca(ax)
+            return fig,ax
+
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
+                      cmap='YlOrBr',fs=25):
+        ## QCD Axion band:
+        g_min,g_max = ax.get_ylim()
+        m_min,m_max = ax.get_xlim()
+
+        # Mass-coupling relation
+        def g_x(C_ae,m_a):
+            return 1.644e-7*C_ae*m_a
+        DFSZ_l = 0.16
+        DFSZ_u = 0.26
+
+        plt.plot([3.5e-13,3.5e-13],[g_min,g_max],'k--',lw=3)
+        plt.text(3.5e-13/4,1e-16,r'$f_a\sim M_{\rm Pl}$',fontsize=fs,rotation=90)
+
+        # QCD Axion models
+        n = 200
+        m = logspace(log10(m_min),log10(m_max),n)
+        rot = 45.0
+        trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
+        if DFSZ_on:
+            col = 'goldenrod'
+            plt.fill_between(m,g_x(DFSZ_l,m),y2=g_x(DFSZ_u,m),facecolor=col,zorder=0,alpha=0.5)
+            plt.plot(m,g_x(DFSZ_l,m),'k-',lw=3.5,zorder=0)
+            plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
+            plt.plot(m,g_x(DFSZ_l,m),'-',lw=2,zorder=0,color=col)
+            plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=col)
+            plt.text(1e-8,g_x(DFSZ_u,1e-8)*5,r'{\bf DFSZ models}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor')
+        return
+
+    def OldComagnetometers(ax,col=[0.75, 0.2, 0.2],fs=20,projection=True):
+        # Old comagnetometer data arXiv:[1907.03767]
+        y2 = ax.get_ylim()[1]
+        zo = 0.3
+        dat = loadtxt("limit_data/AxionNeutron/OldComagnetometers.txt")
+        dat[:,1] *= AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=2.5)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+        plt.text(3e-15,4e-7,r'{\bf Old}',fontsize=fs,color='k',ha='center',va='top')
+        plt.text(3e-15,1.5e-7,r'{\bf comagnetometers}',fontsize=fs,color='k',ha='center',va='top')
+        if projection:
+            dat = loadtxt("limit_data/AxionNeutron/Projections/FutureComagnetometers.txt")
+            dat[:,1] *= AxionNeutron.m_n
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=1,lw=3)
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.5)
+            plt.text(1e-18,0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs,color=col,ha='left',va='top')
+        return
+
+    def UltracoldNeutronsAndMercury(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
+        # arXiv:[1902.04644]
+        y2 = ax.get_ylim()[1]
+        zo = 1
+        dat = loadtxt("limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt")
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.9e-19,2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
+        return
+
+    class CASPEr():
+        def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
+            # arXiv:[1902.04644]
+            y2 = ax.get_ylim()[1]
+            zo = 1
+            dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
+            dat[:,1] *= AxionNeutron.m_n
+            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
+            plt.plot(dat[0:2,0],dat[0:2,1],'k-',lw=2.5)
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+            plt.text(2e-16,2e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor')
+            if projection:
+                dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
+                dat[:,1] *= AxionNeutron.m_n
+                plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
+                plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
+                plt.text(1.5e-22,8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
+
+            return
+
+        def Comagnetometer(ax,col='darkred',fs=20,projection=True):
+            # arXiv:[1901.10843]
+            y2 = ax.get_ylim()[1]
+            zo = 1.5
+            dat = loadtxt("limit_data/AxionNeutron/CASPEr_Comagnetometer.txt")
+            dat[:,1] *= AxionNeutron.m_n
+            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+            plt.text(1e-21,2e-4,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top')
+            return
+
+        def wind(ax,col='red',fs=20,projection=True):
+            # arXiv:[1711.08999]
+            y2 = ax.get_ylim()[1]
+            zo = -1
+            dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_wind.txt")
+            dat[:,1] *= AxionNeutron.m_n
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.5)
+            plt.text(1.4e-9,1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27)
+            return
+
+    def LabExperiments(ax,projection=True,fs=20):
+        y2 = ax.get_ylim()[1]
+
+        # Long range spin dependent forces K-3He arXiv:[0809.4700]
+        zo = 0.2
+        col = [0.4, 0.2, 0.2]
+        dat = loadtxt("limit_data/AxionNeutron/LongRangeForces.txt")
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(1.4e-11,1.5e-4,r'{\bf Long-range forces}',fontsize=fs,color='w',ha='left',va='top')
+
+        # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
+        zo = 0.03
+        col = 'darkred'
+        dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.8e-2,1.1e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
+
+    def Haloscopes(ax,projection=True,fs=20):
+        AxionNeutron.OldComagnetometers(ax,projection=projection,fs=fs)
+        AxionNeutron.CASPEr.ZULF(ax,projection=projection,fs=fs)
+        AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
+        AxionNeutron.UltracoldNeutronsAndMercury(ax,projection=projection,fs=fs+5)
+        if projection:
+            AxionNeutron.CASPEr.wind(ax,fs=fs)
+        return
+
+    def StellarBounds(ax,fs=30):
+        y2 = ax.get_ylim()[1]
+
+        # Stellar physics constraints
+        # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
+        SN = loadtxt("limit_data/AxionNeutron/SN1987A.txt")
+        SN[:,1] *= AxionNeutron.m_n
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.02)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=0.5,lw=2.5,zorder=0.02)
+        plt.text(0.8e-2,2e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
+
+        # Cooling of HESS J1731-347 arXiv:[1806.07991]
+        SN = loadtxt("limit_data/AxionNeutron/NeutronStars.txt")
+        SN[:,1] *= AxionNeutron.m_n
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.01)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=0.5,lw=2.5,zorder=0.01)
+        plt.text(0.8e-2,4.5e-10,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top')
+#==============================================================================#
 
 
 

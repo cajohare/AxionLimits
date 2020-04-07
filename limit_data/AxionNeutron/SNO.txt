@@ -1,0 +1,6 @@
+# SNO axion-induced dissociation of neutrons
+# m_a [eV]  g_an/m_n [GeV^-1]
+1e-23	2e-5
+2e6	2e-5
+2e6	1e-3
+1e-23	1e-3
