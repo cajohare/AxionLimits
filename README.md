@@ -110,7 +110,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * CASPEr-ZULF-Sidechain: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/CASPEr_ZULF.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt), [reference](https://arxiv.org/abs/1902.04644)
 * nEDM (ultracold neutrons and mercury): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt), [reference](https://arxiv.org/abs/1902.04644)
 * Old comagnetometers: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/OldComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767)
-* Future comagnetometers: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/FutureComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767])
+* Future comagnetometers: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/FutureComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767)
 ### Other experiments
 * Long-range force search with comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/LongRangeForces.txt), [reference](https://arxiv.org/abs/0809.4700)
 * SNO (deuterium dissasociation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SNO.txt), [reference](https://arxiv.org/abs/2004.02733)
