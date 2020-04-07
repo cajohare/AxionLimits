@@ -826,6 +826,7 @@ class AxionElectron():
     def PandaX(ax,col='mediumvioletred',fs=20):
         # PandaX arXiv:[1707.07921]
         y2 = ax.get_ylim()[1]
+#         Currently not using Solar pandaX limit
 #         dat = loadtxt("limit_data/AxionElectron/PandaX_Solar.txt")
 #         plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.53,lw=2)
 #         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.53)
@@ -894,20 +895,9 @@ class AxionElectron():
         return
 
     def Haloscopes(ax,projection=True,fs=20):
-        #AxionPhoton.ADMX(ax,projection=projection,fs=fs)
         if projection:
             AxionElectron.ElectronSpinMagnetometers(ax)
         return
-
-
-    def AstroBounds(ax,projection=True,fs=15):
-        y2 = ax.get_ylim()[1]
-        ### Astrophysical constraints
-        return
-
-    def Cosmology(ax,fs=30):
-        y2 = ax.get_ylim()[1]
-        ## Cosmology constraints
 
     def StellarBounds(ax,fs=30,Hint=True):
         y2 = ax.get_ylim()[1]
