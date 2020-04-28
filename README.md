@@ -121,8 +121,6 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * Hot Neutron Star (HESS J1731-347): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NeutronStars.txt), [reference](https://arxiv.org/abs/)
 * SN1987 Cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SN1987A.txt), [reference](https://arxiv.org/abs/1906.11844)
 
-(CASPEr)
-
 ---
 
 ## Acknowledgements
