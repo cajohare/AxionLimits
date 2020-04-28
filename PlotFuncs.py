@@ -160,6 +160,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2019_2.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/AxionPhoton/ADMX_Sidecar.txt")
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+
 
         if projection:
             # ADMX arXiv[1804.05750]
@@ -365,7 +368,7 @@ class AxionPhoton():
             plt.text(4e-5,3.5e-1,r'{\bf MADMAX}',fontsize=fs,color=col,rotation=0,ha='left',va='top')
         return
 
-    def KLASH(ax,col=[0.8, 0.1, 0.2],fs=15,RescaleByMass=False):
+    def KLASH(ax,col=[0.6, 0.1, 0.2],fs=15,RescaleByMass=False):
         # KLASH arXiv:[1707.06010]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -376,11 +379,11 @@ class AxionPhoton():
             rs2 = 1.0
         dat = loadtxt("limit_data/AxionPhoton/Projections/KLASH.txt")
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.3)
         if rs1==0:
             plt.text(1e-7,1e-12,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top')
         else:
-            plt.text(2.5e-7,3e2,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top')
+            plt.text(2.5e-7,1.3e0,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor')
 
     def BRASS(ax,col=[0.5, 0.1, 0.2],fs=15,RescaleByMass=False):
         # BRASS http://www.iexp.uni-hamburg.de/groups/astroparticle/brass/brassweb.htm
@@ -475,13 +478,30 @@ class AxionPhoton():
         plt.text(0.8e-10,3e-10,r'{\bf SHAFT}',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=9)
         return
 
-    def ALPS(ax,col=[0.8, 0.25, 0.33],fs=15):
+    def ALPS(ax,projection=True,col=[0.8, 0.25, 0.33],fs=15,RescaleByMass=False):
         # ALPS-I arXiv:[1004.1313]
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/ALPS.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.53,alpha=0.5)
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
-        plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
+        if projection:
+            dat = loadtxt("limit_data/AxionPhoton/Projections/ALPS-II.txt")
+            plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',lw=1.5,zorder=1.5,color='k',alpha=1)
+            if RescaleByMass:
+                plt.text(9e-4,2.5e3,r'{\bf ALPS-II}',fontsize=20,color='w',rotation=20)
+            else:
+                plt.text(1.5e-3,3e-9,r'{\bf ALPS-II}',rotation=58,fontsize=18,color='w',zorder=10)
+        else:
+            plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
+
+        return
 
     def OSQAR(ax,col=[0.6, 0.2, 0.25],fs=15):
         # OSQAR arXiv:[]
@@ -490,6 +510,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.52,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.52,lw=0.01)
         plt.text(1e-5,1.5e-8,r'{\bf OSQAR}',fontsize=17,color='w')
+        return
 
     def PVLAS(ax,col=[0.4, 0.2, 0.2],fs=15):
         # PVLAS arXiv:[]
@@ -498,6 +519,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.51,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.51,lw=0.01)
         plt.text(2e-3,9e-8,r'{\bf PVLAS}',fontsize=17,color='w',rotation=45)
+        return
 
 
     def CROWS(ax,col=[0.7, 0.2, 0.2],fs=15):
@@ -507,6 +529,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.54,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.54,lw=0.01)
         plt.text(1e-7,1.5e-7,r'{\bf CROWS}',fontsize=17,color='w',rotation=0)
+        return
 
 
     ####################################################
@@ -526,7 +549,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=2,zorder=1.5,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=1.5,lw=0.1)
         if rs1==0:
-            plt.text(1e-3,5e-10,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top')
+            plt.text(1e-1,1.5e-9,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top')
         else:
             plt.text(4e-2,5e3,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top')
 
@@ -566,7 +589,7 @@ class AxionPhoton():
 
     def LSW(ax,projection=True):
         AxionPhoton.PVLAS(ax)
-        AxionPhoton.ALPS(ax)
+        AxionPhoton.ALPS(ax,projection=projection)
         AxionPhoton.OSQAR(ax)
         AxionPhoton.CROWS(ax)
         return
@@ -599,11 +622,11 @@ class AxionPhoton():
         plt.text(3e-12,2e-11,r'\quad {\bf A}',fontsize=fs-2,color='w',ha='left',va='top')
 
         # HESS arXiv:[1304.0700]
-        HESS_col = [0.0, 0.62, 0.38]
+        HESS_col = [0.0, 0.55, 0.3]
         HESS = loadtxt("limit_data/AxionPhoton/HESS.txt")
         plt.plot(HESS[:,0],HESS[:,1],'k-',alpha=0.6,zorder=0.2,lw=2)
         plt.fill_between(HESS[:,0],HESS[:,1],y2=y2,edgecolor=None,facecolor=HESS_col,zorder=0.2)
-        plt.text(2e-8,1.6e-11,r'{\bf HESS}',fontsize=fs+1,color='k',ha='left',va='top')
+        plt.text(2e-8,1.6e-11,r'{\bf HESS}',fontsize=fs+1,color=HESS_col,ha='left',va='top')
 
         # Fermi NGC1275 arXiv:[1603.06978]
         Fermi_col = [0.0, 0.42, 0.24]
@@ -929,7 +952,7 @@ class AxionNeutron():
     m_n = 0.93957
 
     def FigSetup(xlab=r'$m_a$ [eV]',ylab='$|g_{an}|$',\
-                     g_min = 1.0e-17,g_max = 1.0e-3,\
+                     g_min = 1.0e-17,g_max = 1.0e-2,\
                      m_min = 1.0e-22,m_max = 1.0e-2,\
                      lw=2.5,lfs=45,tfs=25,tickdir='out',\
                      Grid=False,Shape='Rectangular',mathpazo=False,
@@ -1045,32 +1068,33 @@ class AxionNeutron():
 
     def UltracoldNeutronsAndMercury(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
         # arXiv:[1902.04644]
+        StochasticCorrection = 18.0 #<---- From 1905.13650
         y2 = ax.get_ylim()[1]
         zo = 1
         dat = loadtxt("limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.9e-19,2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
+        plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.9e-19,StochasticCorrection*2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
         return
 
     class CASPEr():
         def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
             # arXiv:[1902.04644]
+            StochasticCorrection = 18.0 #<---- From 1905.13650
             y2 = ax.get_ylim()[1]
             zo = 1
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
             dat[:,1] *= AxionNeutron.m_n
-            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
-            plt.plot(dat[0:2,0],dat[0:2,1],'k-',lw=2.5)
-            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(2e-16,2e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor')
+            plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
+            plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5)
+            plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+            plt.text(1.05e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor')
             if projection:
                 dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
                 dat[:,1] *= AxionNeutron.m_n
                 plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
                 plt.text(1.5e-22,8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
-
             return
 
         def Comagnetometer(ax,col='darkred',fs=20,projection=True):
@@ -1081,7 +1105,7 @@ class AxionNeutron():
             dat[:,1] *= AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(1e-21,2e-4,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top')
+            plt.text(1e-21,5e-3,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top')
             return
 
         def wind(ax,col='red',fs=20,projection=True):
@@ -1101,10 +1125,20 @@ class AxionNeutron():
         # Long range spin dependent forces K-3He arXiv:[0809.4700]
         zo = 0.2
         col = [0.4, 0.2, 0.2]
-        dat = loadtxt("limit_data/AxionNeutron/LongRangeForces.txt")
+        dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer.txt")
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(1.4e-11,1.5e-4,r'{\bf Long-range forces}',fontsize=fs,color='w',ha='left',va='top')
+        plt.text(2.0e-12,2e-4,r'{\bf K-}$^3${\bf He comagnetometer}',fontsize=fs,color='w',ha='left',va='top')
+
+        # Torsion balance test of gravitational inverse square law: hep-ph/0611184
+        # reinterpreted in: hep-ph/0611223
+        zo = 0.21
+        col = [0.2, 0.25, 0.25]
+        dat = loadtxt("limit_data/AxionNeutron/TorsionBalance.txt")
+        plt.fill_between(dat[:,0],dat[:,1]*11500,y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1]*11500,'-',color='k',alpha=0.5,zorder=zo,lw=3)
+        plt.text(1e-8,1.5e-3,r'{\bf Torsion balance}',fontsize=fs,color='w',ha='left',va='top')
+
 
         # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
         zo = 0.03
@@ -1112,7 +1146,7 @@ class AxionNeutron():
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.8e-2,1.1e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
+        plt.text(0.8e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
 
     def Haloscopes(ax,projection=True,fs=20):
         AxionNeutron.OldComagnetometers(ax,projection=projection,fs=fs)
