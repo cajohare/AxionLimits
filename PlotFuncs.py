@@ -491,16 +491,14 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/ALPS.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.53,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
+        plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ALPS-II.txt")
-            plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',lw=1.5,zorder=1.5,color='k',alpha=1)
+            plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',lw=1.5,zorder=1.5,color='k',alpha=0.5)
             if RescaleByMass:
-                plt.text(9e-4,2.5e3,r'{\bf ALPS-II}',fontsize=20,color='w',rotation=20)
+                plt.text(9e-4,2.5e3,r'{\bf ALPS-II}',fontsize=20,color='k',rotation=20,alpha=0.5)
             else:
-                plt.text(1.5e-3,3e-9,r'{\bf ALPS-II}',rotation=58,fontsize=18,color='w',zorder=10)
-        else:
-            plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
-
+                plt.text(1.5e-3,3e-9,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10)
         return
 
     def OSQAR(ax,col=[0.6, 0.2, 0.25],fs=15):
