@@ -890,6 +890,24 @@ class AxionElectron():
         plt.text(1e0,2.5e-12,r'{\bf Semiconductors}',fontsize=fs,color=col,ha='left',va='top',rotation=-80)
         return
 
+    def Magnon(ax,col='rebeccapurple',fs=20):
+        # Axion-magnon conversion arXiv:[2005.10256]
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionElectron/Projections/Magnon.txt")
+        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=0.5,lw=3)
+        plt.text(2e-6,1e-14,r'{\bf Magnons \newline (YIT, NiSP$_3$)}',fontsize=fs,color=col,ha='left',va='top',rotation=0)
+        return
+
+    def MagnonScan(ax,col='mediumvioletred',fs=20):
+        # Axion-magnon conversion arXiv:[2005.10256 and 2001.10666]
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionElectron/Projections/MagnonScan.txt")
+        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=0.5,lw=3)
+        plt.text(1.8e-5,1e-13,r'{\bf Magnons}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
+        plt.text(1.8e-5,0.7*1e-13,r'{\bf (Scanning)}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
+
+        return
+
     def UndergroundDetectors(ax,projection=True,fs=20):
         AxionElectron.LUX(ax,fs=fs)
         AxionElectron.PandaX(ax,fs=fs)
@@ -913,6 +931,8 @@ class AxionElectron():
 
     def Haloscopes(ax,projection=True,fs=20):
         if projection:
+            AxionElectron.Magnon(ax,fs=fs)
+            AxionElectron.MagnonScan(ax,fs=fs)
             AxionElectron.ElectronSpinMagnetometers(ax)
         return
 
@@ -938,7 +958,7 @@ class AxionElectron():
             col = 'k'
             dat = loadtxt("limit_data/AxionElectron/WDhint.txt")
             plt.fill_between(dat[:,0],dat[:,1],color=col,edgecolor=None,lw=0.001,zorder=0.1,alpha=0.3)
-            plt.text(5e-6,1.4e-13,r'{\bf White dwarf hint}',fontsize=fs-10)
+            plt.text(4e-7,1.4e-13,r'{\bf White dwarf hint}',fontsize=fs-10)
 #==============================================================================#
 
 
@@ -1061,7 +1081,7 @@ class AxionNeutron():
             dat[:,1] *= AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=1,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.5)
-            plt.text(1e-18,0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs,color=col,ha='left',va='top')
+            plt.text(5e-18,0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs-1,color=col,ha='left',va='top')
         return
 
     def UltracoldNeutronsAndMercury(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
@@ -1074,6 +1094,7 @@ class AxionNeutron():
         plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
         plt.text(0.9e-19,StochasticCorrection*2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
         return
+
 
     class CASPEr():
         def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
@@ -1145,6 +1166,17 @@ class AxionNeutron():
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
         plt.text(0.8e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
+
+        if projection:
+            # Proton storage ring arXiv:[2005.11867]
+            zo = -1
+            col = 'crimson'
+            dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
+            dat[:,1] *= AxionNeutron.m_n
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
+            plt.text(1.3e-22,4e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top')
+
 
     def Haloscopes(ax,projection=True,fs=20):
         AxionNeutron.OldComagnetometers(ax,projection=projection,fs=fs)
