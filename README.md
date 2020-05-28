@@ -92,7 +92,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 ### Haloscopes:
 * Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)
 * Axion-magnon conversion:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Magnon.txt),  [reference](https://arxiv.org/abs/2005.10256)
-* Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/ 2001.10666)
+* Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
 
 ### Astro bounds:
 * Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/1708.02111)
