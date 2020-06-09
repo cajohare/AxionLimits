@@ -75,70 +75,83 @@ class AxionPhoton():
             if Grid:
                 ax.grid(zorder=0)
             return fig,ax
-
     def QCDAxion(ax,coupling='Photon',
-                      C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
-                      cmap='YlOrBr',fs=18,RescaleByMass=False):
-        if RescaleByMass:
-            rs1 = 1.0
-            rs2 = 0.0
-        else:
-            rs1 = 0.0
-            rs2 = 1.0
-        ## QCD Axion band:
-        g_min,g_max = ax.get_ylim()
-        m_min,m_max = ax.get_xlim()
+                          C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
+                          cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False):
+            if RescaleByMass:
+                rs1 = 1.0
+                rs2 = 0.0
+            else:
+                rs1 = 0.0
+                rs2 = 1.0
+            ## QCD Axion band:
+            g_min,g_max = ax.get_ylim()
+            m_min,m_max = ax.get_xlim()
 
-        # Mass-coupling relation
-        def g_x(C_ag,m_a):
-            return 2e-10*C_ag*m_a
-        KSVZ = 1.92
-        DFSZ = 0.75
+            # Mass-coupling relation
+            def g_x(C_ag,m_a):
+                return 2e-10*C_ag*m_a
+            KSVZ = 1.92
+            DFSZ = 0.75
 
-        if rs1==0:
-            # Plot Band
-            n = 200
-            g = logspace(log10(g_min),log10(g_max),n)
-            m = logspace(log10(m_min),log10(m_max),n)
-            QCD = zeros(shape=(n,n))
-            for i in range(0,n):
-                QCD[:,i] = norm.pdf(log10(g)-log10(g_x(1.0,m[i])),0.0,0.8)
-            cols = cm.get_cmap(cmap)
-            cols.set_under('w') # Set lowest color to white
-            vmin = amax(QCD)/(C_logwidth/2)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+            if rs1==0:
+                # Plot Band
+                n = 200
+                g = logspace(log10(g_min),log10(g_max),n)
+                m = logspace(log10(m_min),log10(m_max),n)
+                QCD = zeros(shape=(n,n))
+                for i in range(0,n):
+                    QCD[:,i] = norm.pdf(log10(g)-log10(g_x(1.0,m[i])),0.0,0.8)
+                cols = cm.get_cmap(cmap)
 
-            # QCD Axion models
-            rot = 45.0
-            trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
-            m2 = array([1e-9,5e-8])
-            if KSVZ_on:
-                plt.plot(m,g_x(KSVZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
-                plt.text(1e-8,g_x(KSVZ,1e-8)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor')
-            if DFSZ_on:
-                plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
-                plt.text(5e-8,g_x(DFSZ,5e-8)/1.5,r'{\bf DFSZ II}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
-        else:
-            C_min,C_max = ax.get_ylim()
-            n = 200
-            C = logspace(log10(C_min),log10(C_max),n)
-            m = logspace(log10(m_min),log10(m_max),n)
-            QCD = zeros(shape=(n,n))
-            for i in range(0,n):
-                QCD[:,i] = norm.pdf(log10(C),0.0,0.8)
-            cols = cm.get_cmap(cmap)
-            cols.set_under('w') # Set lowest color to white
-            vmin = amax(QCD)/(C_logwidth/2)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            #plt.plot([1e-9,1e0],[1.92,1.92],'-',lw=2,color='k')
-            plt.plot([1e-9,1e0],[0.75,0.75],'-',lw=2,color='k')
-            #plt.text(2e-1,1.92*1.2,r'{\bf KSVZ}',fontsize=fs,color='k')
-            plt.text(1e-2,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k')
-        return
+                cols.set_under('w') # Set lowest color to white
+                vmin = amax(QCD)/(C_logwidth/4.6)
+                plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+                plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+                plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+
+                # QCD Axion models
+                rot = 45.0
+                trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
+                m2 = array([1e-9,5e-8])
+                if KSVZ_on:
+                    if thick_lines:
+                        plt.plot(m,g_x(KSVZ,m),'-',linewidth=5,color='k',zorder=0)
+                        plt.plot(m,g_x(KSVZ,m),'-',linewidth=3,color=cols(0.7),zorder=0)
+                    else:
+                        plt.plot(m,g_x(KSVZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
+                    if text_on:
+                        plt.text(1e-8,g_x(KSVZ,1e-8)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor')
+                if DFSZ_on:
+                    if thick_lines:
+                        plt.plot(m,g_x(DFSZ,m),'-',linewidth=5,color='k',zorder=0)
+                        plt.plot(m,g_x(DFSZ,m),'-',linewidth=3,color=cols(0.7),zorder=0)
+                    else:
+                        plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
+                    if text_on:
+                        plt.text(5e-8,g_x(DFSZ,5e-8)/1.5,r'{\bf DFSZ II}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
+            else:
+                C_min,C_max = ax.get_ylim()
+                n = 200
+                C = logspace(log10(C_min),log10(C_max),n)
+                m = logspace(log10(m_min),log10(m_max),n)
+                QCD = zeros(shape=(n,n))
+                for i in range(0,n):
+                    QCD[:,i] = norm.pdf(log10(C),0.0,0.8)
+                cols = cm.get_cmap(cmap)
+                cols.set_under('w') # Set lowest color to white
+                vmin = amax(QCD)/(C_logwidth/2)
+                plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+                plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+                plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+                if thick_lines:
+                    plt.plot([1e-9,1e0],[0.75,0.75],'-',lw=5,color='k')
+                    plt.plot([1e-9,1e0],[0.75,0.75],'-',lw=3,color='k')
+                else:
+                    plt.plot([1e-9,1e0],[0.75,0.75],'-',lw=2,color='k')
+                if text_on:
+                    plt.text(1e-2,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k')
+            return
 
 
     def ADMX(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False):
@@ -170,8 +183,8 @@ class AxionPhoton():
             plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
             plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
             if rs1==0:
-                plt.text(4e-5,9e-16,r'{\bf ADMX}',fontsize=20,color=col,rotation=0,ha='left',va='top')
-                plt.plot([4e-5,3e-5],[9e-16,2.1e-15],'k-',lw=1.5)
+                plt.text(1e-5,2.3e-16,r'{\bf ADMX}',fontsize=20,color=col,rotation=0,ha='left',va='top')
+                plt.plot([3e-5,2e-5],[3e-16,0.6e-15],'k-',lw=1.5)
             else:
                 plt.text(0.9e-6,0.15,r'{\bf ADMX}',fontsize=fs,color=col,rotation=0,ha='left',va='top')
         else:
@@ -233,9 +246,7 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/HAYSTAC.txt")
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            if projection:
-                plt.text(2.4e-5,4e-12,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
-            else:
+            if projection==False:
                 plt.text(2.4e-5,5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
@@ -336,20 +347,19 @@ class AxionPhoton():
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ORGAN_Projected.txt")
             plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
-            plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
+            plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
             if rs1==0:
                 plt.text(5e-4,1.15e-14,r'{\bf ORGAN}',fontsize=18,color=col,rotation=0,ha='left',va='top')
                 plt.plot([5e-4,1.5e-4],[1.3e-14,6e-13],'k-',lw=1.5)
             else:
-                plt.text(1.2e-4,1e3,r'{\bf ORGAN}',fontsize=18,color=col,rotation=-90,ha='left',va='top')
+                plt.text(1.2e-4,1e3,r'{\bf ORGAN}',fontsize=18,color='darkred',rotation=-90,ha='left',va='top')
 
         else:
             if rs1==0:
                 plt.text(110e-6,6e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         return
 
-
-    def MADMAX(ax,col=[0.6, 0.1, 0.1],fs=18,RescaleByMass=False):
+    def MADMAX(ax,col='darkred',fs=18,RescaleByMass=False):
         # MADMAX arXiv[2003.10894]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -365,7 +375,28 @@ class AxionPhoton():
             plt.text(1.5e-4,3.5e-15,r'{\bf MADMAX}',fontsize=18,color=col,rotation=0,ha='left',va='top')
             plt.plot([3e-4,1.3e-4],[4.5e-15,2.6e-14],'k-',lw=1.5)
         else:
-            plt.text(4e-5,3.5e-1,r'{\bf MADMAX}',fontsize=fs,color=col,rotation=0,ha='left',va='top')
+            plt.text(5e-5,3.5e0,r'{\bf MADMAX}',fontsize=14,color=col,rotation=0,ha='left',va='top')
+        return
+
+
+    def PlasmaHaloscope(ax,col='darkred',fs=18,RescaleByMass=False):
+        # Plasma Haloscope arXiv[1904.11872]
+        y2 = ax.get_ylim()[1]
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+        dat = loadtxt("limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt")
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=3,color=col,zorder=0)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
+        if rs1==0:
+            plt.text(1.5e-4,1e-15,r'{\bf Plasma haloscope}',fontsize=18,color=col,rotation=0,ha='left',va='top')
+            plt.plot([1.3e-4,0.5e-4],[1e-15,0.7e-14],'k-',lw=1.5)
+        else:
+            plt.text(2.3e-4,5e-1,r'{\bf Plasma}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
+            plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
         return
 
     def KLASH(ax,col=[0.6, 0.1, 0.2],fs=15,RescaleByMass=False):
@@ -416,7 +447,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if rs1==0:
-            plt.text(0.5e-2,5e-14,r'{\bf TOORAD}',rotation=0,fontsize=18,color=col,ha='left',va='top')
+            plt.text(0.6e-2,5e-14,r'{\bf TOORAD}',rotation=0,fontsize=18,color=col,ha='left',va='top')
             plt.plot([0.5e-2,0.21e-2],[5e-14,1e-13],'k-',lw=1.5)
         else:
             plt.text(0.6e-3,4e-1,r'{\bf TOORAD}',rotation=-25,fontsize=fs,color=col,ha='left',va='top')
@@ -491,7 +522,8 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/ALPS.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2.5,zorder=1.53,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
-        plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
+        if rs1==0:
+            plt.text(1e-5,7e-8,r'{\bf ALPS-I}',fontsize=20,color='w')
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ALPS-II.txt")
             plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',lw=1.5,zorder=1.5,color='k',alpha=0.5)
@@ -574,6 +606,7 @@ class AxionPhoton():
         AxionPhoton.ORGAN(ax,projection=projection)
 
         if projection:
+            AxionPhoton.PlasmaHaloscope(ax)
             AxionPhoton.MADMAX(ax)
             AxionPhoton.KLASH(ax)
             AxionPhoton.TOORAD(ax)
@@ -933,7 +966,7 @@ class AxionElectron():
         if projection:
             AxionElectron.Magnon(ax,fs=fs)
             AxionElectron.MagnonScan(ax,fs=fs)
-            AxionElectron.ElectronSpinMagnetometers(ax)
+            #AxionElectron.ElectronSpinMagnetometers(ax)
         return
 
     def StellarBounds(ax,fs=30,Hint=True):

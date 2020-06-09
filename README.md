@@ -42,6 +42,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * LAMPOST: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/LAMPOST.txt), [reference](https://arxiv.org/abs/1803.11455)
 * MADMAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/MADMAX.txt), [reference](https://arxiv.org/abs/2003.10894)
 * ORGAN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
+* Plasma haloscope: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt), [reference](https://arxiv.org/abs/1904.11872)
 * QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
 * RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/2003.03348)
@@ -90,7 +91,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * XENON1T: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T.txt), [reference](https://arxiv.org/abs/1907.11485)
 
 ### Haloscopes:
-* Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)
+<!---* Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)-->
 * Axion-magnon conversion:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Magnon.txt),  [reference](https://arxiv.org/abs/2005.10256)
 * Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
 
@@ -128,7 +129,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Maurizio Giannotti, Pablo Quílez, and Javier Redondo, for comments and suggestions.
+Thank you to: Itay Bloch, Maurizio Giannotti, Alex Millar, Pablo Quílez, Javier Redondo and Edoardo Vitagliano for comments and suggestions that helped improve these plots.
 
 ## To do
 Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
