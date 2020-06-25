@@ -630,7 +630,7 @@ class AxionPhoton():
         y2 = ax.get_ylim()[1]
         ### Astrophysical constraints
 
-        # SN-gamma rays arXiv:[1410.3747]
+        # Fermi extragalactic SN gamma rays arXiv:[2006.06722]
         SNgamma_col = [0.05, 0.5, 0.06]
         SNgamma = loadtxt("limit_data/AxionPhoton/SN-gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.21,lw=2)
@@ -638,11 +638,11 @@ class AxionPhoton():
         plt.text(3e-11,2e-11,r'{\bf SN}-$\gamma$',fontsize=fs,color='w',ha='left',va='top')
 
         # M87 Limits from arXiv:[1703.07354]
-        M87_col = [0.0, 0.66, 0.42]
+        M87_col = 'seagreen'
         M87 = loadtxt("limit_data/AxionPhoton/M87.txt")
-        plt.plot(M87[:,0],M87[:,1],'k-',lw=2,alpha=0.8,zorder=0.2)
+        plt.plot(M87[:,0],M87[:,1],'k-',lw=2,alpha=1,zorder=0.2)
         plt.fill_between(M87[:,0],M87[:,1],y2=y2,edgecolor=None,facecolor=M87_col,zorder=0.2)
-        plt.text(1.4e-12,4e-12,r'\quad {\bf M87}',fontsize=fs,color='w',ha='left',va='top')
+        plt.text(1.4e-12,5e-12,r'\quad {\bf M87}',fontsize=fs,color='w',ha='left',va='top')
 
         # HYDRA-A arXiv:[1304.0989]
         HYDRA_col = [0.24, 0.71, 0.54]
@@ -855,25 +855,43 @@ class AxionElectron():
 
         return
 
-    def XENON1T(ax,col='m',fs=20):
-        # XENON1T LDM Searches arXiv:[1907.11485]
+    def XENON1T(ax,col='crimson',fs=20):
+        # XENON1T S2 analysis arXiv:[1907.11485]
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/AxionElectron/XENON1T.txt")
+        dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_S2.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.51,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.51)
-        plt.text(0.25e2,4e-14,r'{\bf XENON1T}',fontsize=fs,color=col,ha='left',va='top')
+
+        # XENON1T S1+S2 analysis arXiv:[2006.09721]
+        dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_S1S2.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.51,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.51)
+
+        plt.text(1.2e2,4e-14,r'{\bf XENON1T}',fontsize=fs,color=col,ha='center',va='top')
+        plt.text(1.2e2,2.5e-14,r'(DM)',fontsize=fs,color=col,ha='center',va='top')
+
+        # Solar axion basin arXiv:[2006.12431]
+        col = 'royalblue'
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionElectron/XENON1T_S2_SolarAxionBasin.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.6,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.6)
+        plt.text(1.5e3,2e-11,r'{\bf XENON1T}',fontsize=fs,color='k',ha='center',va='top')
+        plt.text(1.5e3,1.3e-11,r'(Solar axion',fontsize=fs,color='k',ha='center',va='top')
+        plt.text(1.5e3,0.8e-11,r' basin)',fontsize=fs,color='k',ha='center',va='top')
+
         return
 
-    def LUX(ax,col='darkorchid',fs=20):
+    def LUX(ax,col='darkred',fs=20):
         # LUX arXiv:[1704.02297]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/LUX.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.52,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.52)
-        plt.text(0.5e-8,6e-12,r'{\bf LUX}',fontsize=30,color='w',alpha=0.8,ha='left',va='top')
+        plt.text(0.5e-8,6e-12,r'{\bf LUX} (Solar axions)',fontsize=30,color='w',alpha=0.8,ha='left',va='top')
         return
 
-    def PandaX(ax,col='mediumvioletred',fs=20):
+    def PandaX(ax,col='firebrick',fs=20):
         # PandaX arXiv:[1707.07921]
         y2 = ax.get_ylim()[1]
 #         Currently not using Solar pandaX limit
@@ -886,7 +904,7 @@ class AxionElectron():
         plt.text(1.2e3,4.5e-13,r'{\bf PandaX}',fontsize=fs-2,color='w',ha='left',va='top',rotation=20)
         return
 
-    def EDELWEISS(ax,col='crimson',projection=True,fs=20):
+    def EDELWEISS(ax,col='darkred',projection=True,fs=20):
         # EDELWEISS arXiv:[1808.02340]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/EDELWEISS.txt")
@@ -898,17 +916,17 @@ class AxionElectron():
         plt.text(9e0,7e-13,r'{\bf EDELWEISS}',fontsize=fs,color=col,ha='left',va='top')
         return
 
-    def SuperCDMS(ax,col='orchid',fs=20):
+    def SuperCDMS(ax,col='maroon',fs=20):
         # SuperCDMS arXiv:[1911.11905]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/SuperCDMS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.58)
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=0.58,lw=3)
-        plt.text(1e2,9e-12,r'{\bf SuperCDMS}',fontsize=fs,color='k',ha='left',va='top',alpha=0.8)
+        plt.text(2e1,2.7e-11,r'{\bf SuperCDMS}',fontsize=fs-1,color='w',ha='left',va='top',alpha=0.8,rotation=-82)
         return
 
-    def DARWIN(ax,col='blueviolet',fs=20):
-        # PandaX arXiv:[1606.07001]
+    def DARWIN(ax,col='brown',fs=20):
+        # DARWIN arXiv:[1606.07001]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/Projections/DARWIN.txt")
         plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
@@ -927,7 +945,8 @@ class AxionElectron():
         # Axion-magnon conversion arXiv:[2005.10256]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/Projections/Magnon.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=0.5,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,color=col,alpha=0.4,zorder=0.51)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.5,lw=3)
         plt.text(2e-6,1e-14,r'{\bf Magnons \newline (YIT, NiSP$_3$)}',fontsize=fs,color=col,ha='left',va='top',rotation=0)
         return
 
@@ -935,9 +954,10 @@ class AxionElectron():
         # Axion-magnon conversion arXiv:[2005.10256 and 2001.10666]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionElectron/Projections/MagnonScan.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=0.5,lw=3)
-        plt.text(1.8e-5,1e-13,r'{\bf Magnons}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
-        plt.text(1.8e-5,0.7*1e-13,r'{\bf (Scanning)}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,color=col,alpha=0.4,zorder=0.51)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.5,lw=3)
+        plt.text(1.8e-5,0.5e-13,r'{\bf Magnons}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
+        plt.text(1.8e-5,0.7*0.5e-13,r'{\bf (Scanning)}',fontsize=fs-1,color=col,ha='center',va='top',rotation=0)
 
         return
 
@@ -980,7 +1000,7 @@ class AxionElectron():
         plt.text(0.5e-8,3.5e-13,r'{\bf Red giants}',fontsize=fs,color='w')
 
         # Solar neutrinos arXiv:[0807.2926]
-        SolarNu_col = [0.01, 0.75, 0.24]
+        SolarNu_col = 'seagreen'
         SolarNu = loadtxt("limit_data/AxionElectron/SolarNu.txt")
         plt.plot(SolarNu[:,0],SolarNu[:,1],color='k',lw=2,alpha=0.7,zorder=1)
         plt.fill_between(SolarNu[:,0],SolarNu[:,1],y2=y2,edgecolor=None,facecolor=SolarNu_col,zorder=0.7)

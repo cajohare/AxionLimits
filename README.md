@@ -66,7 +66,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
 * Horizontal branch stars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HorizontalBranch.txt), [reference](https://arxiv.org/abs/1406.6053)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
-* SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN-gamma.txt), [reference](https://arxiv.org/abs/1410.3747)
+* Extragalacic supernovae gamma rays (Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN-gamma.txt), [reference](https://arxiv.org/abs/2006.06722)
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
 * SN1987A neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_neutrinos.txt), [reference](https://arxiv.org/abs/1808.10136)
 * VLT (Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)
@@ -88,7 +88,9 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * PandaX-II: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/PandaX.txt), [reference](https://arxiv.org/abs/1707.07921)
 * Semiconductors (absorption): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/SemiconductorAbsorption.txt), [reference](https://arxiv.org/abs/1608.02123)
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
-* XENON1T: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T.txt), [reference](https://arxiv.org/abs/1907.11485)
+* XENON1T (ALP DM search, S2 only): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S2.txt), [reference](https://arxiv.org/abs/1907.11485)
+* XENON1T (ALP DM search S1+S2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
+* XENON1T (Solar axion basin): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_SolarAxionBasin.txt), [reference](https://arxiv.org/abs/2006.12431)
 
 ### Haloscopes:
 <!---* Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)-->
