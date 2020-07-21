@@ -48,7 +48,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Plasma haloscope: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt), [reference](https://arxiv.org/abs/1904.11872)
 * QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
 * RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
-* SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/2003.03348)
+* SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SHAFT.txt), [reference](https://arxiv.org/abs/2003.03348)
 * TOORAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD.txt), [reference](https://arxiv.org/abs/1807.08810)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
 ### Helioscopes/LSW
@@ -134,7 +134,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Maurizio Giannotti, Alex Millar, Pablo Quílez, Javier Redondo and Edoardo Vitagliano for comments and suggestions that helped improve these plots.
+Thank you to: Itay Bloch, Raymond Co, Maurizio Giannotti, Alex Millar, Pablo Quílez, Javier Redondo and Edoardo Vitagliano for comments and suggestions that helped improve these plots.
 
 ## To do
 Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
