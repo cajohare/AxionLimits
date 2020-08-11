@@ -195,7 +195,9 @@ class AxionPhoton():
 
 
     def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=15,RescaleByMass=False):
-        # Neutron stars arXiv:[2004.00011]
+        # Neutron stars: Green Bank arXiv:[2004.00011]
+        # Jansky VLA: 2008.01877
+
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
             rs1 = 1.0
@@ -203,8 +205,12 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        dat = loadtxt('limit_data/AxionPhoton/NeutronStars.txt')
+        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_GreenBank.txt')
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+
+        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_VLA.txt')
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+
         if rs1==0:
             plt.text(5e-6,1e-12,r'{\bf Neutron stars}',fontsize=fs,color='w',ha='left')
         else:
@@ -233,7 +239,7 @@ class AxionPhoton():
         return
 
     def HAYSTAC(ax,col=[0.88, 0.07, 0.37],fs=13,RescaleByMass=False,projection=True):
-        # HAYSTAC arXiv:[1803.03690]
+        # HAYSTAC arXiv:[1803.03690] and [2008.01853]
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
@@ -244,15 +250,23 @@ class AxionPhoton():
             zo = 0
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/HAYSTAC.txt")
+        dat2 = loadtxt("limit_data/AxionPhoton/HAYSTAC_2020.txt")
+
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,zorder=zo,lw=3)
+
             if projection==False:
                 plt.text(2.4e-5,5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            plt.text(dat[0,0],y2*1.2,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color='k',zorder=zo,lw=4)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,zorder=zo,lw=3)
+            plt.text(dat2[0,0]*1.1,y2*1.2,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.plot(dat2[0,0],dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
         return
 
     def CAPP(ax,col=[1, 0.1, 0.37],fs=15,RescaleByMass=False):
@@ -296,7 +310,7 @@ class AxionPhoton():
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
-            plt.text(dat[0,0]*1.3,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.text(dat[0,0]*1.1,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
         return
 
@@ -389,7 +403,7 @@ class AxionPhoton():
             rs1 = 0.0
             rs2 = 1.0
         dat = loadtxt("limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt")
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=3,color=col,zorder=0)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=2,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if rs1==0:
             plt.text(1.5e-4,1e-15,r'{\bf Plasma haloscope}',fontsize=18,color=col,rotation=0,ha='left',va='top')
@@ -592,7 +606,7 @@ class AxionPhoton():
             if rs1==0:
                 plt.text(0.35e-1,0.2e-11,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=45)
             else:
-                plt.text(0.7e-2,0.15e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-20)
+                plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18)
         return
 
 
@@ -635,13 +649,13 @@ class AxionPhoton():
         SNgamma = loadtxt("limit_data/AxionPhoton/SN-gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.21,lw=2)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.21)
-        plt.text(3e-11,2e-11,r'{\bf SN}-$\gamma$',fontsize=fs,color='w',ha='left',va='top')
+        plt.text(8e-11,0.7e-11,r'{\bf SNe}',fontsize=fs,color='w',ha='left',va='top')
 
         # M87 Limits from arXiv:[1703.07354]
         M87_col = 'seagreen'
         M87 = loadtxt("limit_data/AxionPhoton/M87.txt")
-        plt.plot(M87[:,0],M87[:,1],'k-',lw=2,alpha=1,zorder=0.2)
-        plt.fill_between(M87[:,0],M87[:,1],y2=y2,edgecolor=None,facecolor=M87_col,zorder=0.2)
+        plt.plot(M87[:,0],M87[:,1],'k-',lw=2,alpha=1,zorder=0.219)
+        plt.fill_between(M87[:,0],M87[:,1],y2=y2,edgecolor=None,facecolor=M87_col,zorder=0.219)
         plt.text(1.4e-12,5e-12,r'\quad {\bf M87}',fontsize=fs,color='w',ha='left',va='top')
 
         # HYDRA-A arXiv:[1304.0989]
@@ -684,6 +698,14 @@ class AxionPhoton():
         plt.fill_between(Chandra[:,0],Chandra[:,1],y2=y2,edgecolor=None,facecolor=Chandra_col,zorder=0.1)
         if projection==False:
             plt.text(1.1e-11,2e-12,r'{\bf Chandra}',fontsize=fs,color=Chandra_col,rotation=0,ha='left',va='top')
+
+        # Xray super star clusters arXiv:[2008.03305]
+        col = [0.2, 0.54, 0.01]
+        StarCluster = loadtxt("limit_data/AxionPhoton/Xray-SuperStarClusters.txt")
+        plt.plot(StarCluster[:,0],StarCluster[:,1],'k-',alpha=0.6,zorder=0.22,lw=2)
+        plt.fill_between(StarCluster[:,0],StarCluster[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.22)
+        plt.text(2.5e-11,6e-11,r'{\bf Star clusters}',fontsize=13,color='w',ha='left',va='top',rotation=45)
+
 
         if projection==True:
             # Fermi nearby SN prospects arXiv:[1609.02350]

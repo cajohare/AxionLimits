@@ -1,0 +1,4 @@
+# HAYSTAC 2020 quantum enhanced result 2008.01853
+# m_a [eV]  g_ap [GeV^-1]
+1.69e-5 6.489e-15
+1.72e-5 6.6048e-15
