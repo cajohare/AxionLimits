@@ -646,10 +646,27 @@ class AxionPhoton():
 
         # Fermi extragalactic SN gamma rays arXiv:[2006.06722]
         SNgamma_col = [0.05, 0.5, 0.06]
-        SNgamma = loadtxt("limit_data/AxionPhoton/SN-gamma.txt")
+        SNgamma = loadtxt("limit_data/AxionPhoton/SNe-gamma.txt")
+        plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.25,lw=2)
+        plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.25)
+        plt.text(1.2e-12,0.6e-10,r'{\bf Fermi-SN}',fontsize=fs-3,color='w',ha='left',va='top')
+
+        # # SN1987 gamma rays arXiv:[1410.3747]
+        SNgamma_col = [0.05, 0.5, 0.06]
+        SNgamma = loadtxt("limit_data/AxionPhoton/SN1987A_gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.21,lw=2)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.21)
-        plt.text(8e-11,0.7e-11,r'{\bf SNe}',fontsize=fs,color='w',ha='left',va='top')
+        if projection==False:
+            plt.text(6e-11,0.45e-11,r'{\bf SN1987A}',fontsize=fs,color=SNgamma_col,ha='left',va='top')
+
+        # HYDRA-A arXiv:[1304.0989]
+        HYDRA_col = [0.24, 0.71, 0.54]
+        HYDRA = loadtxt("limit_data/AxionPhoton/HYDRA_A.txt")
+        plt.plot(HYDRA[:,0],HYDRA[:,1],'k-',alpha=0.6,zorder=0.23,lw=2)
+        plt.fill_between(HYDRA[:,0],HYDRA[:,1],y2=y2,edgecolor=None,facecolor=HYDRA_col,zorder=0.23)
+        plt.text(1.2e-12,2e-11,r'{\bf Hydra}',fontsize=fs-2,color='w',ha='left',va='top')
+
+
 
         # M87 Limits from arXiv:[1703.07354]
         M87_col = 'seagreen'
@@ -657,14 +674,6 @@ class AxionPhoton():
         plt.plot(M87[:,0],M87[:,1],'k-',lw=2,alpha=1,zorder=0.219)
         plt.fill_between(M87[:,0],M87[:,1],y2=y2,edgecolor=None,facecolor=M87_col,zorder=0.219)
         plt.text(1.4e-12,5e-12,r'\quad {\bf M87}',fontsize=fs,color='w',ha='left',va='top')
-
-        # HYDRA-A arXiv:[1304.0989]
-        HYDRA_col = [0.24, 0.71, 0.54]
-        HYDRA = loadtxt("limit_data/AxionPhoton/HYDRA_A.txt")
-        plt.plot(HYDRA[:,0],HYDRA[:,1],'k-',alpha=0.6,zorder=0.23,lw=2)
-        plt.fill_between(HYDRA[:,0],HYDRA[:,1],y2=y2,edgecolor=None,facecolor=HYDRA_col,zorder=0.23)
-        plt.text(1.5e-12,4e-11,r'{\bf Hydra}',fontsize=fs-2,color='w',ha='left',va='top')
-        plt.text(3e-12,2e-11,r'\quad {\bf A}',fontsize=fs-2,color='w',ha='left',va='top')
 
         # HESS arXiv:[1304.0700]
         HESS_col = [0.0, 0.55, 0.3]
@@ -704,7 +713,9 @@ class AxionPhoton():
         StarCluster = loadtxt("limit_data/AxionPhoton/Xray-SuperStarClusters.txt")
         plt.plot(StarCluster[:,0],StarCluster[:,1],'k-',alpha=0.6,zorder=0.22,lw=2)
         plt.fill_between(StarCluster[:,0],StarCluster[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.22)
-        plt.text(2.5e-11,6e-11,r'{\bf Star clusters}',fontsize=13,color='w',ha='left',va='top',rotation=45)
+        plt.text(2.2e-11,2.9e-11,r'{\bf Star}',fontsize=13,color='w',ha='left',va='top',rotation=45)
+        plt.text(2.5e-11,2.7e-11,r'{\bf clusters}',fontsize=13,color='w',ha='left',va='top',rotation=45)
+
 
 
         if projection==True:
