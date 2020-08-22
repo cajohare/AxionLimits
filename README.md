@@ -72,9 +72,9 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Neutron Stars (Green Bank and Effelsberg) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/NeutronStars_GreenBank.txt), [reference](https://arxiv.org/abs/2004.00011)
 * Neutron Stars (Jansky VLA) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/NeutronStars_VLA.txt), [reference](https://arxiv.org/abs/2008.01877)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
-* SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
-* SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_gamma.txt), [reference](https://arxiv.org/abs/1410.3747)
-* SN1987A neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1986A_neutrinos.txt), [reference](https://arxiv.org/abs/1808.10136)
+* SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
+* SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_gamma.txt), [reference](https://arxiv.org/abs/1410.3747)
+* SN1987A neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_neutrinos.txt), [reference](https://arxiv.org/abs/1808.10136)
 * Super star clusters (NuSTAR Xray): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Xray-SuperStarClusters.txt), [reference](https://arxiv.org/abs/2008.03305)
 * VLT (Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)
 ### Cosmology
