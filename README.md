@@ -36,6 +36,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * ADMX 2018: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2018.txt), [reference](https://arxiv.org/abs/1804.05750)
 * ADMX 2019: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_2.txt), [reference](https://arxiv.org/abs/1910.08638)
 * ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_Sidecar.txt), [reference](https://arxiv.org/abs/1901.00920)
+* ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt)  [reference](https://arxiv.org/abs/1612.08296)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/1903.02017)
 * BRASS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BRASS.txt), [reference](http://www.iexp.uni-hamburg.de/groups/astroparticle/brass/brassweb.htm)
 * CAPP-8TB: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-8TB.txt), [reference](https://arxiv.org/abs/2001.05102)
@@ -138,7 +139,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alex Millar, Pablo Quílez, Javier Redondo and Edoardo Vitagliano for comments, suggestions and corrections that have greatly helped improve these plots.
+Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, and Edoardo Vitagliano for comments, suggestions and corrections that have greatly helped improve these plots.
 
 ## To do
 Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
