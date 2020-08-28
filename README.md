@@ -1,7 +1,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3932430.svg)](https://doi.org/10.5281/zenodo.3932430)
 
-This page showcases my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations. All the limit data can be found in the [limit_data](https://github.com/cajohare/AxionLimits/raw/master/limit_data) folder, at the very least I hope it can save you some time digitising plots.
+This page showcases my python scripts for reproducing my plots of axion constraints. Various plots are available, see the jupyter notebooks (and the figures below) for different configurations. All the limit data can be found in the [limit_data](https://github.com/cajohare/AxionLimits/raw/master/limit_data) folder, at the very least I hope this can save you some time digitising plots.
 
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
