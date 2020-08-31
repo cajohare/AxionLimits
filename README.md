@@ -65,13 +65,14 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/M87.txt), [reference](https://arxiv.org/abs/1703.07354)
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra.txt), [reference](https://arxiv.org/abs/1907.05475)
+* Diffuse SN ALP background: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DSNBALP.txt), [reference](https://arxiv.org/abs/2008.11741)
 * Fermi-LAT (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_bound.txt), [hole](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_hole.txt), [reference](https://arxiv.org/abs/1603.06978)
 * Fermi-LAT (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FermiSN.txt), [reference](https://arxiv.org/abs/1609.02350)
 * Fermi-LAT (Extragalactic SNe): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-gamma.txt), [reference](https://arxiv.org/abs/2006.06722)
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
 * Horizontal branch stars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HorizontalBranch.txt), [reference](https://arxiv.org/abs/1406.6053)
 * Neutron Stars (Green Bank and Effelsberg) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_GreenBank.txt), [reference](https://arxiv.org/abs/2004.00011)
-* Neutron Stars (Jansky VLA) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_VLA.txt), [reference](https://arxiv.org/abs/2008.01877)
+* Neutron Stars (Jansky VLA) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_VLA.txt), [reference1](https://arxiv.org/abs/2008.01877), [reference2](https://arxiv.org/abs/2008.11188)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
 * SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_gamma.txt), [reference](https://arxiv.org/abs/1410.3747)
@@ -143,4 +144,3 @@ Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alex Mi
 
 ## To do
 Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
-

@@ -194,9 +194,9 @@ class AxionPhoton():
         return
 
 
-    def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=15,RescaleByMass=False):
+    def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=17,RescaleByMass=False):
         # Neutron stars: Green Bank arXiv:[2004.00011]
-        # Jansky VLA: 2008.01877
+        # Jansky VLA: 2008.01877, 2008.11188
 
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -207,12 +207,14 @@ class AxionPhoton():
             rs2 = 1.0
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_GreenBank.txt')
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_VLA.txt')
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
         if rs1==0:
-            plt.text(5e-6,1e-12,r'{\bf Neutron stars}',fontsize=fs,color='w',ha='left')
+            plt.text(3e-6,0.8e-10,r'{\bf Neutron stars}',fontsize=fs,color='w',ha='left')
         else:
             plt.text(1e-7,4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
             plt.text(1e-7,1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
@@ -231,7 +233,7 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/RBF_UF_Haloscopes.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         if rs1==0:
-            plt.text(0.4e-5,3e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top')
+            plt.text(0.4e-5,0.6e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top')
         else:
             plt.text(0.7e-5,4e3,r'{\bf RBF}',fontsize=fs,color='w',rotation=0,ha='center',va='top')
             plt.text(0.7e-5,1e3,r'{\bf UF}',fontsize=fs,color='w',rotation=0,ha='center',va='top')
@@ -306,7 +308,7 @@ class AxionPhoton():
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
-            plt.text(5.2e-5,4e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+            plt.text(5.2e-5,0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
@@ -370,7 +372,7 @@ class AxionPhoton():
 
         else:
             if rs1==0:
-                plt.text(110e-6,6e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+                plt.text(110e-6,1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         return
 
     def MADMAX(ax,col='darkred',fs=18,RescaleByMass=False):
@@ -649,7 +651,15 @@ class AxionPhoton():
         SNgamma = loadtxt("limit_data/AxionPhoton/SNe-gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.25,lw=2)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.25)
-        plt.text(1.2e-12,0.6e-10,r'{\bf Fermi-SN}',fontsize=fs-3,color='w',ha='left',va='top')
+        plt.text(1.2e-12,0.55e-10,r'{\bf Fermi-SN}',fontsize=fs-3,color='w',ha='left',va='top')
+
+        # Diffuse SN ALP background arXiv:[2008.11741]
+        DSNALP_col = [0.0, 0.62, 0.3]
+        DSNALP = loadtxt("limit_data/AxionPhoton/DSNALP.txt")
+        plt.plot(DSNALP[:,0],DSNALP[:,1],'k-',alpha=0.6,zorder=0.25,lw=2)
+        plt.fill_between(DSNALP[:,0],DSNALP[:,1],y2=y2,edgecolor=None,facecolor=DSNALP_col,zorder=0.25)
+        plt.text(1.2e-12,1.2e-10,r'{\bf DSNALP}',fontsize=fs-3,color='w',ha='left',va='top')
+
 
         # # SN1987 gamma rays arXiv:[1410.3747]
         SNgamma_col = [0.05, 0.5, 0.06]
@@ -713,7 +723,7 @@ class AxionPhoton():
         StarCluster = loadtxt("limit_data/AxionPhoton/Xray-SuperStarClusters.txt")
         plt.plot(StarCluster[:,0],StarCluster[:,1],'k-',alpha=0.6,zorder=0.22,lw=2)
         plt.fill_between(StarCluster[:,0],StarCluster[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.22)
-        plt.text(2.2e-11,2.9e-11,r'{\bf Star}',fontsize=13,color='w',ha='left',va='top',rotation=45)
+        plt.text(2.2e-11,2.7e-11,r'{\bf Star}',fontsize=13,color='w',ha='left',va='top',rotation=45)
         plt.text(2.5e-11,2.7e-11,r'{\bf clusters}',fontsize=13,color='w',ha='left',va='top',rotation=45)
 
 
