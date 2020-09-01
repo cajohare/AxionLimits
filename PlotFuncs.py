@@ -525,6 +525,21 @@ class AxionPhoton():
         plt.text(0.8e-10,3e-10,r'{\bf SHAFT}',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=9)
         return
 
+
+    def UPLOAD(ax,col='tomato',fs=16):
+        # UPLOAD arXiv:[1912.07751]
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/UPLOAD.txt")
+        n = shape(dat)[0]
+        x = dat[arange(0,n,2),0]
+        y = dat[arange(0,n,2),1]
+        y[-1] = y2
+        plt.plot(x,y,'k-',lw=1,zorder=10,alpha=0.9)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.8)
+        #plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9)
+        return
+
+
     def ALPS(ax,projection=True,col=[0.8, 0.25, 0.33],fs=15,RescaleByMass=False):
         # ALPS-I arXiv:[1004.1313]
         if RescaleByMass:
@@ -620,6 +635,7 @@ class AxionPhoton():
         AxionPhoton.SHAFT(ax)
         AxionPhoton.CAPP(ax,fs=fs-4)
         AxionPhoton.ORGAN(ax,projection=projection)
+        AxionPhoton.UPLOAD(ax)
 
         if projection:
             AxionPhoton.PlasmaHaloscope(ax)
