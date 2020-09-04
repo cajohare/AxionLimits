@@ -141,7 +141,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, and Edoardo Vitagliano for comments, suggestions and corrections that have greatly helped improve these plots.
+Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, and Edoardo Vitagliano for comments and corrections that have greatly helped improve these plots.
 
 ## To do
 Add plots for axion-edm, axion-gluon, dark photon kinetic mixing...
