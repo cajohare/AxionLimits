@@ -720,11 +720,21 @@ class AxionPhoton():
         plt.plot(Fermi2[:,0],Fermi2[:,1],'k-',alpha=0.5,lw=1.5,zorder=0.24)
         plt.text(4.8e-10,1.2e-11,r'{\bf Fermi}',fontsize=fs,color='w',ha='left',va='top')
 
-        # Optical telescope [astro-ph/0611502]
-        Telescopes_col = [0.09, 0.45, 0.27]
-        Telescopes = loadtxt("limit_data/AxionPhoton/Telescopes.txt")
-        plt.fill_between(Telescopes[:,0],Telescopes[:,1],y2=y2,edgecolor=None,facecolor=Telescopes_col,zorder=0.2)
-        plt.text(3.3,4e-12,r'{\bf Telescopes}',fontsize=fs,color=Telescopes_col,rotation=-90,ha='left',va='top')
+        # Telescopes (MUSE) [2009.01310]
+        Telescopes_col1 = [0.09, 0.45, 0.27]
+        Telescopes = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
+        plt.fill_between(Telescopes[:,0],Telescopes[:,1],y2=y2,edgecolor=None,facecolor=Telescopes_col1,zorder=0.2)
+        plt.text(1.5,0.7e-12,r'{\bf MUSE}',fontsize=fs,color=Telescopes_col1,rotation=90,ha='left',va='top',rotation_mode='anchor')
+
+        # Telescopes (VIMOS) [astro-ph/0611502]
+        Telescopes_col2 = [0.09, 0.6, 0.27]
+        Telescopes = loadtxt("limit_data/AxionPhoton/Telescopes_VIMOS.txt")
+        plt.fill_between(Telescopes[:,0],Telescopes[:,1],y2=y2,edgecolor=None,facecolor=Telescopes_col2,zorder=0.2)
+        plt.text(7,1e-11,r'{\bf VIMOS}',fontsize=fs,color=Telescopes_col2,rotation=-90,ha='left',va='top')
+
+        # Extra text:
+        #plt.text(3,1.1e-13,r'{\bf Telescopes}',fontsize=fs,color=Telescopes_col1,rotation=0,ha='center',va='top')
+        #plt.text(3,5e-14,r'(DM ALP decay)',fontsize=fs,color=Telescopes_col1,rotation=0,ha='center',va='top')
 
         # Chandra arXiv:[1907.05475]
         Chandra_col = [0.0, 0.3, 0.24]
