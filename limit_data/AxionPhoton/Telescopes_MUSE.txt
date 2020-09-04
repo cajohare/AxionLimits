@@ -1,4 +1,5 @@
-# MUSE-Faint observations of Leo T https://arxiv.org/abs/2009.01310
+# MUSE-Faint observations of Leo T (ALP DM decay)
+# https://arxiv.org/abs/2009.01310
 # m_a [eV]  g_agamma [GeV^-1]
 2.6604082092688666	5.62360117428649e-13
 2.661067215816157	5.825398913869097e-13

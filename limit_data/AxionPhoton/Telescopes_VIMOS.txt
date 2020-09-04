@@ -1,4 +1,5 @@
-# VLT Clusters
+# VIMOS/VLT Galaxy clusters (ALP DM decay)
+# https://arxiv.org/abs/astro-ph/0611502
 # m_a [eV]  g_ap [GeV^-1]
 4.4768	6.2834e-11
 4.4874	8.9007e-12
