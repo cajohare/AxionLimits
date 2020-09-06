@@ -667,7 +667,7 @@ class AxionPhoton():
         SNgamma = loadtxt("limit_data/AxionPhoton/SNe-gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.25,lw=2)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.25)
-        plt.text(1.2e-12,0.55e-10,r'{\bf Fermi-SN}',fontsize=fs-3,color='w',ha='left',va='top')
+        plt.text(1.2e-12,0.51e-10,r'{\bf Fermi-SNe}',fontsize=fs-3,color='w',ha='left',va='top')
 
         # Diffuse SN ALP background arXiv:[2008.11741]
         DSNALP_col = [0.0, 0.62, 0.3]
