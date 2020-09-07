@@ -708,6 +708,13 @@ class AxionPhoton():
         plt.fill_between(HESS[:,0],HESS[:,1],y2=y2,edgecolor=None,facecolor=HESS_col,zorder=0.2)
         plt.text(2e-8,1.6e-11,r'{\bf HESS}',fontsize=fs+1,color=HESS_col,ha='left',va='top')
 
+        # Mrk 421 arXiv:[2008.09464]
+        Mrk_col = [0.4, 0.6, 0.1]
+        Mrk = loadtxt("limit_data/AxionPhoton/Mrk421.txt")
+        plt.plot(Mrk[:,0],Mrk[:,1],'k-',alpha=0.6,zorder=0.26,lw=2)
+        plt.fill_between(Mrk[:,0],Mrk[:,1],y2=y2,edgecolor=None,facecolor=Mrk_col,zorder=0.26)
+        plt.text(4e-9,1.2e-10,r'{\bf Mrk 421}',fontsize=fs-3,color='w',ha='left',va='top')
+
         # Fermi NGC1275 arXiv:[1603.06978]
         Fermi_col = [0.0, 0.42, 0.24]
         Fermi1 = loadtxt("limit_data/AxionPhoton/Fermi1.txt")
@@ -763,7 +770,7 @@ class AxionPhoton():
 
         return
 
-    def Cosmology(ax,fs=30):
+    def Cosmology(ax,fs=30,projection=False):
         y2 = ax.get_ylim()[1]
         ## Cosmology constraints see arXiv:[1210.3196] for summary
         # Xray Background
@@ -771,6 +778,14 @@ class AxionPhoton():
         XRAY = loadtxt("limit_data/AxionPhoton/XRAY.txt")
         plt.plot(XRAY[:,0],XRAY[:,1],color='k',alpha=0.5,zorder=0.3,lw=2)
         plt.fill_between(XRAY[:,0],XRAY[:,1],y2=1e-11,edgecolor=None,facecolor=XRAY_col,zorder=0.3)
+        if projection:
+            # THESEUS 2008.08306
+            THESEUS = loadtxt("limit_data/AxionPhoton/Projections/THESEUS.txt")
+            plt.plot(THESEUS[:,0],THESEUS[:,1],color=XRAY_col,alpha=0.5,zorder=0.29,lw=2)
+            plt.fill_between(THESEUS[:,0],THESEUS[:,1],y2=1e-11,edgecolor=None,alpha=0.1,facecolor=XRAY_col,zorder=0.29)
+            plt.text(3e3,0.8e-18,r'{\bf THESEUS}',fontsize=17,color=XRAY_col,rotation=0,ha='right',va='top')
+            plt.plot([3e3,5e3],[0.8e-18,1.3e-18],'k-')
+
 
         # Extragalactic background light
         EBL_col =  [0.0, 0.2, 0.6]
