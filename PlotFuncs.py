@@ -48,7 +48,7 @@ class AxionPhoton():
             ax.set_xlabel(xlab,fontsize=lfs)
             ax.set_ylabel(ylab,fontsize=lfs)
 
-            ax.tick_params(which='major',direction=tickdir,width=2.5,length=13,right=TopAndRightTicks,top=TopAndRightTicks,pad=7)
+            ax.tick_params(which='major',direction=tickdir,width=2.5,length=13,right=TopAndRightTicks,top=TopAndRightTicks,pad=8)
             ax.tick_params(which='minor',direction=tickdir,width=1,length=10,right=TopAndRightTicks,top=TopAndRightTicks)
 
 
