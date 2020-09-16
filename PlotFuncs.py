@@ -23,6 +23,20 @@ from scipy.stats import norm
 pltdir = 'plots/'
 pltdir_png = pltdir+'plots_png/'
 
+# Black hole superradiance constraints on the axion mass
+# can be used for any coupling
+def BlackHoleSpins(ax,label_position,fs=20,col='k',alpha=0.2,PlotLine=True,rotation=90,text_col='k'):
+    y2 = ax.get_ylim()[-1]
+
+    # arxiv: 2009.07206
+    BH = loadtxt("limit_data/BlackHoleSpins.txt")
+    if PlotLine:
+        plt.plot(BH[:,0],BH[:,1],color=col,lw=3,alpha=min(alpha*2,1),zorder=0)
+    plt.fill_between(BH[:,0],BH[:,1],y2=0,edgecolor=None,facecolor=col,zorder=0,alpha=alpha)
+    plt.text(label_position[0],label_position[1],r'{\bf Black hole spins}',fontsize=fs,color=text_col,\
+             rotation=rotation,ha='center',rotation_mode='anchor')
+    return
+
 #==============================================================================#
 class AxionPhoton():
     def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\

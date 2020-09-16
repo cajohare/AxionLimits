@@ -5,6 +5,8 @@ This page showcases my python scripts for reproducing my plots of axion constrai
 
 Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would like any limits being added.
 
+Disclaimer: the limits listed here have been collected from an extremely wide array of papers (not all of them published) and from several different sub-fields. There may be wildly varying levels of uncertainty, assumption, model dependence, and importantly, differing levels of statistical rigour. There is not necessarily any fixed convention for what even constitutes a bound. This goes especially for experimental projections, which vary considerably in their respective levels of optimism. Therefore, one should exercise some caution when reading these plots: they not intended to be the definitive word on the status of the axion. I more see them as a way to advertise the many ways one can search, and give a *rough* picture for what is allowed and what is ruled out. Some may see my inclusion of certain bounds as being overly democratic, however I felt that it was important for this extremely active field to be fully reflected in these plots.
+
 # Contents
 * [Axion-photon coupling](#axionphoton)
 * [Axion-electron coupling](#axionelectron)
@@ -63,6 +65,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
 ### Astro bounds
+* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BlackHoleSpins.txt), [reference](https://arxiv.org/abs/2009.07206)
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/M87.txt), [reference](https://arxiv.org/abs/1703.07354)
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra.txt), [reference](https://arxiv.org/abs/1907.05475)
@@ -138,6 +141,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * Proton storage ring: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/StorageRing.txt), [reference](https://arxiv.org/abs/2005.11867)
 
 ### Astro bounds
+* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BlackHoleSpins.txt), [reference](https://arxiv.org/abs/2009.07206)
 * Hot Neutron Star (HESS J1731-347): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NeutronStars.txt), [reference](https://arxiv.org/abs/)
 * SN1987 Cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SN1987A.txt), [reference](https://arxiv.org/abs/1906.11844)
 
