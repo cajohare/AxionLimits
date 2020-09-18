@@ -16,7 +16,7 @@ Disclaimer: the limits listed here have been collected from an extremely wide ar
 
 ### <a name="axionphoton"></a>
 # Axion-photon coupling
-Click to see the notebook to make each plot
+Click on the plots to see the notebooks
 
 [<img src="plots/plots_png/AxionPhoton.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
