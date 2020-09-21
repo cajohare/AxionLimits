@@ -118,7 +118,6 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SolarNu.txt), [reference](https://arxiv.org/abs/0807.2926)
 * White dwarf hint: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/WDhint.txt), [reference](https://arxiv.org/abs/1708.02111)
 
-
 ---
 
 ### <a name="axionneutron"></a>
