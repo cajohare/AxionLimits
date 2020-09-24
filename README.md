@@ -96,7 +96,8 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 ### <a name="axionelectron"></a>
 # Axion-electron coupling
 [<img src="plots/plots_png/AxionElectron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)
+Download (without projections): [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
 
 ### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
@@ -124,7 +125,8 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 ### <a name="axionneutron"></a>
 # Axion-neutron coupling
 [<img src="plots/plots_png/AxionNeutron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionNeutron.ipynb)
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)
+Download (without projections): [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)
 
 ### Haloscopes
 Note: CASPEr and nEDM limits account for stochastic correction reported in [1905.13650](https://arxiv.org/abs/1905.13650)
