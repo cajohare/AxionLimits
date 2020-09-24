@@ -1090,12 +1090,12 @@ class AxionElectron():
     def StellarBounds(ax,fs=30,Hint=True):
         y2 = ax.get_ylim()[1]
         # Stellar physics constraints
-        # Red Giants arXiv:[1708.02111]
+        # Red Giants arXiv:[2007.03694]
         RG_col = [0.0, 0.66, 0.42]
         dat = loadtxt("limit_data/AxionElectron/RedGiants.txt")
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=RG_col,zorder=0.5)
-        plt.text(0.5e-8,3.5e-13,r'{\bf Red giants}',fontsize=fs,color='w')
+        plt.text(0.5e-8,2.5e-13,r'{\bf Red giants}',fontsize=fs,color='w')
 
         # Solar neutrinos arXiv:[0807.2926]
         SolarNu_col = 'seagreen'
@@ -1109,7 +1109,7 @@ class AxionElectron():
             col = 'k'
             dat = loadtxt("limit_data/AxionElectron/WDhint.txt")
             plt.fill_between(dat[:,0],dat[:,1],color=col,edgecolor=None,lw=0.001,zorder=0.1,alpha=0.3)
-            plt.text(4e-7,1.4e-13,r'{\bf White dwarf hint}',fontsize=fs-10)
+            plt.text(1e-7,1e-13,r'{\bf White dwarf hint}',fontsize=fs-10)
 #==============================================================================#
 
 

@@ -114,7 +114,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
 
 ### Astro bounds:
-* Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/1708.02111)
+* Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/2007.03694)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SolarNu.txt), [reference](https://arxiv.org/abs/0807.2926)
 * White dwarf hint: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/WDhint.txt), [reference](https://arxiv.org/abs/1708.02111)
 
