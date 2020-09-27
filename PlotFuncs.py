@@ -1116,7 +1116,7 @@ class AxionElectron():
 
 #==============================================================================#
 class AxionNeutron():
-    # Warning: often couplings are actually given as g_an/m_n (this is what is in the limit_data files)
+    # Warning: often couplings are actually given as g_an/2 m_n (this is what is in the limit_data files)
     # But we are using the dimensionless coupling, so will multiply by the neutron mass
     # this makes essentially no observable difference to the plot but it useful to remember.
     m_n = 0.93957
@@ -1223,17 +1223,17 @@ class AxionNeutron():
         y2 = ax.get_ylim()[1]
         zo = 0.3
         dat = loadtxt("limit_data/AxionNeutron/OldComagnetometers.txt")
-        dat[:,1] *= AxionNeutron.m_n
+        dat[:,1] *= 2*AxionNeutron.m_n
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=2.5)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
         plt.text(3e-15,4e-7,r'{\bf Old}',fontsize=fs,color='k',ha='center',va='top')
         plt.text(3e-15,1.5e-7,r'{\bf comagnetometers}',fontsize=fs,color='k',ha='center',va='top')
         if projection:
             dat = loadtxt("limit_data/AxionNeutron/Projections/FutureComagnetometers.txt")
-            dat[:,1] *= AxionNeutron.m_n
+            dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=1,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.5)
-            plt.text(5e-18,0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs-1,color=col,ha='left',va='top')
+            plt.text(5e-18,2*0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs-1,color=col,ha='left',va='top')
         return
 
     def UltracoldNeutronsAndMercury(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
@@ -1242,9 +1242,10 @@ class AxionNeutron():
         y2 = ax.get_ylim()[1]
         zo = 1
         dat = loadtxt("limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
         plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.9e-19,StochasticCorrection*2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
+        plt.text(0.9e-19,2*StochasticCorrection*2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top')
         return
 
 
@@ -1255,17 +1256,17 @@ class AxionNeutron():
             y2 = ax.get_ylim()[1]
             zo = 1
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
-            dat[:,1] *= AxionNeutron.m_n
+            dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
             plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5)
             plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(1.05e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor')
+            plt.text(0.3e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor')
             if projection:
                 dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
-                dat[:,1] *= AxionNeutron.m_n
+                dat[:,1] *= 2*AxionNeutron.m_n
                 plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
-                plt.text(1.5e-22,8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
+                plt.text(1e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
             return
 
         def Comagnetometer(ax,col='darkred',fs=20,projection=True):
@@ -1273,10 +1274,10 @@ class AxionNeutron():
             y2 = ax.get_ylim()[1]
             zo = 1.5
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_Comagnetometer.txt")
-            dat[:,1] *= AxionNeutron.m_n
+            dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(1e-21,5e-3,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top')
+            plt.text(1e-21,1.5*5e-3,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top')
             return
 
         def wind(ax,col='red',fs=20,projection=True):
@@ -1284,10 +1285,10 @@ class AxionNeutron():
             y2 = ax.get_ylim()[1]
             zo = -1
             dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_wind.txt")
-            dat[:,1] *= AxionNeutron.m_n
+            dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.5)
-            plt.text(1.4e-9,1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27)
+            plt.text(1.4e-9,2*1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27)
             return
 
     def LabExperiments(ax,projection=True,fs=20):
@@ -1315,19 +1316,20 @@ class AxionNeutron():
         zo = 0.03
         col = 'darkred'
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.5,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.8e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
+        plt.text(0.8e-2,4*1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top')
 
         if projection:
             # Proton storage ring arXiv:[2005.11867]
             zo = -1
             col = 'crimson'
             dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
-            dat[:,1] *= AxionNeutron.m_n
+            dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
-            plt.text(1.3e-22,4e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top')
+            plt.text(1.3e-22,2*4e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top')
 
 
     def Haloscopes(ax,projection=True,fs=20):
@@ -1345,17 +1347,17 @@ class AxionNeutron():
         # Stellar physics constraints
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
         SN = loadtxt("limit_data/AxionNeutron/SN1987A.txt")
-        SN[:,1] *= AxionNeutron.m_n
+        SN[:,1] *= 2*AxionNeutron.m_n
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.02)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=0.5,lw=2.5,zorder=0.02)
-        plt.text(0.8e-2,2e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
+        plt.text(0.8e-2,2*2e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
 
         # Cooling of HESS J1731-347 arXiv:[1806.07991]
         SN = loadtxt("limit_data/AxionNeutron/NeutronStars.txt")
-        SN[:,1] *= AxionNeutron.m_n
+        SN[:,1] *= 2*AxionNeutron.m_n
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.01)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=0.5,lw=2.5,zorder=0.01)
-        plt.text(0.8e-2,4.5e-10,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top')
+        plt.text(0.8e-2,9e-10,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top')
 #==============================================================================#
 
 

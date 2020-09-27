@@ -1,6 +1,6 @@
 # CASPEr-ZULF comagnetometer
 # Already accounts for stochastic correction of https://arxiv.org/pdf/1905.13650.pdf
-# m_a [eV]  g_an/m_n [GeV^-1]
+# m_a [eV]  g_an/2m_n [GeV^-1]
 1.0558723437166442e-22	0.001568073819808967
 1.2986211778893764e-22	0.0015121280183735897
 1.5818291132929548e-22	0.0014501889090386773
