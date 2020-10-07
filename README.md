@@ -11,7 +11,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 * [Axion-photon coupling](#axionphoton)
 * [Axion-electron coupling](#axionelectron)
 * [Axion-neutron coupling](#axionneutron)
-
+* [Axion CP-violating couplings](#axionCPV)
 ---
 
 ### <a name="axionphoton"></a>
@@ -148,6 +148,26 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BlackHoleSpins.txt), [reference](https://arxiv.org/abs/2009.07206)
 * Hot Neutron Star (HESS J1731-347): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NeutronStars.txt), [reference](https://arxiv.org/abs/1806.07991)
 * SN1987 Cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SN1987A.txt), [reference](https://arxiv.org/abs/1906.11844)
+
+---
+
+### <a name="axionCPV"></a>
+# Axion CP-violating couplings
+[<img src="plots/plots_png/ScalarNucleon.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
+[<img src="plots/plots_png/MonopoleDipole_ElectronNucleon.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
+[<img src="plots/plots_png/MonopoleDipole_NucleonNucleon.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
+For more details see our paper: [arXiv:2010.XXXX](https://arxiv.org/abs/2010.XXXXX)
+
+Download Scalar Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)
+
+Download Electron-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)
+
+Download Nucleon-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)
+
+### Download combined limits
+* Scalar-Nucleon combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
+* Electron-Nucleon Lab/Astro combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
+* Nucleon-Nucleon Lab/Astro combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
 
 ---
 
