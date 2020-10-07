@@ -11,7 +11,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 * [Axion-photon coupling](#axionphoton)
 * [Axion-electron coupling](#axionelectron)
 * [Axion-neutron coupling](#axionneutron)
-* [Axion CP-violating couplings](https://github.com/cajohare/AxionLimits/raw/master/limit_data/README.md)
+* [Axion CP-violating couplings](#axionCPV)
 ---
 
 ### <a name="axionphoton"></a>
