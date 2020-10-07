@@ -1,5 +1,5 @@
 # Union of inverse square law tests 
-#  m [eV] 	 g_s_baryon [dimensionless]
+#  m [eV] 	 g_s_nucleon [dimensionless]
 8.615706952098159421e-09 2.738674030019057312e-19
 8.795244996549588810e-09 2.676120472879565438e-19
 8.978524336936993648e-09 2.612263396088726552e-19

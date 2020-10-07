@@ -1,5 +1,5 @@
 # Union of equivalence principle tests 
-#  m [eV] 	 g_s_baryon [dimensionless]
+#  m [eV] 	 g_s_nucleon [dimensionless]
 2.653561939985576600e-20 1.000000000000000000e+00
 2.746527326956077167e-20 3.451594752169049755e-24
 2.842749680739503724e-20 3.451512967470309499e-24
