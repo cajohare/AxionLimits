@@ -153,7 +153,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 
 ### <a name="axionCPV"></a>
 # Axion CP-violating couplings
-[<img src="plots/plots_png/ScalarNucleon.png" width="600">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
+[<img src="plots/plots_png/ScalarNucleon.png" width="550">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 [<img src="plots/plots_png/MonopoleDipole_ElectronNucleon.png" width="500">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 [<img src="plots/plots_png/MonopoleDipole_NucleonNucleon.png" width="500">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 
