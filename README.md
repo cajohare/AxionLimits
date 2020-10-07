@@ -155,12 +155,11 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 # Axion CP-violating couplings
 [<img src="plots/plots_png/ScalarNucleon.png" width="550">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 [<img src="plots/plots_png/MonopoleDipole_ElectronNucleon.png" width="500">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
-[<img src="plots/plots_png/MonopoleDipole_NucleonNucleon.png" width="500">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
-
+[<img src="plots/plots_png/MonopoleDipole_NucleonNucleon.png" width="500">](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb) \
 For more details see our paper: [arXiv:2010.XXXX](https://arxiv.org/abs/2010.XXXXX)
 
-Download Scalar Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)
-Download Electron-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)
+Download Scalar Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)\
+Download Electron-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)\
 Download Nucleon-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)
 
 ### Download combined limits
