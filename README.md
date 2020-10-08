@@ -163,8 +163,8 @@ Download Nucleon-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/mast
 
 ### Download combined limits
 * Scalar-Nucleon combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
-* Electron-Nucleon Lab/Astro combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
-* Nucleon-Nucleon Lab/Astro combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/Union.txt)
+* Electron-Nucleon Astro/Lab combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/UnionAstroLab.txt)
+* Nucleon-Nucleon Astro/Lab combined bound: [.txt file](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarNucleon/UnionAstroLab.txt)
 
 ---
 
