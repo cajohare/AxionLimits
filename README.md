@@ -41,7 +41,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_Sidecar.txt), [reference](https://arxiv.org/abs/1901.00920)
 * ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt)  [reference](https://arxiv.org/abs/1612.08296)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/1903.02017)
-* BRASS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BRASS.txt), [reference](http://www.iexp.uni-hamburg.de/groups/astroparticle/brass/brassweb.htm)
+* BRASS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BRASS.txt), [reference](https://www1.physik.uni-hamburg.de/iexp/gruppe-horns/forschung/brass.html)
 * CAPP-8TB: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-8TB.txt), [reference](https://arxiv.org/abs/2001.05102)
 * DANCE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
 * HAYSTAC 2018: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC.txt), [reference](https://arxiv.org/abs/1803.03690)
@@ -169,4 +169,4 @@ Download Nucleon-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/mast
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, and Edoardo Vitagliano for comments and corrections that have greatly helped improve these plots.
+Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, and Edoardo Vitagliano for comments and corrections that have greatly helped improve these plots.
