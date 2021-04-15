@@ -54,7 +54,7 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 * QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
 * RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SHAFT.txt), [reference](https://arxiv.org/abs/2003.03348)
-* TOORAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD.txt), [reference](https://arxiv.org/abs/1807.08810)
+* TOORAD: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD1.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD2.txt) [reference](https://arxiv.org/abs/2102.05366)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
 * UPLOAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
 ### Helioscopes/LSW
@@ -169,4 +169,4 @@ Download Nucleon-Nucleon: [png](https://github.com/cajohare/AxionLimits/raw/mast
 ---
 
 ## Acknowledgements
-Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, and Edoardo Vitagliano for comments and corrections that have greatly helped improve these plots.
+Thank you to: Itay Bloch, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Sebastian Hoof, David Marsh, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, and Edoardo Vitagliano for comments and corrections that have greatly helped improve these plots.
