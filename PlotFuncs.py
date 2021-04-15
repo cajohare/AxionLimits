@@ -402,9 +402,11 @@ class AxionPhoton():
 
         else:
             zo = 0
-            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
+            if RescaleByMass:
+                plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
-            plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+            if RescaleByMass:
+                plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             if text_on:
                 if rs1==0:
                     plt.text(110e-6,1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
@@ -489,9 +491,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(2.3e-3,0.6e-10,r'{\bf BRASS}',rotation=56,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(1e-3,0.5e-12,r'{\bf BRASS}',fontsize=14,ha='center',rotation=48,color=col)
             else:
-                plt.text(1e-3,0.12e3,r'{\bf BRASS}',rotation=15,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(0.45e-3,0.4e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col)
 
         return
 
@@ -510,10 +512,10 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(0.6e-2,5e-14,r'{\bf TOORAD}',rotation=0,fontsize=18,color=col,ha='left',va='top')
-                plt.plot([0.5e-2,0.21e-2],[5e-14,1e-13],'k-',lw=1.5)
+                plt.text(0.7e-2,3e-11,r'{\bf TOO}',fontsize=12,ha='center',color=col)
+                plt.text(0.7e-2,1.5e-11,r'{\bf RAD}',fontsize=12,ha='center',color=col)
             else:
-                plt.text(0.6e-3,4e-1,r'{\bf TOORAD}',rotation=-25,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(0.25e-2,0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color=col)
         return
 
     def LAMPOST(ax,col=[0.8, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True):
@@ -592,8 +594,9 @@ class AxionPhoton():
         y[-1] = y2
         plt.plot(x,y,'k-',lw=1,zorder=10,alpha=0.9)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.8)
-        if text_on:
-            plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9)
+        #if text_on:
+
+        #    plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9)
         return
 
 
