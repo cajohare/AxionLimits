@@ -1,16 +1,20 @@
 # Axion-neutron coupling
 ---
-[<img align="right" height="200" src="../plots/plots_png/AxionNeutron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png)
+[<img align="right" height="300" src="../plots/plots_png/AxionNeutron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionNeutron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png)
+### &nbsp;
+### &nbsp;
 ---
-[<img align="right" height="200" src="../plots/plots_png/AxionNeutron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png)
+[<img align="right" height="300" src="../plots/plots_png/AxionNeutron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionNeutron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png)
+### &nbsp;
+### &nbsp;
 ---
 
 # Data files and references
