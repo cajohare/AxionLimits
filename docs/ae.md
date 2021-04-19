@@ -1,13 +1,13 @@
 # Axion-electron coupling
 ---
-[<img align="right" height="200" src="../plots/plots_png/AxionElectron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png)
+[<img align="right" height="200" src="../plots/plots_png/AxionElectron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.png)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png)
 ---
 [<img align="right" height="200" src="../plots/plots_png/AxionElectron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png)
-## Basic plot
+## Basic plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.png)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png)
