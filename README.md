@@ -23,12 +23,19 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [View details](docs/ap.md)
 [Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
-   \
-  
+   &nbsp; \
+  &nbsp; \
+  &nbsp; 
+
 ## Axion-neutron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](an.md)
 
-[View details](docs/an.md)
+[View details](docs/ap.md)\
+[Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
+[Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
+   &nbsp; \
+  &nbsp; \
+  &nbsp; 
 
 
 
