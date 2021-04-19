@@ -16,18 +16,18 @@ Plot of dimensionless coupling with projections ([pdf](https://github.com/cajoha
 
 
 ## Axion-electron coupling
-[<img align="right" width="200" src="plots/plots_png/AxionElectron.png">](docs/ae.md)
+[<img align="right" width="300" src="plots/plots_png/AxionElectron.png">](docs/ae.md)
 
-[**View details and data files**](docs/ae.md)\
+### [**View details and data files**](docs/ae.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png))\
    &nbsp; \
   &nbsp;
 
 ## Axion-neutron coupling
-[<img align="right" width="200" src="plots/plots_png/AxionNeutron.png">](docs/an.md)
+[<img align="right" width="300" src="plots/plots_png/AxionNeutron.png">](docs/an.md)
 
-[**View details and data files**](docs/an.md)\
+### [**View details and data files**](docs/an.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png))\
    &nbsp; \
@@ -35,18 +35,18 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
   &nbsp;
 
 ## Axion CP-violating couplings
-[<img align="right" width="200" src="plots/plots_png/ScalarNucleon.png">](docs/cp.md)
+[<img align="right" width="300" src="plots/plots_png/ScalarNucleon.png">](docs/cp.md)
 
-[**View details and data files**](docs/cp.md)\
+### [**View details and data files**](docs/cp.md)\
 Plot for scalar nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png))\
 Plot for electron-electron coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png))\
 Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png))\
   &nbsp;
 
 ## Dark photons
-[<img align="right" width="200" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
+[<img align="right" width="300" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
 
-[**View details and data files**](docs/dp.md)\
+### [**View details and data files**](docs/dp.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png))\
    &nbsp; \
   &nbsp; \
