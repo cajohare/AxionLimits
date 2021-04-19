@@ -10,7 +10,7 @@ This page contains plots, data files, and python notebooks, for limits on axions
 [<img align="right" width="300" src="plots/plots_png/AxionPhoton.png">](docs/ae.md)
 
 # [**Axion-photon coupling**](docs/ap.md)
-[**Data files**](docs/cp.md)\
+[**Data files**](docs/ap.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png))\
 Plot of dimensionless coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png))\
@@ -21,7 +21,7 @@ Plot of dimensionless coupling with projections ([pdf](https://github.com/cajoha
 [<img align="right" width="300" src="plots/plots_png/AxionElectron.png">](docs/ae.md)
 
 # [**Axion-electron coupling**](docs/ae.md)
-[**Data files**](docs/cp.md)\
+[**Data files**](docs/ae.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png))\
    &nbsp; \
@@ -32,7 +32,7 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 [<img align="right" width="300" src="plots/plots_png/AxionNeutron.png">](docs/an.md)
 
 # [**Axion-neutron coupling**](docs/an.md)
-[**Data files**](docs/cp.md)\
+[**Data files**](docs/an.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png))\
    &nbsp; \
@@ -55,7 +55,7 @@ Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits
 [<img align="right" width="300" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
 
 # [**Dark photons**](docs/dp.md)
-[**Data files**](docs/cp.md)\
+[**Data files**](docs/dp.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png))\
    &nbsp; \
   &nbsp; \
