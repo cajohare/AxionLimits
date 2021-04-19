@@ -21,19 +21,15 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
 [View details](docs/ap.md)
-\
-\
-\
-\
-
+[Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
+[Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
+   \
+  
 ## Axion-neutron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](an.md)
 
 [View details](docs/an.md)
- \
- \
- \
- \
+
 
 
 ## Acknowledgements
