@@ -10,7 +10,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion photon coupling
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
-[View details](docs/ap.md)\
+[**View details**](docs/ap.md)\
 [Download plot: Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
 [Download plot: Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
 [Download plot: Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
@@ -20,7 +20,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion-electron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionElectron.png">](ae.md)
 
-[**View details**](docs/ae.md)
+[**View details**](docs/ae.md)\
 [Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
@@ -30,7 +30,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion-neutron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](an.md)
 
-[View details](docs/an.md)\
+[**View details**](docs/an.md)\
 [Download plot: Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
 [Download plot: Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
    &nbsp; \
@@ -40,7 +40,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion CP-violating couplings
 [<img align="left" width="200" src="plots/plots_png/ScalarNucleon.png">](cp.md)
 
-[View details](docs/cp.md)\
+[**View details**](docs/cp.md)\
 [Download plot: Scalar-Nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)\
 [Download plot: Electron-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)\
 [Download plot: Nucleon-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)\
@@ -50,7 +50,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Dark photons
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](dp.md)
 
-[View details](docs/dp.md)\
+[**View details**](docs/dp.md)\
 [Dark photon constraints (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf)\
    &nbsp; \
   &nbsp; \
