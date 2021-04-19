@@ -14,7 +14,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
 [Download plot: Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
 [Download plot: Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
-[Download plot: Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)\
+[Download plot: Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
 
 
 ## Axion-electron coupling
@@ -24,6 +24,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
+      &nbsp; \
   &nbsp;
 
 ## Axion-neutron coupling
