@@ -10,23 +10,30 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion photon coupling
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
-* [View details](docs/ap.md)
-* [Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
-* [Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
-* [Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)
-* [Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
+[View details](docs/ap.md)\
+[Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
+[Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
+[Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
+[Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)\
 
 
 ## Axion-electron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
-* [View details](docs/ap.md)
-
+[View details](docs/ap.md)
+\
+\
+\
+\
 
 ## Axion-neutron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](an.md)
 
-* [View details](docs/an.md)
+[View details](docs/an.md)
+ \
+ \
+ \
+ \
 
 
 ## Acknowledgements
