@@ -27,8 +27,10 @@
 * Tokyo (Knirck et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Knirck.txt), [reference](https://arxiv.org/abs/1806.05120)
 * Tokyo (Suzuki et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Dish.txt), [reference](https://arxiv.org/abs/2003.13144)
 * Tokyo (Tomita et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Tomita.txt), [reference](https://arxiv.org/abs/2006.02828)
+* SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
 * WISPDMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WISPDMX.txt), [reference](https://arxiv.org/abs/1907.12449)
+* WSi Nanowire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WSi_Nanowire.txt), [reference](https://arxiv.org/abs/1903.05101)
 * Xenon100: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon100.txt), [reference](https://link.springer.com/article/10.1007%2FJHEP06%282017%29087)
 * Xenon1T: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T.txt), [reference](https://arxiv.org/abs/1907.11485)
 
@@ -41,12 +43,13 @@ Note that these have been recast using the scheme detailed in [arXiv:21??.?????]
 
 ## Astrophysical bounds
 * Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://arxiv.org/abs/2002.05165)
-* Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2002.05165)
 * IGM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2002.05165)
 * LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2002.05165)
 * Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/2002.05165)
-* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2002.05165)
 * Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Rydberg atoms: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Ryd.txt), any leads on the original reference for this?
 
 ## Cosmological bounds
 * Dark photon dark matter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DM.txt), [reference](https://arxiv.org/abs/1201.5902)
