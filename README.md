@@ -8,11 +8,11 @@ This page contains plots, data files, and python notebooks, for limits on axions
 ## Axion photon coupling
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
-[**View details**](docs/ap.md)\
-Download plot: Axion-photon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf),[png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png))\
-[Download plot: Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
-[Download plot: Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
-[Download plot: Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
+[**View details and limit data files**](docs/ap.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png))\
+Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png))\
+Plot of dimensionless coupling ([PDF](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png))\
+Plot of dimensionless coupling with projections ([PDF](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png))
 
 
 ## Axion-electron coupling
