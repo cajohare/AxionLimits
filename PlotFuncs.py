@@ -120,7 +120,7 @@ class AxionPhoton():
             return fig,ax
     def QCDAxion(ax,coupling='Photon',
                           C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
-                          cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False):
+                          cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False,C_center=1,C_width=0.8):
             if RescaleByMass:
                 rs1 = 1.0
                 rs2 = 0.0
@@ -144,7 +144,7 @@ class AxionPhoton():
                 m = logspace(log10(m_min),log10(m_max),n)
                 QCD = zeros(shape=(n,n))
                 for i in range(0,n):
-                    QCD[:,i] = norm.pdf(log10(g)-log10(g_x(1.0,m[i])),0.0,0.8)
+                    QCD[:,i] = norm.pdf(log10(g)-log10(g_x(C_center,m[i])),0.0,C_width)
                 cols = cm.get_cmap(cmap)
 
                 cols.set_under('w') # Set lowest color to white
@@ -313,12 +313,12 @@ class AxionPhoton():
         dat2 = loadtxt("limit_data/AxionPhoton/HAYSTAC_2020.txt")
 
         if rs1==0:
-            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,zorder=zo,lw=3)
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=2)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,zorder=zo,lw=2)
 
             if text_on:
                 if projection==False:
-                    plt.text(2.4e-5,5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+                    plt.text(2.1e-5,5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -360,7 +360,8 @@ class AxionPhoton():
         return
 
     def QUAX(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True):
-        # QUAX arXiv:[1903.06547]
+        # QUAX1 arXiv:[1903.06547]
+        # QUAX2 arXiv:[2012.09498]
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
@@ -371,20 +372,27 @@ class AxionPhoton():
             zo = 0
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
+        dat2 = loadtxt("limit_data/AxionPhoton/QUAX2.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
+
             if text_on:
-                plt.text(5.2e-5,0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+                plt.text(6e-5,0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color='k',lw=4,zorder=zo)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=3,zorder=zo)
             if text_on:
-                plt.text(dat[0,0]*1.1,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+                plt.text(dat2[0,0]*1.1,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+            plt.plot(dat2[0,0],dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+
         return
 
-    def ABRACADABRA(ax,col=[0.83, 0.07, 0.37],fs=15,projection=False,RescaleByMass=False,text_on=True):
+    def ABRACADABRA(ax,col=[0.83, 0.07, 0.37],fs=15,projection=False,RescaleByMass=False,text_on=True,lw=1):
         # ABRACADABRA arXiv:[1810.12257]
         if RescaleByMass:
             rs1 = 1.0
@@ -399,16 +407,16 @@ class AxionPhoton():
         x = dat[arange(0,n,20),0]
         y = dat[arange(0,n,20),1]
         y[-1] = y2
-        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=1,zorder=2.01,alpha=0.5)
+        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=lw,zorder=2.01,alpha=0.5)
 
 
         dat = loadtxt("limit_data/AxionPhoton/ABRACADABRA_run2.txt")
         n = shape(dat)[0]
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=[0.83, 0.07, 0.37],zorder=2.02)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=2.02)
         x = dat[arange(0,n,1),0]
         y = dat[arange(0,n,1),1]
         y[-1] = y2
-        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=1,zorder=2.02,alpha=0.5)
+        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=lw,zorder=2.02,alpha=0.5)
 
 
         if text_on:
@@ -428,7 +436,7 @@ class AxionPhoton():
                     plt.plot([dat[-1,0],dat[-1,0]],[dat[-1,1]/(rs1*2e-10*dat[-1,0]+rs2),1e6],lw=1.5,color=col,zorder=0)
         return
 
-    def ORGAN(ax,col='crimson',projection=False,fs=15,RescaleByMass=False,text_on=True):
+    def ORGAN(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True):
         # ORGAN arXiv[1706.00209]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -438,7 +446,6 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        col = [0.8, 0.0, 0.0]
         dat = loadtxt("limit_data/AxionPhoton/ORGAN.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=col,facecolor=col,zorder=0.1,lw=2)
 
@@ -622,7 +629,7 @@ class AxionPhoton():
             plt.text(1e-11,1.3e-12,r'{\bf ADBC}',rotation=26,fontsize=fs,color=col,ha='left',va='top')
         return
 
-    def SHAFT(ax,col='red',fs=16,text_on=True):
+    def SHAFT(ax,col='red',fs=16,text_on=True,lw=1):
         # SHAFT arXiv:[2003.03348]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/SHAFT.txt")
@@ -630,7 +637,7 @@ class AxionPhoton():
         x = dat[arange(0,n,2),0]
         y = dat[arange(0,n,2),1]
         y[-1] = y2
-        plt.plot(x,y,'k-',lw=1,zorder=1.81,alpha=0.5)
+        plt.plot(x,y,'k-',lw=lw,zorder=1.81,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.8)
         if text_on:
             plt.text(0.8e-10,3e-10,r'{\bf SHAFT}',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=9)
@@ -810,7 +817,6 @@ class AxionPhoton():
         plt.fill_between(HYDRA[:,0],HYDRA[:,1],y2=y2,edgecolor=None,facecolor=HYDRA_col,zorder=0.23)
         if text_on:
             plt.text(1.2e-12,2e-11,r'{\bf Hydra}',fontsize=fs-2,color='w',ha='left',va='top')
-
 
 
         # M87 Limits from arXiv:[1703.07354]
