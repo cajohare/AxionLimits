@@ -24,7 +24,6 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
-      &nbsp; \
   &nbsp;
 
 ## Axion-neutron coupling
