@@ -44,7 +44,7 @@ Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits
   &nbsp;
 
 ## Dark photons
-[<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](dp.md)
+[<img align="left" width="200" src="plots/plots_png/DarkPhoton.png">](dp.md)
 
 [**View details and data files**](docs/dp.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png))\
