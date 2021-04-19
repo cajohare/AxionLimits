@@ -24,7 +24,6 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
-  &nbsp; \
   &nbsp;
 
 ## Axion-neutron coupling
@@ -34,11 +33,10 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
 [Download plot: Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
    &nbsp; \
-  &nbsp; \
   &nbsp;
 
 ## Axion CP-violating couplings
-[<img align="left" width="200" src="plots/plots_png/AxionCPV.png">](cp.md)
+[<img align="left" width="200" src="plots/plots_png/ScalarNucleon.png">](cp.md)
 
 [View details](docs/cp.md)\
 [Download plot: Scalar-Nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)\
