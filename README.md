@@ -33,13 +33,17 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
 
 ### Closeups
-[<img src="plots/plots_png/AxionPhoton_IAXOCloseup.png" height="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
-[<img src="plots/plots_png/AxionPhoton_AstroCloseUp.png" height="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
-[<img src="plots/plots_png/AxionPhoton_RadioFreqCloseup.png" height="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_IAXOCloseup.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_AstroCloseUp.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_RadioFreqCloseup.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
 
 Helioscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_IAXOCloseup.pdf)\
 Astro bounds: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.pdf)\
 Haloscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.pdf)
+
+| ![<img src="plots/plots_png/AxionPhoton_IAXOCloseup.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb) | 
+|:--:| 
+| *Space* |
 
 ### Haloscopes:
 * ABRACADABRA (Run 1): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt)  [reference](https://arxiv.org/abs/1810.12257)
