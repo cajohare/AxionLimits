@@ -11,33 +11,51 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
 
 [View details](docs/ap.md)\
-[Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
-[Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
-[Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
-[Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)\
+[Download plot: Axion-photon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
+[Download plot: Axion-photon coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)\
+[Download plot: Axion-photon dimensionless coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)\
+[Download plot: Axion-photon dimensionless coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)\
 
 
 ## Axion-electron coupling
-[<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">](ap.md)
+[<img align="left" width="200" src="plots/plots_png/AxionElectron.png">](ae.md)
 
-[View details](docs/ap.md)
-[Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
-[Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
+[View details](docs/ae.md)
+[Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
+[Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
   &nbsp; \
-  &nbsp; 
+  &nbsp;
 
 ## Axion-neutron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](an.md)
 
-[View details](docs/ap.md)\
-[Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
-[Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
+[View details](docs/an.md)\
+[Download plot: Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
+[Download plot: Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
    &nbsp; \
   &nbsp; \
-  &nbsp; 
+  &nbsp;
 
+## Axion CP-violating couplings
+[<img align="left" width="200" src="plots/plots_png/AxionCPV.png">](cp.md)
 
+[View details](docs/cp.md)\
+[Download plot: Scalar-Nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)\
+[Download plot: Electron-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)\
+[Download plot: Nucleon-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)\
+  &nbsp; \
+  &nbsp;
+
+## Dark photons
+[<img align="left" width="200" src="plots/plots_png/AxionNeutron.png">](dp.md)
+
+[View details](docs/dp.md)\
+[Dark photon constraints (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf)\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
 
 ## Acknowledgements
 Thank you to: Masha Baryakhtar, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Sebastian Hoof, David Marsh, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, and Edoardo Vitagliano for comments, corrections and suggestions that have greatly helped improve these plots.
