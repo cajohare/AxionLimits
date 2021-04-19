@@ -1,6 +1,6 @@
 # Dark photon limits
 ---
-[<img align="right" height="200" src="../plots/plots_png/DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png)
+[<img align="right" height="500" src="../plots/plots_png/DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/DarkPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.png)
