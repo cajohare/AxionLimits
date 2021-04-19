@@ -15,12 +15,38 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 * [Dark Photon kinetic mixing](docs/dp.md)
 
 
-[<img src="plots/plots_png/AxionPhoton.png" height="210">](docs/ap.md)
-[<img src="plots/plots_png/AxionElectron.png" height="210">](docs/ae.md)\
-[<img src="plots/plots_png/AxionNeutron.png" height="210">](docs/an.md)
-[<img src="plots/plots_png/ScalarNucleon.png" height="210">](docs/cp.md)\
-[<img src="plots/plots_png/DarkPhoton.png" height="210">](docs/cp.md)
+## Axion photon coupling
+<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">
 
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)
+
+---
+
+## Axion photon coupling
+<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">
+
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)
+
+---
+
+## Axion photon coupling
+<img align="left" width="200" src="plots/plots_png/AxionPhoton.png">
+
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)\
+[Axion-photon coupling](docs/ap.md)
+
+---
 
 ## Acknowledgements
 Thank you to: Masha Baryakhtar, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Maurizio Giannotti, Alexander Gramolin, Sebastian Hoof, David Marsh, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, and Edoardo Vitagliano for comments, corrections and suggestions that have greatly helped improve these plots.
