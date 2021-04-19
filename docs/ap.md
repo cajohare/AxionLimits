@@ -1,24 +1,24 @@
 # Axion-photon coupling
 ---
-[<img align="left" height="200" src="../plots/plots_png/AxionPhoton.png">]
+<img align="left" height="200" src="../plots/plots_png/AxionPhoton.png">
 # Basic plot
 ### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.png)
 ### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
 ---
-[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_with_Projections.png">]
+<img align="left" height="200" src="../plots/plots_png/AxionPhoton_with_Projections.png">
 # Basic plot with projections
 ### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.png)
 ### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png)
 ---
-[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled_NoProjections.png">]
+<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled_NoProjections.png">
 # Basic plot with projections
 ### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.png)
 ### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png)
 ---
-[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled.png">]
+<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled.png">
 # Basic plot with projections
 ### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.png)
