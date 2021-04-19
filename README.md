@@ -7,7 +7,7 @@ The purpose of this website is to host data files, and python notebooks needed t
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionPhoton.png">](docs/ae.md)
+[<img align="right" width="300" src="plots/plots_png/AxionPhoton.png">](docs/ap.md)
 
 # [**Axion-photon coupling**](docs/ap.md)
 [**Data files**](docs/ap.md)\
