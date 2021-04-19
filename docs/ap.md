@@ -2,57 +2,46 @@
 ---
 [<img align="left" height="200" src="../plots/plots_png/AxionPhoton.png">](docs/ap.md)
 # Basic plot
-### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
-### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.png)
-### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
 ---
 [<img align="left" height="200" src="../plots/plots_png/AxionPhoton_with_Projections.png">](docs/ap.md)
 # Basic plot with projections
-### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
-### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.png)
-### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png)
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png)
 ---
 [<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled_NoProjections.png">](docs/ap.md)
-# Basic plot with projections
-### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
-### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.png)
-### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png)
+# Dimensionless coupling
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png)
 ---
 [<img align="left" height="200" src="../plots/plots_png/AxionPhoton_Rescaled.png">](docs/ap.md)
-# Basic plot with projections
-### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
-### [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.png)
-### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png)
+# Dimensionless coupling with projections
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png)
 ---
-
-
-[<img src="../plots/plots_png/AxionPhoton.png" width="300">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
-
-###  With projected limits
-
-[<img src="../plots/plots_png/AxionPhoton_with_Projections.png" width="300">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.pdf)
-
-### Dimensionless Axion-photon coupling
-
-[<img src="../plots/plots_png/AxionPhoton_Rescaled.png" width="300">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled_NoProjections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled_NoProjections.pdf)
-
-### Dimensionless Axion-photon coupling (with projected limits)
-
-[<img src="../plots/plots_png/AxionPhoton_Rescaled.png" width="300">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
-
-### Closeups
-[<img src="../plots/plots_png/AxionPhoton_IAXOCloseup.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)\
-Helioscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_IAXOCloseup.pdf)
-
-[<img src="../plots/plots_png/AxionPhoton_AstroCloseUp.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)\
-Astro bounds: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.pdf)
-
-[<img src="../plots/plots_png/AxionPhoton_RadioFreqCloseup.png" height="210">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)\
-Haloscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.pdf)
+[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_IAXOCloseup.png">](docs/ap.md)
+# Helioscope closeup
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_IAXOCloseup.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png)
+---
+[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_AstroCloseUp.png">](docs/ap.md)
+# High energy astrophysics limits closeup
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png)
+---
+[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup.png">](docs/ap.md)
+# High energy astrophysics limits closeup
+### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.png)
+### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
+---
 
 ## Data files and references
 
