@@ -1,6 +1,6 @@
 # Axion-photon coupling
 Click on the plots to see the notebook used to create it
-
+---
 [<img align="left" height="200" src="../plots/plots_png/AxionPhoton.png">](docs/ae.md)
 # Basic plot
 ### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
