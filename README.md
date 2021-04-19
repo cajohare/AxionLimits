@@ -20,7 +20,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 ## Axion-electron coupling
 [<img align="left" width="200" src="plots/plots_png/AxionElectron.png">](ae.md)
 
-[View details](docs/ae.md)
+[**View details**](docs/ae.md)
 [Download plot: Axion-electron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)\
 [Download plot: Axion-electron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
    &nbsp; \
@@ -45,7 +45,6 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Electron-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)\
 [Download plot: Nucleon-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)\
   &nbsp; \
-     &nbsp; \
   &nbsp;
 
 ## Dark photons
