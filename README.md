@@ -41,7 +41,7 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/ScalarNucleon.png">](docs/cp.md)
+[<img align="right" width="300" src="plots/plots_png/MonopoleDipole_ElectronNucleon.png">](docs/cp.md)
 
 # [**Axion CP-violating couplings**](docs/cp.md)
 [**Data files**](docs/cp.md)\
