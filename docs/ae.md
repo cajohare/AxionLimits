@@ -1,7 +1,9 @@
 # Axion-electron coupling
-[<img src="../plots/plots_png/AxionElectron_with_Projections.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)
-Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)\
-Download (without projections): [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
+[<img src="../plots/plots_png/AxionElectron.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)\
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf)
+
+[<img src="../plots/plots_png/AxionElectron_with_Projections.png" width="1000">](https://github.com/cajohare/AxionLimits/blob/master/AxionElectron.ipynb)\
+Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf)
 
 ### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
