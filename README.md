@@ -15,11 +15,11 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 * [Dark Photon kinetic mixing](docs/dp.md)
 
 
-[<img src="../plots/plots_png/AxionPhoton.png" height="210">](docs/ap.md)
-[<img src="../plots/plots_png/AxionElectron.png" height="210">](docs/ae.md)\
-[<img src="../plots/plots_png/AxionNeutron.png" height="210">](docs/an.md)
-[<img src="../plots/plots_png/ScalarNucleon.png" height="210">](docs/cp.md)\
-[<img src="../plots/plots_png/DarkPhoton.png" height="210">](docs/cp.md)
+[<img src="plots/plots_png/AxionPhoton.png" height="210">](docs/ap.md)
+[<img src="plots/plots_png/AxionElectron.png" height="210">](docs/ae.md)\
+[<img src="plots/plots_png/AxionNeutron.png" height="210">](docs/an.md)
+[<img src="plots/plots_png/ScalarNucleon.png" height="210">](docs/cp.md)\
+[<img src="plots/plots_png/DarkPhoton.png" height="210">](docs/cp.md)
 
 
 ## Acknowledgements
