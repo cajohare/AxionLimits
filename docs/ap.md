@@ -4,13 +4,10 @@ Click on the plots to see the notebook used to create it
 [<img align="left" height="300" src="../plots/plots_png/AxionPhoton.png">](docs/ae.md)
 
 # Basic plot
-[notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
-[png](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.png)\
-[png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)\
-&nbsp; \ 
-&nbsp; \ 
-&nbsp; \
-&nbsp; 
+### [notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
+### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.png)
+### [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
+--
 
 
 [<img src="../plots/plots_png/AxionPhoton.png" width="300">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)\
