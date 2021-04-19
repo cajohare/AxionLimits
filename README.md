@@ -33,6 +33,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Axion-neutron coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)\
 [Download plot: Axion-neutron coupling with projections (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)\
    &nbsp; \
+      &nbsp; \
   &nbsp;
 
 ## Axion CP-violating couplings
@@ -43,6 +44,7 @@ Please email me [ciaran.aj.ohare@gmail.com] or make a pull request if you would 
 [Download plot: Electron-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)\
 [Download plot: Nucleon-nucleon coupling (PDF)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)\
   &nbsp; \
+     &nbsp; \
   &nbsp;
 
 ## Dark photons
