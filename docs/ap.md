@@ -36,8 +36,8 @@
 ### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.png)
 ### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png)
 ---
-[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup.png">]((https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
-# High energy astrophysics limits closeup
+[<img align="left" height="200" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
+# Haloscopes closeup
 ### [View Notebook](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
 ### [Download pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.png)
 ### [Download png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
