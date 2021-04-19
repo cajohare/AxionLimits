@@ -33,9 +33,10 @@ Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_p
 Download: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Rescaled.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Rescaled.pdf)
 
 ### Closeups
-[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
-[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
-[<img src="plots/plots_png/AxionPhoton_Rescaled.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_IAXOCloseup.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_AstroCloseUp.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+[<img src="plots/plots_png/AxionPhoton_RadioFreqCloseup.png" width="200">](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+
 Helioscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_IAXOCloseup.pdf)\
 Astro bounds: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.pdf)\
 Haloscopes: [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png), [pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.pdf)
