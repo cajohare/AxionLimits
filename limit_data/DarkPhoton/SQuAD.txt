@@ -1,0 +1,5 @@
+# Superconducting cubit
+# https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.126.141302
+# mass [eV]  kinetic mixing
+24.86e-6 1.68e-15
+24.86e-6 1.68e-15

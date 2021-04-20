@@ -29,6 +29,7 @@
 * Tokyo (Tomita et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Tomita.txt), [reference](https://arxiv.org/abs/2006.02828)
 * SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
+* SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)
 * WISPDMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WISPDMX.txt), [reference](https://arxiv.org/abs/1907.12449)
 * WSi Nanowire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WSi_Nanowire.txt), [reference](https://arxiv.org/abs/1903.05101)
 * Xenon100: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon100.txt), [reference](https://link.springer.com/article/10.1007%2FJHEP06%282017%29087)
