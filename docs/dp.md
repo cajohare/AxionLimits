@@ -52,9 +52,11 @@ Note that these have been recast using the scheme detailed in [arXiv:21??.?????]
 * Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/2002.05165)
 * Rydberg atoms: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Ryd.txt), any leads on the original reference for this?
 
-## Cosmological bounds on Dark Photon Dark Matter
-* Cosmolgy (Arias et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DM.txt), [reference](https://arxiv.org/abs/1201.5902)
-* Cosmology (homogeneous plasma, Witte et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_combined_Witte.txt), [reference](https://arxiv.org/abs/1911.05086)
-* Cosmology (inhomogeneous plasma, Witte et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_combined_Witte_inhomogeneous.txt), [reference](https://arxiv.org/abs/2003.13698)
-* Cosmology (inhomogeneous plasma, Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_combined.txt), [reference](https://arxiv.org/abs/2002.05165)
-* HeII reionisation (inhomogenous plasma, Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HeII.txt), [reference](https://arxiv.org/abs/2002.05165)
+## Cosmological bounds on Dark photons
+* COBE/FIRAS (Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS_Caputo.txt), [reference](https://arxiv.org/abs/2002.05165)
+
+## Cosmological bounds on Dark Photon as Dark Matter (DPDM)
+* Arias et al.: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Arias.txt), [reference](https://arxiv.org/abs/1201.5902)
+* Witte et al. (homogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_homogeneous.txt), [reference](https://arxiv.org/abs/1911.05086)
+* Witte et al. (inhomogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_inhomogeneous.txt), [reference](https://arxiv.org/abs/2003.13698)
+* Caputo et al. (HeII reionisation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Caputo_HeII.txt), [reference](https://arxiv.org/abs/2002.05165)
