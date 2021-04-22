@@ -1,0 +1,5 @@
+# DM pathfinder
+# 1906.08814
+# mass [eV]  kinetic mixing
+2.031e-9 1.5e-9
+2.039e-9 1.5e-9
