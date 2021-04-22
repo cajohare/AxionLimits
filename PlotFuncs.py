@@ -331,7 +331,6 @@ class AxionPhoton():
         return
 
     def CAPP(ax,col=[1, 0.1, 0.37],fs=15,RescaleByMass=False,text_on=True):
-        # CAPP arXiv:[2001.05102]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
             rs1 = 1.0
@@ -341,11 +340,14 @@ class AxionPhoton():
             rs1 = 0.0
             rs2 = 1.0
             zo = 0
-        dat = loadtxt("limit_data/AxionPhoton/CAPP-8TB.txt")
-        dat2 = loadtxt("limit_data/AxionPhoton/CAPP_2020.txt")
+        dat = loadtxt("limit_data/AxionPhoton/CAPP-1.txt")
+        dat2 = loadtxt("limit_data/AxionPhoton/CAPP-2.txt")
+        dat3 = loadtxt("limit_data/AxionPhoton/CAPP-3.txt")
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col)
+
             if text_on:
                 plt.text(0.8e-5,0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top')
         else:
@@ -355,8 +357,12 @@ class AxionPhoton():
                 plt.text(dat[0,0]*1.1,y2*1.8,r'{\bf CAPP}',fontsize=fs,color=col,rotation=40,ha='left',va='top',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             imin = argmin(dat2[:,1])
-            plt.plot(dat2[imin,0],dat2[imin,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
-            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat[0,0]+rs2),y2=y2,color=col)
+            plt.plot(dat2[imin,0],dat2[imin,1]/(rs1*2e-10*dat2[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+            imin = argmin(dat3[:,1])
+            plt.plot(dat3[imin,0],dat3[imin,1]/(rs1*2e-10*dat3[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col)
+
         return
 
     def QUAX(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True):
