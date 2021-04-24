@@ -1,0 +1,5 @@
+# Solar-L global fit
+# https://arxiv.org/pdf/1501.01639.pdf
+# mass [eV]  kinetic mixing
+1e-6	1.7877548065299094e-12
+7.52922243676292	1.7877548065299094e-12
