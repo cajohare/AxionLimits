@@ -39,9 +39,12 @@
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)
 * CAST: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CAST.txt), [reference](https://arxiv.org/abs/0801.1527)
 * CROWS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CROWS.txt), [reference](https://arxiv.org/abs/1310.8098)
-* LSW-UWA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_UWA.txt), [reference](https://arxiv.org/abs/1003.0964)
 * LSW-AMDX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_ADMX.txt), [reference](https://arxiv.org/abs/1410.5244)
+* LSW-CERN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_CERN.txt), [reference](https://arxiv.org/abs/1207.3275)
+* LSW-SPring-8: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SPring-8.txt), [reference](https://arxiv.org/abs/1502.04490)
+* LSW-UWA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_UWA.txt), [reference](https://arxiv.org/abs/1003.0964)
 * SHIPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHIPS.txt), [reference](https://arxiv.org/abs/1502.04490)
+
 
 ## Experimental searches for DPDM
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPHA.txt), [reference](https://arxiv.org/abs/2006.06836)
@@ -66,7 +69,7 @@
 * Xenon1T S1+S2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
 
 ## Axion Haloscopes (recast axion bounds)
-Note that these have been recast using the scheme detailed in [arXiv:21??.?????](https://arxiv.org/abs/2101.?????)
+Note that these have been recast using the scheme detailed in [arXiv:21??.?????](https://arxiv.org/abs/2105.?????)
 * ADMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ADMX.txt)
 * CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CAPP.txt)
 * HAYSTAC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HAYSTAC.txt)
@@ -76,14 +79,16 @@ Note that these have been recast using the scheme detailed in [arXiv:21??.?????]
 * TEXONO [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/TEXONO.txt), [reference](https://arxiv.org/abs/1804.10777)
 
 ## Astrophysical bounds
-* Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://arxiv.org/abs/2002.05165)
-* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2002.05165)
-* IGM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/2002.05165)
-* Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2002.05165)
-* LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2002.05165)
-* Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://arxiv.org/abs/1002.0329)
+* Crab Nebula gamma rays (2008, DP-photon oscillations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab.txt), [reference](https://arxiv.org/abs/0810.5501)
+* Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
+* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/1305.2920)
+* IGM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
+* Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/1002.0329)
+* LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
+* Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/1305.2920)
 * Solar luminosity (global fit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar-Global.txt), [reference](https://arxiv.org/abs/1501.01639)
-* Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/1305.2920)
 
 ## Cosmological bounds on Dark photons
 * COBE/FIRAS (Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/2002.05165)

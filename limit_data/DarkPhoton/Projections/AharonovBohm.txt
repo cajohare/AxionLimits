@@ -1,4 +1,4 @@
-# MADMAX
+# Aharonov-Bohm experiment proposal
 # https://arxiv.org/pdf/1603.01282.pdf
 # mass [eV]  kinetic mixing
 1.52544880318482e-7	0.000005538013676544898
