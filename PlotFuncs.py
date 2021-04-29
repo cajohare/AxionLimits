@@ -392,7 +392,7 @@ class AxionPhoton():
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=3,zorder=zo)
             if text_on:
-                plt.text(dat2[0,0]*1.1,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+                plt.text(dat2[0,0]*1.2,y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             plt.plot(dat2[0,0],dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
 
@@ -448,10 +448,11 @@ class AxionPhoton():
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
-            zo = 3
+            zo = 6
         else:
             rs1 = 0.0
             rs2 = 1.0
+            zo = 0
         dat = loadtxt("limit_data/AxionPhoton/ORGAN.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=col,facecolor=col,zorder=0.1,lw=2)
 
@@ -467,7 +468,6 @@ class AxionPhoton():
                     plt.text(1.2e-4,1e3,r'{\bf ORGAN}',fontsize=18,color='darkred',rotation=-90,ha='left',va='top')
 
         else:
-            zo = 0
             if RescaleByMass:
                 plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
@@ -478,6 +478,30 @@ class AxionPhoton():
                     plt.text(110e-6,1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
                 else:
                     plt.text(dat[0,0]*1.1,y2*1.2,r'{\bf ORGAN}',fontsize=fs-3,color=col,rotation=40,ha='left',rotation_mode='anchor')
+
+        return
+
+    def RADES(ax,col='blueviolet',fs=15,RescaleByMass=False,text_on=True):
+        # RADES 2104.13798
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+            zo = 6
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+            zo = 0
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/RADES.txt")
+
+        if rs1==0:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
+        else:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
+            if text_on:
+                plt.text(dat[0,0]*0.88,y2*1.2,r'{\bf RADES}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
 
         return
 
@@ -503,7 +527,7 @@ class AxionPhoton():
         return
 
 
-    def PlasmaHaloscope(ax,col='darkred',fs=18,RescaleByMass=False,text_on=True):
+    def ALPHA(ax,col='darkred',fs=18,RescaleByMass=False,text_on=True):
         # Plasma Haloscope arXiv[1904.11872]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -512,16 +536,16 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        dat = loadtxt("limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt")
+        dat = loadtxt("limit_data/AxionPhoton/Projections/ALPHA.txt")
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=2,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if text_on:
             if rs1==0:
-                plt.text(1.5e-4,1e-15,r'{\bf Plasma haloscope}',fontsize=18,color=col,rotation=0,ha='left',va='top')
+                plt.text(1.5e-4,1e-15,r'{\bf ALPHA}',fontsize=18,color=col,rotation=0,ha='left',va='top')
                 plt.plot([1.3e-4,0.5e-4],[1e-15,0.7e-14],'k-',lw=1.5)
             else:
-                plt.text(2.3e-4,5e-1,r'{\bf Plasma}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
-                plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
+                plt.text(2.3e-4,5e-1,r'{\bf ALPHA}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
+                #plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
         return
 
     def KLASH(ax,col=[0.6, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True):
@@ -766,7 +790,7 @@ class AxionPhoton():
         AxionPhoton.UPLOAD(ax,text_on=text_on)
 
         if projection:
-            AxionPhoton.PlasmaHaloscope(ax,text_on=text_on)
+            AxionPhoton.ALPHA(ax,text_on=text_on)
             AxionPhoton.MADMAX(ax,text_on=text_on)
             AxionPhoton.KLASH(ax,text_on=text_on)
             AxionPhoton.TOORAD(ax,text_on=text_on)
@@ -775,7 +799,8 @@ class AxionPhoton():
             AxionPhoton.DANCE(ax,text_on=text_on)
             AxionPhoton.aLIGO(ax,text_on=text_on)
         else:
-            AxionPhoton.QUAX(ax,text_on=text_on)
+            AxionPhoton.QUAX(ax,text_on=False)
+            #AxionPhoton.RADES(ax,text_on=False)
         return
 
     def LSW(ax,projection=True):
