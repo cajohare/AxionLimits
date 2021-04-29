@@ -1,6 +1,6 @@
 # Dark photon limits
 ---
-[<img align="right" height="500" src="../plots/plots_png/DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png)
+[<img align="right" height="300" src="../plots/plots_png/DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/DarkPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.pdf)
@@ -9,18 +9,12 @@
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
-### &nbsp;
-### &nbsp;
-### &nbsp;
 ---
-[<img align="right" height="500" src="../plots/plots_png/DarkPhoton_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_with_Projections.png)
+[<img align="right" height="300" src="../plots/plots_png/DarkPhoton_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_with_Projections.png)
 ## Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/DarkPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_with_Projections.png)
-### &nbsp;
-### &nbsp;
-### &nbsp;
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
