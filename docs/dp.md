@@ -1,11 +1,11 @@
 # Dark photon limits
 
-These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/2006.10415) so if you use them for whatever reason, please cite this paper too
+These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/2105.04565) so if you use them for whatever reason, please cite this paper too
 ```
 @article{Caputo:2021,
     author = "Caputo, A. and O'Hare, C.A.J. and Millar, A.J. and Vitagliano, E.",
     title = "{Dark photon limits: a cookbook}",
-    eprint = "2105.XXXXX",
+    eprint = "2105.04565",
     archivePrefix = "arXiv",
     primaryClass = "hep-ph",
     month = "05",
