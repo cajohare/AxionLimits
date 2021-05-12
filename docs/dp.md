@@ -1,4 +1,18 @@
 # Dark photon limits
+
+These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/2006.10415) so if you use them for whatever reason, please cite this paper too
+```
+@article{Caputo:2021,
+    author = "Caputo, A. and O'Hare, C.A.J. and Millar, A.J. and Vitagliano, E.",
+    title = "{Dark photon limits: a cookbook}",
+    eprint = "2105.XXXXX",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "05",
+    year = "2021"
+}
+```
+
 ---
 [<img align="right" height="300" src="../plots/plots_png/DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton.png)
 ## Basic plot
@@ -16,7 +30,19 @@
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="300" src="../plots/plots_png/DarkPhoton_Haloscopes_Closeup.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Haloscopes_Closeup.png)
+## Plot with projections
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/DarkPhoton.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_Haloscopes_Closeup.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Haloscopes_Closeup.png)
+### &nbsp;
+### &nbsp;
+---
 # Data files and references
+## Combined limits
+* Direct detection: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
+* Laboratory: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Laboratory.txt)
+* Stellar bounds: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Stellar.txt)
 
 ## Tests of coulomb law/photon mass
 * Atomic spectroscopy: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Spectroscopy.txt), [reference](https://arxiv.org/abs/1008.3536)
