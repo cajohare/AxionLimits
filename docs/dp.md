@@ -2,13 +2,14 @@
 
 These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/2105.04565) so if you use them for whatever reason, please cite this paper too
 ```
-@article{Caputo:2021,
-    author = "Caputo, A. and O'Hare, C.A.J. and Millar, A.J. and Vitagliano, E.",
+@article{Caputo:2021eaa,
+    author = "Caputo, Andrea and O'Hare, Ciaran A. J. and Millar, Alexander J. and Vitagliano, Edoardo",
     title = "{Dark photon limits: a cookbook}",
     eprint = "2105.04565",
     archivePrefix = "arXiv",
     primaryClass = "hep-ph",
-    month = "05",
+    reportNumber = "NORDITA-2021-036",
+    month = "5",
     year = "2021"
 }
 ```
