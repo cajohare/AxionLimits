@@ -1,5 +1,5 @@
 # Axion CP-violating couplings
-These plots appeared in the paper [O'Hare & Vitagliano. 2021](https://arxiv.org/abs/2010.03889) so if you use them for whatever reason, please cite this paper too
+These plots appeared in the paper [O'Hare & Vitagliano, PRD 102 115026 2021](https://arxiv.org/abs/2010.03889) so if you use them for whatever reason, please cite this paper too
 ```
 @article{OHare:2020wah,
     author = "O'Hare, Ciaran A. J. and Vitagliano, Edoardo",
