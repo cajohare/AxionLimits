@@ -40,8 +40,8 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/200
 ---
 # Data files and references
 ## Combined limits
-* Direct detection: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
-* Laboratory: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Laboratory.txt)
+* Direct detection (without axion haloscopes): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
+* photon-DP transitions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Laboratory.txt)
 * Stellar bounds: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Stellar.txt)
 
 ## Tests of coulomb law/photon mass
@@ -63,6 +63,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/200
 
 
 ## Experimental searches for DPDM
+### All files are true to their *original* sources, i.e. without any rescaling
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPHA.txt), [reference](https://arxiv.org/abs/2006.06836)
 * DAMIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DAMIC.txt), [reference](https://arxiv.org/abs/1907.12628)
 * Dark E-field Pilot: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkEfield.txt), [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DarkEfield.txt), [reference](https://arxiv.org/abs/2101.02805)
@@ -85,12 +86,29 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/200
 * Xenon1T S2 only: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T.txt), [reference](https://arxiv.org/abs/1907.11485)
 * Xenon1T S1+S2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
 
-## Axion Haloscopes (recast axion bounds)
-Note that these have been recast using the scheme detailed in [arXiv:21??.?????](https://arxiv.org/abs/2105.?????)
-* ADMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ADMX.txt)
-* CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CAPP.txt)
-* HAYSTAC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HAYSTAC.txt)
-* ORGAN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ORGAN.txt)
+## Direct detection
+These have been recast using the scheme detailed in [arXiv:21??.?????](https://arxiv.org/abs/2105.?????) so they all assume the fixed polarisation scenario for the DP polarisation distribution around the Earth. They also all assume 0.45 GeV/cm^3 for the DM density
+* ADMX 2009: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX.txt)
+* ADMX 2018: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX2018.txt)
+* ADMX 2019-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX2019-1.txt)
+* ADMX 2019-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX2019-2.txt)
+* ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX_Sidecar.txt)
+* ADMX SLIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX_SLIC.txt)
+* CAPP-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-1.txt)
+* CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-2.txt)
+* CAPP-3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-3.txt)
+* Dark E-field: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/DarkEfield.txt)
+* DM Pathfinder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/DM-Pathfinder.txt)
+* FUNK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/FUNK.txt)
+* HAYSTAC (2018): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/HAYSTAC.txt)
+* HAYSTAC (2020): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/HAYSTAC_2020.txt)
+* QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/QUAX.txt)
+* SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/SHUKET.txt)
+* SQuAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/SQuAD.txt)
+* Tokyo (Suzuki et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/Tokyo-Dish.txt)
+* Tokyo (Knirck et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/Tokyo-Suzuki.txt)
+* Tokyo (Tomita et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/Tokyo-Tomita.txt)
+* WISPDMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/WISPDMX.txt)
 
 ## Reactor neutrinos
 * TEXONO [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/TEXONO.txt), [reference](https://arxiv.org/abs/1804.10777)
