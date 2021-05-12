@@ -87,7 +87,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * Xenon1T S1+S2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
 
 ## Updated Experimental searches for DPDM
-These have been recast using the scheme detailed in [arXiv:21??.?????](https://arxiv.org/abs/2105.?????) so they all assume the fixed polarisation scenario for the DP polarisation distribution around the Earth. They also all assume 0.45 GeV/cm^3 for the DM density
+These have been recast using the scheme detailed in [arXiv:2105.04565](https://arxiv.org/abs/2105.04565) so they all assume the fixed polarisation scenario for the DP polarisation distribution around the Earth. They also all assume 0.45 GeV/cm^3 for the DM density
 * ADMX 2009: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX.txt)
 * ADMX 2018: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX2018.txt)
 * ADMX 2019-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ADMX2019-1.txt)
