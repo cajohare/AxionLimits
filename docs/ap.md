@@ -70,6 +70,7 @@
 * CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-2.txt), [reference](https://arxiv.org/abs/2008.10141)
 * CAPP-3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-3.txt), [reference](https://arxiv.org/abs/2012.10764)
 * DANCE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
+* DANCE (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2105.06252)
 * HAYSTAC (2018): [limit (low res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC.txt),[limit (high res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_highres.txt) [reference](https://arxiv.org/abs/1803.03690)
 * HAYSTAC (2020): [limit (low res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020.txt), [limit (high res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020_highres.txt), [reference](https://arxiv.org/abs/2008.01853)
 * KLASH: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/KLASH.txt), [reference](https://arxiv.org/abs/1707.06010)
