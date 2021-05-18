@@ -120,6 +120,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Crab Nebula gamma rays (2008, DP-photon oscillations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab.txt), [reference](https://arxiv.org/abs/0810.5501)
 * Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
 * Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/1305.2920)
+* Gas cloud heating: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GasClouds.txt), [reference](https://arxiv.org/abs/1812.10919)
 * IGM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
 * Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/1002.0329)
 * LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
