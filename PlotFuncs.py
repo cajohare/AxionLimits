@@ -872,7 +872,7 @@ class AxionPhoton():
         plt.plot(Mrk[:,0],Mrk[:,1],'k-',alpha=0.6,zorder=0.26,lw=lw)
         plt.fill_between(Mrk[:,0],Mrk[:,1],y2=y2,edgecolor=None,facecolor=Mrk_col,zorder=0.26)
         if text_on:
-            plt.text(4e-9,1.2e-10,r'{\bf Mrk 421}',fontsize=fs-3,color='w',ha='left',va='top')
+            plt.text(1e-9,5.5e-11,r'{\bf Mrk 421}',fontsize=fs-3,color='w',ha='left',va='top')
 
         # Fermi NGC1275 arXiv:[1603.06978]
         Fermi_col = [0.0, 0.42, 0.24]
