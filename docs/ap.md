@@ -96,7 +96,7 @@
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
 
 ### Astro bounds
-* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BlackHoleSpins_SI.txt), [reference](https://arxiv.org/abs/2011.11646)
+* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/M87.txt), [reference](https://arxiv.org/abs/1703.07354)
@@ -108,9 +108,9 @@
 * Fermi-LAT (Extragalactic SNe): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-gamma.txt), [reference](https://arxiv.org/abs/2006.06722)
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
 * Horizontal branch stars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HorizontalBranch.txt), [reference](https://arxiv.org/abs/1406.6053)
+* Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
 * Neutron Stars (Green Bank and Effelsberg) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_GreenBank.txt), [reference](https://arxiv.org/abs/2004.00011)
 * Neutron Stars (Jansky VLA) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_VLA.txt), [reference1](https://arxiv.org/abs/2008.01877), [reference2](https://arxiv.org/abs/2008.11188)
-* Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
 * SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_gamma.txt), [reference](https://arxiv.org/abs/1410.3747)
@@ -118,7 +118,7 @@
 * Super star clusters (NuSTAR Xray): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Xray-SuperStarClusters.txt), [reference](https://arxiv.org/abs/2008.03305)
 * Telescopes (MUSE Leo-T): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_MUSE.txt), [reference](https://arxiv.org/abs/2009.01310)
 * Telescopes (VIMOS Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_VIMOS.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)
-* THESEUS (ALP DM decay to Xrays): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/THESEUS.txt), [projection](https://arxiv.org/abs/2008.08306)
+* THESEUS (ALP DM decay to Xrays): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/THESEUS.txt), [reference](https://arxiv.org/abs/2008.08306)
 
 ### Cosmology
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)

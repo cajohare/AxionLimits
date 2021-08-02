@@ -24,7 +24,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * CASPEr-wind: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/CASPEr_wind.txt), [reference](https://arxiv.org/abs/1711.08999)
 * CASPEr-ZULF-Comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/CASPEr_Comagnetometer.txt), [reference](https://arxiv.org/abs/1901.10843)
 * CASPEr-ZULF-Sidechain: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/CASPEr_ZULF.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt), [reference](https://arxiv.org/abs/1902.04644)
-* nEDM (ultracold neutrons and mercury): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt), [reference](https://arxiv.org/abs/1902.04644)
+* nEDM (ultracold neutrons and mercury): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt), [reference](https://arxiv.org/abs/1708.06367)
 * NASDUCK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NASDUCK.txt), [reference](https://arxiv.org/abs/2105.04603)
 * K-3He comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/K-3He_Comagnetometer.txt), [reference](https://arxiv.org/abs/0809.4700)
 * Old comagnetometers: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/OldComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767)
@@ -36,6 +36,6 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * Proton storage ring: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/StorageRing.txt), [reference](https://arxiv.org/abs/2005.11867)
 
 ## Astro bounds
-* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BlackHoleSpins.txt), [reference](https://arxiv.org/abs/2009.07206)
+* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Hot Neutron Star (HESS J1731-347): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NeutronStars.txt), [reference](https://arxiv.org/abs/1806.07991)
 * SN1987 Cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SN1987A.txt), [reference](https://arxiv.org/abs/1906.11844)

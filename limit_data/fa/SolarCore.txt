@@ -1,0 +1,6 @@
+# Solar core finite density bounds from existence of neutrino lines 1/fa https://arxiv.org/pdf/1708.08464.pdf
+# Corrected by https://arxiv.org/pdf/2102.01082.pdf
+# Mass [eV] 1/f_a [GeV^-1]
+1e-30 3e-16
+8.609414907291512e-16	3e-16
+0.000001989618321620073	0.000001000000000000002

@@ -41,6 +41,18 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
+[<img align="right" width="300" src="plots/plots_png/AxionProton.png">](docs/ap.md)
+
+# [**Axion-proton coupling**](docs/ap.md)
+[**Data files**](docs/ap.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton.png))\
+Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton_with_Projections.png))\
+   &nbsp; \
+      &nbsp; \
+  &nbsp;
+
+---
+
 [<img align="right" width="300" src="plots/plots_png/MonopoleDipole_ElectronNucleon.png">](docs/cp.md)
 
 # [**Axion CP-violating couplings**](docs/cp.md)
@@ -48,6 +60,30 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 Plot for scalar nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png))\
 Plot for electron-electron coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png))\
 Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png))\
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/AxionEDM.png">](docs/aedm.md)
+
+# [**Axion-EDM coupling**](docs/aedm.md)
+[**Data files**](docs/aedm.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionEDM.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM.png))\
+Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionEDM_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM_with_Projections.png))\
+   &nbsp; \
+      &nbsp; \
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/Axion_fa.png">](docs/fa.md)
+
+# [**Mass versus f_a**](docs/fa.md)
+[**Data files**](docs/fa.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa.png))\
+   &nbsp; \
+   &nbsp; \
+      &nbsp; \
   &nbsp;
 
 ---
@@ -63,4 +99,4 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
   &nbsp;
 
 # Acknowledgements
-**Thank you to**: Masha Baryakhtar, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Maurizio Giannotti, Alexander Gramolin, Sebastian Hoof, Hai-Jun Li, David Marsh, Alex Millar, Pablo Quílez, Javier Redondo, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.
+**Thank you to**: Masha Baryakhtar, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Maurizio Giannotti, Alexander Gramolin, Sebastian Hoof, Hai-Jun Li, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Andreas Ringwald, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.

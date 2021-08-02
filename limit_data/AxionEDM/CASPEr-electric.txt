@@ -1,0 +1,5 @@
+# CASPEr-electric
+# Mass	C_{a-gamma-n} [GeV^-2]
+# https://arxiv.org/abs/2101.01241
+163e-9	1e0
+163e-9	9.4e-4

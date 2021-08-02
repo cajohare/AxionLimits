@@ -1,0 +1,7 @@
+# Binary pulsar (axion force not stronger than gravity) 1/f_a https://arxiv.org/pdf/1708.08464.pdf
+# Corrected by
+# Mass [eV] 1/fa [GeV^-1]
+1e-30	4.1988367066607805e-18
+3.0990463391994393e-16	 4.1988367066607805e-18
+3.0990463391994393e-16	 8.295009164996002e-18
+1e-30	8.295009164996002e-18
