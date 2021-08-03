@@ -269,6 +269,11 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
+        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye.txt')
+        dat[:,1] *= 100 # x100 to get Model A
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
+
         if text_on:
             if rs1==0:
                 plt.text(3e-6,0.8e-10,r'{\bf Neutron stars}',fontsize=fs,color='w',ha='left')
