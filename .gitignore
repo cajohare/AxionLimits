@@ -1,5 +1,9 @@
-data/recoils/AtmNu_Recoils_Xe.txt
-data/recoils/AtmNu_Recoils_Ar.txt
+refs/AxionLimits_Refs.aux
+refs/AxionLimits_Refs.bbl
+refs/AxionLimits_Refs.blg
+refs/AxionLimits_Refs.out
+refs/AxionLimits_Refs.synctex.gz
+refs/AxionLimits_Refs.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

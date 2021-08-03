@@ -4,5 +4,9 @@
 * AxionPhoton (g_ap) 
 * AxionElectron (g_ae)
 * AxionNeutron (g_an)
-
+* AxionProton (g_ap)
+* AxionEDM (g_agamman)
+* CP-violating couplings
+* f_a
+* DarkPhoton
 ---
