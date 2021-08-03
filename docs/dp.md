@@ -32,7 +32,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/DarkPhoton_Haloscopes_Closeup.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Haloscopes_Closeup.png)
-## Plot with projections
+## Haloscope closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/DarkPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_Haloscopes_Closeup.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Haloscopes_Closeup.png)
