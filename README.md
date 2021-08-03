@@ -31,7 +31,7 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionNeutron.png">](docs/an.md)
+[<img align="right" width="300" src="plots/plots_png/AxionNeutron_with_Projections.png">](docs/an.md)
 
 # [**Axion-neutron coupling**](docs/an.md)
 [**Data files**](docs/an.md)\
@@ -43,7 +43,7 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionProton.png">](docs/app.md)
+[<img align="right" width="300" src="plots/plots_png/AxionProton_with_Projections.png">](docs/app.md)
 
 # [**Axion-proton coupling**](docs/app.md)
 [**Data files**](docs/app.md)\
