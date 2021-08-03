@@ -1,4 +1,4 @@
 # SN1987A Raffelt Estimate fa = 4e8 GeV
 # Mass [eV]	1/fa [GeV^-1]
 1e-30 2.5e-9
-1e6 2.5e-9
+1e3 2.5e-9

@@ -1,5 +1,5 @@
 # Axion EDM coupling from nEDM (accounts for stochastic effect)
-# https://arxiv.org/pdf/1710.05271.pdf
+# https://arxiv.org/abs/1708.06367
 # mass [eV]   g_{a\gamma n} [GeV^-2]
 1.022930000139830321e-24 1.599339868767232009e-24
 1.745067290321748662e-24 1.584218170367245617e-24

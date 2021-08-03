@@ -11,7 +11,7 @@
 
 ---
 [<img align="right" height="300" src="../plots/plots_png/Axion_fa_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
-## Basic plot
+## Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Axion_fa.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
@@ -24,7 +24,7 @@
 ## Experiments
 * nEDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/nEDM.txt), [reference](https://arxiv.org/abs/1708.06367)
 * Storage Ring EDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
-* CASPEr-electric projections: [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt) [reference](https://arxiv.org/abs/1711.08999)
+* CASPEr-electric projections: [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)
 
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)

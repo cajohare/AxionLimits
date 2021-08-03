@@ -1,4 +1,4 @@
-\documentclass[9pt,twocolumn]{extarticle}
+\documentclass[8pt,twocolumn]{extarticle}
 \usepackage[colorlinks=true,pdfstartview=FitV,breaklinks=true]{hyperref}
 \usepackage[dvipsnames,table]{xcolor}
 \hypersetup{urlcolor=BlueViolet,
@@ -6,7 +6,8 @@
 	    linkcolor=PineGreen}
 \usepackage{geometry}
 \usepackage{mdframed}
- \geometry{a4paper,left=15mm,right=15mm,top=20mm,bottom=10mm}
+\usepackage[sc]{mathpazo}
+ \geometry{a4paper,left=15mm,right=15mm,top=20mm,bottom=15mm}
 \usepackage{authblk}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -16,7 +17,7 @@
 \setlength{\droptitle}{-8em}  
 
 \title{\textbf{References for AxionLimits webpage}}
-\author{Ciaran O'Hare}
+\author{Ciaran A. J. O'Hare}
 \affil{ARC Centre of Excellence for Dark Matter Particle Physics\\ 
 The University of Sydney, Camperdown, NSW 2006, Australia\\
 ciaran.ohare@sydney.edu.au}
@@ -97,7 +98,7 @@ ciaran.ohare@sydney.edu.au}
 \vspace{-2em}
 \subsection*{Cosmology}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
-    \item Cosmology (ionisation fraction, EBL, X-rays)~\cite{Cadamuro:2011fd}
+    \item Ionisation fraction, EBL, X-rays~\cite{Cadamuro:2011fd}
     \item BBN+$N_{\rm eff}$~\cite{Depta:2020wmr}
 \end{itemize}
 \end{mdframed}
@@ -139,7 +140,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in~\cite
     \item Old comagnetometers~\cite{Bloch:2019lcy}
     \item Torsion balance~\cite{Adelberger:2006dh}
     \item Hot Neutron Star (HESS J1731-347)~\cite{Beznogov:2018fda}
-    \item SN1987 Cooling~\cite{Carenza:2019pxu}
+    \item SN1987A Cooling~\cite{Carenza:2019pxu}
     \item SNO (deuterium dissasociation)~\cite{Bhusal:2020bvx}
     \item Proton storage ring (projection)~\cite{Graham:2020kai}
     \item DM comagnetometer (projection)~\cite{Bloch:2019lcy}
@@ -178,7 +179,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in~\cite
 \vspace{-1em}
 \section{CP-violating couplings}\vspace{-0.5em}
 Combined constraints~\cite{OHare:2020wah}
-\subsection*{Scalar-nucleon}
+\subsection*{Scalar-nucleon}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
 	\item Red giants~\cite{Hardy:2016kme}
 	\item MICROSCOPE~\cite{Berge:2017ovy}.
@@ -233,6 +234,7 @@ Combined constraints~\cite{OHare:2020wah}
 
 \begin{mdframed}
 \section{Dark photons}\vspace{-0.5em}
+Combined constraints~\cite{Caputo:2021eaa}
 \subsection*{DP-SM photon transitions}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
 \item Coulomb~\cite{Goldhaber:2008xy,Williams:1971ms,Bartlett:1988yy,Tu:2005ge,Kroff:2020zhp},
@@ -287,8 +289,9 @@ Combined constraints~\cite{OHare:2020wah}
 \end{itemize}
 \end{mdframed}
 
-
+\onecolumn{
 \bibliographystyle{bibi}
 \bibliography{biblio}
+}
 
 \end{document}
