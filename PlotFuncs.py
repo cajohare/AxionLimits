@@ -1942,22 +1942,35 @@ class AxionEDM():
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs)
         return
 
-    def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='ForestGreen',text_col='w',text_rot=0,fs=33,zorder=1):
+    def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
         dat = loadtxt('limit_data/AxionEDM/SN1987A.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right')
         return
 
-    def CASPEr(ax,text_pos=[130e-9,1e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False):
+    def CASPEr(ax,text_pos=[130e-9,1e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False,text_on=True):
         dat = loadtxt('limit_data/AxionEDM/CASPEr-electric.txt')
         plt.plot(dat[:,0],dat[:,1],'-',color=col,zorder=13,lw=4)
-        plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=text_col,fontsize=fs,ha='right',zorder=zorder)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=text_col,fontsize=fs,ha='right',zorder=zorder)
         if projection:
-            dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric.txt')
+            dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseI.txt')
             plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
-            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.1,zorder=-10)
-            plt.text(1e-9,1.9e-18,'CASPEr-electric',rotation=51,fontsize=25,color=col)
+            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+
+            dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseII.txt')
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
+            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+
+            dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseIII.txt')
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
+            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+            if text_on:
+                plt.text(1.5e-12,1.5e-13,r'{\bf CASPEr-electric}',rotation=37,fontsize=25,color=col)
+                plt.text(1e-10,0.15e-11,'phase I',rotation=38,fontsize=20,color=col)
+                plt.text(1.5e-8,3e-15,'phase II',rotation=49,fontsize=20,color=col)
+                plt.text(7e-8,0.3e-15,'phase III',rotation=49,fontsize=20,color=col)
         return
 #==============================================================================#
 
@@ -2078,14 +2091,14 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs)
         return
 
-    def SolarCore(ax,text_pos=[1e-15,0.15e-14],col='#067034',text_col='w',text_rot=42.5,fs=30,zorder=-5):
+    def SolarCore(ax,text_pos=[1e-15,0.15e-14],col='#0d4dba',text_col='w',text_rot=42.5,fs=30,zorder=-5):
         dat = loadtxt('limit_data/fa/SolarCore.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf Solar core}',color=text_col,rotation=text_rot,fontsize=fs)
         return
 
-    def Pulsars(ax,text_pos=[2e-16,1.3e-18],linespacing_y=0.65,col='#19a656',text_col='#19a656',text_rot=0,fs=23):
+    def Pulsars(ax,text_pos=[2e-16,1.3e-18],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/Pulsar.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=1)
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=1,alpha=1)
@@ -2094,7 +2107,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center')
         return
 
-    def SN1987A(ax,text_pos=[1.3e-3,0.9e-8],col='ForestGreen',text_col='w',text_rot=0,fs=33,zorder=1):
+    def SN1987A(ax,text_pos=[1.3e-3,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
         dat = loadtxt('limit_data/fa/SN1987A.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)

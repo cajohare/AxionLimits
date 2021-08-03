@@ -1,0 +1,6 @@
+# Neutron stars https://arxiv.org/pdf/1708.08464.pdf
+# Corrected by https://arxiv.org/abs/2102.00012
+# Mass [eV] 1/fa [GeV^-1]
+1e-30	4.856333373804037e-18
+8.266328529540377e-12	4.856333373804037e-18
+0.10240847932799532	5.408816565446977e-8

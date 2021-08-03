@@ -66,7 +66,7 @@ Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionEDM.png">](docs/aedm.md)
+[<img align="right" width="300" src="plots/plots_png/AxionEDM_with_Projections.png">](docs/aedm.md)
 
 # [**Axion-EDM coupling**](docs/aedm.md)
 [**Data files**](docs/aedm.md)\
@@ -78,12 +78,12 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/Axion_fa.png">](docs/fa.md)
+[<img align="right" width="300" src="plots/plots_png/Axion_fa_with_Projections.png">](docs/fa.md)
 
 # [**Mass versus f_a**](docs/fa.md)
 [**Data files**](docs/fa.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa.png))\
-   &nbsp; \
+Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png))\
    &nbsp; \
       &nbsp; \
   &nbsp;

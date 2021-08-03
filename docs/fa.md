@@ -1,10 +1,20 @@
 # Mass vs Peccei-Quinn scale
 ---
-[<img align="right" height="300" src="../plots/plots_png/AxionEDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa.png)
+[<img align="right" height="300" src="../plots/plots_png/Axion_fa.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa.png)
 ## Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Axion_fa.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa.png)
+### &nbsp;
+### &nbsp;
+---
+
+---
+[<img align="right" height="300" src="../plots/plots_png/Axion_fa_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
+## Basic plot
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Axion_fa.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
 ### &nbsp;
 ### &nbsp;
 ---
@@ -17,6 +27,8 @@
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
+* NS-NS Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSNS-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
+* NS-BH Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSBH-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * *Solar core (neutrino line): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SolarCore.txt), [reference](https://arxiv.org/abs/1708.08464)
 * SN1987: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SN1987A.txt), [reference](https://arxiv.org/abs/hep-ph/0611350)
 
