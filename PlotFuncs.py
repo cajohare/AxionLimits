@@ -842,7 +842,7 @@ class AxionPhoton():
         ### Astrophysical constraints
 
         # Fermi extragalactic SN gamma rays arXiv:[2006.06722]
-        SNgamma_col = [0.05, 0.5, 0.06]
+        SNgamma_col = 'ForestGreen'
         SNgamma = loadtxt("limit_data/AxionPhoton/SNe-gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.25,lw=lw)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.25)
@@ -859,7 +859,7 @@ class AxionPhoton():
 
 
         # # SN1987 gamma rays arXiv:[1410.3747]
-        SNgamma_col = [0.05, 0.5, 0.06]
+        SNgamma_col = '#067034'
         SNgamma = loadtxt("limit_data/AxionPhoton/SN1987A_gamma.txt")
         plt.plot(SNgamma[:,0],SNgamma[:,1],'k-',alpha=0.6,zorder=0.21,lw=lw)
         plt.fill_between(SNgamma[:,0],SNgamma[:,1],y2=y2,edgecolor=None,facecolor=SNgamma_col,zorder=0.21)
@@ -879,7 +879,7 @@ class AxionPhoton():
         # M87 Limits from arXiv:[1703.07354]
         M87_col = 'seagreen'
         M87 = loadtxt("limit_data/AxionPhoton/M87.txt")
-        plt.plot(M87[:,0],M87[:,1],'k-',lw=lw,alpha=1,zorder=0.219)
+        plt.plot(M87[:,0],M87[:,1],'k-',lw=lw,alpha=0.5,zorder=0.219)
         plt.fill_between(M87[:,0],M87[:,1],y2=y2,edgecolor=None,facecolor=M87_col,zorder=0.219)
         if text_on:
             plt.text(1.4e-12,5e-12,r'\quad {\bf M87}',fontsize=fs,color='w',ha='left',va='top')
@@ -1032,10 +1032,10 @@ class AxionPhoton():
 
         # SN1987A-neutrinos updated arXiv:[1808.10136]
         SN = loadtxt("limit_data/AxionPhoton/SN1987A_2019.txt")
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.1)
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.1)
         # SN1987A-decay arXiv:[1702.02964]
         SN = loadtxt("limit_data/AxionPhoton/SN1987A_decay.txt")
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.1)
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.1)
 
         if text_on:
             plt.text(0.4e6,6e-7,r'{\bf SN1987A}',fontsize=fs-9,color='w',rotation=-60,ha='left',va='top')
@@ -1576,7 +1576,7 @@ class AxionNeutron():
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
         SN = loadtxt("limit_data/AxionNeutron/SN1987A.txt")
         SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.02)
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.02)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
         plt.text((1-0.05)*0.8e-2,(1+0.05)*2*2e-8,r'{\bf SN1987A}',fontsize=fs,color='k',ha='right',va='top')
         plt.text(0.8e-2,2*2e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
@@ -1812,7 +1812,7 @@ class AxionProton():
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
         SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
         SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='ForestGreen',zorder=0.02)
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.02)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
         plt.text((1-0.05)*0.8e-2,(1+0.05)*1.9e-8,r'{\bf SN1987A}',fontsize=fs,color='k',ha='right',va='top')
         plt.text(0.8e-2,1.9e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
@@ -1935,10 +1935,10 @@ class AxionEDM():
                  fontsize=fs,rotation=trans_angle+2,color=text_col,ha='left',va='top',rotation_mode='anchor')
         return
 
-    def nEDM(ax,text_pos=[5e-20,1e-13],col='darkred',text_col='w',text_rot=0,fs=30,zorder=0):
+    def nEDM(ax,text_pos=[5e-20,1e-13],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
         dat = loadtxt('limit_data/AxionEDM/nEDM.txt')
-        plt.plot(dat[:,0],dat[:,1]*3,color='k',lw=3,alpha=1,zorder=zorder)
-        plt.fill_between(dat[:,0],dat[:,1]*3,y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs)
         return
 
@@ -2112,6 +2112,39 @@ class Axion_fa():
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right')
+        return
+
+    def NeutronStars(ax,text_pos=[0.5e-3,1.1e-12],col='#1f6ff0',text_col='#1f6ff0',text_rot=43.5,fs=29,zorder=-5):
+        dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right')
+        return
+
+    def Inspirals(ax,text_pos=[1e-16,2e-14],col='#b9befa',text_col='#b9befa',text_rot=0,fs=23,zorder=-2):
+        dat = loadtxt('limit_data/fa/Projections/NSBH-Inspiral.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
+
+        dat = loadtxt('limit_data/fa/Projections/NSNS-Inspiral.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
+
+        plt.text(text_pos[0],text_pos[1],r'{\bf Inspirals}',color=text_col,rotation=text_rot,fontsize=fs)
+        return
+
+    def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-2,rot=41,fs=20):
+        dat = loadtxt('limit_data/fa/Projections/StorageRingEDM.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring EDM}',color=col,alpha=0.4,fontsize=fs,rotation=rot)
+        return
+
+    def CASPEr(ax,text_pos=[9e-11,4e-19],col='crimson',alpha=0.1,zorder=-2,rot=57,fs=23):
+        dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=rot)
         return
 #==============================================================================#
 

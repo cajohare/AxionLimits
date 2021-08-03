@@ -1,6 +1,6 @@
 # CASPEr-electric projection (Phase I)
 # https://arxiv.org/abs/1711.08999
-# Mass [eV] C_{a-gamma-n} [GeV^-2]
+# Mass [eV] g_{a-gamma-n} [GeV^-2]
 1e-20	1e-23
 1.100026049672414e-14	5.207257715885831e-17
 1.3101686065962424e-14	6.468049727276175e-17

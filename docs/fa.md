@@ -22,7 +22,9 @@
 # Data files and references
 
 ## Experiments
-* nEDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/nEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
+* nEDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/nEDM.txt), [reference](https://arxiv.org/abs/1708.06367)
+* Storage Ring EDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
+* CASPEr-electric projections: [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt) [reference](https://arxiv.org/abs/1711.08999)
 
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)

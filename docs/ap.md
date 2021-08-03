@@ -93,7 +93,10 @@
 * CAST (2007): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST_highm.txt), [reference](https://arxiv.org/abs/hep-ex/0702006)
 * CAST (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST.txt), [reference](https://arxiv.org/abs/1705.02290)
 * CROWS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CROWS.txt), [reference](https://arxiv.org/abs/1310.8098)
+* babyIAXO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/babyIAXO.txt), [reference](https://arxiv.org/abs/1212.4633)
 * IAXO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO.txt), [reference](https://arxiv.org/abs/1212.4633)
+* IAXO+: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO_plus.txt), [reference](https://arxiv.org/abs/1212.4633)
+* IAXO (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO_plus_SN_Spica1.txt), [reference](https://arxiv.org/abs/1212.4633)
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
 
