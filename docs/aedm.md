@@ -27,4 +27,4 @@
 
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
-* SN1987: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)
+* SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)
