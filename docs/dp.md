@@ -141,4 +141,4 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Caputo et al. (HeII reionisation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Caputo_HeII.txt), [reference](https://arxiv.org/abs/2002.05165)
 
 ## Black hole superradiance
-* Cardoso et al.: [reference](https://arxiv.org/abs/1801.01420)
+* Cardoso et al: [reference](https://arxiv.org/abs/1801.01420)
