@@ -1,20 +1,21 @@
-\documentclass[10pt,twocolumn]{article}
+\documentclass[8pt,twocolumn]{extarticle}
 \usepackage[colorlinks=true,pdfstartview=FitV,breaklinks=true]{hyperref}
 \usepackage[dvipsnames,table]{xcolor}
 \hypersetup{urlcolor=BlueViolet,
 	    citecolor=Plum,
 	    linkcolor=PineGreen}
 \usepackage{geometry}
- \geometry{a4paper,left=15mm,right=15mm,top=20mm,bottom=15mm}
+\usepackage{mdframed}
+ \geometry{a4paper,left=15mm,right=15mm,top=20mm,bottom=10mm}
 \usepackage{authblk}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{titling}
 \date{}
-\setlength{\droptitle}{-12em}  
+\setlength{\droptitle}{-8em}  
 
-\title{}
+\title{\textbf{References for AxionLimits webpage}}
 \author{Ciaran O'Hare}
 \affil{ARC Centre of Excellence for Dark Matter Particle Physics\\ 
 The University of Sydney, Camperdown, NSW 2006, Australia\\
@@ -24,11 +25,14 @@ ciaran.ohare@sydney.edu.au}
 \maketitle
 \vspace{-3em}
 
-\section{Axion-photon}
-\subsection*{Haloscopes}
+
+\begin{mdframed}
+\vspace{-1em}
+\section{Axion-photon}\vspace{-0.5em}
+\subsection*{Haloscopes}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item ABRACADABRA~\cite{Ouellet:2018beu,Salemi:2021gck}
-    \item ADMX~\cite{Asztalos2010,ADMX:2018gho,ADMX:2019uok,ADMX:2018ogs,Crisosto:2019fcj,Stern:2016bbw}
+    \item ADMX~\cite{Asztalos2010,ADMX:2018gho,ADMX:2019uok,ADMX:2018ogs,Crisosto:2019fcj}
     \item CAPP~\cite{Lee:2020cfj,Jeong:2020cwz,CAPP:2020utb}
     \item HAYSTAC~\cite{HAYSTAC:2018rwy,HAYSTAC:2020kwv}
     \item ORGAN~\cite{McAllister:2017lkb}
@@ -37,18 +41,34 @@ ciaran.ohare@sydney.edu.au}
     \item RBF~\cite{DePanfilis}
     \item SHAFT~\cite{Gramolin:2020ict}
     \item UF~\cite{Hagmann}
+    \item UPLOAD-DOWNLOAD~\cite{Thomson:2019aht}
+    \item ABRACADABRA (projection)~\cite{ABRACADABRA}
+        \item ADBC (projection)~\cite{Liu:2018icu} 
+        \item ADMX (projection)~\cite{Stern:2016bbw}
+              \item aLIGO (projection)~\cite{Nagano:2019rbw} 
+           \item ALPHA (projection)~\cite{Lawson:2019brd} 
+           \item BRASS (projection)~\cite{BRASS}
+    \item DM-Radio (projection)~\cite{DMRadio}
+     \item DANCE (projection)~\cite{Michimura:2019qxr} 
+           \item LAMPOST (projection)~\cite{Baryakhtar:2018doz} 
+      \item MADMAX (projection)~\cite{Beurthey:2020yuq} 
+           \item KLASH (projection)~\cite{Alesini:2017ifp} 
+                 \item ORGAN (projection)~\cite{McAllister:2017lkb} 
+                       \item TOORAD (projection)~\cite{Schutte-Engel:2021bqm} 
 \end{itemize}
 \vspace{-2em}
-\subsection*{LSW/Helioscopes}
+\subsection*{LSW/Helioscopes}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item ALPS~\cite{Ehret:2010mh}
     \item CAST~\cite{CAST:2007jps,CAST:2017uph}
     \item CROWS~\cite{Betz:2013dza}
     \item OSQAR~\cite{OSQAR:2015qdv}
     \item PVLAS~\cite{DellaValle:2015xxa}
+    \item ALPS-II (projection)~\cite{Ortiz:2020tgs}
+    \item IAXO (projection)~\cite{Shilon:2013xma}
 \end{itemize}
 \vspace{-2em}
-\subsection*{Astro}
+\subsection*{Astro}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item Chandra (HYDRA)~\cite{Wouters:2013hua}
     \item Chandra (M87)~\cite{Marsh:2017yvc}
@@ -63,22 +83,31 @@ ciaran.ohare@sydney.edu.au}
     \item Neutron Stars (Foster et al.)~\cite{Foster:2020pgt}
     \item Neutron Stars (Darling)~\cite{Darling:2020uyo}
     \item Solar neutrinos~\cite{Vinyoles2015}
-    \item SN1987 (decay)~\cite{Jaeckel:2017tud}
-    \item SN1987 (gamma)~\cite{Payez:2014xsa}
+    \item SN1987A (decay)~\cite{Jaeckel:2017tud}
+    \item SN1987A (gamma)~\cite{Payez:2014xsa}
     \item Star clusters~\cite{Dessert:2020lil}
     \item Telescopes (MUSE)~\cite{Regis:2020fhw}
     \item Telescopes (VIMOS)~\cite{Grin:2006aw}
+    \item Fermi galactic SN (projection)~\cite{Meyer:2016wrm}
+     \item THESEUS (projection)~\cite{Thorpe-Morgan:2020rwc}
+    \item eROSITA (projection)~\cite{Dekker:2021bos}
 \end{itemize}
 \vspace{-2em}
-\subsection*{Cosmology}
+\subsection*{Cosmology}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item Cosmology (ionisation fraction, EBL, X-rays)~\cite{Cadamuro:2011fd}
     \item BBN+$N_{\rm eff}$~\cite{Depta:2020wmr}
 \end{itemize}
+\end{mdframed}
 
-\section{Axion-electron}
+\newpage 
+
+\begin{mdframed}
+\vspace{-1em}
+\section{Axion-electron}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item EDELWEISS~\cite{EDELWEISS:2018tde}
+    \item Magnon non-demolition~\cite{Ikeda:2021mlv}
     \item LUX~\cite{LUX:2017glr}
     \item Panda-X~\cite{PandaX:2017ock}
     \item SuperCDMS~\cite{SuperCDMS:2019jxx}
@@ -86,10 +115,18 @@ ciaran.ohare@sydney.edu.au}
     \item XENON1T (Solar basin)~\cite{VanTilburg:2020jvl}
     \item Red giants ($\omega$Cen)~\cite{Capozzi:2020cbu}
     \item Solar neutrinos~\cite{Gondolo:2008dd}
+    \item Magnons (projection)~\cite{Chigusa:2020gfs}
+        \item Polaritons (projection)~\cite{Mitridate:2020kly}
+    \item DARWIN (projection)~\cite{DARWIN:2016hyl}
+    \item LZ (projection)~\cite{LZ:2021xov}
+  	\item Semiconductors (projection)~\cite{Bloch:2016sjj}
+  	\item White dwarf hint~\cite{Giannotti:2017hny}
 \end{itemize}
+\end{mdframed}
 
-
-\section{Axion-neutron/proton}
+\begin{mdframed}
+\vspace{-1em}
+\section{Axion-nucleon}\vspace{-0.5em}
 Note: CASPEr and nEDM limits account for stochastic correction reported in~\cite{Centers:2019dyn}
 \begin{itemize}\setlength\itemsep{-0.5em}
     \item CASPEr-ZULF-Comagnetometer~\cite{Wu:2019exd}
@@ -102,51 +139,87 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in~\cite
     \item Hot Neutron Star (HESS J1731-347)~\cite{Beznogov:2018fda}
     \item SN1987 Cooling~\cite{Carenza:2019pxu}
     \item SNO (deuterium dissasociation)~\cite{Bhusal:2020bvx}
+    \item Proton storage ring (projection)~\cite{Graham:2020kai}
+    \item DM comagnetometer (projection)~\cite{Bloch:2019lcy}
+    \item CASPEr-wind (projection)~\cite{Garcon:2019inh}
 \end{itemize}
+\end{mdframed}
 
-\section{Axion-EDM}
+\begin{mdframed}
+\vspace{-1em}
+\section{Axion-EDM}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
 	\item CASPEr-electric~\cite{Aybas:2021nvn}
-	\item CASPEr-electric (projection)~\cite{JacksonKimball:2017elr}
 	\item nEDM~\cite{Chang:2017ruk}
 	\item SN1987A~\cite{Graham:2013gfa}
+	\item CASPEr-electric (projection)~\cite{JacksonKimball:2017elr}	
 \end{itemize}
+\end{mdframed}
 
-
-\section{CP-violating couplings}
-\subsection*{Scalar-nucleon}
-\begin{itemize}\setlength\itemsep{-0.5em}
-	\item 
-\end{itemize}
-\vspace{-2em}
-
-\subsection*{Pseudoscalar-electron}
-\begin{itemize}\setlength\itemsep{-0.5em}
-	\item 
-\end{itemize}
-\vspace{-2em}
-
-\subsection*{Pseudoscalar-nucleon}
-\begin{itemize}\setlength\itemsep{-0.5em}
-	\item 
-\end{itemize}
-
-
-\section{Axion mass versus $f_a$}
+\begin{mdframed}
+\vspace{-1em}
+\section{Axion mass versus $f_a$}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
 	\item Binary pulsars and Solar core constraint on $\bar{\theta}$~\cite{Hook:2017psm}. I include minor numerical corrections made by~\cite{DiLuzio:2021gos,DiLuzio:2021pxd}.
 	\item nEDM~\cite{Chang:2017ruk}
 	\item SN1987A~\cite{Raffelt:2006cw}
 \end{itemize}
+\end{mdframed}
+
+\newpage
+
+\begin{mdframed}
+\vspace{-1em}
+\section{CP-violating couplings}\vspace{-0.5em}
+\subsection*{Scalar-nucleon}
+\begin{itemize}\setlength\itemsep{-0.5em}
+	\item Red giants~\cite{Hardy:2016kme}
+	\item MICROSCOPE~\cite{Berge:2017ovy}.
+    \item Eot-Wash~\cite{Smith:1999cr,Kapner:2006si,Lee:2020zjt}
+    \item Irvine~\cite{Hoskins:1985tn}. Corrected to $2\sigma$ limit by~\cite{Ke:2021jtj}
+    \item HUST~\cite{Tu:2007zz,Yang:2012zzb,Tan:2020vpf,Tan:2016vwu}.
+    \item Stanford~\cite{Geraci:2008hb}
+    \item IUPUI~\cite{Chen:2014oda}.
+    \item Wuhan~\cite{Ke:2021jtj}
+\end{itemize}
+\vspace{-2em}
 
 
+\subsection*{Pseudoscalar-electron}\vspace{-0.5em}
+\begin{itemize}\setlength\itemsep{-0.5em}
+	\item Red giants~\cite{Hardy:2016kme}
+	\item Eot-wash~\cite{Heckel:2008hw}
+    \item NIST~\cite{Wineland:1991zz}
+    \item SMILE~\cite{Lee:2018vaq}.
+   \item QUAX~\cite{Crescini:2016lwj,Crescini:2017uxs}
+    \item Washington~\cite{Terrano:2015sna,Hoedl:2011zz}.
+    \item XENON1T~\cite{Aprile:2019xxb}
+    \item Magnon (projection)~\cite{Mitridate:2020kly}
+           \item QUAX (projection)~\cite{Crescini:2016lwj}.
+\end{itemize}
+\vspace{-2em}
 
-\section{Black hole superradiance}
+\subsection*{Pseudoscalar-nucleon}\vspace{-0.5em}
+\begin{itemize}\setlength\itemsep{-0.5em}
+	\item Neutron star cooling~\cite{Beznogov:2018fda}
+    \item Washington~\cite{Venema:1992zz}. Limit taken from~\cite{Safronova:2017xyt}.
+    \item SMILE~\cite{Lee:2018vaq}.
+    \item Mainz~\cite{Tullney:2013wqa}
+    \item ARIADNE (projection)~\cite{Arvanitaki:2014dfa}
+    \item CASPEr-wind (projection)~\cite{JacksonKimball:2017elr}
+    \item DM comagnetometer (projection)~\cite{Bloch:2019lcy}
+\end{itemize}
+\end{mdframed}
+
+\begin{mdframed}
+\vspace{-1em}
+\section{Black hole superradiance}\vspace{-0.5em}
 \begin{itemize}\setlength\itemsep{-0.5em}
 	\item Baryakhtar et al.~\cite{Baryakhtar:2020gao} (just Stellar mass BHs)
 	\item Mehta et al.~\cite{Baryakhtar:2020gao} (Stellar mass and SMBHs)
 	\item Stott~\cite{Stott:2020gjj}
 \end{itemize}
+\end{mdframed}
 
 \bibliographystyle{bibi}
 \bibliography{biblio}

@@ -29,7 +29,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * K-3He comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/K-3He_Comagnetometer.txt), [reference](https://arxiv.org/abs/0809.4700)
 * Old comagnetometers: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/OldComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767)
 * Future comagnetometers: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/FutureComagnetometers.txt), [reference](https://arxiv.org/abs/1907.03767)
-* Torsion balance: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
+* Torsion balance: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
 
 ## Other experiments
 * SNO (deuterium dissasociation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SNO.txt), [reference](https://arxiv.org/abs/2004.02733)

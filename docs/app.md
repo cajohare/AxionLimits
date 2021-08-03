@@ -25,7 +25,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * CASPEr-ZULF-Comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/CASPEr_Comagnetometer.txt), [reference](https://arxiv.org/abs/1901.10843)
 * CASPEr-ZULF-Sidechain: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/CASPEr_ZULF.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt), [reference](https://arxiv.org/abs/1902.04644)
 * NASDUCK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NASDUCK.txt), [reference](https://arxiv.org/abs/2105.04603)
-* Torsion balance: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
+* Torsion balance: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
 
 ## Other experiments
 * SNO (deuterium dissasociation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/SNO.txt), [reference](https://arxiv.org/abs/2004.02733)

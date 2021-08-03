@@ -41,10 +41,10 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionProton.png">](docs/ap.md)
+[<img align="right" width="300" src="plots/plots_png/AxionProton.png">](docs/app.md)
 
-# [**Axion-proton coupling**](docs/ap.md)
-[**Data files**](docs/ap.md)\
+# [**Axion-proton coupling**](docs/app.md)
+[**Data files**](docs/app.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton_with_Projections.png))\
    &nbsp; \
