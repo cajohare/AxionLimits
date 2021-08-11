@@ -1,0 +1,5 @@
+# BASE
+# 10.1103/PhysRevLett.126.041301
+# mass [eV]  g_agamma [GeV^-1]
+2.709e-9  1e-11
+2.7914e-9  1e-11

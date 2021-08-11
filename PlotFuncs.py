@@ -262,7 +262,7 @@ class AxionPhoton():
         else:
             if text_on:
                 if rs1==0:
-                    plt.text(0.7e-6*text_shift[0],1e-13*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top')
+                    plt.text(0.85e-6*text_shift[0],1e-13*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top')
                 else:
                     plt.gcf().text(0.39*text_shift[0],0.5*text_shift[1],r'{\bf ADMX}',rotation=90,color=col)
         return
@@ -376,7 +376,7 @@ class AxionPhoton():
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
 
             if text_on:
-                plt.text(text_shift[0]*6e-5,text_shift[1]*0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+                plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
@@ -696,6 +696,60 @@ class AxionPhoton():
         #    plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9)
         return
 
+
+    def BASE(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=1.9,lw=2.5):
+        # BASE https://inspirehep.net/literature/1843024
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+            zo = zorder
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+            zo = zorder
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/BASE.txt")
+
+        if rs1==0:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=lw,zorder=zo)
+            if text_on:
+                plt.text(text_shift[0]*3e-9,text_shift[1]*1.e-12,r'{\bf BASE}',fontsize=fs,color=col,rotation=90,ha='center',va='top')
+        else:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=lw+2,zorder=zo)
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=lw+1,zorder=zo)
+            if text_on:
+                plt.text(text_shift[0]*dat[0,0]*1.2,text_shift[1]*y2*1.2,r'{\bf BASE}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+
+        return
+
+    def ADMX_SLIC(ax,col='crimson',fs=12,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=1):
+        # ADMX SLIC https://arxiv.org/pdf/1911.05772.pdf
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+            zo = zorder
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+            zo = zorder
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/ADMX_SLIC.txt")
+        x = mean(dat[:,0])
+        y = amin(dat[:,1])
+        if rs1==0:
+            plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=2,zorder=zo)
+            if text_on:
+                plt.text(text_shift[0]*2.4e-7,text_shift[1]*0.8e-11,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+        else:
+            plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color='k',lw=4,zorder=zo)
+            plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=3,zorder=zo)
+            if text_on:
+                plt.text(text_shift[0]*x,text_shift[1]*y2*1.2,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.plot(x,y/(rs1*2e-10*x+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+
+        return
+
     def ALPS(ax,projection=True,col=[0.8, 0.25, 0.33],fs=15,RescaleByMass=False,text_on=True,lw_proj=1.5,lsty_proj='-',col_proj='k',text_shift_x=1,text_shift_y=1):
         # ALPS-I arXiv:[1004.1313]
         if RescaleByMass:
@@ -788,7 +842,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def SN1987A_gamma(ax,text_label=r'{\bf SN1987A}',text_pos=[6e-11,0.45e-11],col='#067034',text_col='#067034',fs=15,zorder=0.21,text_on=True):
+    def SN1987A_gamma(ax,text_label=r'{\bf SN1987A}',text_pos=[6e-11,0.4e-11],col='#067034',text_col='#067034',fs=15,zorder=0.21,text_on=True):
         # SN1987 gamma rays arXiv:[1410.3747]
         dat = loadtxt("limit_data/AxionPhoton/SN1987A_gamma.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
@@ -806,25 +860,25 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def HESS(ax,text_label=r'{\bf HESS}',text_pos=[2e-8,1.6e-11],col=[0.0, 0.55, 0.3],text_col=[0.0, 0.55, 0.3],fs=16,zorder=0.2,text_on=True):
+    def HESS(ax,text_label=r'{\bf HESS}',text_pos=[2e-8,1.8e-11],col=[0.0, 0.55, 0.3],text_col=[0.0, 0.55, 0.3],fs=16,zorder=0.2,text_on=True):
         # HESS arXiv:[1304.0700]
         dat = loadtxt("limit_data/AxionPhoton/HESS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[0.79e-9,5.5e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True):
+    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[3e-9,6e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True):
         # Mrk 421 arXiv:[2008.09464]
         dat = loadtxt("limit_data/AxionPhoton/Mrk421.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def Chandra(ax,text_label=r'{\bf Chandra}',text_pos=[1.1e-11,2e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True):
+    def Chandra(ax,text_label=r'{\bf Chandra}',text_pos=[1.01e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True):
         # Chandra arXiv:[1907.05475]
         dat = loadtxt("limit_data/AxionPhoton/Chandra.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def Fermi(ax,text_label=r'{\bf Fermi}',text_pos=[4.8e-10,1.2e-11],col=[0.0, 0.42, 0.24],text_col='w',fs=15,zorder=0.24,text_on=True):
+    def Fermi(ax,text_label=r'{\bf Fermi}',text_pos=[4.02e-10,1.2e-11],col=[0.0, 0.42, 0.24],text_col='w',fs=15,zorder=0.24,text_on=True):
         # Fermi NGC1275 arXiv:[1603.06978]
         Fermi1 = loadtxt("limit_data/AxionPhoton/Fermi1.txt")
         Fermi2 = loadtxt("limit_data/AxionPhoton/Fermi2.txt")
@@ -959,7 +1013,7 @@ class AxionPhoton():
             else:
                 plt.text(text_shift[0]*1e-7,text_shift[1]*4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
                 plt.text(text_shift[0]*1e-7,text_shift[1]*1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
-                plt.plot([3.5e-7,7e-6],[6e3,2e4],lw=1.5,color=col)
+                plt.plot([3.5e-7*text_shift[0],7e-6],[6e3*text_shift[1],2e4],lw=1.5,color=col)
         return
 
     def Haloscopes(ax,projection=False,fs=20,text_on=True):
@@ -983,7 +1037,9 @@ class AxionPhoton():
             AxionPhoton.DANCE(ax,text_on=text_on)
             AxionPhoton.aLIGO(ax,text_on=text_on)
         else:
-            AxionPhoton.QUAX(ax,text_on=False)
+            AxionPhoton.QUAX(ax,text_on=text_on)
+            AxionPhoton.BASE(ax,text_on=text_on)
+            AxionPhoton.ADMX_SLIC(ax,fs=fs-8,text_on=text_on)
             #AxionPhoton.RADES(ax,text_on=False)
         return
 

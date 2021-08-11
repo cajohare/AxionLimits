@@ -65,6 +65,7 @@
 * ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt),  [reference](https://arxiv.org/abs/1612.08296)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/1903.02017)
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt), [reference](https://arxiv.org/abs/1904.11872)
+* BASE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BASE.txt), [reference](https://arxiv.org/abs/2101.11290)
 * BRASS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BRASS.txt), [reference](https://www1.physik.uni-hamburg.de/iexp/gruppe-horns/forschung/brass.html)
 * CAPP-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-1.txt), [reference](https://arxiv.org/abs/2001.05102)
 * CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-2.txt), [reference](https://arxiv.org/abs/2008.10141)
