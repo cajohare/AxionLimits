@@ -27,7 +27,9 @@
 * CASPEr-electric projections: [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)
 
 ## Astro bounds
-* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
+* Black hole spins (Mehta et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
+* Black hole spins (Baryakhtar et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Baryakhtar.txt), [reference](https://arxiv.org/abs/2011.11646)
+
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
 * NS-NS Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSNS-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * NS-BH Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSBH-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)

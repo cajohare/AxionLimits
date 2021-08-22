@@ -255,14 +255,14 @@ class AxionPhoton():
             plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
             if text_on:
                 if rs1==0:
-                    plt.text(1e-5*text_shift[0],2.3e-16*text_shift[1],r'{\bf ADMX}',fontsize=20,color=col,rotation=0,ha='left',va='top')
+                    plt.text(1e-5*text_shift[0],2.3e-16*text_shift[1],r'{\bf ADMX}',fontsize=20,color=col,rotation=0,ha='left',va='top',clip_on=True)
                     plt.plot([3e-5,2e-5],[3e-16,0.6e-15],'k-',lw=1.5)
                 else:
-                    plt.text(0.9e-6*text_shift[0],0.15*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=0,ha='left',va='top')
+                    plt.text(0.9e-6*text_shift[0],0.15*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=0,ha='left',va='top',clip_on=True)
         else:
             if text_on:
                 if rs1==0:
-                    plt.text(0.85e-6*text_shift[0],1e-13*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top')
+                    plt.text(0.85e-6*text_shift[0],1e-13*text_shift[1],r'{\bf ADMX}',fontsize=fs,color=col,rotation=90,ha='left',va='top',clip_on=True)
                 else:
                     plt.gcf().text(0.39*text_shift[0],0.5*text_shift[1],r'{\bf ADMX}',rotation=90,color=col)
         return
@@ -282,10 +282,10 @@ class AxionPhoton():
 
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*0.4e-5,text_shift[1]*0.6e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top')
+                plt.text(text_shift[0]*0.4e-5,text_shift[1]*0.6e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top',clip_on=True)
             else:
-                plt.text(text_shift[0]*0.7e-5,text_shift[1]*4e3,r'{\bf RBF}',fontsize=fs,color='w',rotation=0,ha='center',va='top')
-                plt.text(text_shift[0]*0.7e-5,text_shift[1]*1e3,r'{\bf UF}',fontsize=fs,color='w',rotation=0,ha='center',va='top')
+                plt.text(text_shift[0]*0.7e-5,text_shift[1]*4e3,r'{\bf RBF}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
+                plt.text(text_shift[0]*0.7e-5,text_shift[1]*1e3,r'{\bf UF}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
 
         return
 
@@ -309,7 +309,7 @@ class AxionPhoton():
 
             if text_on:
                 if projection==False:
-                    plt.text(text_shift[0]*2.1e-5,text_shift[0]*5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+                    plt.text(text_shift[0]*2.1e-5,text_shift[0]*5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -336,11 +336,11 @@ class AxionPhoton():
         dat3 = loadtxt("limit_data/AxionPhoton/CAPP-3.txt")
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
-            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col)
-            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
-                plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top')
+                plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',zorder=zo,lw=4)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -376,7 +376,7 @@ class AxionPhoton():
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
 
             if text_on:
-                plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+                plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
@@ -418,8 +418,8 @@ class AxionPhoton():
 
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.5e-9,text_shift[1]*3e-8,r'{\bf ABRA}',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=10)
-                plt.text(text_shift[0]*1.5e-9,text_shift[1]*1e-8,r'10 cm',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=10)
+                plt.text(text_shift[0]*1.5e-9,text_shift[1]*3e-8,r'{\bf ABRA}',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=10,clip_on=True)
+                plt.text(text_shift[0]*1.5e-9,text_shift[1]*1e-8,r'10 cm',fontsize=fs,color='w',rotation=0,ha='center',va='top',zorder=10,clip_on=True)
 
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ABRACADABRA.txt")
@@ -427,9 +427,9 @@ class AxionPhoton():
             plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
             if text_on:
                 if rs1==0:
-                    plt.text(text_shift[0]*5e-12,text_shift[1]*4e-18,r'{\bf ABRACADABRA}',fontsize=fs-1,color=col,rotation=13,ha='left',va='top')
+                    plt.text(text_shift[0]*5e-12,text_shift[1]*4e-18,r'{\bf ABRACADABRA}',fontsize=fs-1,color=col,rotation=13,ha='left',va='top',clip_on=True)
                 else:
-                    plt.text(text_shift[0]*1.3e-9,text_shift[1]*1.0e2,r'{\bf ABRACADABRA}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top')
+                    plt.text(text_shift[0]*1.3e-9,text_shift[1]*1.0e2,r'{\bf ABRACADABRA}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top',clip_on=True)
                     plt.plot([dat[-1,0],dat[-1,0]],[dat[-1,1]/(rs1*2e-10*dat[-1,0]+rs2),1e6],lw=1.5,color=col,zorder=0)
         return
 
@@ -446,9 +446,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*2e-10,text_shift[1]*0.5e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=90)
+                plt.text(text_shift[0]*2e-10,text_shift[1]*0.5e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=90,clip_on=True)
             else:
-                plt.text(text_shift[0]*5e-9,text_shift[1]*4.0e-1,r'{\bf DM-Radio}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top')
+                plt.text(text_shift[0]*5e-9,text_shift[1]*4.0e-1,r'{\bf DM-Radio}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top',clip_on=True)
         return
 
     def ORGAN(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -471,10 +471,10 @@ class AxionPhoton():
             plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
             if text_on:
                 if rs1==0:
-                    plt.text(text_shift[0]*5e-4,text_shift[1]*1.15e-14,r'{\bf ORGAN}',fontsize=18,color=col,rotation=0,ha='left',va='top')
+                    plt.text(text_shift[0]*5e-4,text_shift[1]*1.15e-14,r'{\bf ORGAN}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
                     plt.plot([5e-4,1.5e-4],[1.3e-14,6e-13],'k-',lw=1.5)
                 else:
-                    plt.text(text_shift[0]*1.2e-4,text_shift[1]*1e3,r'{\bf ORGAN}',fontsize=18,color='darkred',rotation=-90,ha='left',va='top')
+                    plt.text(text_shift[0]*1.2e-4,text_shift[1]*1e3,r'{\bf ORGAN}',fontsize=18,color='darkred',rotation=-90,ha='left',va='top',clip_on=True)
 
         else:
             if RescaleByMass:
@@ -484,7 +484,7 @@ class AxionPhoton():
                 plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             if text_on:
                 if rs1==0:
-                    plt.text(text_shift[0]*110e-6,text_shift[1]*1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top')
+                    plt.text(text_shift[0]*110e-6,text_shift[1]*1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
                 else:
                     plt.text(text_shift[0]*dat[0,0]*1.1,text_shift[1]*y2*1.2,r'{\bf ORGAN}',fontsize=fs-3,color=col,rotation=40,ha='left',rotation_mode='anchor')
 
@@ -528,10 +528,10 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.5e-4,text_shift[1]*3.5e-15,r'{\bf MADMAX}',fontsize=18,color=col,rotation=0,ha='left',va='top')
+                plt.text(text_shift[0]*1.5e-4,text_shift[1]*3.5e-15,r'{\bf MADMAX}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
                 plt.plot([3e-4,1.3e-4],[4.5e-15,2.6e-14],'k-',lw=1.5)
             else:
-                plt.text(text_shift[0]*5e-5,text_shift[1]*3.5e0,r'{\bf MADMAX}',fontsize=14,color=col,rotation=0,ha='left',va='top')
+                plt.text(text_shift[0]*5e-5,text_shift[1]*3.5e0,r'{\bf MADMAX}',fontsize=14,color=col,rotation=0,ha='left',va='top',clip_on=True)
 
         return
 
@@ -549,10 +549,10 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.5e-4,text_shift[1]*1e-15,r'{\bf ALPHA}',fontsize=18,color=col,rotation=0,ha='left',va='top')
+                plt.text(text_shift[0]*1.5e-4,text_shift[1]*1e-15,r'{\bf ALPHA}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
                 plt.plot([1.3e-4,0.5e-4],[1e-15,0.7e-14],'k-',lw=1.5)
             else:
-                plt.text(text_shift[0]*2.3e-4,text_shift[1]*5e-1,r'{\bf ALPHA}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
+                plt.text(text_shift[0]*2.3e-4,text_shift[1]*5e-1,r'{\bf ALPHA}',fontsize=fs,color=col,rotation=0,ha='center',va='top',clip_on=True)
                 #plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
         return
 
@@ -570,9 +570,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.3)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1e-7,text_shift[1]*1e-12,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(text_shift[0]*1e-7,text_shift[1]*1e-12,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
             else:
-                plt.text(text_shift[0]*2.5e-7,text_shift[1]*1.3e0,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor')
+                plt.text(text_shift[0]*2.5e-7,text_shift[1]*1.3e0,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
         return
 
     def BRASS(ax,col=[0.5, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -589,9 +589,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1e-3,text_shift[1]*0.5e-12,r'{\bf BRASS}',fontsize=14,ha='center',rotation=48,color=col)
+                plt.text(text_shift[0]*1e-3,text_shift[1]*0.5e-12,r'{\bf BRASS}',fontsize=14,ha='center',rotation=48,color=col,clip_on=True)
             else:
-                plt.text(text_shift[0]*0.45e-3,text_shift[1]*0.4e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col)
+                plt.text(text_shift[0]*0.45e-3,text_shift[1]*0.4e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col,clip_on=True)
 
         return
 
@@ -610,10 +610,10 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*0.7e-2,text_shift[1]*3e-11,r'{\bf TOO}',fontsize=12,ha='center',color=col)
-                plt.text(text_shift[0]*0.7e-2,text_shift[1]*1.5e-11,r'{\bf RAD}',fontsize=12,ha='center',color=col)
+                plt.text(text_shift[0]*0.7e-2,text_shift[1]*3e-11,r'{\bf TOO}',fontsize=12,ha='center',color=col,clip_on=True)
+                plt.text(text_shift[0]*0.7e-2,text_shift[1]*1.5e-11,r'{\bf RAD}',fontsize=12,ha='center',color=col,clip_on=True)
             else:
-                plt.text(text_shift[0]*0.25e-2,text_shift[1]*0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color=col)
+                plt.text(text_shift[0]*0.25e-2,text_shift[1]*0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color=col,clip_on=True)
         return
 
     def LAMPOST(ax,col=[0.8, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -630,9 +630,9 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*0.8e-1,text_shift[1]*5e-12,r'{\bf LAMPOST}',rotation=-90,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(text_shift[0]*0.8e-1,text_shift[1]*5e-12,r'{\bf LAMPOST}',rotation=-90,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
             else:
-                plt.text(text_shift[0]*0.9e-1,text_shift[1]*1.9e-1,r'{\bf LAMPOST}',rotation=0,fontsize=fs,color=col,ha='left',va='top')
+                plt.text(text_shift[0]*0.9e-1,text_shift[1]*1.9e-1,r'{\bf LAMPOST}',rotation=0,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
 
         return
 
@@ -644,7 +644,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf DANCE}',rotation=50,fontsize=fs,color=col,ha='left',va='top')
+            plt.text(text_pos[0],text_pos[1],r'{\bf DANCE}',rotation=50,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
     def aLIGO(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[0.2e-9,0.35e-13]):
@@ -654,7 +654,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=0,fontsize=fs,color=col,ha='left',va='top')
+            plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=0,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
     def ADBC(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1e-11,1.3e-12],rotation=26):
@@ -664,7 +664,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf ADBC}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top')
+            plt.text(text_pos[0],text_pos[1],r'{\bf ADBC}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
     def SHAFT(ax,col='red',fs=16,text_on=True,lw=1,text_pos=[0.8e-10,3e-10],rotation=0,zorder=1.8):
@@ -678,7 +678,7 @@ class AxionPhoton():
         plt.plot(x,y,'k-',lw=lw,zorder=1.81,alpha=0.5)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf SHAFT}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top')
+            plt.text(text_pos[0],text_pos[1],r'{\bf SHAFT}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True)
         return
 
     def UPLOAD(ax,col='tomato',fs=16,text_on=False):
@@ -693,7 +693,7 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.8)
         #if text_on:
 
-        #    plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9)
+        #    plt.text(0.8e-9,3e-8,r'{\bf UPLOAD}',fontsize=fs,color='w',rotation=-90,ha='center',va='top',zorder=9,clip_on=True)
         return
 
 
@@ -713,7 +713,7 @@ class AxionPhoton():
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=lw,zorder=zo)
             if text_on:
-                plt.text(text_shift[0]*3e-9,text_shift[1]*1.e-12,r'{\bf BASE}',fontsize=fs,color=col,rotation=90,ha='center',va='top')
+                plt.text(text_shift[0]*3e-9,text_shift[1]*1.e-12,r'{\bf BASE}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=lw+2,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=lw+1,zorder=zo)
@@ -740,7 +740,7 @@ class AxionPhoton():
         if rs1==0:
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=2,zorder=zo)
             if text_on:
-                plt.text(text_shift[0]*2.4e-7,text_shift[1]*0.8e-11,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=-90,ha='center',va='top')
+                plt.text(text_shift[0]*2.4e-7,text_shift[1]*0.8e-11,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=3,zorder=zo)
@@ -764,14 +764,14 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'k-',lw=2,zorder=1.53,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
         if rs1==0:
-            if text_on: plt.text(1e-5*text_shift_x,7e-8*text_shift_y,r'{\bf ALPS-I}',fontsize=20,color='w')
+            if text_on: plt.text(1e-5*text_shift_x,7e-8*text_shift_y,r'{\bf ALPS-I}',fontsize=20,color='w',clip_on=True)
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ALPS-II.txt")
             plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),linestyle=lsty_proj,lw=lw_proj,zorder=1.5,color=col_proj,alpha=0.5)
             if RescaleByMass:
-                plt.text(9e-4*text_shift_x,2.5e3*text_shift_y,r'{\bf ALPS-II}',fontsize=20,color='k',rotation=20,alpha=0.5)
+                plt.text(9e-4*text_shift_x,2.5e3*text_shift_y,r'{\bf ALPS-II}',fontsize=20,color='k',rotation=20,alpha=0.5,clip_on=True)
             else:
-                if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10)
+                if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True)
         return
 
     def OSQAR(ax,text_label=r'{\bf OSQAR}',text_pos=[1e-5,3e-8],col=[0.6, 0.2, 0.25],text_col='w',fs=17,zorder=1.52,text_on=True,edgealpha=1,lw=2):
@@ -813,9 +813,9 @@ class AxionPhoton():
         plt.plot([mf,mf],[gf,gi],'k-',lw=2,zorder=1.5)
         if text_on==True:
             if rs1==0:
-                plt.text(1e-1,1.5e-9,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top')
+                plt.text(1e-1,1.5e-9,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top',clip_on=True)
             else:
-                plt.text(4e-2,5e3,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top')
+                plt.text(4e-2,5e3,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top',clip_on=True)
 
         if projection:
             # IAXO arXiv[1212.4633]
@@ -825,9 +825,9 @@ class AxionPhoton():
             plt.fill_between(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),y2=y2,edgecolor=None,facecolor=IAXO_col,zorder=0,alpha=0.3)
             if text_on==True:
                 if rs1==0:
-                    plt.text(0.35e-1,0.2e-11,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=45)
+                    plt.text(0.35e-1,0.2e-11,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=45,clip_on=True)
                 else:
-                    plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18)
+                    plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18,clip_on=True)
         return
 
     def FermiSNe(ax,text_label=r'{\bf Fermi-SNe}',text_pos=[1.2e-12,0.51e-10],col='ForestGreen',text_col='w',fs=12,zorder=0.25,text_on=True):
