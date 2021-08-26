@@ -23,6 +23,16 @@ from scipy.stats import norm
 pltdir = 'plots/'
 pltdir_png = pltdir+'plots_png/'
 
+#==============================================================================#
+def col_alpha(col,alpha=0.1):
+    rgb = colors.colorConverter.to_rgb(col)
+    bg_rgb = [1,1,1]
+    return [alpha * c1 + (1 - alpha) * c2
+            for (c1, c2) in zip(rgb, bg_rgb)]
+#==============================================================================#
+
+
+
 def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
                     lw=2,y2=1e0,edgealpha=0.6,text_on=False,text_pos=[0,0],\
                     ha='left',va='top',clip_on=True,fs=15,text_col='k',rotation=0,facealpha=1):
@@ -139,7 +149,7 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
 
 #==============================================================================#
 class AxionPhoton():
-    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False,C_center=1,C_width=0.8,KSVZ_label_mass=1e-8,DFSZ_label_mass=5e-8):
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False,C_center=1,C_width=0.8,KSVZ_label_mass=1e-8,DFSZ_label_mass=5e-8,vmax=0.9):
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
@@ -169,9 +179,9 @@ class AxionPhoton():
 
             cols.set_under('w') # Set lowest color to white
             vmin = amax(QCD)/(C_logwidth/4.6)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
 
             # QCD Axion models
             rot = 45.0
@@ -192,7 +202,7 @@ class AxionPhoton():
                 else:
                     plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
                 if text_on:
-                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ II}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
+                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
         else:
             C_min,C_max = ax.get_ylim()
             n = 200
@@ -1113,7 +1123,7 @@ class AxionElectron():
             plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(DFSZ_l,m),'-',lw=2,zorder=0,color=col)
             plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=col)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_u,DFSZ_label_mass)/1.5,r'{\bf DFSZ models}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(DFSZ_label_mass,g_x(DFSZ_u,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
         if KSVZ_on:
             col = KSVZ_col
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0.02)
@@ -1156,7 +1166,7 @@ class AxionElectron():
             plt.text(text_shift[0]*3e3,text_shift[1]*0.8e-11,r' basin)',fontsize=fs,color='k',ha='center',va='top',clip_on=True,**kwargs)
         return
 
-    def LUX(ax,col='darkred',fs=30,text_on=True,text_pos=[0.2e-8,6e-12],zorder=0.52,**kwargs):
+    def LUX(ax,col='indianred',fs=30,text_on=True,text_pos=[0.2e-8,6e-12],zorder=0.52,**kwargs):
         # LUX arXiv:[1704.02297]
         dat = loadtxt("limit_data/AxionElectron/LUX.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
@@ -1190,13 +1200,13 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf EDELWEISS}',fontsize=fs,color=col,ha='left',va='top',clip_on=True,rotation=rotation,**kwargs)
         return
 
-    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[1.7e1,2.7e-11],zorder=0.58,rotation=-82,**kwargs):
+    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[1.7e1,2.7e-11],text_col='maroon',zorder=0.58,rotation=-82,**kwargs):
         # SuperCDMS arXiv:[1911.11905]
         dat = loadtxt("limit_data/AxionElectron/SuperCDMS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zorder,lw=3)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf SuperCDMS}',fontsize=fs-1,color='w',ha='left',va='top',alpha=0.8,rotation=rotation,clip_on=True,**kwargs)
+            plt.text(text_pos[0],text_pos[1],r'{\bf SuperCDMS}',fontsize=fs-1,color=text_col,ha='left',va='top',alpha=1.0,rotation=rotation,clip_on=True,**kwargs)
         return
 
     def DARWIN(ax,col='brown',fs=20,text_on=True,text_pos=[0.3e3,2e-14],zorder=0.1,**kwargs):
@@ -1240,6 +1250,15 @@ class AxionElectron():
         if text_on:
             plt.text(text_shift[0]*1.2e-5,text_shift[1]*0.5e-13,r'{\bf Magnons}',fontsize=fs-1,color=col,ha='center',va='top',clip_on=True,**kwargs)
             plt.text(text_shift[0]*1.2e-5,text_shift[1]*0.7*0.5e-13,r'{\bf (Scanning)}',fontsize=fs-1,color=col,ha='center',va='top',clip_on=True,**kwargs)
+        return
+
+    def QUAX(ax,col='maroon',fs=17,text_on=True,text_pos=[50e-6,0.9e-10],zorder=10.0,text_rot=-90,**kwargs):
+        # QUAX https://inspirehep.net/literature/1777123
+        dat = loadtxt("limit_data/AxionElectron/QUAX.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.4,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=zorder,lw=3)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf QUAX}',fontsize=fs,color=col,rotation=text_rot,ha='left',va='top',clip_on=True,**kwargs)
         return
 
     def RedGiants(ax,col=[0.0, 0.66, 0.42],text_pos=[0.2e-8,2e-13],text_on=True,zorder=0.5,fs=30,**kwargs):
@@ -1339,7 +1358,7 @@ class AxionNeutron():
             #plt.fill_between(m,g_x(DFSZ_u,m),y2=1e-99,facecolor=col,zorder=0,alpha=0.5)
             plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=col)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ models}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
         return
 
     def OldComagnetometers(ax,col=[0.75, 0.2, 0.2],fs=20,projection=True):
@@ -1812,13 +1831,22 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Solar core}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
-    def Pulsars(ax,text_pos=[2e-16,1.3e-18],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=23):
-        dat = loadtxt('limit_data/fa/Pulsar.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=1)
-        plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=1,alpha=1)
 
-        plt.text(text_pos[0],text_pos[1],r'{\bf Binary}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
-        plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
+    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-2,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
+        dat = loadtxt('limit_data/fa/GW170817.txt')
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
+        plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
+
+        plt.text(text_pos[0],text_pos[1],r'{\bf GW170817}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
+        return
+
+
+    def Pulsars(ax,text_pos=[2e-15,0.12e-16],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=21,zo=-1.9):
+        dat = loadtxt('limit_data/fa/Pulsar.txt')
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
+        plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
+
+        plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
     def SN1987A(ax,text_pos=[1.3e-3,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
@@ -1847,14 +1875,14 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Inspirals}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
-    def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-2,rot=41,fs=20):
+    def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-2.5,rot=41,fs=20):
         dat = loadtxt('limit_data/fa/Projections/StorageRingEDM.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring EDM}',color=col,alpha=0.4,fontsize=fs,rotation=rot,clip_on=True)
         return
 
-    def CASPEr(ax,text_pos=[9e-11,4e-19],col='crimson',alpha=0.1,zorder=-2,rot=57,fs=23):
+    def CASPEr(ax,text_pos=[9e-11,4e-19],col='crimson',alpha=0.1,zorder=-2.5,rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
@@ -1990,14 +2018,6 @@ def reverse_colourmap(cmap, name = 'my_cmap_r'):
     return my_cmap_r
 #==============================================================================#
 
-
-#==============================================================================#
-def col_alpha(col,alpha=0.1):
-    rgb = colors.colorConverter.to_rgb(col)
-    bg_rgb = [1,1,1]
-    return [alpha * c1 + (1 - alpha) * c2
-            for (c1, c2) in zip(rgb, bg_rgb)]
-#==============================================================================#
 
 
 

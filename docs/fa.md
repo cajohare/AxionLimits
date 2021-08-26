@@ -29,8 +29,8 @@
 ## Astro bounds
 * Black hole spins (Mehta et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Black hole spins (Baryakhtar et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Baryakhtar.txt), [reference](https://arxiv.org/abs/2011.11646)
-
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
+* GW170817 [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/GW170817.txt), [reference](https://arxiv.org/abs/2105.13963)
 * NS-NS Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSNS-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * NS-BH Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSBH-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * *Solar core (neutrino line): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SolarCore.txt), [reference](https://arxiv.org/abs/1708.08464)
