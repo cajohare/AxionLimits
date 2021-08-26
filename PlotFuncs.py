@@ -1200,7 +1200,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf EDELWEISS}',fontsize=fs,color=col,ha='left',va='top',clip_on=True,rotation=rotation,**kwargs)
         return
 
-    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[1.7e1,2.7e-11],text_col='maroon',zorder=0.58,rotation=-82,**kwargs):
+    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,**kwargs):
         # SuperCDMS arXiv:[1911.11905]
         dat = loadtxt("limit_data/AxionElectron/SuperCDMS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
