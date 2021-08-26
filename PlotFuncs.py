@@ -1832,7 +1832,7 @@ class Axion_fa():
         return
 
 
-    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-2,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
+    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
@@ -1841,12 +1841,20 @@ class Axion_fa():
         return
 
 
-    def Pulsars(ax,text_pos=[2e-15,0.12e-16],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=21,zo=-1.9):
+    def Pulsars(ax,text_pos=[2e-15,0.12e-16],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=21,zo=-6.9):
         dat = loadtxt('limit_data/fa/Pulsar.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
 
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
+        return
+
+
+    def BBN(ax,text_pos=[1.2e-17,0.8e-16],col='navy',text_col='w',text_rot=15,fs=21,zorder=-6):
+        dat = loadtxt('limit_data/fa/BBN.txt')
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.text(text_pos[0],text_pos[1],r'{\bf BBN}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
     def SN1987A(ax,text_pos=[1.3e-3,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
@@ -1856,14 +1864,14 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
-    def NeutronStars(ax,text_pos=[0.5e-3,1.1e-12],col='#1f6ff0',text_col='#1f6ff0',text_rot=43.5,fs=29,zorder=-5):
+    def NeutronStars(ax,text_pos=[0.5e-3,1.1e-12],col='#1f6ff0',text_col='#1f6ff0',text_rot=43.5,fs=29,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
         plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
-    def Inspirals(ax,text_pos=[1e-16,2e-14],col='#b9befa',text_col='#b9befa',text_rot=0,fs=23,zorder=-2):
+    def Inspirals(ax,text_pos=[1e-16,2e-14],col='#b9befa',text_col='#b9befa',text_rot=0,fs=23,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NSBH-Inspiral.txt')
         plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
@@ -1875,14 +1883,14 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Inspirals}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
-    def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-2.5,rot=41,fs=20):
+    def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-10,rot=41,fs=20):
         dat = loadtxt('limit_data/fa/Projections/StorageRingEDM.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring EDM}',color=col,alpha=0.4,fontsize=fs,rotation=rot,clip_on=True)
         return
 
-    def CASPEr(ax,text_pos=[9e-11,4e-19],col='crimson',alpha=0.1,zorder=-2.5,rot=57,fs=23):
+    def CASPEr(ax,text_pos=[9e-11,4e-19],col='crimson',alpha=0.1,zorder=-10,rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
