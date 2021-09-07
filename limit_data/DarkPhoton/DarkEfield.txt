@@ -1,4 +1,5 @@
 # Dark E-field
+# Note that this is a 5 sigma limit, not a 95%
 #mass [eV] kinetic mixing
 #https://arxiv.org/pdf/2101.02805.pdf
 2.570240591634544e-7	 5.198416987351509e-14
