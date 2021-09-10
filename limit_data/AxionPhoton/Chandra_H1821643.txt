@@ -1,4 +1,4 @@
-# Chandra NGC 1275
+# Chandra H182+1643
 # https://arxiv.org/pdf/2109.03261.pdf
 # m_a [eV]  g_ap [GeV^-1]
 1.0037423729705558e-19	 5.047311029452132e-13
