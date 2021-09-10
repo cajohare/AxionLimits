@@ -860,13 +860,13 @@ class AxionPhoton():
 
     def Hydra(ax,text_label=r'{\bf Hydra}',text_pos=[1.2e-12,2e-11],col=[0.24, 0.71, 0.54],text_col='w',fs=13,zorder=0.23,text_on=True):
         # HYDRA-A arXiv:[1304.0989]
-        dat = loadtxt("limit_data/AxionPhoton/HYDRA_A.txt")
+        dat = loadtxt("limit_data/AxionPhoton/Chandra_HYDRA_A.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
     def M87(ax,text_label=r'\quad {\bf M87}',text_pos=[1.4e-12,5e-12],col='seagreen',text_col='w',fs=15,zorder=0.219,text_on=True):
         # M87 Limits from arXiv:[1703.07354]
-        dat = loadtxt("limit_data/AxionPhoton/M87.txt")
+        dat = loadtxt("limit_data/AxionPhoton/Chandra_M87.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
@@ -882,9 +882,13 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
-    def Chandra(ax,text_label=r'{\bf Chandra}',text_pos=[1.01e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True):
-        # Chandra arXiv:[1907.05475]
-        dat = loadtxt("limit_data/AxionPhoton/Chandra.txt")
+    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True):
+        dat = loadtxt("limit_data/AxionPhoton/Chandra_NGC1275.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
+        return
+
+    def H1821643(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True):
+        dat = loadtxt("limit_data/AxionPhoton/Chandra_H1821643.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
         return
 
@@ -966,7 +970,7 @@ class AxionPhoton():
 
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
-        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2e5,8e-10],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.4,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5)
+        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,2e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.4,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5)
         return
 
     def HorizontalBranch(ax,text_label=r'{\bf Horizontal branch}',text_pos=[1.4e0,1.5e-10],col=[0.0, 0.66, 0.42],text_col='w',fs=23,zorder=1,text_on=True,lw=2):
@@ -981,15 +985,35 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center')
         return
 
-    def SN1987A_decay(ax,text_label=r'{\bf Solar} $\nu$',text_pos=[1e1,3e-9],col='#067034',text_col='w',fs=21,zorder=0.1,text_on=True,lw=2,rotation=-60):
-        # SN1987A-neutrinos updated arXiv:[1808.10136]
-        SN = loadtxt("limit_data/AxionPhoton/SN1987A_2019.txt")
-        plt.fill_between(SN[:,0],SN[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        # SN1987A-decay arXiv:[1702.02964]
-        SN = loadtxt("limit_data/AxionPhoton/SN1987A_decay.txt")
-        plt.fill_between(SN[:,0],SN[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+    def DiffuseGammaRays(ax,text_label=r'{Diffuse}-$\gamma$',text_pos=[1e5,1e-10],col='#1e7ac7',text_col='w',fs=21,zorder=0.41,text_on=True,lw=2,rotation=0):
+        # https://arxiv.org/pdf/2109.03244.pdf
+        dat = loadtxt("limit_data/AxionPhoton/DiffuseGammaRays.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=2,color='k',alpha=0.5,zorder=zorder)
+
         if text_on:
-            plt.text(0.4e6,6e-7,r'{\bf SN1987A}',fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True)
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True)
+        return
+
+    def SN1987A_HeavyALP_gamma(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[0.8e5,2.0e-10],col='#067034',text_col='w',fs=18,zorder=0.41,text_on=True,lw=2,rotation=-25.5):
+        # https://arxiv.org/pdf/2109.03244.pdf
+        dat = loadtxt("limit_data/AxionPhoton/SN1987A_HeavyALP_gamma.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=2,color='k',alpha=0.5,zorder=zorder)
+
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True)
+        return
+
+    def SN1987A_HeavyALP_nu(ax,text_shift=[1,1],col='darkgreen',text_col='w',fs=17,zorder=0.41,text_on=True,lw=2,rotation=0,ha='center'):
+        # https://arxiv.org/pdf/2109.03244.pdf
+        dat = loadtxt("limit_data/AxionPhoton/SN1987A_HeavyALP_nu.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=2,color='k',alpha=0.5,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.8e6,text_shift[1]*5e-8,r'{\bf SN1987A}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
+            plt.text(text_shift[0]*1.8e6,text_shift[1]*2e-8,r'($\nu$)',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
         return
 
     def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=17,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -1070,12 +1094,12 @@ class AxionPhoton():
         AxionPhoton.Fermi(ax,text_on=text_on)
         AxionPhoton.StarClusters(ax,text_on=text_on)
         if projection:
-            AxionPhoton.Chandra(ax,text_on=False)
+            AxionPhoton.NGC1275(ax,text_on=False)
             AxionPhoton.SN1987A_gamma(ax,text_on=False)
             AxionPhoton.Fermi_GalacticSN(ax,text_on=text_on)
 
         else:
-            AxionPhoton.Chandra(ax,text_on=text_on)
+            AxionPhoton.NGC1275(ax,text_on=text_on)
             AxionPhoton.SN1987A_gamma(ax,text_on=text_on)
         return
 
@@ -1085,7 +1109,8 @@ class AxionPhoton():
         return
 
     def ALPdecay(ax,projection=False,text_on=True):
-        AxionPhoton.SN1987A_decay(ax,text_on=text_on)
+        AxionPhoton.SN1987A_HeavyALP_gamma(ax,text_on=text_on)
+        AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
         if projection:

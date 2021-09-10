@@ -1,4 +1,4 @@
-# Hydra-A gamma rays
+# Hydra-A X-rays
 # m_a [eV]  g_ap [GeV^-1]
 1.0256e-16	8.2033e-12
 1.0256e-12	8.2033e-12
