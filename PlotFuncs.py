@@ -1191,7 +1191,7 @@ class AxionElectron():
             plt.text(text_shift[0]*3e3,text_shift[1]*0.8e-11,r' basin)',fontsize=fs,color='k',ha='center',va='top',clip_on=True,**kwargs)
         return
 
-    def LUX(ax,col='indianred',fs=30,text_on=True,text_pos=[0.2e-8,6e-12],zorder=0.52,**kwargs):
+    def LUX(ax,col='indianred',fs=30,text_on=True,text_pos=[0.2e-8,7e-12],zorder=0.52,**kwargs):
         # LUX arXiv:[1704.02297]
         dat = loadtxt("limit_data/AxionElectron/LUX.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
