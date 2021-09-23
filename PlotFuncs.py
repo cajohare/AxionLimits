@@ -979,7 +979,12 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center')
         return
 
-    def SolarNu(ax,text_label=r'{\bf Solar} $\nu$',text_pos=[1e1,3e-9],col='seagreen',text_col='w',fs=33,zorder=1,text_on=True,lw=2):
+    def WhiteDwarfs(ax,text_label=r'\noindent {\bf White}\newline  {\bf dwarfs}',text_pos=[1.3e6,4e-8],col='#2ec763',text_col='w',fs=18,zorder=0.9,text_on=True,lw=2,rotation=87):
+        dat = loadtxt("limit_data/AxionPhoton/WhiteDwarfs.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',rotation=rotation)
+        return
+
+    def SolarNu(ax,text_label=r'{\bf Solar} $\nu$',text_pos=[1e1,2e-9],col='seagreen',text_col='w',fs=33,zorder=1,text_on=True,lw=2):
         # Solar neutrino B8 bound arXiv:[1501.01639]
         dat = loadtxt("limit_data/AxionPhoton/SolarNu.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center')
@@ -1012,8 +1017,8 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=2,color='k',alpha=0.5,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1.8e6,text_shift[1]*5e-8,r'{\bf SN1987A}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
-            plt.text(text_shift[0]*1.8e6,text_shift[1]*2e-8,r'($\nu$)',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
+            plt.text(text_shift[0]*1.8e6,text_shift[1]*5e-9,r'{\bf SN1987A}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
+            plt.text(text_shift[0]*1.8e6,text_shift[1]*2e-9,r'($\nu$)',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
         return
 
     def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=17,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -1106,6 +1111,7 @@ class AxionPhoton():
     def StellarBounds(ax,text_on=True):
         AxionPhoton.HorizontalBranch(ax,text_on=text_on)
         AxionPhoton.SolarNu(ax,text_on=text_on)
+        AxionPhoton.WhiteDwarfs(ax,text_on=text_on)
         return
 
     def ALPdecay(ax,projection=False,text_on=True):
