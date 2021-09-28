@@ -104,6 +104,7 @@
 ### Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
+* Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_M87.txt), [reference](https://arxiv.org/abs/1703.07354)
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_NGC1275.txt), [reference](https://arxiv.org/abs/1907.05475)
