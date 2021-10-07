@@ -118,7 +118,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * TEXONO [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/TEXONO.txt), [reference](https://arxiv.org/abs/1804.10777)
 
 ## Astrophysical bounds
-* Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://arxiv.org/abs/1002.0329)
+* Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://arxiv.org/abs/2110.02875)
 * Crab Nebula gamma rays (2008, DP-photon oscillations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab.txt), [reference](https://arxiv.org/abs/0810.5501)
 * Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
 * Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/1305.2920)
