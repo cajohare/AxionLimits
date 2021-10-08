@@ -784,8 +784,16 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True)
         return
 
+
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',text_pos=[1e-1,0.5e-4],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=10,text_on=True,edgealpha=1,lw=2):
+        # SAPPHIRES arXiv:[2105.01224]
+        dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+
+
     def OSQAR(ax,text_label=r'{\bf OSQAR}',text_pos=[1e-5,3e-8],col=[0.6, 0.2, 0.25],text_col='w',fs=17,zorder=1.52,text_on=True,edgealpha=1,lw=2):
-        # PVLAS arXiv:[]
+        # OSQAR arXiv:[]
         dat = loadtxt("limit_data/AxionPhoton/OSQAR.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -840,7 +848,7 @@ class AxionPhoton():
                     plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18,clip_on=True)
         return
 
-    def FermiSNe(ax,text_label=r'{\bf Fermi-SNe}',text_pos=[1.2e-12,0.51e-10],col='ForestGreen',text_col='w',fs=12,zorder=0.25,text_on=True):
+    def FermiSNe(ax,text_label=r'{\bf Fermi-SNe}',text_pos=[1.2e-12,0.45e-10],col='ForestGreen',text_col='w',fs=12,zorder=0.25,text_on=True):
         # Fermi extragalactic SN gamma rays arXiv:[2006.06722]
         dat = loadtxt("limit_data/AxionPhoton/SNe-gamma.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on)
