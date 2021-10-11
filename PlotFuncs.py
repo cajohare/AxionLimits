@@ -19,6 +19,7 @@ import matplotlib.ticker as mticker
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.cm as cm
 from scipy.stats import norm
+import matplotlib.patheffects as pe
 
 pltdir = 'plots/'
 pltdir_png = pltdir+'plots_png/'
@@ -707,7 +708,7 @@ class AxionPhoton():
         return
 
 
-    def BASE(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=1.9,lw=2.5):
+    def BASE(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=1.9,lw=2.5,arrow_on=True):
         # BASE https://inspirehep.net/literature/1843024
         if RescaleByMass:
             rs1 = 1.0
@@ -719,6 +720,13 @@ class AxionPhoton():
             zo = zorder
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/BASE.txt")
+
+        if arrow_on:
+            fig = plt.gcf()
+            plt.arrow(0.265, 0.535, 0, 0.035, transform=fig.transFigure,figure=fig,
+              length_includes_head=True,lw=1,
+              head_width=0.007, head_length=0.016, overhang=0.13,
+              edgecolor='crimson',facecolor='crimson',clip_on=True)
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=lw,zorder=zo)
@@ -961,7 +969,7 @@ class AxionPhoton():
         ## Cosmology constraints see arXiv:[1210.3196] for summary
         # Xray Background
         dat = loadtxt("limit_data/AxionPhoton/XRAY.txt")
-        FilledLimit(ax,dat,r'{\bf X-rays}',text_pos=[1e4,0.8e-16],col=[0.03, 0.57, 0.82],text_col='w',fs=fs,zorder=0.05,text_on=text_on,rotation=-50,ha='left',va='top',edgealpha=0.8)
+        FilledLimit(ax,dat,r'{\bf X-rays}',y2=1e-10,text_pos=[1e4,0.8e-16],col=[0.03, 0.57, 0.82],text_col='w',fs=fs,zorder=0.05,text_on=text_on,rotation=-50,ha='left',va='top',edgealpha=0.8)
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
@@ -1063,7 +1071,7 @@ class AxionPhoton():
                 plt.plot([3.5e-7*text_shift[0],7e-6],[6e3*text_shift[1],2e4],lw=1.5,color=col)
         return
 
-    def Haloscopes(ax,projection=False,fs=20,text_on=True):
+    def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True):
         AxionPhoton.ADMX(ax,projection=projection,fs=fs,text_on=text_on)
         AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=text_on)
         AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on)
@@ -1085,7 +1093,7 @@ class AxionPhoton():
             AxionPhoton.aLIGO(ax,text_on=text_on)
         else:
             AxionPhoton.QUAX(ax,text_on=text_on)
-            AxionPhoton.BASE(ax,text_on=text_on)
+            AxionPhoton.BASE(ax,text_on=text_on,arrow_on=BASE_arrow_on)
             AxionPhoton.ADMX_SLIC(ax,fs=fs-8,text_on=text_on)
             #AxionPhoton.RADES(ax,text_on=False)
         return
@@ -2044,6 +2052,9 @@ def MyTriplePlot(xlab1='',ylab1='',xlab2='',ylab2='',xlab3='',ylab3='',\
         ax3.grid()
     return fig,ax1,ax2,ax3
 #==============================================================================#
+
+def line_background(lw,col):
+    return [pe.Stroke(linewidth=lw, foreground=col), pe.Normal()]
 
 
 #==============================================================================#
