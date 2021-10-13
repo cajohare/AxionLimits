@@ -60,6 +60,7 @@
 * ADMX (2010): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX.txt), [reference](https://arxiv.org/abs/0910.5914)
 * ADMX (2018): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2018.txt), [reference](https://arxiv.org/abs/1804.05750)
 * ADMX (2019): [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_2.txt), [reference](https://arxiv.org/abs/1910.08638)
+* ADMX (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2021.txt), [reference](https://arxiv.org/abs/2110.06096)
 * ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_Sidecar.txt), [reference](https://arxiv.org/abs/1901.00920)
 * ADMX SLIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_SLIC.txt), [reference](https://arxiv.org/abs/1911.05772)
 * ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt),  [reference](https://arxiv.org/abs/1612.08296)
