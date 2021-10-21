@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Buschmann et al. 2020
+# https://arxiv.org/abs/1906.00967
+# Post-inflation PQ+QCD era simulation
+14.2e-6 36.2e-6

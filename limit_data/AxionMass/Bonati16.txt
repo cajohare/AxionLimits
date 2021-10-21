@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Bonati et al. 2016
+# https://arxiv.org/abs/1512.06746
+# Lattice qcd calculation
+0.000004098265306726216  0.000007887035490719888

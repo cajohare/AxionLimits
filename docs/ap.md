@@ -105,8 +105,8 @@
 
 ### Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
-* Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
-* Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
+* Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
+* Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
 * Chandra (M87): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_M87.txt), [reference](https://arxiv.org/abs/1703.07354)
 * Chandra (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_NGC1275.txt), [reference](https://arxiv.org/abs/1907.05475)
@@ -123,7 +123,7 @@
 * Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
 * Neutron Stars (Foster et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_GreenBank.txt), [reference](https://arxiv.org/abs/2004.00011)
 * Neutron Stars (Darling) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_VLA.txt), [reference1](https://arxiv.org/abs/2008.01877), [reference2](https://arxiv.org/abs/2008.11188)
-* Neutron Stars (Battye et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_Battye.txt), [reference2](https://arxiv.org/abs/2107.01225)
+* Neutron Stars (Battye et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_Battye.txt), [reference](https://arxiv.org/abs/2107.01225)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)
 * SN1987A gamma rays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_HeavyALP_gamma.txt), [reference](https://arxiv.org/abs/2109.03244)
@@ -132,8 +132,10 @@
 * Telescopes (Haystack): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_Haystack.txt), [reference](https://iopscience.iop.org/article/10.1086/318310)
 * Telescopes (MUSE Leo-T): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_MUSE.txt), [reference](https://arxiv.org/abs/2009.01310)
 * Telescopes (VIMOS Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_VIMOS.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)
-* THESEUS (ALP DM decay to Xrays): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/THESEUS.txt), [reference](https://arxiv.org/abs/2008.08306)
+* THESEUS (ALP DM decay to Xrays): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/THESEUS.txt), [reference](https://arxiv.org/abs/2008.08306)
 * White dwarf initial-final mass relation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2102.00379)
+* XMM-Newton (decaying DM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XMM-Newton.txt), [reference](https://arxiv.org/abs/2102.02207)
+
 
 ### Cosmology
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)

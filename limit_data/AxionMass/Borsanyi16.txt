@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Borsanyi et al. 2016
+# https://arxiv.org/abs/1606.07494
+# Lattice QCD post-inflationary range
+0.00004834219531046074  0.001307763563621612

@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Dine et al. 2017
+# https://arxiv.org/abs/1705.00676
+# Post inflation range with instanton uncertainties
+0.00002628036063179591  0.00006431886294447989

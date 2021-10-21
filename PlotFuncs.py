@@ -967,6 +967,14 @@ class AxionPhoton():
         plt.plot([2.1e3,3.5e3],[0.3e-18,0.4e-18],'-',lw=2,color=col)
         return
 
+
+    def XMMNewton(ax,text_label=r'{\bf XMM-Newton}',text_pos=[3.2e3,1.8e-18],col=[0.03, 0.57, 0.82],edgecolor='k',text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.01,text_on=True,lw=0.5,facealpha=1):
+        # eROSITA 2103.13241
+        dat = loadtxt("limit_data/AxionPhoton/XMM-Newton.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        plt.plot([3.5e3,6e3],[1.5e-18,2e-18],'k-',lw=2,color=col,path_effects=line_background(3,'k'))
+        return
+
     def Cosmology(ax,fs=30,text_on=True):
         ## Cosmology constraints see arXiv:[1210.3196] for summary
         # Xray Background
@@ -1060,7 +1068,6 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye.txt')
-        dat[:,1] *= 100 # x100 to get Model A
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
@@ -1137,6 +1144,7 @@ class AxionPhoton():
         AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
+        AxionPhoton.XMMNewton(ax,text_on=text_on)
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
             AxionPhoton.eROSITA(ax,text_on=text_on)
@@ -2015,6 +2023,40 @@ def MyDoublePlot(xlab1='',ylab1='',xlab2='',ylab2='',\
         ax1.grid()
         ax2.grid()
     return fig,ax1,ax2
+
+
+def MyDoublePlot_Vertical(xlab1='',ylab1='',xlab2='',ylab2='',\
+                     hspace=0.05,lw=2.5,lfs=45,tfs=30,size_x=15,size_y=14,Grid=False,height_ratios=[2.5,1]):
+    plt.rcParams['axes.linewidth'] = lw
+    plt.rc('text', usetex=True)
+    plt.rc('font', family='serif',size=tfs)
+    mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+
+
+    fig, axarr = plt.subplots(2,1,figsize=(size_x,size_y))
+    gs = gridspec.GridSpec(2, 1,height_ratios=height_ratios)
+    gs.update(hspace=hspace)
+    ax1 = plt.subplot(gs[0])
+    ax2 = plt.subplot(gs[1])
+
+    ax1.tick_params(which='major',direction='in',width=2,length=13,right=False,top=True,pad=10)
+    ax1.tick_params(which='minor',direction='in',width=1,length=10,right=False,top=True)
+
+    ax2.tick_params(which='major',direction='in',width=2,length=13,right=False,top=True,pad=10)
+    ax2.tick_params(which='minor',direction='in',width=1,length=10,right=False,top=True)
+
+    ax1.set_xlabel(xlab1,fontsize=lfs)
+    ax1.set_ylabel(ylab1,fontsize=lfs)
+
+    ax2.set_xlabel(xlab2,fontsize=lfs)
+    ax2.set_ylabel(ylab2,fontsize=lfs)
+
+
+    if Grid:
+        ax1.grid()
+        ax2.grid()
+    return fig,ax1,ax2
+
 
 
 def MyTriplePlot(xlab1='',ylab1='',xlab2='',ylab2='',xlab3='',ylab3='',\

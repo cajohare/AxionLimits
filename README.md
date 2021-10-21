@@ -90,6 +90,17 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 ---
 
+[<img align="right" width="300" src="plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png">](docs/am.md)
+
+# [**Axion mass predictions**](docs/am.md)
+[**Data files**](docs/am.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup_withTheory.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png))\
+   &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
 [<img align="right" width="300" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
 
 # [**Dark photons**](docs/dp.md)
@@ -100,5 +111,6 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
    &nbsp; \
   &nbsp;
 
+
 # Acknowledgements
-**Thank you to**: Masha Baryakhtar, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Maurizio Giannotti, Alexander Gramolin, Fred Hiskins, Sebastian Hoof, Hai-Jun Li, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Andreas Ringwald, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.
+**Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Maurizio Giannotti, Alexander Gramolin, Fred Hiskins, Sebastian Hoof, Hai-Jun Li, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Andreas Ringwald, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.

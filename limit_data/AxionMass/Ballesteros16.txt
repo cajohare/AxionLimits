@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Ballesteros et al. 2016
+# https://arxiv.org/abs/1608.05414
+# SMASH model
+50e-6 200e-6

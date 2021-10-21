@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Petreczky et al. 2016
+# https://arxiv.org/abs/1606.03145
+# Lattice topological susceptibility calculation
+3.744e-6  4.95e-6

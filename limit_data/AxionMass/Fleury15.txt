@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Fleury and Moore et al. 2015
+# https://arxiv.org/abs/1509.00026
+# Strings simulation (there is no upper bound, 1e-4 is for convenience)
+18e-6  1e-3

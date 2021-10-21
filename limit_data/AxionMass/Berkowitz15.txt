@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Berkowitz et al. 2015
+# https://arxiv.org/abs/1505.07455
+# Lattice qcd calculation (there is no upper bound, 1e-4 is for convenience)
+14.5e-6  1e-3

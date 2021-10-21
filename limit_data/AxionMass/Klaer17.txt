@@ -1,0 +1,4 @@
+# Predicted axion masses (in eV) from Klaer and Moore 2017
+# https://arxiv.org/abs/1708.07521
+# High tension axion string simulation
+22.8e-6  29.6e-6
