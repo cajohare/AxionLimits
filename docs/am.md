@@ -1,6 +1,6 @@
 # Axion mass theory predictions
 ---
-[<img align="right" height="250" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
 ## Haloscopes closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_TheoryPredictions.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup_withTheory.pdf)
@@ -10,7 +10,7 @@
 
 ## Files and references
 
-### Axio masses:
+### Axion masses:
 * Ballesteros et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Ballesteros16.txt),  [reference](https://arxiv.org/abs/1608.05414)
 * Berkowitz et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Berkowitz15.txt),  [reference](https://arxiv.org/abs/1505.07455)
 * Bonati et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Bonati16.txt),  [reference](https://arxiv.org/abs/1512.06746)
