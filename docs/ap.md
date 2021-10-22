@@ -62,6 +62,7 @@
 * ADMX (2019): [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_2.txt), [reference](https://arxiv.org/abs/1910.08638)
 * ADMX (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2021.txt), [reference](https://arxiv.org/abs/2110.06096)
 * ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_Sidecar.txt), [reference](https://arxiv.org/abs/1901.00920)
+* ADMX Sidecar (JTWPA): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ADMX_Sidecar_JTWPA.txt), [reference](https://arxiv.org/abs/2110.10262)
 * ADMX SLIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_SLIC.txt), [reference](https://arxiv.org/abs/1911.05772)
 * ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt),  [reference](https://arxiv.org/abs/1612.08296)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/1903.02017)

@@ -75,6 +75,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * LAMPOST (projection): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/LAMPOST.txt), [reference](https://arxiv.org/abs/1803.11455)
 * LZ: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/LZ.txt), [reference](https://arxiv.org/abs/2102.11740)
 * MADMAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/MADMAX.txt), [reference](https://arxiv.org/abs/2006.06836)
+* MuDHI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/MuDHI.txt), [reference](https://arxiv.org/abs/2110.10497)
 * SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
 * SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)
