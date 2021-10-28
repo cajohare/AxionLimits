@@ -527,6 +527,30 @@ class AxionPhoton():
 
         return
 
+    def GrAHal(ax,col='#b53e5a',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+        # Grenoble haloscope  2110.14406
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+            zo = 6
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+            zo = 0
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/GrAHal.txt")
+
+        if rs1==0:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
+        else:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
+            if text_on:
+                plt.text(text_shift[0]*dat[0,0]*0.88,text_shift[1]*y2*1.2,r'{\bf GrAHal}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
+            plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
+
+        return
+
     def MADMAX(ax,col='darkred',fs=18,RescaleByMass=False,text_on=True,text_shift=[1,1]):
         # MADMAX arXiv[2003.10894]
         y2 = ax.get_ylim()[1]
@@ -1105,6 +1129,7 @@ class AxionPhoton():
             AxionPhoton.BASE(ax,text_on=text_on,arrow_on=BASE_arrow_on)
             AxionPhoton.ADMX_SLIC(ax,fs=fs-8,text_on=text_on)
             #AxionPhoton.RADES(ax,text_on=False)
+            #AxionPhoton.GrAHal(ax,text_on=False)
         return
 
     def LSW(ax,projection=False,text_on=True):

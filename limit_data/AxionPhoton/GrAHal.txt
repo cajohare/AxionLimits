@@ -1,0 +1,5 @@
+# Grenoble haloscope
+#  2110.14406 
+# Mass [eV] g_agamma [GeV^-1]
+26.37e-6  2.2e-13
+26.37e-6  2.2e-13
