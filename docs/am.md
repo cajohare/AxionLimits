@@ -6,12 +6,19 @@
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup_withTheory.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
 ### &nbsp;
+### &nbsp;
+### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_ALPDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
 ## Haloscopes closeup
-### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/ALPDM.ipynb)
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_ALPDM.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
 ### &nbsp;
 ---
 
@@ -31,7 +38,7 @@
 
 
 ### Other dark matter predictions
-Go to the [notebook](https://github.com/cajohare/AxionLimits/blob/master/ALPDM.ipynb) for details on plotting
+Go to the [notebook](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb) for details on plotting
 * ALP Cogenesis [reference](https://arxiv.org/abs/2006.04809)
 * Early matter domination [reference](https://arxiv.org/abs/1905.06952)
 * Post-inflation misalignment [reference](https://arxiv.org/abs/1201.5902) (and work in prep.)
