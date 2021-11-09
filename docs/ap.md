@@ -90,6 +90,7 @@
 * TOORAD: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD1.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD2.txt), [reference](https://arxiv.org/abs/2102.05366)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UF.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
 * UPLOAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
+* WISPLC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPLC.txt), [reference](https://arxiv.org/abs/2111.04541)
 
 ### Helioscopes/LSW
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)

@@ -94,7 +94,7 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
                  lw=2.5,lfs=45,tfs=25,tickdir='out',\
                  Grid=False,Shape='Rectangular',\
                  mathpazo=False,TopAndRightTicks=False,\
-                xtick_rotation=20.0,tick_pad=8,\
+                xtick_rotation=20.0,tick_pad=8,x_labelpad=10,y_labelpad=10,\
              FrequencyAxis=False,N_Hz=1,upper_xlabel=r"$\nu_a$ [Hz]",**freq_kwargs):
 
     plt.rcParams['axes.linewidth'] = lw
@@ -108,11 +108,13 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
         fig = plt.figure(figsize=(16.5,5))
     elif Shape=='Rectangular':
         fig = plt.figure(figsize=(16.5,11))
+    elif Shape=='Square':
+        fig = plt.figure(figsize=(14.2,14))
 
     ax = fig.add_subplot(111)
 
-    ax.set_xlabel(xlab,fontsize=lfs)
-    ax.set_ylabel(ylab,fontsize=lfs)
+    ax.set_xlabel(xlab,fontsize=lfs,labelpad=x_labelpad)
+    ax.set_ylabel(ylab,fontsize=lfs,labelpad=y_labelpad)
 
     ax.tick_params(which='major',direction=tickdir,width=2.5,length=13,right=TopAndRightTicks,top=TopAndRightTicks,pad=tick_pad)
     ax.tick_params(which='minor',direction=tickdir,width=1,length=10,right=TopAndRightTicks,top=TopAndRightTicks)
@@ -446,7 +448,7 @@ class AxionPhoton():
                     plt.plot([dat[-1,0],dat[-1,0]],[dat[-1,1]/(rs1*2e-10*dat[-1,0]+rs2),1e6],lw=1.5,color=col,zorder=0)
         return
 
-    def DMRadio(ax,col=[0.83, 0.07, 0.37],fs=23,text_on=True,RescaleByMass=False,lw=2,text_shift=[1,1]):
+    def DMRadio(ax,col=[0.83, 0.07, 0.37],fs=23,text_on=True,RescaleByMass=False,lw=2,text_shift=[1,1],linestyle='-',rotation=90):
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
             rs1 = 1.0
@@ -455,13 +457,31 @@ class AxionPhoton():
             rs1 = 0.0
             rs2 = 1.0
         dat = loadtxt('limit_data/AxionPhoton/Projections/DMRadio.txt')
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=2,color=col,zorder=0)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),linestyle=linestyle,linewidth=2,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*2e-10,text_shift[1]*0.5e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=90,clip_on=True)
+                plt.text(text_shift[0]*2e-10,text_shift[1]*0.05e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=rotation,clip_on=True)
             else:
                 plt.text(text_shift[0]*5e-9,text_shift[1]*4.0e-1,r'{\bf DM-Radio}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top',clip_on=True)
+        return
+
+    def WISPLC(ax,col=[0.8, 0.07, 0.37],fs=15,text_on=True,RescaleByMass=False,lw=2,text_shift=[1,1],linestyle='-',rotation=14):
+        y2 = ax.get_ylim()[1]
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+        dat = loadtxt('limit_data/AxionPhoton/Projections/WISPLC.txt')
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),linestyle=linestyle,linewidth=2,color=col,zorder=0)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
+        if text_on:
+            if rs1==0:
+                plt.text(text_shift[0]*2e-11,text_shift[1]*8e-16,r'{\bf WISPLC}',color='crimson',fontsize=fs,rotation=rotation,clip_on=True)
+            else:
+                plt.text(text_shift[0]*1.5e-9,text_shift[1]*1.5e4,r'{\bf WISPLC}',fontsize=fs+1,color=col,rotation=-14,ha='left',va='top',clip_on=True)
         return
 
     def ORGAN(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -674,7 +694,7 @@ class AxionPhoton():
         return
 
     # Low mass ALP haloscopes
-    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1.7e-12,2e-13]):
+    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.5e-12,1.7e-13]):
         # DANCE arXiv[1911.05196]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/DANCE.txt")
@@ -694,7 +714,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=0,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1e-11,1.3e-12],rotation=26):
+    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1.3e-11,1.65e-12],rotation=26):
         # ADBC arXiv[1809.01656]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/ADBC.txt")
@@ -1124,12 +1144,29 @@ class AxionPhoton():
             AxionPhoton.ADBC(ax,text_on=text_on)
             AxionPhoton.DANCE(ax,text_on=text_on)
             AxionPhoton.aLIGO(ax,text_on=text_on)
+            AxionPhoton.WISPLC(ax,text_on=text_on)
         else:
             AxionPhoton.QUAX(ax,text_on=text_on)
             AxionPhoton.BASE(ax,text_on=text_on,arrow_on=BASE_arrow_on)
             AxionPhoton.ADMX_SLIC(ax,fs=fs-8,text_on=text_on)
             #AxionPhoton.RADES(ax,text_on=False)
             #AxionPhoton.GrAHal(ax,text_on=False)
+        return
+
+    def HaloscopesUniform(ax,projection=False,fs=20,text_on=True,col='darkred'):
+        AxionPhoton.ADMX(ax,projection=projection,fs=fs,text_on=text_on,col=col)
+        AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=text_on,col=col)
+        AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on,col=col)
+        AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on,col=col)
+        AxionPhoton.SHAFT(ax,text_on=text_on,col=col)
+        AxionPhoton.CAPP(ax,fs=fs-4,text_on=text_on,col=col)
+        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,col=col)
+        AxionPhoton.UPLOAD(ax,text_on=text_on,col=col)
+        AxionPhoton.QUAX(ax,text_on=text_on,col=col)
+        AxionPhoton.BASE(ax,text_on=text_on,col=col,arrow_on=False)
+        AxionPhoton.ADMX_SLIC(ax,fs=fs-8,text_on=text_on,col=col)
+        AxionPhoton.RADES(ax,text_on=text_on,col=col)
+        AxionPhoton.GrAHal(ax,text_on=text_on,col=col)
         return
 
     def LSW(ax,projection=False,text_on=True):
