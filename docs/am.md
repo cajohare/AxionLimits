@@ -1,7 +1,7 @@
 # Axion dark matter theory predictions
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
-## Haloscopes closeup
+## QCD axion
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_TheoryPredictions.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup_withTheory.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
@@ -10,11 +10,10 @@
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_ALPDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
-## Haloscopes closeup
+## Other DM predictions
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_ALPDM.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
-### &nbsp;
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
