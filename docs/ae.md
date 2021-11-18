@@ -30,6 +30,7 @@
 ### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
 * EDELWEISS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/EDELWEISS.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/EDELWEISS.txt), [reference](https://arxiv.org/abs/1808.02340)
+* GERDA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/GERDA.txt), [reference](https://arxiv.org/abs/2005.14184)
 * LUX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/LUX.txt), [reference](https://arxiv.org/abs/1704.02297)
 * LZ: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/LZ.txt), [reference](https://arxiv.org/abs/2102.11740)
 * PandaX-II: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/PandaX.txt), [reference](https://arxiv.org/abs/1707.07921)

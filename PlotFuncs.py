@@ -1325,7 +1325,15 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf PandaX}',fontsize=fs-2,color='w',ha='left',va='top',rotation=rotation,clip_on=True,**kwargs)
         return
 
-    def EDELWEISS(ax,col='darkred',projection=False,fs=15,text_on=True,text_pos=[9e0,7e-13],zorder=0.57,rotation=0,**kwargs):
+    def GERDA(ax,col='#d13617',fs=22,text_on=True,text_pos=[1.6e5,1.9e-11],zorder=0.52,text_col='w',**kwargs):
+        dat = loadtxt("limit_data/AxionElectron/GERDA.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf GERDA}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,**kwargs)
+        return
+
+    def EDELWEISS(ax,col='darkred',projection=False,fs=15,text_col='darkred',text_on=True,text_pos=[9e0,7e-13],zorder=0.57,rotation=0,**kwargs):
         # EDELWEISS arXiv:[1808.02340]
         dat = loadtxt("limit_data/AxionElectron/EDELWEISS.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
@@ -1334,7 +1342,7 @@ class AxionElectron():
             dat = loadtxt("limit_data/AxionElectron/Projections/EDELWEISS.txt")
             plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,lw=3)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf EDELWEISS}',fontsize=fs,color=col,ha='left',va='top',clip_on=True,rotation=rotation,**kwargs)
+            plt.text(text_pos[0],text_pos[1],r'{\bf EDELWEISS}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,rotation=rotation,**kwargs)
         return
 
     def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,**kwargs):
