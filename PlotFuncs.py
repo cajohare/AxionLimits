@@ -995,6 +995,14 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=0.0,edgealpha=0)
         return
 
+
+    def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[2.3e2,0.25e-13],col='#036b3e',text_col='w',fs=16,zorder=0.1,text_on=True,rotation=-46):
+        # anomalous gas heating in Leo T dwarf
+        dat = loadtxt("limit_data/AxionPhoton/LeoT.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation)
+        return
+
+
     def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[8e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.01,text_on=True,lw=2,facealpha=0.1):
         # THESEUS 2008.08306
         dat = loadtxt("limit_data/AxionPhoton/Projections/THESEUS.txt")
@@ -1011,12 +1019,16 @@ class AxionPhoton():
         plt.plot([2.1e3,3.5e3],[0.3e-18,0.4e-18],'-',lw=2,color=col)
         return
 
-
     def XMMNewton(ax,text_label=r'{\bf XMM-Newton}',text_pos=[3.2e3,1.8e-18],col=[0.03, 0.57, 0.82],edgecolor='k',text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.01,text_on=True,lw=0.5,facealpha=1):
-        # eROSITA 2103.13241
         dat = loadtxt("limit_data/AxionPhoton/XMM-Newton.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
         plt.plot([3.5e3,6e3],[1.5e-18,2e-18],'k-',lw=2,color=col,path_effects=line_background(3,'k'))
+        return
+
+    def COBEFIRAS(ax,text_label=r'{\bf COBE/FIRAS}',text_pos=[0.45e2,4e-13],col='#234f8c',text_col='w',fs=13,zorder=0.2,text_on=True,rotation=-46):
+        # anomalous gas heating in Leo T dwarf
+        dat = loadtxt("limit_data/AxionPhoton/COBE-FIRAS.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation)
         return
 
     def Cosmology(ax,fs=30,text_on=True):
@@ -1041,6 +1053,10 @@ class AxionPhoton():
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
         FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,2e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.4,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5)
+
+        # Spectral distortions of CMB
+        AxionPhoton.COBEFIRAS(ax,text_on=text_on)
+
         return
 
     def HorizontalBranch(ax,text_label=r'{\bf Horizontal branch}',text_pos=[1.4e0,1.5e-10],col=[0.0, 0.66, 0.42],text_col='w',fs=23,zorder=1,text_on=True,lw=2):
@@ -1207,6 +1223,8 @@ class AxionPhoton():
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
+        AxionPhoton.LeoT(ax,text_on=text_on)
+
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
             AxionPhoton.eROSITA(ax,text_on=text_on)
@@ -1908,7 +1926,7 @@ class Axion_fa():
             return C*(1/1e12)*(m_a/5.7e-6)
 
 
-        if shading_on:
+        if shading_on: # not strictly necessary as there is a fixed ma-fa relation and the uncertainty is small
             n = 200
             g = logspace(log10(g_min),log10(g_max),n)
             m = logspace(log10(m_min),log10(m_max),n)
@@ -1925,10 +1943,8 @@ class Axion_fa():
             text_col=cols(0.7)
         else:
             n = 200
-            col ='goldenrod'
             m = logspace(log10(m_min),log10(m_max),n)
-            plt.fill_between(m,f_a(1-0.4,m),y2=f_a(1+0.4,m),facecolor=col,zorder=0,alpha=alpha)
-
+            plt.plot(m,f_a(1,m),color=text_col,lw=4,path_effects=line_background(5,'k'),zorder=-10)
         if text_on:
             trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
             plt.text(QCD_label_mass,f_a(1-0.4,QCD_label_mass)/1.4,r'{\bf QCD axion}',\
