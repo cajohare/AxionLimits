@@ -1,0 +1,4 @@
+# Breakthrough listen asymmetrically doppler shifted radio line
+# https://arxiv.org/pdf/2112.03439.pdf
+1.4309346567411084e-05 4.1e-8
+1.5136476426799007e-05 4.1e-8
