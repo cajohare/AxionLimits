@@ -1004,13 +1004,13 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha)
         return
 
-    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.7e-12],col=[0.09, 0.45, 0.27],text_col=[0.09, 0.45, 0.27],fs=15,zorder=0.2,text_on=True,lw=0):
+    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.7e-12],col=[0.09, 0.45, 0.27],text_col=[0.09, 0.45, 0.27],fs=15,zorder=0.5,text_on=True,lw=0):
         # Telescopes (MUSE) [2009.01310]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
         return
 
-    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[15,1e-11],col=[0.09, 0.6, 0.27],text_col=[0.09, 0.6, 0.27],fs=15,zorder=0.2,text_on=True,lw=0):
+    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[12,0.4e-11],col=[0.09, 0.6, 0.27],text_col=[0.09, 0.6, 0.27],fs=15,zorder=0.5,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_VIMOS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)
@@ -1060,20 +1060,20 @@ class AxionPhoton():
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
-        EBL2 = loadtxt("limit_data/AxionPhoton/EBL.txt")
-        FilledLimit(ax,EBL,r'{\bf EBL}',text_pos=[5e4,5e-14],col=[0.0, 0.2, 0.6],text_col='w',fs=fs+5,zorder=0.5,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.8,lw=2.5)
-        FilledLimit(ax,EBL2,r'{\bf EBL}',col=[0.0, 0.2, 0.6],text_on=False,edgealpha=0.0)
+        EBL2 = loadtxt("limit_data/AxionPhoton/EBL2.txt")
+        FilledLimit(ax,EBL,r'{\bf EBL}',text_pos=[5e4,5e-14],col=[0.0, 0.2, 0.6],text_col='w',fs=fs+5,zorder=0.5,text_on=text_on,rotation=-55,ha='left',va='top')
+        FilledLimit(ax,EBL2,'',col=[0.0, 0.2, 0.6],text_on=False,zorder=0.29)
 
         # Ionisation fraction
         dat = loadtxt("limit_data/AxionPhoton/x_ion.txt")
-        FilledLimit(ax,dat,'',col=[0.27, 0.51, 0.71],text_col='k',fs=fs,zorder=0.5,text_on=False,edgealpha=0.8)
+        FilledLimit(ax,dat,'',col=[0.27, 0.51, 0.71],text_col='k',fs=fs,zorder=0.51,text_on=False,edgealpha=0.8)
         if text_on:
             plt.text(100.5744*0.93,5.1720e-11,r'{\bf Ionisation}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
             plt.text(40*0.93,4.1720e-11,r'{\bf fraction}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
 
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
-        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,2e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.4,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5)
+        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,2e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.39,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5)
 
         # Spectral distortions of CMB
         AxionPhoton.COBEFIRAS(ax,text_on=text_on)
