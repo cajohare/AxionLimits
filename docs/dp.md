@@ -80,7 +80,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
 * SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)
-* SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperCDMS.txt), [reference](https://arxiv/org/1911.11905)
+* SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * SuperCDMS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/SuperCDMS.txt), [reference](https://link.springer.com/article/10.1007/JHEP06(2017)087)
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperMAG.txt), [reference1](https://arxiv.org/abs/2106.00022). [reference2](https://arxiv.org/abs/2108.08852)
 * Tokyo (Knirck et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Knirck.txt), [reference](https://arxiv.org/abs/1806.05120)
