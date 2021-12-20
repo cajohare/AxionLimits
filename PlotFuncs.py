@@ -647,9 +647,9 @@ class AxionPhoton():
         if text_on:
             if rs1==0:
                 plt.text(text_shift[0]*1.1e-3,text_shift[1]*0.4e-13,r'{\bf BRASS}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
-                plt.plot([1.3e-3,0.5e-3],[0.6e-13,2.2e-12],'k-',lw=1.5)
+                plt.plot([1.3e-3,0.5e-3],[0.45e-13,2.2e-12],'k-',lw=1.5)
             else:
-                plt.text(text_shift[0]*0.45e-3,text_shift[1]*0.4e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col,clip_on=True)
+                plt.text(text_shift[0]*0.45e-3,text_shift[1]*1e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col,clip_on=True)
 
         return
 
@@ -667,9 +667,9 @@ class AxionPhoton():
         if text_on:
             if rs1==0:
                 plt.text(text_shift[0]*2.4e-3,text_shift[1]*1.4e-13,r'{\bf BREAD}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
-                plt.plot([2.4e-3,0.6e-3],[1.5e-13,2.9e-11],'k-',lw=1.5)
+                plt.plot([3.5e-3,3e-3],[1.5e-13,2.9e-13],'k-',lw=1.5)
             else:
-                plt.text(text_shift[0]*0.45e-3,text_shift[1]*1e2,r'{\bf BREAD}',fontsize=15,rotation=0,color=col,clip_on=True)
+                plt.text(text_shift[0]*2e-3,text_shift[1]*1e-1,r'{\bf BREAD}',fontsize=18,rotation=0,color=col,clip_on=True)
 
         return
 
