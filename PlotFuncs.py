@@ -297,7 +297,7 @@ class AxionPhoton():
 
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*0.4e-5,text_shift[1]*0.6e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top',clip_on=True)
+                plt.text(text_shift[0]*0.37e-5,text_shift[1]*0.8e-11,r'{\bf RBF+UF}',fontsize=fs,color='w',rotation=-90,ha='left',va='top',clip_on=True)
             else:
                 plt.text(text_shift[0]*0.7e-5,text_shift[1]*4e3,r'{\bf RBF}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
                 plt.text(text_shift[0]*0.7e-5,text_shift[1]*1e3,r'{\bf UF}',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
@@ -1032,7 +1032,7 @@ class AxionPhoton():
         return
 
 
-    def MWDXrays(ax,text_label=r'{\bf MWD X-rays}',text_pos=[4e-7,1.3e-10],col='#59c275',text_col='#59c275',fs=14,zorder=0.1,text_on=True,Projection=False):
+    def MWDXrays(ax,text_label=r'{\bf MWD X-rays}',text_pos=[1.5e-7,1.3e-10],col='#59c275',text_col='#59c275',fs=14,zorder=0.1,text_on=True,Projection=False):
         # Magnetic white dwarf chandra x-rays arXiv:[2104.12772]
         dat = loadtxt("limit_data/AxionPhoton/MWDXrays.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on)
@@ -1178,7 +1178,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*1.8e6,text_shift[1]*2e-9,r'($\nu$)',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
         return
 
-    def NeutronStars(ax,col=[0.1, 0.5, 0.2],fs=17,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def NeutronStars(ax,col='#52a178',fs=14,RescaleByMass=False,text_on=True,text_shift=[1,1],text_col='#52a178'):
         # Neutron stars: Green Bank arXiv:[2004.00011]
         # Jansky VLA: 2008.01877, 2008.11188
         # Battye et al. []
@@ -1208,7 +1208,7 @@ class AxionPhoton():
 
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*3e-6,text_shift[1]*0.8e-10,r'{\bf Neutron stars}',fontsize=fs,color='w',ha='left')
+                plt.text(text_shift[0]*1e-5,text_shift[1]*0.6e-10,r'{\bf Neutron stars}',fontsize=fs,color=text_col,ha='left',va='bottom')
             else:
                 plt.text(text_shift[0]*1e-7,text_shift[1]*4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
                 plt.text(text_shift[0]*1e-7,text_shift[1]*1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
