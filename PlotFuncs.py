@@ -1926,18 +1926,18 @@ class AxionProton():
 
         # Stellar physics constraints
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
-        # SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
-        # SN[:,1] *= 2*AxionNeutron.m_n
-        # plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.02)
-        # plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
-        # plt.text((1-0.05)*0.8e-2,(1+0.05)*1.9e-8,r'{\bf SN1987A}',fontsize=fs,color='k',ha='right',va='top')
-        # plt.text(0.8e-2,1.9e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
+        SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
+        SN[:,1] *= 2*AxionNeutron.m_n
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.01)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
+        plt.text((1-0.05)*0.8e-2,(1+0.05)*1.3e-5,r'{\bf SN1987A}',fontsize=fs,color='k',ha='right',va='top')
+        plt.text(0.8e-2,1.3e-5,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top')
 
         # Cooling of HESS J1731-347 arXiv:[1806.07991]
         SN = loadtxt("limit_data/AxionProton/NeutronStars.txt")
         SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.01)
-        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.02)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
         plt.text((1-0.05)*0.8e-2,(1+0.05)*1.9e-8,r'{\bf Neutron star cooling}',fontsize=fs-6,color='k',ha='right',va='top')
         plt.text(0.8e-2,1.9e-8,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top')
 #==============================================================================#
