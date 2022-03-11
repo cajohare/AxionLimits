@@ -118,7 +118,8 @@
 
 ### Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
-* Breakthrough Listen: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
+* Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
+* Breakthrough Listen (Neutron stars) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
 * Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
 * Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
 * Chandra (Hydra-A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_HYDRA_A.txt), [reference](https://arxiv.org/abs/1304.0989)
