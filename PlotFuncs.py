@@ -1090,10 +1090,10 @@ class AxionPhoton():
         plt.plot([2.1e3,3.5e3],[0.3e-18,0.4e-18],'-',lw=2,color=col)
         return
 
-    def XMMNewton(ax,text_label=r'{\bf XMM-Newton}',text_pos=[3.2e3,1.8e-18],col=[0.03, 0.57, 0.82],edgecolor='k',text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.01,text_on=True,lw=0.5,facealpha=1):
+    def XMMNewton(ax,text_label=r'{\bf XMM-Newton}',text_pos=[1e3,1.8e-18],col='#3b4ba1',edgecolor='k',text_col='#3b4ba1',fs=17,zorder=0.01,text_on=True,lw=0.5,facealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/XMM-Newton.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
-        plt.plot([3.5e3,6e3],[1.5e-18,2e-18],'k-',lw=2,color=col,path_effects=line_background(3,'k'))
+        plt.plot([1.2e3,6e3],[1.3e-18,2e-18],'k-',lw=2,color=col,path_effects=line_background(3,'k'))
         return
 
     def COBEFIRAS(ax,text_label=r'{\bf COBE/FIRAS}',text_pos=[0.45e2,4e-13],col='#234f8c',text_col='w',fs=13,zorder=0.2,text_on=True,rotation=-46):
@@ -1208,7 +1208,7 @@ class AxionPhoton():
 
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1e-5,text_shift[1]*0.6e-10,r'{\bf Neutron stars}',fontsize=fs,color=text_col,ha='left',va='bottom')
+                plt.text(text_shift[0]*1e-5,text_shift[1]*0.62e-10,r'{\bf Neutron stars}',fontsize=fs,color=text_col,ha='left',va='bottom')
             else:
                 plt.text(text_shift[0]*1e-7,text_shift[1]*4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
                 plt.text(text_shift[0]*1e-7,text_shift[1]*1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
@@ -2145,6 +2145,16 @@ class Axion_fa():
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=rot,clip_on=True)
+        return
+
+    def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.4e-14],col='darkred',alpha=0.4,zorder=-10,rot=90,fs=20):
+        dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect1.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect64.txt')
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Piezoaxionic}',color=col,alpha=0.6,fontsize=fs,rotation=rot,clip_on=True)
         return
 #==============================================================================#
 
