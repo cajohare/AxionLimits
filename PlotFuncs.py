@@ -1190,15 +1190,19 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_GreenBank.txt')
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
+        # dat = loadtxt('limit_data/AxionPhoton/NeutronStars_GreenBank.txt')
+        # plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        # plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
+        #
+        # dat = loadtxt('limit_data/AxionPhoton/NeutronStars_VLA.txt')
+        # plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        # plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
+        #
+        # dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye.txt')
+        # plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        # plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
-        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_VLA.txt')
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
-
-        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye.txt')
+        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt')
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
 
@@ -1208,7 +1212,7 @@ class AxionPhoton():
             else:
                 plt.text(text_shift[0]*1e-7,text_shift[1]*4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
                 plt.text(text_shift[0]*1e-7,text_shift[1]*1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
-                plt.plot([3.5e-7*text_shift[0],7e-6],[6e3*text_shift[1],2e4],lw=1.5,color=col)
+                plt.plot([3.5e-7*text_shift[0],2e-5],[6e3*text_shift[1],8e3],lw=1.5,color=col,path_effects=line_background(2,'w'))
         return
 
     def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True):
@@ -1220,9 +1224,8 @@ class AxionPhoton():
         AxionPhoton.UPLOAD(ax,text_on=text_on)
 
         if projection:
-            AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=False)
             AxionPhoton.CAPP(ax,fs=fs-4,text_on=False)
-
+            AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=False)
             AxionPhoton.DMRadio(ax,text_on=text_on)
             AxionPhoton.SRF(ax,text_on=text_on)
             AxionPhoton.ALPHA(ax,text_on=text_on)
