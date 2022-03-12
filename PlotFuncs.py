@@ -1178,7 +1178,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*1.8e6,text_shift[1]*2e-9,r'($\nu$)',fontsize=fs,color='w',rotation=0,ha='center',va='top',clip_on=True)
         return
 
-    def NeutronStars(ax,col='#52a178',fs=14,RescaleByMass=False,text_on=True,text_shift=[1,1],text_col='#52a178'):
+    def NeutronStars(ax,col='#52a178',fs=14,RescaleByMass=False,text_on=True,text_shift=[1,1],lw=1.5,text_col='#52a178',xskip=10):
         # Neutron stars: Green Bank arXiv:[2004.00011]
         # Jansky VLA: 2008.01877, 2008.11188
         # Battye et al. []
@@ -1204,7 +1204,7 @@ class AxionPhoton():
 
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt')
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',alpha=0.5,lw=0.5,zorder=0)
+        plt.plot(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),'k-',alpha=0.8,lw=lw,zorder=0.1)
 
         if text_on:
             if rs1==0:
