@@ -38,6 +38,7 @@
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * XENON1T (ALP DM search, S2 only): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S2.txt), [reference](https://arxiv.org/abs/1907.11485)
 * XENON1T (ALP DM search S1+S2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
+* XENON1T (ALP DM search single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
 * XENON1T (Solar axion basin): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_S2_SolarAxionBasin.txt), [reference](https://arxiv.org/abs/2006.12431)
 
 ### Haloscopes:

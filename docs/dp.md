@@ -91,6 +91,9 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * Xenon100: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon100.txt), [reference](https://link.springer.com/article/10.1007%2FJHEP06%282017%29087)
 * Xenon1T S2 only: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T.txt), [reference](https://arxiv.org/abs/1907.11485)
 * Xenon1T S1+S2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
+* XENON1T (single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
+* Xenon1T S2 (Solar DPs): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_Solar_S2.txt), [reference](https://arxiv.org/abs/1907.11485)
+
 
 ## Updated Experimental searches for DPDM
 These have been recast using the scheme detailed in [arXiv:2105.04565](https://arxiv.org/abs/2105.04565) so they all assume the fixed polarisation scenario for the DP polarisation distribution around the Earth. They also all assume 0.45 GeV/cm^3 for the DM density and are defined as exclusion limits at 95% CL.

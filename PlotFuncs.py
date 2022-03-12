@@ -1385,6 +1385,12 @@ class AxionElectron():
         dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_S1S2.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+
+        # XENON1T Single electron analysis arXiv:[2112.12116]
+        dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_SE.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+
         if text_on:
             plt.text(text_shift[0]*1.2e2,text_shift[1]*4e-14,r'{\bf XENON1T}',fontsize=fs,color=col,ha='center',va='top',clip_on=True,**kwargs)
             #plt.text(text_shift[0]*1.2e2,text_shift[1]*2.5e-14,r'(DM)',fontsize=fs,color=col,ha='center',va='top',clip_on=True,**kwargs)
