@@ -239,7 +239,7 @@ class AxionPhoton():
                     plt.text(KSVZ_label_mass,0.75/3,r'{\bf KSVZ}',fontsize=fs,color='k')
         return
 
-    def ADMX(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def ADMX(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=0.1):
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
@@ -250,17 +250,17 @@ class AxionPhoton():
         # 2019: arXiv[1910.08638]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/ADMX.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2018.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2019_1.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2019_2.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2021.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX_Sidecar.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
 
 
         if projection:
@@ -282,7 +282,7 @@ class AxionPhoton():
                     plt.gcf().text(0.39*text_shift[0],0.5*text_shift[1],r'{\bf ADMX}',rotation=90,color=col)
         return
 
-    def RBF_UF(ax,col ='darkred',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def RBF_UF(ax,col ='darkred',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=0.1):
         # UF: Phys. Rev. D42, 1297 (1990).
         # RBF: Phys. Rev. Lett. 59, 839 (1987).
         if RescaleByMass:
@@ -293,7 +293,7 @@ class AxionPhoton():
             rs2 = 1.0
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/RBF_UF_Haloscopes.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
 
         if text_on:
             if rs1==0:
@@ -404,7 +404,7 @@ class AxionPhoton():
 
         return
 
-    def ABRACADABRA(ax,col=[0.83, 0.07, 0.37],fs=15,projection=False,RescaleByMass=False,text_on=True,lw=1,text_shift=[1,1]):
+    def ABRACADABRA(ax,col=[0.83, 0.07, 0.37],fs=15,projection=False,RescaleByMass=False,text_on=True,lw=1,text_shift=[1,1],line_alpha=0.5):
         # ABRACADABRA arXiv:[1810.12257]
         if RescaleByMass:
             rs1 = 1.0
@@ -419,7 +419,7 @@ class AxionPhoton():
         x = dat[arange(0,n,20),0]
         y = dat[arange(0,n,20),1]
         y[-1] = y2
-        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=lw,zorder=2.01,alpha=0.5)
+        plt.plot(x,y/(rs1*2e-10*x+rs2),'k-',lw=lw,zorder=2.01,alpha=line_alpha)
 
 
         dat = loadtxt("limit_data/AxionPhoton/ABRACADABRA_run2.txt")
@@ -764,7 +764,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],r'{\bf ADBC}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def SHAFT(ax,col='red',fs=16,text_on=True,lw=1,text_pos=[0.8e-10,3e-10],rotation=0,zorder=1.8):
+    def SHAFT(ax,col='red',fs=16,text_on=True,lw=1,text_pos=[0.8e-10,3e-10],rotation=0,zorder=1.8,line_alpha=0.5):
         # SHAFT arXiv:[2003.03348]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/SHAFT.txt")
@@ -772,7 +772,7 @@ class AxionPhoton():
         x = dat[arange(0,n,2),0]
         y = dat[arange(0,n,2),1]
         y[-1] = y2
-        plt.plot(x,y,'k-',lw=lw,zorder=1.81,alpha=0.5)
+        plt.plot(x,y,'k-',lw=lw,zorder=1.81,alpha=line_alpha)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf SHAFT}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True)
@@ -1025,7 +1025,7 @@ class AxionPhoton():
                 plt.text(text_shift[0]*5e-8,text_shift[1]*0.7e-11,r'{\bf MWD Pol.}',fontsize=13,color='w',rotation=0,ha='center',clip_on=True)
         return
 
-    def HAWC(ax,text_label=r'{\bf HAWC}',text_pos=[0.9e-7,2.5e-11],col='#324d22',text_col='#324d22',fs=14,zorder=0.25,text_on=True,Projection=False):
+    def HAWC(ax,text_label=r'{\bf HAWC}',text_pos=[0.9e-7,2.5e-11],col='#2b5e4e',text_col='#2b5e4e',fs=14,zorder=0.25,text_on=True,Projection=False):
         # HAWC TeV Blazars arXiv:[2203.04332]
         dat = loadtxt("limit_data/AxionPhoton/HAWC.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on)
@@ -1378,7 +1378,7 @@ class AxionElectron():
     def XENON1T(ax,col='crimson',fs=19,text_on=True,zorder=0.51,lw=2,text_shift=[1,1],**kwargs):
         # XENON1T S2 analysis arXiv:[1907.11485]
         dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_S2.txt")
-        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
 
         # XENON1T S1+S2 analysis arXiv:[2006.09721]
@@ -1388,7 +1388,7 @@ class AxionElectron():
 
         # XENON1T Single electron analysis arXiv:[2112.12116]
         dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_SE.txt")
-        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
 
         if text_on:
@@ -1416,7 +1416,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf LUX} (Solar axions)',fontsize=fs,color='w',alpha=0.8,ha='left',va='top',clip_on=True,**kwargs)
         return
 
-    def PandaX(ax,col='firebrick',fs=20,text_on=True,lw=3,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
+    def PandaX(ax,col='firebrick',fs=20,text_on=True,lw=2,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
         # PandaX arXiv:[1707.07921]
 #         Currently not using Solar pandaX limit
 #         dat = loadtxt("limit_data/AxionElectron/PandaX_Solar.txt")
@@ -1429,7 +1429,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf PandaX}',fontsize=fs-2,color='w',ha='left',va='top',rotation=rotation,clip_on=True,**kwargs)
         return
 
-    def GERDA(ax,col='#d13617',fs=22,text_on=True,text_pos=[1.6e5,1.9e-11],zorder=0.52,lw=3,text_col='w',**kwargs):
+    def GERDA(ax,col='#d13617',fs=22,text_on=True,text_pos=[1.6e5,1.9e-11],zorder=0.52,lw=2,text_col='w',**kwargs):
         dat = loadtxt("limit_data/AxionElectron/GERDA.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1437,10 +1437,10 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf GERDA}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,**kwargs)
         return
 
-    def EDELWEISS(ax,col='darkred',projection=False,fs=15,text_col='darkred',text_on=True,text_pos=[9e0,7e-13],zorder=0.57,lw=3,rotation=0,**kwargs):
+    def EDELWEISS(ax,col='darkred',projection=False,fs=15,text_col='darkred',text_on=True,text_pos=[9e0,7e-13],zorder=0.57,lw=2,rotation=0,**kwargs):
         # EDELWEISS arXiv:[1808.02340]
         dat = loadtxt("limit_data/AxionElectron/EDELWEISS.txt")
-        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=2)
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         if projection:
             dat = loadtxt("limit_data/AxionElectron/Projections/EDELWEISS.txt")
@@ -1449,7 +1449,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf EDELWEISS}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,rotation=rotation,**kwargs)
         return
 
-    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,lw=3,**kwargs):
+    def SuperCDMS(ax,col='maroon',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,lw=2,**kwargs):
         # SuperCDMS arXiv:[1911.11905]
         dat = loadtxt("limit_data/AxionElectron/SuperCDMS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1474,7 +1474,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf LZ}',fontsize=fs,color=col,ha='left',va='top',clip_on=True,**kwargs)
         return
 
-    def Semiconductors(ax,col='purple',fs=15,text_on=True,text_pos=[1e0,2.5e-12],lw=3,rotation=-80,zorder=0.51,**kwargs):
+    def Semiconductors(ax,col='purple',fs=15,text_on=True,text_pos=[1e0,2.5e-12],lw=2.5,rotation=-80,zorder=0.51,**kwargs):
         # ALP Absorption with semiconductors arXiv:[1608.02123]
         dat = loadtxt("limit_data/AxionElectron/Projections/SemiconductorAbsorption.txt")
         plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zorder,lw=lw)
