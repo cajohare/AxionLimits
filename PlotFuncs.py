@@ -371,7 +371,7 @@ class AxionPhoton():
 
         return
 
-    def QUAX(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def QUAX(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
         # QUAX1 arXiv:[1903.06547]
         # QUAX2 arXiv:[2012.09498]
         if RescaleByMass:
@@ -402,6 +402,13 @@ class AxionPhoton():
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             plt.plot(dat2[0,0],dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
 
+        if projection==True:
+            dat = loadtxt("limit_data/AxionPhoton/Projections/QUAX2005.txt")
+            plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
+            plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
+            if rs1==1.0:
+                plt.text(2.5e-5,0.8e-1,r'{\bf QUAX}',color=col,fontsize=18)
+                plt.plot([4.0e-5,4.0e-5],[2.2e-1,2.1e0],'k-',lw=1.5)
         return
 
     def ABRACADABRA(ax,col=[0.83, 0.07, 0.37],fs=15,projection=False,RescaleByMass=False,text_on=True,lw=1,text_shift=[1,1],edgealpha=1):
@@ -632,8 +639,8 @@ class AxionPhoton():
                 #plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
         return
 
-    def KLASH(ax,col=[0.6, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
-        # KLASH arXiv:[1707.06010]
+    def FLASH(ax,col='darkred',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+        # FLASH https://indico.cern.ch/event/1115163/
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
             rs1 = 1.0
@@ -641,14 +648,15 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        dat = loadtxt("limit_data/AxionPhoton/Projections/KLASH.txt")
+        dat = loadtxt("limit_data/AxionPhoton/Projections/FLASH.txt")
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.3)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1e-7,text_shift[1]*1e-12,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
+                plt.text(text_shift[0]*2.5e-6,text_shift[1]*0.45e-16,r'{\bf FLASH}',fontsize=20,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([1.2e-6,2.5e-6],[5e-16,0.6e-16],'k-',lw=1.5)
             else:
-                plt.text(text_shift[0]*2.5e-7,text_shift[1]*1.3e0,r'{\bf KLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
+                plt.text(text_shift[0]*3e-7,text_shift[1]*3e0,r'{\bf FLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
         return
 
     def BRASS(ax,col='darkred',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -710,6 +718,7 @@ class AxionPhoton():
                 plt.text(text_shift[0]*0.7e-2,text_shift[1]*3e-11,r'{\bf TOO}',fontsize=12,ha='center',color=col,clip_on=True)
                 plt.text(text_shift[0]*0.7e-2,text_shift[1]*1.5e-11,r'{\bf RAD}',fontsize=12,ha='center',color=col,clip_on=True)
             else:
+                plt.text((1-0.05)*text_shift[0]*0.25e-2,(1+0.05)*text_shift[1]*0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color='k',clip_on=True)
                 plt.text(text_shift[0]*0.25e-2,text_shift[1]*0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color=col,clip_on=True)
         return
 
@@ -1231,7 +1240,7 @@ class AxionPhoton():
             AxionPhoton.SRF(ax,text_on=text_on)
             AxionPhoton.ALPHA(ax,text_on=text_on)
             AxionPhoton.MADMAX(ax,text_on=text_on)
-            AxionPhoton.KLASH(ax,text_on=text_on)
+            AxionPhoton.FLASH(ax,text_on=text_on)
             AxionPhoton.TOORAD(ax,text_on=text_on)
             AxionPhoton.BRASS(ax,text_on=text_on)
             AxionPhoton.BREAD(ax,text_on=text_on)

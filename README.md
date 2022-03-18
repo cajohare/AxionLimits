@@ -117,4 +117,4 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
 
 
 # Acknowledgements
-**Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Maurizio Giannotti, Alexander Gramolin, Josh Foster, Fred Hiskins, Sebastian Hoof, Stefan Knirck, Hai-Jun Li, Jesse Liu, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Andreas Ringwald, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.
+**Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Claudio Gatti, Maurizio Giannotti, Alexander Gramolin, Josh Foster, Fred Hiskins, Sebastian Hoof, Stefan Knirck, Hai-Jun Li, Jesse Liu, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Alessio Rettaroli, Andreas Ringwald, Giuseppe Ruoso, Gray Rybka, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.
