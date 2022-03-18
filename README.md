@@ -115,6 +115,20 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
    &nbsp; \
   &nbsp;
 
+If you use something here, it helps me out for keeping track of citations if you cite the zenodo DOI attached to this repository
+```
+@misc{AxionLimits,
+  author       = {Ciaran O'Hare},
+  title        = {cajohare/AxionLimits: AxionLimits},
+  month        = jul,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.3932430},
+  howpublished = {\url{https://cajohare.github.io/AxionLimits/}}
+}
+```
+
 
 # Acknowledgements
 **Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Claudio Gatti, Maurizio Giannotti, Alexander Gramolin, Josh Foster, Fred Hiskins, Sebastian Hoof, Stefan Knirck, Hai-Jun Li, Jesse Liu, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Alessio Rettaroli, Andreas Ringwald, Giuseppe Ruoso, Gray Rybka, Jan Schuette-Engel, Philip Sørensen, Edoardo Vitagliano, and Sam Witte for comments, corrections and suggestions that have greatly helped improve these plots.
