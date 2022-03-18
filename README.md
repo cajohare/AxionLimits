@@ -115,7 +115,9 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
    &nbsp; \
   &nbsp;
 
-If you use something here, it helps me out for keeping track of citations if you cite the zenodo DOI attached to this repository
+---
+
+If you use something here, you can give credit by citing the zenodo DOI attached to this repository
 ```
 @misc{AxionLimits,
   author       = {Ciaran O'Hare},
