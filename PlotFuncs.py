@@ -461,7 +461,7 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*2e-10,text_shift[1]*0.1e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=rotation,clip_on=True)
+                plt.text(text_shift[0]*2e-10,text_shift[1]*0.05e-16,r'{\bf DM-Radio}',color='crimson',fontsize=20,rotation=rotation,clip_on=True)
             else:
                 plt.text(text_shift[0]*5e-9,text_shift[1]*4.0e-1,r'{\bf DM-Radio}',fontsize=fs-1,color=col,rotation=0,ha='left',va='top',clip_on=True)
         return
@@ -665,14 +665,14 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.1e-3,text_shift[1]*0.4e-13,r'{\bf BRASS}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.text(text_shift[0]*1.1e-3,text_shift[1]*0.35e-13,r'{\bf BRASS}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
                 plt.plot([1.3e-3,0.5e-3],[0.45e-13,2.2e-12],'k-',lw=1.5)
             else:
                 plt.text(text_shift[0]*0.45e-3,text_shift[1]*1e1,r'{\bf BRASS}',fontsize=20,rotation=9,color=col,clip_on=True)
 
         return
 
-    def BREAD(ax,col='darkred',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def BREAD(ax,col='firebrick',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
             rs1 = 1.0
@@ -685,8 +685,8 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*2.4e-3,text_shift[1]*1.4e-13,r'{\bf BREAD}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
-                plt.plot([3.5e-3,3e-3],[1.5e-13,2.9e-13],'k-',lw=1.5)
+                plt.text(text_shift[0]*2.4e-3,text_shift[1]*1.2e-13,r'{\bf BREAD}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([3.5e-3,3e-3],[1.35e-13,2.9e-13],'k-',lw=1.5)
             else:
                 plt.text(text_shift[0]*2e-3,text_shift[1]*1e-1,r'{\bf BREAD}',fontsize=18,rotation=0,color=col,clip_on=True)
 
@@ -713,7 +713,7 @@ class AxionPhoton():
                 plt.text(text_shift[0]*0.25e-2,text_shift[1]*0.3e2,r'{\bf TOORAD}',fontsize=18,rotation=-21,color=col,clip_on=True)
         return
 
-    def LAMPOST(ax,col=[0.8, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def LAMPOST(ax,col=[0.8, 0.1, 0.2],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],rotation=55):
         # LAMPOST arXiv[1803.11455]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -727,7 +727,7 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*0.8e-1,text_shift[1]*5e-12,r'{\bf LAMPOST}',rotation=-90,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
+                plt.text(text_shift[0]*1.55e-1,text_shift[1]*3.5e-11,r'{\bf LAMPOST}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
             else:
                 plt.text(text_shift[0]*0.9e-1,text_shift[1]*1.9e-1,r'{\bf LAMPOST}',rotation=0,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
 
@@ -937,12 +937,12 @@ class AxionPhoton():
             # IAXO arXiv[1212.4633]
             IAXO_col = 'purple'
             IAXO = loadtxt("limit_data/AxionPhoton/Projections/IAXO.txt")
-            plt.plot(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),'--',linewidth=2.5,color=IAXO_col,zorder=0.5)
+            plt.plot(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),'--',linewidth=2.5,color=IAXO_col,zorder=0.1)
             plt.fill_between(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),y2=y2,edgecolor=None,facecolor=IAXO_col,zorder=0,alpha=0.3)
             if text_on==True:
                 if rs1==0:
-                    plt.text(0.35e-1,0.1e-11,r'{\bf IAXO}',fontsize=23,color='purple',rotation=0,clip_on=True)
-                    plt.plot([5e-2,1e-1],[1.0e-11,0.3e-11],'k-',lw=1.5)
+                    plt.text(1e-2,2.3e-13,r'{\bf IAXO}',fontsize=23,color='purple',rotation=0,clip_on=True)
+                    plt.plot([3e-3,1e-2],[4.0e-12,6e-13],'k-',lw=1.5)
                 else:
                     plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18,clip_on=True)
         return
@@ -971,7 +971,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def M87(ax,text_label=r'\quad {\bf M87}',text_pos=[1.4e-12,5e-12],col='seagreen',text_col='w',fs=15,zorder=0.219,text_on=True,edgealpha=1,lw=2):
+    def M87(ax,text_label=r'\quad {\bf M87}',text_pos=[1.4e-12,4e-12],col='seagreen',text_col='w',fs=15,zorder=0.219,text_on=True,edgealpha=1,lw=2):
         # M87 Limits from arXiv:[1703.07354]
         dat = loadtxt("limit_data/AxionPhoton/Chandra_M87.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
@@ -1049,7 +1049,7 @@ class AxionPhoton():
             plt.text(0.88*text_pos[0],text_pos[1],r'{\bf clusters}',fontsize=fs,color=text_col,ha='left',va='top',rotation=rotation,clip_on=True)
         return
 
-    def Fermi_GalacticSN(ax,text_label=r'{\bf Fermi SN}',text_pos=[1e-9,5e-13],col=[0.0, 0.42, 0.24],text_col=[0.0, 0.42, 0.24],fs=15,zorder=0.0,text_on=True,rotation=43,lw=1.5,facealpha=0.2,edgealpha=0.6):
+    def Fermi_GalacticSN(ax,text_label=r'{\bf Fermi SN}',text_pos=[1e-9,5e-13],col=[0.0, 0.42, 0.24],text_col=[0.0, 0.42, 0.24],fs=15,zorder=0.0,text_on=True,rotation=43,lw=1.5,facealpha=0.05,edgealpha=0.6):
         # Fermi nearby SN prospects arXiv:[1609.02350]
         dat = loadtxt("limit_data/AxionPhoton/Projections/FermiSN.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha,edgealpha=edgealpha)
@@ -1239,6 +1239,7 @@ class AxionPhoton():
             AxionPhoton.DANCE(ax,text_on=text_on)
             AxionPhoton.aLIGO(ax,text_on=text_on)
             AxionPhoton.WISPLC(ax,text_on=text_on)
+            AxionPhoton.LAMPOST(ax)
 
             AxionPhoton.ADMX(ax,text_on=False,col='darkred')
             AxionPhoton.CAPP(ax,text_on=False,col='darkred')
@@ -1280,7 +1281,7 @@ class AxionPhoton():
         AxionPhoton.CROWS(ax,text_on=text_on)
         return
 
-    def LowMassAstroBounds(ax,projection=False,text_on=True,edgealpha=1,lw=1):
+    def LowMassAstroBounds(ax,projection=False,text_on=True,edgealpha=1,lw=1,GalacticSN=False):
         AxionPhoton.FermiSNe(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.DSNALP(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.Hydra(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
@@ -1291,7 +1292,8 @@ class AxionPhoton():
         if projection:
             AxionPhoton.NGC1275(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=False,edgealpha=edgealpha,lw=lw)
-            AxionPhoton.Fermi_GalacticSN(ax,text_on=text_on,lw=lw)
+            if GalacticSN:
+                AxionPhoton.Fermi_GalacticSN(ax,text_on=text_on,lw=lw)
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDPolarisation(ax,text_on=text_on,projection=True,edgealpha=edgealpha,lw=lw)
             AxionPhoton.HESS(ax,text_on=False,edgealpha=edgealpha,lw=lw)

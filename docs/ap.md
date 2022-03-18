@@ -129,7 +129,7 @@
 * Chandra (Magnetic white dwarfs): [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_electron_equals_photon.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_Wphobic.txt), [reference](https://arxiv.org/abs/2104.12772)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/COBE-FIRAS.txt), [reference](https://arxiv.org/abs/2012.07292)
 * Diffuse SN ALP background: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DSNALP.txt), [reference](https://arxiv.org/abs/2110.03679)
-* Distance ladder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN_distances.txt), [reference](https://arxiv.org/abs/2011.05993)
+* Distance ladder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/SN_distances.txt), [reference](https://arxiv.org/abs/2011.05993)
 * eROSITA (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/eROSITA.txt), [reference](https://arxiv.org/pdf/2103.13241.pdf)
 * Fermi-LAT (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_bound.txt), [hole](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_hole.txt), [reference](https://arxiv.org/abs/1603.06978)
 * Fermi-LAT (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FermiSN.txt), [reference](https://arxiv.org/abs/1609.02350)
