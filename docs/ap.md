@@ -92,7 +92,7 @@
 * ORGAN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
 * QUAX (2019): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
 * QUAX (2020): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX2.txt), [reference](https://arxiv.org/abs/2012.09498)
-* QUAX Projection: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/QUAX2005.txt), [reference](https://agenda.infn.it/event/20431/contributions/137687/attachments/82511/108428/Rettaroli_Patras2021_compressed.pdf)
+* QUAX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/QUAX2005.txt), [reference](https://agenda.infn.it/event/20431/contributions/137687/attachments/82511/108428/Rettaroli_Patras2021_compressed.pdf)
 * RADES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RADES.txt), [reference](https://arxiv.org/abs/2104.13798)
 * RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SHAFT.txt), [reference](https://arxiv.org/abs/2003.03348)
