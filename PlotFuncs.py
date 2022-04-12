@@ -1524,7 +1524,7 @@ class AxionElectron():
 
     def RedGiants(ax,col=[0.0, 0.66, 0.42],text_pos=[0.2e-8,2e-13],text_on=True,zorder=0.5,fs=30,**kwargs):
         # Red Giants arXiv:[2007.03694]
-        dat = loadtxt("limit_data/AxionElectron/RedGiants.txt")
+        dat = loadtxt("limit_data/AxionElectron/RedGiants_HighMass.txt")
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on: plt.text(text_pos[0],text_pos[1],r'{\bf Red giants} ($\omega$Cen)',fontsize=fs,color='w',clip_on=True,**kwargs)
