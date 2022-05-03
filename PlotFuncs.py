@@ -2048,8 +2048,8 @@ class AxionEDM():
 #==============================================================================#
 class Axion_fa():
     def QCDAxion(ax,shading_on=True,C_logwidth=10,C_width=0.4,
-                      cmap='YlOrBr',fs=28,QCD_label_mass=1e-7,\
-                 text_on=True,text_col='brown',alpha=0.5,rot=45.0,zorder=-100):
+                      linecolor='gold',fs=28,QCD_label_mass=1e-7,\
+                 text_on=True,text_col='darkgoldenrod',alpha=0.5,rot=45.0,zorder=-100):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -2057,27 +2057,27 @@ class Axion_fa():
         # Mass-coupling relation
         def f_a(C,m_a):
             return C*(1/1e12)*(m_a/5.7e-6)
+        plt.plot([m_min,m_max],[f_a(1,m_min),f_a(1,m_max)],'-',lw=5,path_effects=line_background(6,'k'),color=linecolor,zorder=zorder)
 
-
-        if shading_on: # not strictly necessary as there is a fixed ma-fa relation and the uncertainty is small
-            n = 200
-            g = logspace(log10(g_min),log10(g_max),n)
-            m = logspace(log10(m_min),log10(m_max),n)
-            QCD = zeros(shape=(n,n))
-            for i in range(0,n):
-                QCD[:,i] = norm.pdf(log10(g)-log10(f_a(1,m[i])),0.0,C_width)
-            cols = cm.get_cmap(cmap)
-
-            cols.set_under('w') # Set lowest color to white
-            vmin = amax(QCD)/(C_logwidth/8)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
-            text_col=cols(0.7)
-        else:
-            n = 200
-            m = logspace(log10(m_min),log10(m_max),n)
-            plt.plot(m,f_a(1,m),color=text_col,lw=4,path_effects=line_background(5,'k'),zorder=-10)
+        # if shading_on: # not strictly necessary as there is a fixed ma-fa relation and the uncertainty is small
+        #     n = 200
+        #     g = logspace(log10(g_min),log10(g_max),n)
+        #     m = logspace(log10(m_min),log10(m_max),n)
+        #     QCD = zeros(shape=(n,n))
+        #     for i in range(0,n):
+        #         QCD[:,i] = norm.pdf(log10(g)-log10(f_a(1,m[i])),0.0,C_width)
+        #     cols = cm.get_cmap(cmap)
+        #
+        #     cols.set_under('w') # Set lowest color to white
+        #     vmin = amax(QCD)/(C_logwidth/8)
+        #     plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
+        #     plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
+        #     plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
+        #     text_col=cols(0.7)
+        # else:
+        #     n = 200
+        #     m = logspace(log10(m_min),log10(m_max),n)
+        #     plt.plot(m,f_a(1,m),color=text_col,lw=4,path_effects=line_background(5,'k'),zorder=-10)
         if text_on:
             trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
             plt.text(QCD_label_mass,f_a(1-0.4,QCD_label_mass)/1.4,r'{\bf QCD axion}',\
