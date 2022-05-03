@@ -1,0 +1,4 @@
+# Predicted QCD axion mass (in eV) from ALP Cogenesis 2006.04809
+# axiogenesis 1910.02080+ kinetic misalignment 1910.14152
+# Lattice QCD post-inflationary range
+60e-6  1e-3

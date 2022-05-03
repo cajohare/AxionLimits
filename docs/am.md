@@ -30,6 +30,7 @@
 * Borsanyi et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Borsanyi16.txt),  [reference](https://arxiv.org/abs/1606.07494)
 * Buschmann et al. (2020): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Buschmann20.txt),  [reference](https://arxiv.org/abs/1906.00967)
 * Buschmann et al. (2021): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Buschmann21.txt),  [reference](https://arxiv.org/abs/2108.05368)
+* Co et al. (2020): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Co20.txt),  [reference](https://arxiv.org/abs/2006.04809)
 * Dine et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Dine17.txt),  [reference](https://arxiv.org/abs/1705.00676)
 * Fleury and Moore: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Fleury15.txt),  [reference](https://arxiv.org/abs/1509.00026)
 * Klaer and Moore: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Klaer17.txt),  [reference](https://arxiv.org/abs/1708.07521)
