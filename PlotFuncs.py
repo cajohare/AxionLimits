@@ -40,7 +40,8 @@ def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
     plt.plot(dat[:,0],dat[:,1],'-',color=edgecolor,alpha=edgealpha,zorder=zorder,lw=lw)
     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,alpha=facealpha,zorder=zorder)
     if text_on:
-        plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor')
+        plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,\
+            ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor')
     return
 
 # Black hole superradiance constraints on the axion mass
