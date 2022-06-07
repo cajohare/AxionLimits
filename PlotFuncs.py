@@ -103,7 +103,11 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
     plt.rc('font', family='serif',size=tfs)
 
     if mathpazo:
-        mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+            plt.rcParams.update({
+        "text.usetex": True,
+        "font.family": "serif",
+        "font.serif": ["Palatino"],
+            })
 
     if Shape=='Wide':
         fig = plt.figure(figsize=(16.5,5))
@@ -2205,8 +2209,7 @@ def MySquarePlot(xlab='',ylab='',\
     plt.rcParams['axes.linewidth'] = lw
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif',size=tfs)
-    mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
-
+    plt.rcParams.update({"text.usetex": True,"font.family": "serif","font.serif": ["Palatino"],})
     fig = plt.figure(figsize=(size_x,size_y))
     ax = fig.add_subplot(111)
 
@@ -2224,7 +2227,7 @@ def MyDoublePlot(xlab1='',ylab1='',xlab2='',ylab2='',\
     plt.rcParams['axes.linewidth'] = lw
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif',size=tfs)
-    mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+    plt.rcParams.update({"text.usetex": True,"font.family": "serif","font.serif": ["Palatino"],})
     fig, axarr = plt.subplots(1, 2,figsize=(size_x,size_y))
     gs = gridspec.GridSpec(1, 2)
     gs.update(wspace=wspace)
@@ -2252,7 +2255,7 @@ def MyDoublePlot_Vertical(xlab1='',ylab1='',xlab2='',ylab2='',\
     plt.rcParams['axes.linewidth'] = lw
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif',size=tfs)
-    mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+    plt.rcParams.update({"text.usetex": True,"font.family": "serif","font.serif": ["Palatino"],})
 
 
     fig, axarr = plt.subplots(2,1,figsize=(size_x,size_y))
@@ -2286,7 +2289,7 @@ def MyTriplePlot(xlab1='',ylab1='',xlab2='',ylab2='',xlab3='',ylab3='',\
     plt.rcParams['axes.linewidth'] = lw
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif',size=tfs)
-    mpl.rcParams['text.latex.preamble'] = [r'\usepackage{mathpazo}']
+    plt.rcParams.update({"text.usetex": True,"font.family": "serif","font.serif": ["Palatino"],})
     fig, axarr = plt.subplots(1, 3,figsize=(size_x,size_y))
     gs = gridspec.GridSpec(1, 3)
     gs.update(wspace=wspace)
