@@ -2928,7 +2928,8 @@ class DarkPhoton():
 def MySaveFig(fig,pltname,pngsave=True):
     fig.savefig(pltdir+pltname+'.pdf',bbox_inches='tight')
     if pngsave:
-        fig.savefig(pltdir_png+pltname+'.png',bbox_inches='tight')
+        fig.set_facecolor('w') # <- not sure what matplotlib fucked up in the new version but it seems impossible to set png files to be not transparent now
+        fig.savefig(pltdir_png+pltname+'.png',bbox_inches='tight',transparent=False)
 
 def cbar(mappable,extend='neither',minorticklength=8,majorticklength=10,\
             minortickwidth=2,majortickwidth=2.5,pad=0.2,side="right",orientation="vertical"):
