@@ -17,6 +17,8 @@
 ### &nbsp;
 ---
 
+Warning: Care should be taken when interpreting this plot. The space outside of the QCD axion line corresponds to an ALP that couples to gluons in the same way as QCD axion (i.e. creating an EDM) but with variable strength. So straying away from the QCD axion line necessarily requires extreme fine-tuning of a dimensionless coupling constant.
+
 # Data files and references
 
 ## Experiments
@@ -27,4 +29,5 @@
 
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
+* Planck+BAO thermal ALP bound: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/2205.01637)
 * SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)

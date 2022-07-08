@@ -34,11 +34,12 @@ It must be noted that the area to the left of the QCD axion can only make sense 
 * BBN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BBN.txt), [reference](https://arxiv.org/abs/1401.6460)
 * Black hole spins (Mehta et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Black hole spins (Baryakhtar et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Baryakhtar.txt), [reference](https://arxiv.org/abs/2011.11646)
+* Black hole spins (Unal et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Unal.txt), [reference](https://arxiv.org/abs/2012.12790)
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
 * GW170817 [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/GW170817.txt), [reference](https://arxiv.org/abs/2105.13963)
 * NS-NS Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSNS-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * NS-BH Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSBH-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * *Solar core (neutrino line): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SolarCore.txt), [reference](https://arxiv.org/abs/1708.08464)
-* SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SN1987A.txt), [reference](https://arxiv.org/abs/hep-ph/0611350)
+* SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)
 
 (*) Using corrected values from [here](https://arxiv.org/abs/2102.00012)

@@ -1,4 +1,4 @@
-# Globular cluster horizontal Branch stars
+# Globular cluster R parameter
 # m_a [eV]  g_ap [GeV^-1]
 8.6804e-13	6.549573149937363e-11
 1003.7903030005582	 6.549573149937363e-11

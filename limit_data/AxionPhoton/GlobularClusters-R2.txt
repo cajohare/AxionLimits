@@ -1,0 +1,4 @@
+# Globular cluster R2 parameter
+# m_a [eV]  g_ap [GeV^-1]
+1e-22 0.47e-10
+1e3 0.47e-10

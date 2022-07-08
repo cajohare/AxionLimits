@@ -1,4 +1,4 @@
-# SN1987A Raffelt Estimate fa = 4e8 GeV
+# Most conservative limit from EDM coupling https://arxiv.org/abs/1306.6088
 # Mass [eV]	1/fa [GeV^-1]
-1e-30 2.5e-9
-1e3 2.5e-9
+1e-30 1e-6
+1e3 1e-6
