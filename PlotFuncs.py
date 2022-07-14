@@ -202,7 +202,7 @@ class AxionPhoton():
                 else:
                     plt.plot(m,g_x(KSVZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
                 if text_on:
-                    plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor')
+                    plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor',clip_on=True)
             if DFSZ_on:
                 if thick_lines:
                     plt.plot(m,g_x(DFSZ,m),'-',linewidth=5,color='k',zorder=0)
@@ -210,7 +210,7 @@ class AxionPhoton():
                 else:
                     plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
                 if text_on:
-                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor')
+                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor',clip_on=True)
         else:
             C_min,C_max = ax.get_ylim()
             n = 200
@@ -232,7 +232,7 @@ class AxionPhoton():
                 else:
                     plt.plot([m_min,m_max],[0.75,0.75],'-',lw=2,color='k')
                 if text_on:
-                    plt.text(DFSZ_label_mass,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k')
+                    plt.text(DFSZ_label_mass,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k',clip_on=True)
 
             if KSVZ_on:
                 if thick_lines:
@@ -241,7 +241,7 @@ class AxionPhoton():
                 else:
                     plt.plot([m_min,m_max],[1.92,1.92],'-',lw=2,color='k')
                 if text_on:
-                    plt.text(KSVZ_label_mass,0.75/3,r'{\bf KSVZ}',fontsize=fs,color='k')
+                    plt.text(KSVZ_label_mass,0.75/3,r'{\bf KSVZ}',fontsize=fs,color='k',clip_on=True)
         return
 
     def ADMX(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=0.1):
@@ -972,15 +972,17 @@ class AxionPhoton():
             rs1 = 0.0
             rs2 = 1.0
         dat = loadtxt("limit_data/AxionPhoton/CAST_highm.txt")
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=2,zorder=1.49,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=1.49,lw=0.1)
-        mf = dat[-2,0]
-        gf = dat[-2,1]
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=1.5,zorder=1.49,alpha=1)
+
+        mf = dat[-3,0]
+        gf = dat[-3,1]
         dat = loadtxt("limit_data/AxionPhoton/CAST.txt")
-        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=2,zorder=1.5,alpha=1)
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor='none',facecolor=col,zorder=1.5,lw=0.0)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor='none',facecolor=col,zorder=1.5,lw=0.1)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=1.5,zorder=1.5,alpha=1)
+
         gi = 10.0**interp(log10(mf),log10(dat[:,0]),log10(dat[:,1]))/(rs1*2e-10*mf+rs2)
-        plt.plot([mf,mf],[gf,gi],'k-',lw=2,zorder=1.5)
+        plt.plot([mf,mf],[gf,gi],'k-',lw=1.5,zorder=1.5)
         if text_on==True:
             if rs1==0:
                 plt.text(1e-1,1.5e-9,r'{\bf CAST}',fontsize=fs+4,color='w',rotation=0,ha='center',va='top',clip_on=True)
@@ -1167,7 +1169,7 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/x_ion.txt")
         FilledLimit(ax,dat,'',col=[0.27, 0.51, 0.71],text_col='k',fs=fs,zorder=0.001,text_on=False,edgealpha=edgealpha,lw=lw)
         if text_on:
-            plt.text(100.5744*0.93,4.4720e-11,r'{\bf Ionisation}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
+            plt.text(100.5744*0.93,4.0e-11,r'{\bf Ionisation}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
             plt.text(40*0.93,3.7720e-11,r'{\bf fraction}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
 
         # BBN+N_eff arXiv:[2002.08370]
@@ -1176,9 +1178,9 @@ class AxionPhoton():
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
-        EBL2 = loadtxt("limit_data/AxionPhoton/EBL2.txt")
+        #EBL2 = loadtxt("limit_data/AxionPhoton/EBL2.txt")
         FilledLimit(ax,EBL,r'{\bf EBL}',text_pos=[5e4,5e-14],col=[0.0, 0.2, 0.6],text_col='w',fs=fs+5,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw)
-        FilledLimit(ax,EBL2,'',col=[0.0, 0.2, 0.6],text_on=False,zorder=0.001,edgealpha=edgealpha,lw=lw)
+        #FilledLimit(ax,EBL2,'',col=[0.0, 0.2, 0.6],text_on=False,zorder=0.001,edgealpha=edgealpha,lw=lw)
 
         # Spectral distortions of CMB
         AxionPhoton.COBEFIRAS(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
@@ -2485,10 +2487,9 @@ class DarkPhoton():
         dat = loadtxt("limit_data/DarkPhoton/MuDHI.txt")
 
         y2 = interp(dat[:,0],m1,y1)
-        dat[0,1] = y2[-1]
-        dat[-1,1] = y2[0]
+        dat[dat[:,1]>y2,1] = y2[dat[:,1]>y2]
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=10)
-        plt.plot(dat[::3,0],dat[::3,1],color='k',alpha=1,zorder=10,lw=2)
+        plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=10,lw=1.2)
 
         if text_on:
             plt.text(0.42e-2,1.8e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
@@ -2502,8 +2503,8 @@ class DarkPhoton():
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)*sqrt(2/3/0.27)
 
         y2 = interp(dat[:,0],m1,y1)
-        dat[0,1] = y2[0]/1.1
-        dat[-1,1] = y2[-1]/1.1
+        #dat[0,1] = y2[0]
+        dat[dat[:,1]>y2,1] = y2[dat[:,1]>y2]
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.3,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.3)
         if text_on:
@@ -2569,8 +2570,8 @@ class DarkPhoton():
         dat = loadtxt("limit_data/DarkPhoton/Tokyo-Dish.txt")
         dat[:,1] = dat[:,1]*sqrt(2/3/0.6)
         y2 = interp(dat[:,0],m1,y1)
-        dat[0,1] = y2[0]/1.1
-        dat[-1,1] = y2[-1]/1.1
+        dat[0,1] = y2[0]
+        dat[-1,1] = y2[-1]
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.4,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.4)
 
@@ -2588,6 +2589,20 @@ class DarkPhoton():
             plt.plot([2.05e-1,4e0],[5e-12,8e-12],'-',lw=2.5,color=col)
         return
 
+    def FAST(ax,col='tomato',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/FAST.txt")
+        dat[:,1] = dat[:,1]*sqrt(2/3/0.6)
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
+
+        if text_on:
+            plt.text(7e-6,4e-12,r'{\bf FAST}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+        return
 
     def Jupiter(ax,col='Green',fs=15,text_on=True):
         y2 = ax.get_ylim()[1]
