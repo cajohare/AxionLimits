@@ -17,7 +17,7 @@
 ### &nbsp;
 ---
 
-Warning: Care should be taken when interpreting this plot. The space outside of the QCD axion line corresponds to an ALP that couples to gluons in the same way as QCD axion (i.e. creating an EDM) but with variable strength. So straying away from the QCD axion line necessarily requires extreme fine-tuning of a dimensionless coupling constant.
+Warning: Care should be taken when interpreting this plot. The space outside of the QCD axion line corresponds to an ALP that couples to gluons in the same way as the QCD axion (i.e. creating an EDM) but with variable strength. So straying away from the QCD axion line necessarily requires extreme fine-tuning of a dimensionless coupling constant.
 
 # Data files and references
 
