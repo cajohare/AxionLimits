@@ -1326,8 +1326,8 @@ class AxionPhoton():
         AxionPhoton.ADMX(ax,projection=projection,fs=fs,text_on=text_on,col=col)
         AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=text_on,col=col)
         AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on,col=col)
-        AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on,col=col)
-        AxionPhoton.SHAFT(ax,text_on=text_on,col=col)
+        AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on,col=col,lw=0.75)
+        AxionPhoton.SHAFT(ax,text_on=text_on,col=col,lw=0.75)
         AxionPhoton.CAPP(ax,fs=fs-4,text_on=text_on,col=col)
         AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,col=col)
         AxionPhoton.UPLOAD(ax,text_on=text_on,col=col)
@@ -1463,6 +1463,24 @@ class AxionElectron():
             #plt.text(text_shift[0]*1.2e2,text_shift[1]*2.5e-14,r'(DM)',fontsize=fs,color=col,ha='center',va='top',clip_on=True,**kwargs)
         return
 
+    def XENONnT(ax,col='crimson',fs=19,text_on=True,zorder=0.51,lw=2,text_shift=[1,1],**kwargs):
+        # XENONnT ALP DM
+        dat = loadtxt("limit_data/AxionElectron/XENONnT.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*8e2,text_shift[1]*0.85e-14,r'{\bf XENONnT}',fontsize=fs,color=col,ha='center',va='top',clip_on=True,**kwargs)
+
+    def XENONnT_Solar(ax,col='indianred',fs=30,text_on=True,zorder=0.52,lw=2,text_shift=[1,1],**kwargs):
+        # Solar axions
+        dat = loadtxt("limit_data/AxionElectron/XENONnT_Solar.txt")
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        if text_on:
+            plt.text(text_shift[0]*0.2e-8,text_shift[1]*4e-12,r'{\bf XENONnT} (Solar axions)',fontsize=fs,color='w',alpha=0.8,ha='left',va='top',clip_on=True,**kwargs)
+        return
+
     def SolarBasin(ax,col='royalblue',fs=20,text_on=True,lw=2,text_shift=[1,1],zorder=0.6,**kwargs):
         # Solar axion basin arXiv:[2006.12431]
         dat = loadtxt("limit_data/AxionElectron/XENON1T_S2_SolarAxionBasin.txt")
@@ -1533,7 +1551,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf DARWIN}',fontsize=fs,color=col,ha='left',va='top',clip_on=True,**kwargs)
         return
 
-    def LZ(ax,col='crimson',fs=20,text_on=True,text_pos=[1.5e4,2e-14],lw=3,zorder=0.1,**kwargs):
+    def LZ(ax,col='crimson',fs=20,text_on=True,text_pos=[2.3e3,0.8e-14],lw=3,zorder=0.1,**kwargs):
         # DARWIN arXiv:[2102.11740]
         dat = loadtxt("limit_data/AxionElectron/Projections/LZ.txt")
         plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zorder,lw=lw)
@@ -1577,10 +1595,10 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf QUAX}',fontsize=fs,color=col,rotation=text_rot,ha='left',va='top',clip_on=True,**kwargs)
         return
 
-    def RedGiants(ax,col=[0.0, 0.66, 0.42],text_pos=[0.2e-8,2e-13],text_on=True,zorder=0.5,fs=30,**kwargs):
+    def RedGiants(ax,col=[0.0, 0.66, 0.42],text_pos=[0.2e-8,2e-13],text_on=True,zorder=0.5,fs=30,lw=2,**kwargs):
         # Red Giants arXiv:[2007.03694]
         dat = loadtxt("limit_data/AxionElectron/RedGiants_HighMass.txt")
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=2)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on: plt.text(text_pos[0],text_pos[1],r'{\bf Red giants} ($\omega$Cen)',fontsize=fs,color='w',clip_on=True,**kwargs)
         return
@@ -1590,14 +1608,14 @@ class AxionElectron():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on:
-            plt.text(3e4*text_shift[0],5e-15*text_shift[1],r'{\bf X-rays}',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
-            plt.text(1e4*text_shift[0],2e-15*text_shift[1],r'(1-loop decay)',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
+            plt.text(3e4*text_shift[0],4e-15*text_shift[1],r'{\bf X-rays}',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
+            plt.text(1e4*text_shift[0],1.5e-15*text_shift[1],r'(1-loop decay)',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
             return
 
-    def SolarNu(ax,col='seagreen',text_pos=[0.2e-8,3.8e-11],text_on=True,zorder=0.7,fs=30,**kwargs):
+    def SolarNu(ax,col='seagreen',text_pos=[0.2e-8,3.8e-11],text_on=True,zorder=0.7,fs=30,lw=2,**kwargs):
         # Solar neutrinos arXiv:[0807.2926]
         dat = loadtxt("limit_data/AxionElectron/SolarNu.txt")
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=2)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         if text_on: plt.text(text_pos[0],text_pos[1],r'{\bf Solar} $\nu$',fontsize=fs,color='w',clip_on=True,**kwargs)
         return
@@ -1617,9 +1635,10 @@ class AxionElectron():
         return
 
     def UndergroundDetectors(ax,projection=False,fs=20,text_on=True):
-        AxionElectron.LUX(ax,fs=fs+10,text_on=text_on)
+        AxionElectron.XENONnT_Solar(ax,fs=fs+10,text_on=text_on)
         AxionElectron.PandaX(ax,fs=fs,text_on=text_on)
         AxionElectron.XENON1T(ax,fs=fs-2,text_on=text_on)
+        AxionElectron.XENONnT(ax,fs=fs-2,text_on=text_on)
         AxionElectron.SolarBasin(ax,fs=fs-2,text_on=text_on)
         AxionElectron.SuperCDMS(ax,fs=fs,text_on=text_on)
         AxionElectron.EDELWEISS(ax,fs=fs-5,projection=projection,text_on=text_on)
@@ -2458,8 +2477,13 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
 
+
+        dat = loadtxt("limit_data/DarkPhoton/XENONnT.txt")
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
+
         if text_on:
-            plt.text(8e2,3e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(8e2,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
 
         return
 
