@@ -1,0 +1,7 @@
+# Axion EDM coupling from HfF+ (accounts for stochastic effect)
+# https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.171301
+# mass [eV]   g_{a\gamma n} [GeV^-2]
+1.0312554459540476e-22	 1e0
+1.0312554459540476e-22	 7.007072482748882e-18
+9.336887471631527e-16	 6.544749899550911e-11
+9.336887471631527e-16	 1e0

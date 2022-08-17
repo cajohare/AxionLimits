@@ -19,7 +19,8 @@
 ### &nbsp;
 ---
 
-It must be noted that the area to the left of the QCD axion can only make sense for a QCD axion whose mass is much smaller than the mass arising just from the anomalous gluon coupling of the axion (which defines 1/f_a). There are very few models that achieve this naturally, such as the Z_N axion model of Hook (https://arxiv.org/abs/1802.10093), and developed phenomenologically by Di Luzio et al. (https://arxiv.org/pdf/2102.00012.pdf)
+It must be noted that this plot and the 1/fa plot are, at best, challenging to interpret from any theoretical point of view. They should not be taken any more seriously than simply a comparison of experimental/observational sensitivities. The area outside of the QCD line here requires significant (and rarely natural) model-building. In essence one needs a "QCD" axion whose mass is different from than the mass arising just from the anomalous gluon coupling of the axion (which defines 1/f_a). There are very few models that achieve this naturally, such as the Z_N axion model of Hook (https://arxiv.org/abs/1802.10093), developed phenomenologically by Di Luzio et al. (https://arxiv.org/pdf/2102.00012.pdf)
+
 
 # Data files and references
 

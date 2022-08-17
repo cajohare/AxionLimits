@@ -2046,7 +2046,7 @@ class AxionProton():
 class AxionEDM():
     def QCDAxion(ax,shading_on=True,C_logwidth=10,C_width=0.4,
                       cmap='YlOrBr',fs=28,QCD_label_mass=1e-6,\
-                 text_on=True,text_col='brown',alpha=0.5,rot=45.0,zorder=-100):
+                 text_on=True,text_col='gold',alpha=0.5,rot=45.0,zorder=-100):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -2070,7 +2070,6 @@ class AxionEDM():
             plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
             plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
             plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=1.3,zorder=zorder)
-            text_col=cols(0.7)
         else:
             n = 200
             col ='goldenrod'
@@ -2080,14 +2079,29 @@ class AxionEDM():
         if text_on:
             trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
             plt.text(QCD_label_mass,g_x(1-0.4,QCD_label_mass)/1.4,r'{\bf QCD axion}',\
-                 fontsize=fs,rotation=trans_angle+2,color=text_col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
+             fontsize=fs,rotation=trans_angle+1,color=text_col,ha='left',va='top',rotation_mode='anchor',clip_on=True,
+             path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[5e-20,1e-13],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
+    def nEDM(ax,text_pos=[5e-20,1e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
         dat = loadtxt('limit_data/AxionEDM/nEDM.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
+
+    def BeamEDM(ax,text_pos=[6e-18,2e-15],col='#822f2b',text_col='w',text_rot=30,fs=22,zorder=-1):
+        dat = loadtxt('limit_data/AxionEDM/BeamEDM.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Beam EDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
+
+    def HfF(ax,text_pos=[0.7e-19,1.5e-14],col='#a3435e',text_col='w',text_rot=30,fs=22,zorder=-1):
+        dat = loadtxt('limit_data/AxionEDM/HfF.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
     def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
@@ -2153,12 +2167,26 @@ class Axion_fa():
                  path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[5e-20,1e-13],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
+    def nEDM(ax,text_pos=[3e-20,0.2e-13],col='darkred',text_col='w',text_rot=0,fs=28,zorder=-1):
         # Already accounts for stochastic correction
         dat = loadtxt('limit_data/fa/nEDM.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
+
+    def BeamEDM(ax,text_pos=[6e-18,6e-13],col='#822f2b',text_col='w',text_rot=40,fs=22,zorder=-1):
+        dat = loadtxt('limit_data/fa/BeamEDM.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Beam EDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
+
+    def HfF(ax,text_pos=[0.7e-19,4e-12],col='#a3435e',text_col='w',text_rot=40,fs=22,zorder=-1):
+        dat = loadtxt('limit_data/fa/HfF.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
     def SolarCore(ax,text_pos=[1e-15,0.15e-14],col='#0d4dba',text_col='w',text_rot=41,fs=30,zorder=-5):
