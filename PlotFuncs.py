@@ -396,7 +396,7 @@ class AxionPhoton():
 
         return
 
-    def QUAX(ax,col='crimson',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
+    def QUAX(ax,col='crimson',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
         # QUAX1 arXiv:[1903.06547]
         # QUAX2 arXiv:[2012.09498]
         if RescaleByMass:
@@ -416,7 +416,7 @@ class AxionPhoton():
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
 
             if text_on:
-                plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.8e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
+                plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.05e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
@@ -535,7 +535,7 @@ class AxionPhoton():
                 plt.text(text_shift[0]*1.5e-9,text_shift[1]*1.5e4,r'{\bf WISPLC}',fontsize=fs+1,color=col,rotation=-14,ha='left',va='top',clip_on=True)
         return
 
-    def ORGAN(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+    def ORGAN(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],lw=0.5):
         # ORGAN arXiv[1706.00209]
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -548,6 +548,9 @@ class AxionPhoton():
             zo = 0
         dat = loadtxt("limit_data/AxionPhoton/ORGAN.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=col,facecolor=col,zorder=0.1,lw=1)
+
+        dat2 = loadtxt("limit_data/AxionPhoton/ORGAN-1a.txt")
+        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=lw)
 
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ORGAN_Projected.txt")
@@ -571,7 +574,7 @@ class AxionPhoton():
                     plt.text(text_shift[0]*110e-6,text_shift[1]*1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
                 else:
                     plt.text(text_shift[0]*dat[0,0]*1.1,text_shift[1]*y2*1.2,r'{\bf ORGAN}',fontsize=fs-3,color=col,rotation=40,ha='left',rotation_mode='anchor')
-
+                    plt.text(text_shift[0]*6e-5,text_shift[1]*1e2,r'{\bf ORGAN}',fontsize=fs-6,color=col,rotation=90,ha='left',rotation_mode='anchor')
         return
 
     def RADES(ax,col='blueviolet',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -920,7 +923,7 @@ class AxionPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/ALPS.txt")
 
-        plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=1.53,alpha=1)
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'k-',lw=lw,zorder=1.53,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=1.53,lw=0.01)
         if rs1==0:
             if text_on: plt.text(1e-5*text_shift_x,8e-8*text_shift_y,r'{\bf ALPS-I}',fontsize=20,color='w',clip_on=True)
@@ -1283,7 +1286,7 @@ class AxionPhoton():
         AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on)
         AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on)
         AxionPhoton.SHAFT(ax,text_on=text_on)
-        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on)
+        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,lw=0)
         AxionPhoton.UPLOAD(ax,text_on=text_on)
         AxionPhoton.TASEH(ax,text_on=False)
 
@@ -1307,7 +1310,7 @@ class AxionPhoton():
 
             AxionPhoton.ADMX(ax,text_on=False,col='darkred')
             AxionPhoton.CAPP(ax,text_on=False,col='darkred')
-            AxionPhoton.ORGAN(ax,text_on=False,col='darkred')
+            AxionPhoton.ORGAN(ax,text_on=False,col='darkred',lw=0)
             AxionPhoton.HAYSTAC(ax,text_on=False,col='darkred')
             AxionPhoton.RBF_UF(ax,text_on=False,col='darkred')
             AxionPhoton.QUAX(ax,text_on=False,col='darkred')
@@ -1329,7 +1332,7 @@ class AxionPhoton():
         AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on,col=col,lw=0.75)
         AxionPhoton.SHAFT(ax,text_on=text_on,col=col,lw=0.75)
         AxionPhoton.CAPP(ax,fs=fs-4,text_on=text_on,col=col)
-        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,col=col)
+        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,col=col,lw=0)
         AxionPhoton.UPLOAD(ax,text_on=text_on,col=col)
         AxionPhoton.QUAX(ax,text_on=text_on,col=col)
         AxionPhoton.BASE(ax,text_on=text_on,col=col,arrow_on=False)
@@ -1603,13 +1606,14 @@ class AxionElectron():
         if text_on: plt.text(text_pos[0],text_pos[1],r'{\bf Red giants} ($\omega$Cen)',fontsize=fs,color='w',clip_on=True,**kwargs)
         return
 
-    def Xrays(ax,col='green',text_shift=[1,1],text_on=True,zorder=0.5,fs=23,rotation=-80,**kwargs):
+    def Xrays(ax,col='green',text_shift=[1,1],text_on=True,zorder=0.5,fs=20,rotation=-80,alpha=0.8,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/Xray_1loop.txt")
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=2)
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',color='k',zorder=zorder,lw=2,alpha=alpha)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder,alpha=alpha)
         if text_on:
-            plt.text(3e4*text_shift[0],4e-15*text_shift[1],r'{\bf X-rays}',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
-            plt.text(1e4*text_shift[0],1.5e-15*text_shift[1],r'(1-loop decay)',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
+            plt.text(3.3e4*text_shift[0],4e-15*text_shift[1],r'{\bf X-rays}',fontsize=fs,color='w',clip_on=True,rotation=rotation,**kwargs)
+            plt.text(1.32e4*text_shift[0],1.2e-15*text_shift[1],r'(EM anomaly-free ALP)',fontsize=fs*0.85,color='w',clip_on=True,rotation=rotation,**kwargs)
+
             return
 
     def SolarNu(ax,col='seagreen',text_pos=[0.2e-8,3.8e-11],text_on=True,zorder=0.7,fs=30,lw=2,**kwargs):
@@ -2738,6 +2742,7 @@ class DarkPhoton():
         if text_on:
             plt.text(36e-6,0.25e-14,r'{\bf SQuAD}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
         return
+
 
     def DMPathfinder(ax,col='pink',fs=13,text_on=True):
         y2 = ax.get_ylim()[1]
