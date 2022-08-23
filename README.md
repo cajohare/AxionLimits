@@ -117,6 +117,42 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
 
 ---
 
+[<img align="right" width="300" src="plots/plots_png/ScalarPhoton_with_Projections.png">](docs/phie.md)
+
+# [**Scalar-photon coupling**](docs/phie.md)
+[**Data files**](docs/phie.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarPhoton_with_Projections.png), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarPhoton_with_Projections.png))\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/ScalarElectron_with_Projections.png">](docs/phime.md)
+
+# [**Scalar-electron coupling**](docs/phime.md)
+[**Data files**](docs/phime.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElectron_with_Projections.png), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron_with_Projections.png))\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/VectorB-L_with_Projections.png">](docs/gBL.md)
+
+# [**B-L Vector boson**](docs/gBL.md)
+[**Data files**](docs/gBL.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png))\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
 If you use something here, you can give credit by citing the zenodo DOI attached to this repository
 ```
 @misc{AxionLimits,
@@ -133,4 +169,4 @@ If you use something here, you can give credit by citing the zenodo DOI attached
 
 
 # Acknowledgements
-**Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raphael Cervantes, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Claudio Gatti, Maurizio Giannotti, Alexander Gramolin, Josh Foster, Fred Hiskins, Sebastian Hoof, Stefan Knirck, Hai-Jun Li, Jesse Liu, Laura Manenti, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Alessio Rettaroli, Andreas Ringwald, Giuseppe Ruoso, Gray Rybka, Jan Schuette-Engel, Ivo Schulthess, Philip Sørensen, Fuminobu Takahashi, Mike Tobar, Caner Ünal, Edoardo Vitagliano, Sam Witte, and Byeongsu Yang for comments, corrections and suggestions that have greatly helped improve these plots.
+**Thank you to**: Masha Baryakhtar, Max Berbig, Itay Bloch, Andrea Caputo, Raphael Cervantes, Raymond Co, Chris Dessert, Akash Dixit, Babette Döbrich, Claudio Gatti, Maurizio Giannotti, Alexander Gramolin, Josh Foster, Fred Hiskins, Sebastian Hoof, Stefan Knirck, Hai-Jun Li, Jesse Liu, Jack Manley, Laura Manenti, David Marsh, Alex Millar, Viraf Mehta, Pablo Quílez, Javier Redondo, Alessio Rettaroli, Andreas Ringwald, Giuseppe Ruoso, Gray Rybka, Jan Schuette-Engel, Ivo Schulthess, Philip Sørensen, Fuminobu Takahashi, Mike Tobar, Caner Ünal, Edoardo Vitagliano, Sam Witte, and Byeongsu Yang for comments, corrections and suggestions that have greatly helped improve these plots.

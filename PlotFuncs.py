@@ -44,6 +44,16 @@ def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
             ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor')
     return
 
+def UnfilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
+                    lw=2,y2=1e0,edgealpha=0.6,text_on=False,text_pos=[0,0],\
+                    ha='left',va='top',clip_on=True,fs=15,text_col='k',rotation=0,facealpha=1,\
+                     linestyle='--'):
+    plt.plot(dat[:,0],dat[:,1],linestyle=linestyle,color=edgecolor,alpha=edgealpha,zorder=zorder,lw=lw)
+    if text_on:
+        plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,\
+            ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor')
+    return
+
 # Black hole superradiance constraints on the axion mass
 # can be used for any coupling
 def BlackHoleSpins(ax,C,label_position,whichfile='Mehta',fs=20,col='k',alpha=0.4,\
@@ -88,6 +98,21 @@ def UpperFrequencyAxis(ax,N_Hz=1,tickdir='out',xtick_rotation=0,labelsize=25,xla
     ax2.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
     plt.sca(ax)
 
+def AlternativeCouplingAxis(ax,scale=1,tickdir='out',labelsize=25,ylabel=r"$g_\gamma$ [GeV$^{-1}$]",lfs=40,tick_pad=8,tfs=25,ylabel_pad=60):
+    g_min,g_max = ax.get_ylim()
+    ax3 = ax.twinx()
+    ax3.set_ylim([g_min*scale,g_max*scale])
+    ax3.set_ylabel(ylabel,fontsize=lfs,labelpad=ylabel_pad,rotation=-90)
+    ax3.set_yscale('log')
+    ax3.tick_params(labelsize=tfs)
+    ax3.tick_params(which='major',direction=tickdir,width=2.5,length=13,pad=tick_pad)
+    ax3.tick_params(which='minor',direction=tickdir,width=1,length=10)
+    locmaj = mpl.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=50)
+    locmin = mpl.ticker.LogLocator(base=10.0, subs=arange(2, 10)*.1,numticks=100)
+    ax3.yaxis.set_major_locator(locmaj)
+    ax3.yaxis.set_minor_locator(locmin)
+    ax3.yaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+    plt.sca(ax)
 
 def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
                  g_min = 1.0e-19,g_max = 1.0e-6,\
@@ -1505,11 +1530,6 @@ class AxionElectron():
         return
 
     def PandaX(ax,col='firebrick',fs=20,text_on=True,lw=2,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
-        # PandaX arXiv:[1707.07921]
-#         Currently not using Solar pandaX limit
-#         dat = loadtxt("limit_data/AxionElectron/PandaX_Solar.txt")
-#         plt.plot(dat[:,0],dat[:,1],'k-',alpha=0.6,zorder=0.53,lw=2)
-#         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.53)
         dat = loadtxt("limit_data/AxionElectron/PandaX.txt")
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)

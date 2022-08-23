@@ -13,7 +13,7 @@
 [<img align="right" height="300" src="../plots/plots_png/Axion_fa_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
 ## Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Axion_fa.ipynb)
-### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa.pdf)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
 ### &nbsp;
 ### &nbsp;
