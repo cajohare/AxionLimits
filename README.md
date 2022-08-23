@@ -1,7 +1,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3932430.svg)](https://doi.org/10.5281/zenodo.3932430)
 
-The purpose of this website is to host data files and python notebooks to create limit plots on axions, axion-like particles and dark photons. Please email me [ciaran.aj.ohare@gmail.com] if you have any questions/comments/complaints. I greatly appreciate corrections to anything here, no matter how minor or trivial. Please also inform me if a limit you have made isn't here, usually it will just be because I missed it. Also if you have made one of the limits shown here and it has been revised (e.g. in a v2 of the paper) please let me know as I am much more likely to have missed the update.
+The purpose of this website is to host data files and python notebooks to create limit plots on axions, axion-like particles, dark photons, and other ultralight bosons. Please email me [ciaran.aj.ohare@gmail.com] if you have any questions/comments/complaints. I greatly appreciate corrections to anything here, no matter how minor or trivial. Please also inform me if a limit you have made isn't here, usually it will just be because I missed it. Also if you have made one of the limits shown here and it has been revised (e.g. in a v2 of the paper) please let me know as I am much more likely to have missed the update.
 
 Please go to [refs/](refs/README.md) to see a full list of all references, including a .tex and .bib file with all citation details collected from Inspire.
 
@@ -125,7 +125,6 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarPhoto
    &nbsp; \
   &nbsp; \
    &nbsp; \
-  &nbsp;
 
 ---
 
@@ -137,19 +136,17 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElect
    &nbsp; \
   &nbsp; \
    &nbsp; \
-  &nbsp;
 
 ---
 
 [<img align="right" width="300" src="plots/plots_png/VectorB-L_with_Projections.png">](docs/gBL.md)
 
-# [**B-L Vector boson**](docs/gBL.md)
+# [**Vector B-L coupling**](docs/gBL.md)
 [**Data files**](docs/gBL.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png))\
    &nbsp; \
   &nbsp; \
    &nbsp; \
-  &nbsp;
 
 ---
 
