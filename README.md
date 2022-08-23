@@ -124,7 +124,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton.
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarPhoton_with_Projections.png), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarPhoton_with_Projections.png))\
    &nbsp; \
   &nbsp; \
-   &nbsp; \
+   &nbsp; 
 
 ---
 
@@ -135,7 +135,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarPhoto
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElectron_with_Projections.png), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron_with_Projections.png))\
    &nbsp; \
   &nbsp; \
-   &nbsp; \
+   &nbsp; 
 
 ---
 
@@ -146,7 +146,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElect
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png))\
    &nbsp; \
   &nbsp; \
-   &nbsp; \
+   &nbsp; 
 
 ---
 

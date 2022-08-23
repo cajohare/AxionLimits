@@ -1,4 +1,4 @@
-# Scalar-photon coupling limits
+# Scalar-electron coupling limits
 ---
 [<img align="right" height="300" src="../plots/plots_png/ScalarElectron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron.png)
 ## Basic plot
