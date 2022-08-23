@@ -1,6 +1,6 @@
 # I2
 # Electronic transition of molecular iodine
-# https://arxiv.org/pdf/2010.08107.pdf
+# https://arxiv.org/pdf/2111.06883.pdf
 # mass [eV] 	d_e
 4.861653291507192e-14	1e30
 4.861653291507192e-14	13313.551669284869
