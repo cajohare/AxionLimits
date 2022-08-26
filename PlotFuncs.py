@@ -964,11 +964,10 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True)
         return
 
-
-    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',text_pos=[1e-1,0.5e-4],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=10,text_on=True,edgealpha=1,lw=2):
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=1.6,text_on=True,edgealpha=1,lw=2):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
-        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation)
         return
 
 
@@ -1151,6 +1150,10 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)
         return
 
+    def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.45e4,0.18e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=13,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
+        dat = loadtxt("limit_data/AxionPhoton/SolarBasin.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1)
+        return
 
     def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[2.3e2,0.25e-13],col='#036b3e',text_col='w',fs=16,zorder=0.00003,text_on=True,rotation=-46,edgealpha=1,lw=2):
         # anomalous gas heating in Leo T dwarf
