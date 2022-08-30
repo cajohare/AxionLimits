@@ -2629,6 +2629,16 @@ class DarkPhoton():
             plt.plot([9e-3,3e-3],[3e-10,9e-10],'-',lw=2.5,color=col)
         return
 
+
+    def SQMS(ax,col='#02734b',fs=17,text_on=True,lw=0.5,ms=10):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/SQMS.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.019)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color=col,alpha=1,zorder=0.0)
+        if text_on:
+            plt.text(5.7e-6,0.65e-14,r'{\bf SQMS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+        return
+
     def LAMPOST(ax,col='red',fs=15,text_on=True):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/LAMPOST.txt")
