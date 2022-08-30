@@ -9,20 +9,24 @@
 
 from PlotFuncs import *
 
-def NaturalnessCorner(ax,scale,Lambda_min_TeV,edgecolor='gold',facecolor='gold',
-                      lw=3,path_effects=line_background(0,'k'),
+def NaturalnessCorner(ax,scale,Lambda_min_TeV,dim,edgecolor='gold',facecolor='gold',
+                      lw=3,path_effects=line_background(4,'k'),
                       nlevels=100,alpha=0.1,Lambda_max_TeV=1e20,
                       mass_label=5e-13,
                      text_label=r'Natural $d_e$ ($\Lambda = 10$ TeV)',
-                     text_shift=[1,1],zorder=-100):
+                     text_shift=[1,1],zorder=-100,
+                     Shading=True,fs=25):
     m_vals = array([1e-30,1e30])
-    d_natural = lambda m,Lambda : m/(scale*Lambda**2)
+    d_natural = lambda m,Lambda : m/(scale*Lambda**dim)
     ax.plot(m_vals,d_natural(m_vals,Lambda_min_TeV*1e12),'-',lw=lw,color=edgecolor,path_effects=path_effects,zorder=zorder)
-    Lambda_vals = logspace(log10(Lambda_min_TeV),log10(Lambda_max_TeV),nlevels)
-    for Lambda in Lambda_vals:
-        ax.fill_between(m_vals,d_natural(m_vals,Lambda*1e12),y2=1e-100,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
+   
+    if Shading:
+        Lambda_vals = logspace(log10(Lambda_min_TeV),log10(Lambda_max_TeV),nlevels)
+        for Lambda in Lambda_vals:
+            ax.fill_between(m_vals,d_natural(m_vals,Lambda*1e12),y2=1e-100,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
+  
     trans_angle = plt.gca().transData.transform_angles(array((45.0,)),array([[0, 0]]))[0]
-    ax.text(mass_label*text_shift[0],0.1*d_natural(mass_label,Lambda_min_TeV*1e12)*text_shift[1],text_label,color=edgecolor,rotation=trans_angle,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
+    ax.text(mass_label*text_shift[0],0.1*d_natural(mass_label,Lambda_min_TeV*1e12)*text_shift[1],text_label,fontsize=fs,color=edgecolor,rotation=trans_angle,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
     return
     
 def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',
@@ -240,11 +244,12 @@ class ScalarElectron():
         dat = loadtxt("limit_data/ScalarElectron/Projections/AION-km.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
-    
-    def MAGIS(ax,text_label=r'{\bf MAGIS-km}',text_pos=[5e-16,8e-6],rotation=33,col='#eb4034',text_col='#eb4034',fs=20,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=3):
+
+    def MAGIS(ax,text_label=r'{\bf MAGIS-km}',text_pos=[3e-16,0.2e-6],rotation=36,col='#eb4034',text_col='#eb4034',fs=20,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=3):
         dat = loadtxt("limit_data/ScalarElectron/Projections/MAGIS-km.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return    
+   
         
     def DUAL(ax,text_label=r'{\bf DUAL}',text_pos=[3e-11,0.1e-4],rotation=0,col='#eb4034',text_col='#eb4034',fs=15,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Projections/DUAL.txt")
