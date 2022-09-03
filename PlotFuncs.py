@@ -1150,6 +1150,13 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)
         return
 
+    def HST(ax,text_label=r'{\bf HST}',text_pos=[7,3.4e-11],col='#2f9438',text_col='w',fs=11,zorder=1e-5,text_on=True,lw=2,edgealpha=1,edgecolor='k',rotation=0):
+        # Telescopes (HST)
+        dat = loadtxt("limit_data/AxionPhoton/HST.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=edgealpha)
+        return
+
+
     def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.45e4,0.18e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=13,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
         dat = loadtxt("limit_data/AxionPhoton/SolarBasin.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1)
@@ -1415,6 +1422,7 @@ class AxionPhoton():
         AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
+        AxionPhoton.HST(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
         AxionPhoton.LeoT(ax,text_on=text_on)
 

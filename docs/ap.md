@@ -144,6 +144,7 @@
 * Globular cluster R2-parameter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GlobularClusters-R2.txt), [reference](https://arxiv.org/abs/2207.03102)
 * HAWC (TeV Blazars): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAWC.txt), [reference](https://arxiv.org/abs/2203.04332)
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
+* HST (Cosmic optical background): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST.txt), [reference](https://arxiv.org/abs/2205.01079)
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
 * Magnetic white dwarf polarisation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation.txt), [reference](https://arxiv.org/abs/2203.04319)
 * Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
