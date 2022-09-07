@@ -154,21 +154,22 @@ class ScalarPhoton():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def Resonators(ax,text_label=r'{\bf Resonators}',ms=7,alpha=0.75,text_pos=[0.1e-9,0.9e-4],rotation=23,rotation2=45,col='#690c43',text_col='#690c43',fs=25,fs2=13,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=0):
-        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Sapphire.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
-        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Pillar.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
-        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Quartz.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
-        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Helium.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
 
-        ax.text(6.5e-11,1.2e-2,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(4e-10,2e-2,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+    def Resonators(ax,text_label=r'{\bf Resonators}',ms=7,alpha=0.75,text_pos=[0.1e-9,0.9e-4],rotation=23,rotation2=90,col='#690c43',text_col='#690c43',fs=25,fs2=13,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Sapphire.txt")
+        plt.plot(dat[:-15,0],dat[:-15,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
+        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Pillar.txt")
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
+        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Quartz.txt")
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
+        dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Helium.txt")
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
+
+        ax.text(1.8e-11,3e-2,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(1.3e-10,3e-2,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         ax.text(4e-9,0.7e-1,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(4.5e-8,0.8e-1,'Quartz',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        plt.text(text_pos[0],text_pos[1],text_label,rotation=rotation,color=text_col,fontsize=fs)
+        ax.text(4.5e-7,0.8e2,'Quartz BAW',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        plt.text(text_pos[0],text_pos[1],text_label,rotation=rotation,color=text_col,fontsize=fs,alpha=alpha)
 
         return
 
@@ -255,22 +256,22 @@ class ScalarElectron():
         dat = loadtxt("limit_data/ScalarElectron/Projections/DUAL.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
-    
-    def Resonators(ax,text_label=r'{\bf Resonators}',ms=7,alpha=0.75,text_pos=[0.1e-9,0.9e-4],rotation=23,rotation2=45,col='#690c43',text_col='#690c43',fs=25,fs2=13,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=0):
+        
+    def Resonators(ax,text_label=r'{\bf Resonators}',ms=7,alpha=0.75,text_pos=[0.1e-9,0.9e-4],rotation=23,rotation2=90,col='#690c43',text_col='#690c43',fs=25,fs2=13,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Sapphire.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
+        plt.plot(dat[:-10000,0],dat[:-10000,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
         dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Pillar.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
         dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Quartz.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
         dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Helium.txt")
-        plt.plot(dat[:,0],dat[:,1],'o',ms=ms,mfc=col,mew=lw,mec='k',alpha=alpha)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
 
-        ax.text(5e-11,5e-3,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(3e-10,1e-2,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(3.5e-9,0.6e-1,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(4e-8,0.7e-1,'Quartz',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        plt.text(text_pos[0],text_pos[1],text_label,rotation=rotation,color=text_col,fontsize=fs)
+        ax.text(1.8e-11,2.5e-1,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(1.3e-10,3e-1,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(4e-9,0.7e0,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(4.5e-7,0.8e3,'Quartz BAW',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        plt.text(text_pos[0],text_pos[1],text_label,rotation=rotation,color=text_col,fontsize=fs,alpha=alpha)
 
         return
     
