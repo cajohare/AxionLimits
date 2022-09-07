@@ -2114,7 +2114,7 @@ class AxionEDM():
              path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[5e-20,1e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
+    def nEDM(ax,text_pos=[5e-20,5e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
         dat = loadtxt('limit_data/AxionEDM/nEDM.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
