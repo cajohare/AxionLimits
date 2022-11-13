@@ -2766,8 +2766,11 @@ class DarkPhoton():
         return
 
     def ORPHEUS(ax,col='darkred',fs=10,text_on=True,edge_on=False,lw=0.8):
+        # data file is for randomly polarised case
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/ORPHEUS.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.076)
+        print(sqrt(1/3/0.076))
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=0)
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
