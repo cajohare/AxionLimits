@@ -148,6 +148,7 @@
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
 * Magnetic white dwarf polarisation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation.txt), [reference](https://arxiv.org/abs/2203.04319)
 * Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
+* Pulsar polar caps: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PulsarPolarCap.txt), [reference](https://arxiv.org/abs/2209.09917)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
 * Solar basin (NuSTAR): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarBasin.txt), [reference](https://arxiv.org/abs/2205.05700)
 * SN1987A ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/1702.02964)

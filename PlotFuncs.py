@@ -926,7 +926,7 @@ class AxionPhoton():
         if rs1==0:
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=2,zorder=zorder)
             if text_on:
-                plt.text(text_shift[0]*2.4e-7,text_shift[1]*0.4e-11,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
+                plt.text(text_shift[0]*2.4e-7,text_shift[1]*0.2e-11,r'{\bf ADMX SLIC}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color='k',lw=4,zorder=zorder)
             plt.plot([x,x],[y/(rs1*2e-10*x+rs2),y2/(rs1*2e-10*x+rs2)],color=col,lw=3,zorder=zorder)
@@ -1103,10 +1103,16 @@ class AxionPhoton():
 
         if text_on:
             if projection==False:
-                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.28e-11,r'{\bf MWD}',fontsize=fs,color=text_col,rotation=0,ha='center',clip_on=True)
-                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.13e-11,r'{\bf Polarisation}',fontsize=fs,color=text_col,rotation=0,ha='center',clip_on=True)
+                plt.plot([3e-8,3.5e-8],[2.7e-12,0.65e-11],'-',lw=lw,color=col,path_effects=line_background(lw+1,'k'))
+                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.28e-11/2,r'{\bf MWD}',fontsize=fs,color=text_col,rotation=0,ha='center',clip_on=True)
+                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.13e-11/2,r'{\bf Polarisation}',fontsize=fs*0.85,color=text_col,rotation=0,ha='center',clip_on=True)
             else:
                 plt.text(text_shift[0]*5e-8,text_shift[1]*0.7e-11,r'{\bf MWD Pol.}',fontsize=13,color='w',rotation=0,ha='center',clip_on=True)
+        return
+
+    def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[1.9e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=0.005,text_on=True,lw=1.5,rotation=-11,edgealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/PulsarPolarCap.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',rotation=rotation,edgealpha=edgealpha)
         return
 
     def HAWC(ax,text_label=r'{\bf HAWC}',text_pos=[0.9e-7,2.5e-11],col='#2b5e4e',text_col='#2b5e4e',fs=14,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
@@ -1398,6 +1404,7 @@ class AxionPhoton():
                 AxionPhoton.Fermi_GalacticSN(ax,text_on=text_on,lw=lw)
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDPolarisation(ax,text_on=text_on,projection=True,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.PulsarPolarCap(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.HESS(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.HAWC(ax,text_on=False,edgealpha=edgealpha,lw=lw)
         else:
@@ -1407,6 +1414,7 @@ class AxionPhoton():
             AxionPhoton.HAWC(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDPolarisation(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.PulsarPolarCap(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
 
 
         return
@@ -1730,14 +1738,16 @@ class AxionNeutron():
             col = 'goldenrod'
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=col)
-            plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)/2,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)/2,r'{\bf KSVZ}',fontsize=fs,
+            rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if DFSZ_on:
             col = 'goldenrod'
             #plt.fill_between(m,g_x(DFSZ_u,m),y2=1e-99,facecolor=col,zorder=0,alpha=0.5)
             plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=col)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ}',fontsize=fs,
+            rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def OldComagnetometers(ax,col=[0.75, 0.2, 0.2],fs=20,projection=True):
@@ -1803,7 +1813,7 @@ class AxionNeutron():
                 dat[:,1] *= 2*AxionNeutron.m_n
                 plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
-                plt.text(1e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top',clip_on=True)
+                plt.text(1.3e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top',clip_on=True)
             return
 
         def Comagnetometer(ax,col='darkred',fs=20,projection=True):
@@ -1935,12 +1945,14 @@ class AxionProton():
             col = 'goldenrod'
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=col)
-            plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*6,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*6,r'{\bf KSVZ}',fontsize=fs,
+                rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if DFSZ_on:
             col = 'goldenrod'
             plt.fill_between(m,g_x(DFSZ_l,m),y2=g_x(DFSZ_u,m),facecolor=col,zorder=0,alpha=0.5)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)/2,r'{\bf DFSZ models}',fontsize=fs,rotation=trans_angle,color='k',ha='left',va='top',rotation_mode='anchor',clip_on=True)
+            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)/2,r'{\bf DFSZ models}',fontsize=fs,
+                    rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=20,projection=True):
@@ -1974,7 +1986,7 @@ class AxionProton():
                 dat[:,1] *= 2*AxionProton.m_p
                 plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
-                plt.text(1e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
+                plt.text(1.3e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
             return
 
         def Comagnetometer(ax,col='darkred',fs=20,projection=True):
@@ -2770,12 +2782,11 @@ class DarkPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/ORPHEUS.txt")
         dat[:,1] = dat[:,1]*sqrt(1/3/0.076)
-        print(sqrt(1/3/0.076))
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=0)
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
         if text_on:
-            plt.text(6.5e-5,1e-13,r'{\bf ORPHEUS}',color=col,rotation=-90,fontsize=fs)
+            plt.text(6.5e-5,0.5e-13,r'{\bf ORPHEUS}',color=col,rotation=-90,fontsize=fs)
         return
 
     def WISPDMX(ax,col='crimson',fs=12,text_on=True,edge_on=False,lw=0.8):

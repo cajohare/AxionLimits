@@ -1,0 +1,9 @@
+# Neutron stars - vacuum gap production (Fig. 2 conservative/simulation) https://arxiv.org/pdf/2209.09917.pdf
+# mass [eV] g_ag [GeV^-1]
+1.0e-9	1e0
+1.0e-9	5.047261286291664e-12
+1.0e-8	4.866142003096497e-12
+1.0e-7	3.483890458441170e-12
+1.0e-6	1.997611134233491e-12
+1.0e-5	4.942273069088987e-12
+1.0e-5	1e0
