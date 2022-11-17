@@ -140,6 +140,7 @@
 * Fermi-LAT (NGC 1275): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_bound.txt), [hole](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Fermi_hole.txt), [reference](https://arxiv.org/abs/1603.06978)
 * Fermi-LAT (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FermiSN.txt), [reference](https://arxiv.org/abs/1609.02350)
 * Fermi-LAT (Extragalactic SNe): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-gamma.txt), [reference](https://arxiv.org/abs/2006.06722)
+* Fermi-LAT (Quasars): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/FermiQuasars.txt), [reference](https://arxiv.org/abs/2211.03414)
 * Globular cluster R-parameter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GlobularClusters-R.txt), [reference](https://arxiv.org/abs/1406.6053)
 * Globular cluster R2-parameter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GlobularClusters-R2.txt), [reference](https://arxiv.org/abs/2207.03102)
 * HAWC (TeV Blazars): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAWC.txt), [reference](https://arxiv.org/abs/2203.04332)

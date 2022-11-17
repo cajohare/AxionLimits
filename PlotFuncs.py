@@ -1096,6 +1096,12 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,ha='left',va='top',clip_on=True)
         return
 
+    def FermiQuasars(ax,text_label=r'{\bf Quasars}',text_pos=[1.15e-8,0.95e-11],col='ForestGreen',text_col='w',fs=12,zorder=0.1,text_on=True,edgealpha=1,lw=2):
+        dat = loadtxt("limit_data/AxionPhoton/FermiQuasars.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=30)
+        return
+
+
     def MWDPolarisation(ax,text_shift=[1,1],col='#32a852',text_col='#32a852',fs=14,zorder=0.01,projection=False,text_on=True,edgealpha=1,lw=2):
         # Upper limit on the axion-photon coupling from magnetic white dwarf polarization arXiv:[2203.04319]
         dat = loadtxt("limit_data/AxionPhoton/MWDPolarisation.txt")
@@ -1103,11 +1109,11 @@ class AxionPhoton():
 
         if text_on:
             if projection==False:
-                plt.plot([3e-8,3.5e-8],[2.7e-12,0.65e-11],'-',lw=lw,color=col,path_effects=line_background(lw+1,'k'))
+                plt.plot([3e-8,9.5e-8],[2.7e-12,0.75e-11],'-',lw=lw,color=col,path_effects=line_background(lw+1,'k'))
                 plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.28e-11/2,r'{\bf MWD}',fontsize=fs,color=text_col,rotation=0,ha='center',clip_on=True)
-                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.13e-11/2,r'{\bf Polarisation}',fontsize=fs*0.85,color=text_col,rotation=0,ha='center',clip_on=True)
+                plt.text(text_shift[0]*2.3e-8,text_shift[1]*0.16e-11/2,r'{\bf Polarisation}',fontsize=fs*0.85,color=text_col,rotation=0,ha='center',clip_on=True)
             else:
-                plt.text(text_shift[0]*5e-8,text_shift[1]*0.7e-11,r'{\bf MWD Pol.}',fontsize=13,color='w',rotation=0,ha='center',clip_on=True)
+                plt.text(text_shift[0]*3.5e-7,text_shift[1]*0.6e-11,r'{\bf MWD Pol.}',fontsize=11,color='w',rotation=40,ha='center',clip_on=True)
         return
 
     def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[1.9e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=0.005,text_on=True,lw=1.5,rotation=-11,edgealpha=1):
@@ -1135,7 +1141,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=False,edgealpha=edgealpha,lw=lw)
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf Star}',fontsize=fs,color=text_col,ha='left',va='top',rotation=rotation,clip_on=True)
-            plt.text(0.88*text_pos[0],text_pos[1],r'{\bf clusters}',fontsize=fs,color=text_col,ha='left',va='top',rotation=rotation,clip_on=True)
+            plt.text(0.91*text_pos[0],text_pos[1],r'{\bf clusters}',fontsize=fs,color=text_col,ha='left',va='top',rotation=rotation,clip_on=True)
         return
 
     def Fermi_GalacticSN(ax,text_label=r'{\bf Fermi SN}',text_pos=[1e-9,5e-13],col=[0.0, 0.42, 0.24],text_col=[0.0, 0.42, 0.24],fs=15,zorder=0.0,text_on=True,rotation=43,lw=1.5,facealpha=0.05,edgealpha=0.6):
@@ -1397,6 +1403,7 @@ class AxionPhoton():
         AxionPhoton.Mrk421(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.Fermi(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.StarClusters(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        AxionPhoton.FermiQuasars(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if projection:
             AxionPhoton.NGC1275(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=False,edgealpha=edgealpha,lw=lw)
@@ -1410,8 +1417,8 @@ class AxionPhoton():
         else:
             AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
-            AxionPhoton.HESS(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
-            AxionPhoton.HAWC(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.HESS(ax,edgealpha=edgealpha,lw=lw,text_on=False)
+            AxionPhoton.HAWC(ax,edgealpha=edgealpha,lw=lw,text_on=False)
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDPolarisation(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.PulsarPolarCap(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
