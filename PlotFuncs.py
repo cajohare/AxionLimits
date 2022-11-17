@@ -383,6 +383,22 @@ class AxionPhoton():
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=2)
         return
 
+    def CASTCAPP(ax,col=[0.88, 0.07, 0.24],fs=13,RescaleByMass=False,projection=True,text_on=True,text_shift=[1,1]):
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+            zo = 3
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+            zo = 0
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/CAST-CAPP.txt")
+
+        if rs1==0:
+            plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=2)
+        return
+
     def CAPP(ax,col=[1, 0.1, 0.37],fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
         y2 = ax.get_ylim()[1]
         if RescaleByMass:
@@ -397,11 +413,13 @@ class AxionPhoton():
         dat2 = loadtxt("limit_data/AxionPhoton/CAPP-2.txt")
         dat3 = loadtxt("limit_data/AxionPhoton/CAPP-3.txt")
         dat4 = loadtxt("limit_data/AxionPhoton/CAPP-4.txt")
+        dat5 = loadtxt("limit_data/AxionPhoton/CAPP-5.txt")
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
             plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
                 plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
@@ -418,7 +436,7 @@ class AxionPhoton():
             plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col)
-
+            plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col)
         return
 
     def QUAX(ax,col='crimson',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
@@ -1336,6 +1354,7 @@ class AxionPhoton():
         AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,lw=0)
         AxionPhoton.UPLOAD(ax,text_on=text_on)
         AxionPhoton.TASEH(ax,text_on=False)
+        AxionPhoton.CASTCAPP(ax,text_on=False)
 
         if projection:
             AxionPhoton.CAPP(ax,fs=fs-4,text_on=False)
@@ -2239,13 +2258,19 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
-    def SolarCore(ax,text_pos=[1e-15,0.15e-14],col='#0d4dba',text_col='w',text_rot=41,fs=30,zorder=-5):
+    def SolarCore(ax,text_pos=[0.08e-10,0.12e-10],col='#0d4dba',text_col='w',text_rot=41,fs=30,zorder=-5):
         dat = loadtxt('limit_data/fa/SolarCore.txt')
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf Solar core}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
+    def WhiteDwarfs(ax,text_pos=[0.9e-10,0.03e-11],col='#0356fc',text_col='w',text_rot=41,fs=28,zorder=-10):
+        dat = loadtxt('limit_data/fa/WhiteDwarfs.txt')
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.text(text_pos[0],text_pos[1],r'{\bf White dwarfs}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
 
     def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
@@ -2312,7 +2337,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
-    def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.4e-14],col='darkred',alpha=0.4,zorder=-10,text_rot=90,fs=20):
+    def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.15e-14],col='darkred',alpha=0.4,zorder=-10,text_rot=90,fs=19):
         dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect1.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
@@ -2485,6 +2510,12 @@ class DarkPhoton():
         B = 8.1
         costh = sqrt(0.03)
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
+        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*0.023*dat[:,0]))
+        plt.fill_between([dat[0,0],dat[0,0]],[y2,dat[0,1]],y2=y2,color=QUAX_col,zorder=0.1)
+
+        B = 8.8
+        costh = sqrt(0.023)
+        dat = loadtxt("limit_data/AxionPhoton/CAST-CAPP.txt")
         dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*0.023*dat[:,0]))
         plt.fill_between([dat[0,0],dat[0,0]],[y2,dat[0,1]],y2=y2,color=QUAX_col,zorder=0.1)
 

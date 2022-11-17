@@ -82,6 +82,8 @@
 * CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-2.txt), [reference](https://arxiv.org/abs/2008.10141)
 * CAPP-3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-3.txt), [reference](https://arxiv.org/abs/2012.10764)
 * CAPP-4: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-4.txt), [reference](https://arxiv.org/abs/2206.08845)
+* CAPP-5: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-5.txt), [reference](https://arxiv.org/abs/2210.10961)
+* CAST-CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST-CAPP.txt), [reference](https://arxiv.org/abs/2211.02902)
 * DANCE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
 * DANCE (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2105.06252)
 * DM-Radio: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DMRadio.txt), [reference](https://arxiv.org/abs/2204.13781)
