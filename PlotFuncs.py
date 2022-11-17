@@ -1813,10 +1813,18 @@ class AxionNeutron():
         zo = 1
         dat = loadtxt("limit_data/AxionNeutron/NASDUCK.txt")
         dat[:,1] *= 2*AxionNeutron.m_n
+
+        dat2 = loadtxt("limit_data/AxionNeutron/NASDUCK-SERF.txt")
+        dat2[:,1] *= 2*AxionNeutron.m_n
+
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text((1-0.07)*1.5e-14,(1+0.07)*5e-5,r'{\bf NASDUCK}',fontsize=fs,color='k',ha='left',va='top',clip_on=True)
-        plt.text(1.5e-14,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
+
+        i1 = 0
+        plt.plot(dat2[i1:,0],dat2[i1:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat2[i1:,0],dat2[i1:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text((1-0.07)*1e-13,(1+0.07)*5e-5,r'{\bf NASDUCK}',fontsize=fs,color='k',ha='left',va='top',clip_on=True)
+        plt.text(1e-13,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
         return
 
 
@@ -1874,8 +1882,8 @@ class AxionNeutron():
         dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer.txt")
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text((1-0.07)*5.0e-12,(1+0.07)*2.2e-4,r'{\bf K-}$^3${\bf He comagnetometer}',fontsize=fs,color='k',ha='left',va='top',clip_on=True)
-        plt.text(5.0e-12,2.2e-4,r'{\bf K-}$^3${\bf He comagnetometer}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
+        plt.text((1-0.07)*2.0e-8,(1+0.07)*1.5e-4,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='k',ha='left',va='top',clip_on=True)
+        plt.text(2.0e-8,1.5e-4,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
 
         # Torsion balance test of gravitational inverse square law: hep-ph/0611184
         # reinterpreted in: hep-ph/0611223
@@ -1986,8 +1994,14 @@ class AxionProton():
         zo = 1
         dat = loadtxt("limit_data/AxionProton/NASDUCK.txt")
         dat[:,1] *= 2*AxionProton.m_p
+
+        dat1 = loadtxt("limit_data/AxionProton/NASDUCK-SERF.txt")
+        dat1[:,1] *= 2*AxionProton.m_p
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat1[:,0],dat1[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat1[:,0],dat1[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+
         plt.text((1-0.07)*1.5e-14,(1+0.07)*5e-5,r'{\bf NASDUCK}',fontsize=fs,color='k',ha='left',va='top')
         plt.text(1.5e-14,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top')
         return
