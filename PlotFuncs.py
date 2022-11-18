@@ -989,7 +989,7 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True)
         return
 
-    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=1.9,text_on=True,edgealpha=1,lw=2):
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1.2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=1.9,text_on=True,edgealpha=1,lw=2):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation)
@@ -1857,6 +1857,12 @@ class AxionNeutron():
         plt.text(1e-13,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
         return
 
+    def JEDI(ax,text_pos=[7e-10,2e-6],col='#a3435e',text_col='w',text_rot=90,fs=20,zorder=0.499):
+        dat = loadtxt('limit_data/AxionEDM/JEDI.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
 
 
     class CASPEr():
@@ -1965,6 +1971,7 @@ class AxionNeutron():
         AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
         AxionNeutron.UltracoldNeutronsAndMercury(ax,projection=projection,fs=fs+5)
         AxionNeutron.K3He_Comagnetometer_DarkMatter(ax)
+        AxionNeutron.JEDI(ax)
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
         return
@@ -2244,7 +2251,7 @@ class AxionEDM():
         plt.text(text_pos[0],text_pos[1],r'{\bf Planck+BAO}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
-    def CASPEr(ax,text_pos=[130e-9,1e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False,text_on=True):
+    def CASPEr(ax,text_pos=[0.5e-5,0.25e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False,text_on=True):
         dat = loadtxt('limit_data/AxionEDM/CASPEr-electric.txt')
         plt.plot(dat[:,0],dat[:,1],'-',color=col,zorder=13,lw=4)
         if text_on:
@@ -2267,6 +2274,14 @@ class AxionEDM():
                 plt.text(1.5e-8,3e-15,'phase II',rotation=49,fontsize=20,color=col,clip_on=True)
                 plt.text(7e-8,0.3e-15,'phase III',rotation=49,fontsize=20,color=col,clip_on=True)
         return
+
+    def JEDI(ax,text_pos=[1.5e-10,1.5e-5],col='#a3435e',text_col='w',text_rot=90,fs=22,zorder=10):
+        dat = loadtxt('limit_data/AxionEDM/JEDI.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
+        return
+
 
 #==============================================================================#
 

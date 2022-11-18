@@ -28,8 +28,9 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * Beam EDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BeamEDM.txt), [reference](https://arxiv.org/abs/2204.01454)
 * nEDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/nEDM.txt), [reference](https://arxiv.org/abs/1708.06367)
 * HfH+: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/HfH.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.171301)
+* JEDI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/JEDI.txt), [reference](https://arxiv.org/abs/2208.07293)
 * Piezoaxionic effect [N=1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect1.txt), [N=64](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect64.txt) [reference](https://arxiv.org/abs/2112.11466)
-* Storage Ring EDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
+* Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
 * CASPEr-electric projections: [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)
 
 

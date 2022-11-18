@@ -123,7 +123,7 @@
 * IAXO (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO_plus_SN_Spica1.txt), [reference](https://arxiv.org/abs/2008.03924)
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
-* SAPPHIRES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SAPPHIRES.txt), [reference](https://arxiv.org/abs/2105.01224)
+* SAPPHIRES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SAPPHIRES.txt), [reference](https://arxiv.org/abs/2208.09880)
 
 ### Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
