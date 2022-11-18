@@ -81,6 +81,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * MuDHI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/MuDHI.txt), [reference](https://arxiv.org/abs/2110.10497)
 * ORPHEUS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ORPHEUS.txt), [reference](https://arxiv.org/abs/2204.03818)
 * QUALIPHIDE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/QUALIPHIDE.txt), [reference](https://arxiv.org/abs/2209.03419)
+* Quantum cyclotron: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/QuantumCyclotron.txt), [reference](https://arxiv.org/abs/2208.06519)
 * SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
 * SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)

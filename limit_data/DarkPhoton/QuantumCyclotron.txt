@@ -1,0 +1,5 @@
+# One electron quantum cyclotron
+# 2208.06519
+# mass [eV]  kinetic mixing
+0.61227643e-3 4e-11
+0.61227643e-3 4e-11

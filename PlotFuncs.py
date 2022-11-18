@@ -989,7 +989,7 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True)
         return
 
-    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=1.6,text_on=True,edgealpha=1,lw=2):
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=15,zorder=1.9,text_on=True,edgealpha=1,lw=2):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation)
@@ -2754,7 +2754,7 @@ class DarkPhoton():
         dat = loadtxt("limit_data/DarkPhoton/Tokyo-Tomita.txt")
         plt.plot([dat[1,0],dat[1,0]],[dat[1,1],1e0],'-',color=col,lw=3,zorder=0.2)
         if text_on:
-            plt.text(2.3e-4,2.5e-10,r'{\bf Tokyo-3}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            #plt.text(2e-4,1e-10,r'{\bf Tokyo-3}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
             plt.text(0.45e-3,3e-8,r'{\bf Tokyo-2}',fontsize=fs-2,color='k',rotation=90,rotation_mode='anchor',ha='center',va='center')
             plt.text(0.2e-1,4e-12,r'{\bf Tokyo-1}',fontsize=fs+4,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
             plt.plot([2.05e-1,4e0],[5e-12,8e-12],'-',lw=2.5,color=col)
@@ -2910,6 +2910,16 @@ class DarkPhoton():
             plt.text(2.1e-9,0.5e-8/1.9,r'{\bf DM}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
             plt.text(2.1e-9,0.2e-8/1.9,r'{\bf Pathfinder}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
 
+        return
+
+
+    def QuantumCyclotron(ax,col='orangered',fs=13,text_on=True):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/QuantumCyclotron.txt")
+        dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
+        plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6)
+        if text_on:
+            plt.text(0.95e-3,4e-10,r'{\bf QC}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
         return
 
     def DarkMatter(ax,Witte_col='royalblue',Caputo_col='dodgerblue',Arias_col='navy',fs=20,projection=True,text_on=True):
