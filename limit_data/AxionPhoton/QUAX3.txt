@@ -1,0 +1,5 @@
+# QUAX-axion photon limit
+# 2208.12670
+# m_a [eV]  g_ap [GeV^-1]
+4.282153e-05 0.731e-13
+4.282153e-05 0.731e-13

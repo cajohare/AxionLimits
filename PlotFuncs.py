@@ -414,12 +414,15 @@ class AxionPhoton():
         dat3 = loadtxt("limit_data/AxionPhoton/CAPP-3.txt")
         dat4 = loadtxt("limit_data/AxionPhoton/CAPP-4.txt")
         dat5 = loadtxt("limit_data/AxionPhoton/CAPP-5.txt")
+        dat6 = loadtxt("limit_data/AxionPhoton/CAPP-6.txt")
+
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
             plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
                 plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
@@ -437,6 +440,7 @@ class AxionPhoton():
             plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col)
         return
 
     def QUAX(ax,col='crimson',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
@@ -453,11 +457,12 @@ class AxionPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
         dat2 = loadtxt("limit_data/AxionPhoton/QUAX2.txt")
+        dat3 = loadtxt("limit_data/AxionPhoton/QUAX3.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
-
+            plt.plot([dat3[0,0],dat3[0,0]],[dat3[0,1]/(rs1*2e-10*dat3[0,0]+rs2),y2/(rs1*2e-10*dat3[0,0]+rs2)],color=col,lw=2,zorder=zo)
             if text_on:
                 plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.05e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
@@ -465,6 +470,8 @@ class AxionPhoton():
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=3,zorder=zo)
+            plt.plot([dat3[0,0],dat3[0,0]],[dat3[0,1]/(rs1*2e-10*dat3[0,0]+rs2),y2/(rs1*2e-10*dat3[0,0]+rs2)],color='k',lw=4,zorder=zo)
+            plt.plot([dat3[0,0],dat3[0,0]],[dat3[0,1]/(rs1*2e-10*dat3[0,0]+rs2),y2/(rs1*2e-10*dat3[0,0]+rs2)],color=col,lw=3,zorder=zo)
             if text_on:
                 plt.text(text_shift[0]*dat2[0,0]*1.2,text_shift[1]*y2*1.2,r'{\bf QUAX}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
@@ -1084,9 +1091,13 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[3e-9,6e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True,edgealpha=1,lw=2):
-        # Mrk 421 arXiv:[2008.09464]
+    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[4e-9,6e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True,edgealpha=1,lw=2):
+        # Fermi
         dat = loadtxt("limit_data/AxionPhoton/Mrk421.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        
+        # MAGIC
+        dat = loadtxt("limit_data/AxionPhoton/Mrk421-MAGIC.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
@@ -1114,7 +1125,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,ha='left',va='top',clip_on=True)
         return
 
-    def FermiQuasars(ax,text_label=r'{\bf Quasars}',text_pos=[1.15e-8,0.95e-11],col='ForestGreen',text_col='w',fs=12,zorder=0.1,text_on=True,edgealpha=1,lw=2):
+    def FermiQuasars(ax,text_label=r'{\bf Quasars}',text_pos=[1.15e-8,0.8e-11],col='ForestGreen',text_col='w',fs=12,zorder=0.1,text_on=True,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/AxionPhoton/FermiQuasars.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=30)
         return
@@ -1221,10 +1232,24 @@ class AxionPhoton():
         plt.plot([1.2e3,6e3],[1.3e-18,2e-18],'-',lw=2,color=col,path_effects=line_background(3,'k'))
         return
 
+    def INTEGRAL(ax,text_label=r'{\bf INTEGRAL}',text_pos=[1.7e4,2.7e-19],col='#3b4ba1',edgecolor='k',text_col='#3b4ba1',fs=17,zorder=0.00001,text_on=True,lw=0.5,facealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/INTEGRAL.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        if text_on: 
+            plt.plot([2e4,8e4],[1.9e-19,2.3e-19],'-',lw=2,color=col,path_effects=line_background(3,'k'))
+        return
+
     def COBEFIRAS(ax,text_label=r'{\bf COBE/FIRAS}',text_pos=[0.45e2,4e-13],col='#234f8c',text_col='w',fs=13,zorder=0.0001,text_on=True,rotation=-46,lw=1.5,edgealpha=1):
         # anomalous gas heating in Leo T dwarf
         dat = loadtxt("limit_data/AxionPhoton/COBE-FIRAS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw)
+        return
+
+    def IrreducibleFreezeIn(ax,text_label=r'{\bf Freeze-in}',text_pos=[0.7e6,7e-14],col='midnightblue',edgecolor='k',text_col='w',fs=24,zorder=0.009,text_on=True,lw=1,facealpha=1,rotation=-55,edgealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/IrreducibleFreezeIn.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,
+                    rotation=rotation,edgecolor=edgecolor,fs=fs,
+                    zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha,edgealpha=edgealpha)
         return
 
     def Cosmology(ax,fs=30,text_on=True,edgealpha=1,lw=1.5):
@@ -1237,21 +1262,24 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/x_ion.txt")
         FilledLimit(ax,dat,'',col=[0.27, 0.51, 0.71],text_col='k',fs=fs,zorder=0.001,text_on=False,edgealpha=edgealpha,lw=lw)
         if text_on:
-            plt.text(100.5744*0.93,4.0e-11,r'{\bf Ionisation}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
-            plt.text(40*0.93,3.7720e-11,r'{\bf fraction}',fontsize=fs-9,color='w',rotation=-90,ha='left',va='top',clip_on=True)
+            plt.text(100.5744*0.93,2e-11,r'{\bf Ionisation}',fontsize=fs-12,color='w',rotation=-90,ha='left',va='top',clip_on=True)
+            plt.text(40*0.93,2e-11,r'{\bf fraction}',fontsize=fs-12,color='w',rotation=-90,ha='left',va='top',clip_on=True)
 
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
-        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,2e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw)
+        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,3e-11],col=[0.27, 0.51, 0.71],text_col='w',fs=fs,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw)
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
         #EBL2 = loadtxt("limit_data/AxionPhoton/EBL2.txt")
-        FilledLimit(ax,EBL,r'{\bf EBL}',text_pos=[5e4,5e-14],col=[0.0, 0.2, 0.6],text_col='w',fs=fs+5,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw)
+        FilledLimit(ax,EBL,r'{\bf EBL}',text_pos=[9e4,2.5e-16],col=[0.0, 0.2, 0.6],text_col='w',fs=fs+5,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw)
         #FilledLimit(ax,EBL2,'',col=[0.0, 0.2, 0.6],text_on=False,zorder=0.001,edgealpha=edgealpha,lw=lw)
 
         # Spectral distortions of CMB
         AxionPhoton.COBEFIRAS(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+
+        # Freezein
+        AxionPhoton.IrreducibleFreezeIn(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
 
         return
 
@@ -1459,10 +1487,12 @@ class AxionPhoton():
         AxionPhoton.HST(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
         AxionPhoton.LeoT(ax,text_on=text_on)
-
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
             AxionPhoton.eROSITA(ax,text_on=text_on)
+            AxionPhoton.INTEGRAL(ax,text_on=False)
+        else:
+            AxionPhoton.INTEGRAL(ax,text_on=text_on)
         return
 #==============================================================================#
 
@@ -1840,8 +1870,8 @@ class AxionNeutron():
             plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
             plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5)
             plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(0.3e-16*(1-0.05),(1+0.07)*StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor',clip_on=True)
-            plt.text(0.3e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='w',ha='left',va='top',rotation=40,rotation_mode='anchor',clip_on=True)
+            plt.text(0.5e-16*(1-0.05),(1+0.07)*StochasticCorrection*1.8e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-6,color='k',ha='left',va='top',rotation=40,rotation_mode='anchor',clip_on=True)
+            plt.text(0.5e-16,StochasticCorrection*1.8e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-6,color='w',ha='left',va='top',rotation=40,rotation_mode='anchor',clip_on=True)
             if projection:
                 dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
                 dat[:,1] *= 2*AxionNeutron.m_n
@@ -1873,12 +1903,23 @@ class AxionNeutron():
             plt.text(1.4e-9,2*1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27,clip_on=True)
             return
 
+    def K3He_Comagnetometer_DarkMatter(ax,col='#8a1d34',fs=23,projection=True):
+        y2 = ax.get_ylim()[1]
+        zo = 0.5
+        dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer_DarkMatter.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text((1-0.07)*0.5e-15,(1+0.07)*8e-9,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='k',ha='left',va='top',clip_on=True)
+        plt.text(0.5e-15,8e-9,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True)
+        return
+
     def LabExperiments(ax,projection=True,fs=20):
         y2 = ax.get_ylim()[1]
 
         # Long range spin dependent forces K-3He arXiv:[0809.4700]
         zo = 0.2
-        col = [0.4, 0.2, 0.2]
+        col = 'dimgray'
         dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer.txt")
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
@@ -1923,6 +1964,7 @@ class AxionNeutron():
         AxionNeutron.CASPEr.ZULF(ax,projection=projection,fs=fs)
         AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
         AxionNeutron.UltracoldNeutronsAndMercury(ax,projection=projection,fs=fs+5)
+        AxionNeutron.K3He_Comagnetometer_DarkMatter(ax)
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
         return
@@ -2442,96 +2484,64 @@ class DarkPhoton():
         return fig,ax
 
 
-    def Haloscopes(ax,col=[0.75, 0.2, 0.2],fs=17,projection=True,text_on=True):
+    def Haloscopes(ax,fs=17,projection=True,text_on=True,col='darkred'):
         y2 = ax.get_ylim()[1]
         zo = 0.3
 
-        HAYSTAC_col = 'indianred'
-        CAPP_col = 'crimson'
-        QUAX_col = 'r'
-        ADMX_col = 'firebrick'
-
         # ADMX
-        costh = sqrt(0.019)
-        B = 7.6
-        dat = loadtxt("limit_data/AxionPhoton/ADMX.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=ADMX_col,zorder=0.1,lw=3)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1,lw=3)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2018.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2019_1.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2019_2.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2021.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX_Sidecar.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
-        B = 6.8
-        dat = loadtxt("limit_data/AxionPhoton/ADMX2018.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=ADMX_col,zorder=0.1)
-
-        B = 7.6
-        dat = loadtxt("limit_data/AxionPhoton/ADMX2019_1.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=ADMX_col,zorder=0.1)
-
-        B = 7.6
-        dat = loadtxt("limit_data/AxionPhoton/ADMX2019_2.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=ADMX_col,zorder=0.1)
-
-        B = 7.6
-        dat = loadtxt("limit_data/AxionPhoton/ADMX2021.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=ADMX_col,zorder=0.1)
-
-    #     B = 3.11
-    #     dat = loadtxt("limit_data/AxionPhoton/ADMX_Sidecar_AC.txt")
-    #     dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-    #     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=ADMX_col,facecolor=ADMX_col,zorder=0.1)
-
-    #     B = 5.0
-    #     dat = loadtxt("limit_data/AxionPhoton/ADMX_SLIC.txt")
-    #     dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-    #     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=ADMX_col,facecolor=ADMX_col,zorder=100)
-
-
-
-        B = 9
-        dat = loadtxt("limit_data/AxionPhoton/HAYSTAC_highres.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=HAYSTAC_col,zorder=0.1)
-        dat = loadtxt("limit_data/AxionPhoton/HAYSTAC_2020_highres.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=HAYSTAC_col,zorder=0.1)
+        # HAYSTAC
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/HAYSTAC.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/HAYSTAC_2020.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
 
         # CAPP
-        B = 7.3
-        dat = loadtxt("limit_data/AxionPhoton/CAPP-1.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=CAPP_col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-1.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-2.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-3.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-4.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-5.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-6.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAST-CAPP.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
-        B = 7.8
-        dat = loadtxt("limit_data/AxionPhoton/CAPP-2.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=CAPP_col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/TASEH.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
-        B = 7.9
-        dat = loadtxt("limit_data/AxionPhoton/CAPP-3.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*costh*dat[:,0]))
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='none',facecolor=CAPP_col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ORGAN-1a.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.21)
 
-        # CAPP-3 [KSVZ]
-        dat_min = dat[argmin(dat[:,1]),:]
-        dat_min[1] = dat_min[1]*costh/sqrt(0.2)
-        plt.plot([dat_min[0],dat_min[0]],[1e-10,dat_min[1]],'-',color=CAPP_col,lw=1.5,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX.txt")
+        dat[0,1] = 1e0
+        plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX2.txt")
+        dat[0,1] = 1e0
+        plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
-        B = 8.1
-        costh = sqrt(0.03)
-        dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*0.023*dat[:,0]))
-        plt.fill_between([dat[0,0],dat[0,0]],[y2,dat[0,1]],y2=y2,color=QUAX_col,zorder=0.1)
-
-        B = 8.8
-        costh = sqrt(0.023)
-        dat = loadtxt("limit_data/AxionPhoton/CAST-CAPP.txt")
-        dat[:,1] = 1e-9*dat[:,1]*(B/(1.444e-3*0.023*dat[:,0]))
-        plt.fill_between([dat[0,0],dat[0,0]],[y2,dat[0,1]],y2=y2,color=QUAX_col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX3.txt")
+        dat[0,1] = 1e0
+        plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
 
         if text_on:
@@ -2805,7 +2815,19 @@ class DarkPhoton():
         return
 
 
-    def SHUKET(ax,col='maroon',fs=13,text_on=True,edge_on=False,lw=0.8):
+    def QUALIPHIDE(ax,col='r',fs=9,text_on=True,edge_on=False,lw=0.8,zorder=0):
+        # data file is for randomly polarised case and 0.3 GeV/cm^3
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/QUALIPHIDE.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.13)*sqrt(0.3/0.45)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=zorder,lw=0)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder)
+        if text_on:
+            plt.text(3.5e-5,0.13e-12,r'{\bf QUALIPHIDE}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+        return
+        
+    def SHUKET(ax,col='maroon',fs=13,text_on=False,edge_on=False,lw=0.8):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SHUKET.txt")
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)*sqrt(1/3/0.038)
