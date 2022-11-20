@@ -52,7 +52,7 @@
 * QUAX:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/QUAX.txt),  [reference 2018](https://arxiv.org/abs/1806.00310), [reference 2020](https://arxiv.org/abs/2001.08940)
 
 ### Astro bounds:
-
+* Freeze-in ALPs (irreducible axions): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/IrreducibleFreezeIn.txt), [reference](https://arxiv.org/abs/2209.06216)
 * Red giant branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/RedGiants.txt), [reference](https://arxiv.org/abs/2007.03694)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SolarNu.txt), [reference](https://arxiv.org/abs/0807.2926)
 * White dwarf hint: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/WDhint.txt), [reference](https://arxiv.org/abs/1708.02111)
