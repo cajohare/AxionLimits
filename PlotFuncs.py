@@ -2791,8 +2791,8 @@ class DarkPhoton():
     def Crab(ax,col=[0.1,0.4,0.1],fs=17,text_on=True):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/Crab.txt")
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.09999,lw=2)
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.09999)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=2,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=2)
 
     #     dat = loadtxt("limit_data/DarkPhoton/Crab_2.txt")
     #     plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.9,lw=2)
@@ -3026,13 +3026,22 @@ class DarkPhoton():
             plt.text(0.9e4,0.4e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-43,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
         return
 
-    def CAST(ax,col='maroon',fs=27,text_on=True):
+    def CAST(ax,col='maroon',fs=19,text_on=True):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/CAST.txt")
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1,lw=2)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1)
         if text_on:
-            plt.text(4e-3,0.8e-6,r'{\bf CAST}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.95e-3,6e-6,r'{\bf CAST}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+        return
+
+    def HINODE(ax,col='#700606',fs=16,text_on=True):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/HINODE.txt")
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=2)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
+        if text_on:
+            plt.text(5e-3,0.3e-5,r'{\bf HINODE}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
         return
 
     def SHIPS(ax,col='indianred',fs=20,text_on=True):
