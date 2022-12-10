@@ -49,6 +49,13 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
 ### &nbsp;
 ---
+[<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Ultralight_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
+## Haloscopes closeup
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Ultralight.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Ultralight_with_Projections.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
+### &nbsp;
+---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Simple_Wide.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
 ## Simplified plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/SimplifiedPlots.ipynb)
@@ -107,6 +114,7 @@
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SuperMAG.txt), [reference](https://arxiv.org/abs/2112.09620)
 * TASEH: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/TASEH.txt), [reference](https://arxiv.org/abs/2205.05574)
 * TOORAD: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD1.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD2.txt), [reference](https://arxiv.org/abs/2102.05366)
+* Twisted Anyon Cavity: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TwistedAnyonCavity.txt), [reference](https://arxiv.org/abs/2208.01640)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UF.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
 * UPLOAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
 * WISPLC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPLC.txt), [reference](https://arxiv.org/abs/2111.04541)
@@ -161,6 +169,7 @@
 * White dwarf initial-final mass relation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2102.00379)
 
 ### Astrophysical searches for axions as dark matter (blue)
+* BICEP/KECK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BICEP-KECK.txt), [reference](https://arxiv.org/abs/2108.03316)
 * Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
 * Breakthrough Listen (Neutron stars) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/COBE-FIRAS.txt), [reference](https://arxiv.org/abs/2012.07292)
@@ -168,6 +177,10 @@
 * HST (Cosmic optical background): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST.txt), [reference](https://arxiv.org/abs/2205.01079)
 * INTEGRAL (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2209.06299)
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
+* MOJAVE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MOJAVE.txt), [reference](https://arxiv.org/abs/1811.10997)
+* PPTA+QUIJOTE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PPTA_QUIJOTE.txt), [reference](https://arxiv.org/abs/2201.03422)
+* Pulsar Polarisation Arrays: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PPA.txt), [reference](https://arxiv.org/abs/2111.10615)
+* SPT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SPT.txt), [reference](https://arxiv.org/abs/2203.16567)
 * Telescopes (Haystack): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_Haystack.txt), [reference](https://iopscience.iop.org/article/10.1086/318310)
 * Telescopes (MUSE Leo-T): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_MUSE.txt), [reference](https://arxiv.org/abs/2009.01310)
 * Telescopes (VIMOS Abell 2667 and 2390): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Telescopes_VIMOS.txt), [reference](https://arxiv.org/abs/astro-ph/0611502)

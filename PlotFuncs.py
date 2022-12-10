@@ -33,6 +33,10 @@ def col_alpha(col,alpha=0.1):
 #==============================================================================#
 
 
+def line_background(lw,col):
+    return [pe.Stroke(linewidth=lw, foreground=col), pe.Normal()]
+
+
 
 def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
                     lw=2,y2=1e0,edgealpha=0.6,text_on=False,text_pos=[0,0],\
@@ -841,24 +845,24 @@ class AxionPhoton():
         return
 
     # Low mass ALP haloscopes
-    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.5e-12,1.7e-13]):
+    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.5e-12,1.7e-13],linestyle='-',rotation=50):
         # DANCE arXiv[1911.05196]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/DANCE.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',linewidth=1.5,color=col,zorder=0)
+        plt.plot(dat[:,0],dat[:,1],linestyle=linestyle,linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf DANCE}',rotation=50,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
+            plt.text(text_pos[0],text_pos[1],r'{\bf DANCE}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def aLIGO(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[0.2e-9,0.35e-13]):
+    def aLIGO(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[0.2e-9,0.35e-13],linestyle='-',rotation=0):
         # aLIGO arXiv[1903.02017]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/aLIGO.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',linewidth=1.5,color=col,zorder=0)
+        plt.plot(dat[:,0],dat[:,1],linestyle=linestyle,linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0,alpha=0.1)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=0,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
+            plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
     def ADBC(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1.3e-11,1.65e-12],rotation=26):
@@ -989,7 +993,7 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.9,text_on=True,edgealpha=1,lw=2):
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.91,text_on=True,edgealpha=1,lw=2):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation,path_effects=line_background(1.5,'k'))
@@ -1101,7 +1105,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,None,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
-    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=2):
+    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=2,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/Chandra_NGC1275.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -1470,8 +1474,6 @@ class AxionPhoton():
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.MWDPolarisation(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.PulsarPolarCap(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
-
-
         return
 
     def StellarBounds(ax,text_on=True):
@@ -1494,6 +1496,71 @@ class AxionPhoton():
             AxionPhoton.INTEGRAL(ax,text_on=False)
         else:
             AxionPhoton.INTEGRAL(ax,text_on=text_on)
+        return
+        
+    # ULTRALIGHT AXIONS:
+    def SuperMAG(ax,text_shift=[1,1],col='red',text_col='w',fs=18,zorder=3,text_on=True,lw=1.5,rotation=-48,ha='center',edgealpha=1,path_effects=line_background(2,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/SuperMAG.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.7e-17,text_shift[1]*0.9e-9,r'{\bf SuperMAG}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def BICEPKECK(ax,text_shift=[1,1],col='#49548a',text_col='w',fs=20,zorder=1.2,text_on=True,lw=1.5,rotation=90,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/BICEP-KECK.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*2e-23,text_shift[1]*2e-11,r'{\bf BICEP/KECK}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def MOJAVE(ax,text_shift=[1,1],col='royalblue',text_col='w',fs=20,zorder=1.2,text_on=True,lw=1.5,rotation=32,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/MOJAVE.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*3e-22,text_shift[1]*2e-11,r'{\bf MOJAVE}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def SPT(ax,text_shift=[1,1],col='#403c75',text_col='w',fs=18,zorder=1.01,text_on=True,lw=1.5,rotation=39,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/SPT.txt")
+        dat[:,1] /= 1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e-21,text_shift[1]*0.33e-11,r'{\bf SPT}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def PPA(ax,text_shift=[1,1],col='#403c75',text_col='#403c75',fs=18,zorder=0.1,text_on=True,lw=1.5,rotation=42,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/Projections/PPA.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder,alpha=0.1)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=lw,color=col,alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*7e-21,text_shift[1]*4.5e-13,r'{\bf Pulsar polarisation array}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def PPTA_QUIJOTE(ax,text_shift=[1,1],col='darkblue',text_col='darkblue',fs=15,zorder=1.2,text_on=True,lw=1.5,rotation=39,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/PPTA-QUIJOTE.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.5e-22,text_shift[1]*0.9e-12,r'{\bf PPTA+QUIJOTE}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def TwistedAnyonCavity(ax,text_shift=[1,1],col='crimson',text_col='crimson',fs=22,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/Projections/TwistedAnyonCavity.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder,alpha=0.2)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=lw,color=col,alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*4e-19,text_shift[1]*0.7e-15,r'{\bf Twisted Anyon Cavity}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 #==============================================================================#
 
@@ -1870,13 +1937,23 @@ class AxionNeutron():
         plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
+    def PSI_HgM(ax,col='#a82920',fs=21,rotation=40):
+        y2 = ax.get_ylim()[1]
+        zo = 1.001
+        dat = loadtxt("limit_data/AxionNeutron/PSI_HgM.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.2e-15,1.5e-3,r'{\bf PSI HgM}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
 
     class CASPEr():
         def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
             # arXiv:[1902.04644]
             StochasticCorrection = 18.0 #<---- From 1905.13650
             y2 = ax.get_ylim()[1]
-            zo = 1
+            zo = 2
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
             dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
@@ -1972,27 +2049,29 @@ class AxionNeutron():
         AxionNeutron.UltracoldNeutronsAndMercury(ax,projection=projection,fs=fs+5)
         AxionNeutron.K3He_Comagnetometer_DarkMatter(ax)
         AxionNeutron.JEDI(ax)
+        AxionNeutron.PSI_HgM(ax)
+
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
         return
 
-    def StellarBounds(ax,fs=30):
+    def StellarBounds(ax,fs=24):
         y2 = ax.get_ylim()[1]
 
+        zo = 0.029
         # Stellar physics constraints
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
-        SN = loadtxt("limit_data/AxionNeutron/SN1987A.txt")
-        SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.02)
-        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
-        plt.text(0.8e-2,2*2e-8,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        # SN = loadtxt("limit_data/AxionNeutron/SN1987A.txt")
+        # plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=zo)
+        # plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=zo)
+        # plt.text(0.8e-2,2.4e-9,r'{\bf SN1987A}',fontsize=fs-7,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
-        #  https://arxiv.org/pdf/2111.09892.pdf
+        # https://arxiv.org/pdf/2111.09892.pdf
         SN = loadtxt("limit_data/AxionNeutron/NeutronStars.txt")
-        SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.01)
-        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
-        plt.text(0.8e-2,9e-6,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=zo)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=zo)
+        plt.text(0.8e-2,0.8e-8,r'{\bf Neutron star cooling}',fontsize=fs,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+
 #==============================================================================#
 
 
@@ -2059,11 +2138,11 @@ class AxionProton():
             # arXiv:[1902.04644]
             StochasticCorrection = 18.0 #<---- From 1905.13650
             y2 = ax.get_ylim()[1]
-            zo = 1
+            zo = 2
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
             dat[:,1] *= 2*AxionProton.m_p
             plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
-            plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5)
+            plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5,zorder=zo)
             plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
             plt.text(0.3e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='w',ha='left',va='top',rotation=40,rotation_mode='anchor',path_effects=line_background(1.5,'k'),clip_on=True)
             if projection:
@@ -2140,18 +2219,16 @@ class AxionProton():
 
         # Stellar physics constraints
         # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
-        SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
-        SN[:,1] *= 2*AxionNeutron.m_n
-        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.01)
-        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
-        plt.text(0.8e-2,1.3e-5,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+        # SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
+        # plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.01)
+        # plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
+        # plt.text(0.8e-2,1.3e-5,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
 
-        # Cooling of HESS J1731-347 arXiv:[1806.07991]
+        # NS cooling Buschmann et al.
         SN = loadtxt("limit_data/AxionProton/NeutronStars.txt")
-        SN[:,1] *= 2*AxionNeutron.m_n
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.02)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
-        plt.text(0.8e-2,1.9e-8,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+        plt.text(0.8e-2,0.8e-8,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
 #==============================================================================#
 
 
@@ -3247,10 +3324,6 @@ def MyTriplePlot(xlab1='',ylab1='',xlab2='',ylab2='',xlab3='',ylab3='',\
         ax3.grid()
     return fig,ax1,ax2,ax3
 #==============================================================================#
-
-def line_background(lw,col):
-    return [pe.Stroke(linewidth=lw, foreground=col), pe.Normal()]
-
 
 #==============================================================================#
 def reverse_colourmap(cmap, name = 'my_cmap_r'):

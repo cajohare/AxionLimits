@@ -29,17 +29,17 @@ def NaturalnessCorner(ax,scale,Lambda_min_TeV,dim,edgecolor='gold',facecolor='go
     ax.text(mass_label*text_shift[0],0.1*d_natural(mass_label,Lambda_min_TeV*1e12)*text_shift[1],text_label,fontsize=fs,color=edgecolor,rotation=trans_angle,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
     return
     
-def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',
+def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',text_col='#205e8a',
                       lw=3,path_effects=line_background(0,'k'),
-                      nlevels=100,alpha=0.05,m_max=5e-20,m_min=1e-24,
+                      nlevels=100,alpha=0.05,m_max=2e-21,m_min=1e-24,
                       g_label=5e-13,fs=23,
                      text_label=r'{\bf Structure formation}',
-                     text_shift=[1,1],zorder=-100):
+                     text_shift=[1,1],zorder=-100,rotation=90):
     g_vals = array([1e-30,1e30])
     m_vals = logspace(log10(m_min),log10(m_max),nlevels)
     for m in m_vals:
         ax.fill_between(array([1e-30,m]),array([1e30,1e30]),y2=1e-30,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
-    ax.text(m_max*text_shift[0]*0.5,g_label*text_shift[1],text_label,fontsize=fs,color=edgecolor,rotation=90,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
+    ax.text(m_max*text_shift[0]*0.5,g_label*text_shift[1],text_label,fontsize=fs,color=text_col,rotation=rotation,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
     return
 
 
