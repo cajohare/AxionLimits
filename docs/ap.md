@@ -206,7 +206,7 @@
 * CONUS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CONUS.txt), [reference](https://arxiv.org/abs/1912.05733)
 * DUNE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DUNE.txt), [reference](https://arxiv.org/abs/2011.07054)
 * FASER (LLP): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FASER_LLP.txt), [reference](https://arxiv.org/abs/1811.12522)
-* LEP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LEP.txt), [reference](https://reader.elsevier.com/reader/sd/pii/S0370269315009855?token=B47D07B58842A54F50FFBB23136C5C343C9684938F8DB40688674B7D2330F1EFE8FDA2CCAB8A30C57EBE9DE5E22D6095&originRegion=us-east-1&originCreation=20220711120437)
+* LEP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LEP.txt), [reference](https://arxiv.org/abs/1509.00476)
 * LHC (pp): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LHC_pp.txt), [reference](https://arxiv.org/abs/1607.06083)
 * NOMAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NOMAD.txt), [reference](https://www.sciencedirect.com/science/article/abs/pii/S0370269300003750?via%3Dihub)
 * OPAL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OPAL.txt), [reference](https://arxiv.org/abs/1607.06083)
