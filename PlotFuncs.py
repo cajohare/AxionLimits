@@ -88,7 +88,6 @@ def BlackHoleSpins(ax,C,label_position,whichfile='Mehta',fs=20,col='k',alpha=0.4
 def UpperFrequencyAxis(ax,N_Hz=1,tickdir='out',xtick_rotation=0,labelsize=25,xlabel=r"$\nu_a$ [Hz]",lfs=40,tick_pad=8,tfs=25,xlabel_pad=10):
     m_min,m_max = ax.get_xlim()
     ax2 = ax.twiny()
-    ax2.set_xlim([m_min*241.8*1e12/N_Hz,m_max*241.8*1e12/N_Hz])
     ax2.set_xlabel(xlabel,fontsize=lfs,labelpad=xlabel_pad)
     ax2.set_xscale('log')
     plt.xticks(rotation=xtick_rotation)
@@ -100,7 +99,27 @@ def UpperFrequencyAxis(ax,N_Hz=1,tickdir='out',xtick_rotation=0,labelsize=25,xla
     ax2.xaxis.set_major_locator(locmaj)
     ax2.xaxis.set_minor_locator(locmin)
     ax2.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+    ax2.set_xlim([m_min*241.8*1e12/N_Hz,m_max*241.8*1e12/N_Hz])
     plt.sca(ax)
+
+def UpperFrequencyAxis_Simple(ax,tickdir='out',xtick_rotation=0,labelsize=25,xlabel=None,lfs=40,tick_pad=8,tfs=25,xlabel_pad=10):
+    m_min,m_max = ax.get_xlim()
+    ax2 = ax.twiny()
+    ax2.set_xscale('log')
+    ax2.set_xlabel(xlabel,fontsize=lfs,labelpad=xlabel_pad)
+    ax2.tick_params(labelsize=tfs)
+    ax2.tick_params(which='major',direction=tickdir,width=2.5,length=13,pad=tick_pad)
+    ax2.tick_params(which='minor',direction=tickdir,width=1,length=10)
+    locmaj = mpl.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=50)
+    locmin = mpl.ticker.LogLocator(base=10.0, subs=arange(2, 10)*.1,numticks=100)
+    ax2.xaxis.set_major_locator(locmaj)
+    ax2.xaxis.set_minor_locator(locmin)
+    ax2.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
+    ax2.set_xticks([1e-9,1e-6,1e-3,1e0,1e3,1e6,1e9,1e12])
+    ax2.set_xticklabels(['nHz',r'\textmu Hz','mHz','Hz','kHz','MHz','GHz','THz']);
+    ax2.set_xlim([m_min*241.8*1e12,m_max*241.8*1e12])
+    plt.sca(ax)
+    return
 
 def AlternativeCouplingAxis(ax,scale=1,tickdir='out',labelsize=25,ylabel=r"$g_\gamma$ [GeV$^{-1}$]",lfs=40,tick_pad=8,tfs=25,ylabel_pad=60):
     g_min,g_max = ax.get_ylim()
@@ -1311,7 +1330,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
-    def DiffuseGammaRays(ax,text_label=r'{Diffuse}-$\gamma$',text_pos=[1e5,1e-10],col='#1e7ac7',text_col='w',fs=21,zorder=0.03,text_on=True,lw=1.5,rotation=0):
+    def DiffuseGammaRays(ax,text_label=r'{\bf Diffuse}-$\gamma$',text_pos=[3e5,4e-10],col='#318c49',text_col='w',fs=21,zorder=0.0299,text_on=True,lw=1.5,rotation=0):
         # https://arxiv.org/pdf/2109.03244.pdf
         dat = loadtxt("limit_data/AxionPhoton/DiffuseGammaRays.txt")
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
@@ -1321,9 +1340,18 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SN1987A_HeavyALP_gamma(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[0.8e5,2.0e-10],col='#067034',text_col='w',fs=18,zorder=0.03,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
-        # https://arxiv.org/pdf/2109.03244.pdf
-        dat = loadtxt("limit_data/AxionPhoton/SN1987A_HeavyALP_gamma.txt")
+    def SNe_decay(ax,text_shift=[1,1],col='#15732e',text_col='w',fs=23,zorder=0.03,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/SNe-decay.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.5e7,text_shift[1]*1e-6,r'\noindent {\bf Low-Energy}\newline \indent \indent \indent  {\bf SNe}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def SN1987A_HeavyALP_gamma(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[0.8e5,2.0e-10],col='#067034',text_col='w',fs=18,zorder=0.029,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
+        # https://arxiv.org/pdf/2109.03244.pdf + Jaeckel et al. for high mass part
+        dat = loadtxt('limit_data/AxionPhoton/SN1987A_decay.txt')
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
@@ -1377,6 +1405,106 @@ class AxionPhoton():
                 plt.text(text_shift[0]*1e-7,text_shift[1]*4e3,r'{\bf Neutron}',fontsize=fs,color=col,ha='center')
                 plt.text(text_shift[0]*1e-7,text_shift[1]*1e3,r'{\bf stars}',fontsize=fs,color=col,ha='center')
                 plt.plot([3.5e-7*text_shift[0],2e-5],[6e3*text_shift[1],8e3],lw=1.5,color=col,path_effects=line_background(2,'w'))
+        return
+
+    def BeamDump(ax,text_shift=[1,1],col='purple',text_col='w',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/BeamDump.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*0.3e8,text_shift[1]*1e-4,r'{\bf Beam dump}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+
+    def CMS_PbPb(ax,text_shift=[1,1],col='#851077',text_col='w',fs=17,zorder=0.2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/CMS_PbPb.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.5e10,text_shift[1]*7e-4,r'{\bf CMS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def ATLAS_PbPb(ax,text_shift=[1,1],col='#9732a8',text_col='#9732a8',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/ATLAS_PbPb.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        
+        if text_on:
+            plt.text(text_shift[0]*2e10,text_shift[1]*4e-5,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def LHC_pp(ax,text_shift=[1,1],col='#a11366',text_col='#a11366',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/LHC_pp.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*4e11,text_shift[1]*2e-5,r'{\bf LHC ($pp$)}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def NOMAD(ax,text_shift=[1,1],col='#96062a',text_col='w',fs=20,zorder=1.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/NOMAD.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf NOMAD}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def BaBar(ax,text_shift=[1,1],col='#7a113d',text_col='w',fs=25,zorder=1.65,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/BaBar.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e6,text_shift[1]*0.5e-2,r'{\bf BaBar}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def LEP(ax,text_shift=[1,1],col='#824271',text_col='w',fs=25,zorder=0.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/LEP.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*0.6e9,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/PrimEx.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.4e8,text_shift[1]*0.99e-3,r'{\bf PrimEx}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def BelleII(ax,text_shift=[1,1],col='#7a4282',text_col='w',fs=13.5,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/BelleII.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*0.6e9,text_shift[1]*5e-3,r'{\bf Belle II}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def BESIII(ax,text_shift=[1,1],col='#7a2282',text_col='#7a2282',fs=15.5,zorder=0.0,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/BESIII.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*0.66e9,text_shift[1]*0.3e-3,r'{\bf BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='#6a113d',fs=11.5,zorder=0.0,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+        dat = loadtxt("limit_data/AxionPhoton/OPAL.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*2.6e9,text_shift[1]*0.1e-2,r'{\bf OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True):
@@ -1445,6 +1573,19 @@ class AxionPhoton():
         AxionPhoton.PVLAS(ax,text_on=text_on)
         AxionPhoton.OSQAR(ax,text_on=text_on)
         AxionPhoton.CROWS(ax,text_on=text_on)
+        return
+
+    def ColliderBounds(ax,projection=False,text_on=True):
+        AxionPhoton.BeamDump(ax,text_on=text_on)
+        AxionPhoton.BaBar(ax,text_on=text_on)
+        AxionPhoton.CMS_PbPb(ax,text_on=text_on)
+        AxionPhoton.ATLAS_PbPb(ax,text_on=text_on)
+        AxionPhoton.LHC_pp(ax,text_on=text_on)
+        AxionPhoton.BelleII(ax,text_on=text_on)
+        AxionPhoton.PrimEx(ax,text_on=text_on)
+        AxionPhoton.LEP(ax,text_on=text_on)
+        AxionPhoton.BESIII(ax,text_on=text_on)
+        AxionPhoton.OPAL(ax,text_on=text_on)
         return
 
     def LowMassAstroBounds(ax,projection=False,text_on=True,edgealpha=1,lw=1,GalacticSN=False):
@@ -2467,7 +2608,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
-    def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.15e-14],col='darkred',alpha=0.4,zorder=-10,text_rot=90,fs=19):
+    def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.15e-14],col='darkred',alpha=0.4,zorder=-20,text_rot=90,fs=19):
         dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect1.txt')
         plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)

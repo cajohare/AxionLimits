@@ -50,10 +50,17 @@
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Ultralight_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
-## Haloscopes closeup
+## Ultralight axions
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Ultralight.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Ultralight_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
+### &nbsp;
+---
+[<img align="right" height="250" src="../plots/plots_png/AxionPhoton_ColliderBounds.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ColliderBounds.png)
+## Heavy axions
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_ColliderBounds.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_ColliderBounds.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ColliderBounds.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Simple_Wide.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
@@ -188,3 +195,18 @@
 * XMM-Newton (decaying DM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XMM-Newton.txt), [reference](https://arxiv.org/abs/2102.02207)
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)
 
+### Collider, accelerator and beam dump bounds (purple)
+* ATLAS_PbPb light-by-light: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ATLAS_PbPb.txt), [reference](https://arxiv.org/abs/2008.05355)
+* BaBar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BaBar.txt), [reference](https://link.springer.com/content/pdf/10.1007/JHEP03(2021)190.pdf?pdf=button)
+* Beam dump (combined): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BeamDump.txt), [CHARM](https://www.sciencedirect.com/science/article/abs/pii/0370269385904009?via%3Dihub), [E141](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.755), [E137](https://arxiv.org/abs/1709.00009), [NuCal](https://arxiv.org/abs/1904.02091), [NA64](https://arxiv.org/abs/2005.02710)
+* Belle II: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BelleII.txt), [reference](https://arxiv.org/abs/2007.13071)
+* BESIII: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BESIII.txt), [reference](https://arxiv.org/abs/2211.12699)
+* CMS_PbPb: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CMS_PbPb.txt), [reference](https://arxiv.org/abs/1810.04602)
+* CONUS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CONUS.txt), [reference](https://arxiv.org/abs/1912.05733)
+* DUNE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DUNE.txt), [reference](https://arxiv.org/abs/2011.07054)
+* FASER (LLP): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FASER_LLP.txt), [reference](https://arxiv.org/abs/1811.12522)
+* LEP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LEP.txt), [reference](https://reader.elsevier.com/reader/sd/pii/S0370269315009855?token=B47D07B58842A54F50FFBB23136C5C343C9684938F8DB40688674B7D2330F1EFE8FDA2CCAB8A30C57EBE9DE5E22D6095&originRegion=us-east-1&originCreation=20220711120437)
+* LHC (pp): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LHC_pp.txt), [reference](https://arxiv.org/abs/1607.06083)
+* NOMAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NOMAD.txt), [reference](https://www.sciencedirect.com/science/article/abs/pii/S0370269300003750?via%3Dihub)
+* OPAL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OPAL.txt), [reference](https://arxiv.org/abs/1607.06083)
+* PrimEx: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PrimEx.txt), [reference](https://arxiv.org/abs/1009.1681)

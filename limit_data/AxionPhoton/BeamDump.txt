@@ -1,4 +1,9 @@
-# Beam dump (LEP etc.)
+# Beam dump 
+# CHARM https://www.sciencedirect.com/science/article/abs/pii/0370269385904009?via%3Dihub
+# E141  https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.755
+# E137 https://arxiv.org/abs/1709.00009 and https://journals.aps.org/prd/abstract/10.1103/PhysRevD.38.3375
+# NuCal https://arxiv.org/abs/1904.02091 and https://link.springer.com/article/10.1007/BF01548556
+# NA64 https://arxiv.org/abs/2005.02710
 # m_a [eV]  g_ap [GeV^-1]
 9.102702628864836	1.038087033086637
 18951.164860556506	0.0005539958271398699
