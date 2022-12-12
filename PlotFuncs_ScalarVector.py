@@ -73,6 +73,12 @@ class ScalarPhoton():
         dat = loadtxt("limit_data/ScalarPhoton/DyDy.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
+
+    def DyQuartz(ax,text_label=r'{\bf Dy/Quartz}',text_pos=[0.1e-15,3e-1],rotation=28,col='#c11a4e',text_col='w',fs=20,zorder=0.10,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarPhoton/DyQuartz.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
     
     def RbCs(ax,text_label=r'\center{{\bf SYRTE \newline Rb/Cs}}',text_pos=[0.25e-23,4e-7],rotation=-30,col='#c7345d',text_col='w',fs=17,zorder=0.01,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/RbCs.txt")
@@ -233,6 +239,11 @@ class ScalarElectron():
     def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.3e-9,3e4],rotation=0,col='#b53724',text_col='#b53724',fs=15,zorder=0.15,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Holometer.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+
+    def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[2e-14,6e3],rotation=25,col='#c11a4e',text_col='w',fs=15,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/RbQuartz.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
     # Projections

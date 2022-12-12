@@ -35,6 +35,7 @@
 * Cs/Cav: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/CsCav.txt), [reference](https://arxiv.org/abs/2201.02042)
 * DAMNED: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DAMNED.txt), [reference](https://arxiv.org/abs/2006.07055)
 * Dy/Dy: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DyDy.txt), [reference](https://arxiv.org/abs/1503.06886)
+* Dy/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DyQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 * Dynamic Decoupling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DynamicDecoupling.txt), [reference](https://arxiv.org/abs/1902.02788)
 * GEO 600: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/GEO600.txt), [reference](https://arxiv.org/abs/2103.03783)
 * Holometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/Holometer.txt), [reference](https://arxiv.org/abs/2108.04746)

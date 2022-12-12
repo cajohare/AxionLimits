@@ -205,7 +205,9 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
 
 #==============================================================================#
 class AxionPhoton():
-    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,thick_lines=False,C_center=1,C_width=0.8,KSVZ_label_mass=1e-8,DFSZ_label_mass=5e-8,vmax=0.9):
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,
+                thick_lines=False,C_center=1,C_width=0.8,
+                KSVZ_label_mass=1e-8,DFSZ_label_mass=5e-8,vmax=0.9):
         if RescaleByMass:
             rs1 = 1.0
             rs2 = 0.0
@@ -2531,6 +2533,11 @@ class Axion_fa():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
+    def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[0.15e-16,0.5e-9],text_rot=35,col='#c11a4e',text_col='w',fs=20,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/fa/RbQuartz.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
     def SolarCore(ax,text_pos=[0.08e-10,0.12e-10],col='#0d4dba',text_col='w',text_rot=41,fs=30,zorder=-5,lw=2):

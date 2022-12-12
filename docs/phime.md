@@ -38,6 +38,7 @@
 * H/Quartz/Sapphire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/HQuartzSapphire.txt), [reference](https://arxiv.org/abs/2010.08107)
 * I2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/I2.txt), [reference](https://arxiv.org/abs/2111.06883)
 * H/Si: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/HSi.txt), [reference](https://arxiv.org/abs/2008.08773)
+* Rb/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/RbQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 
 ## Projected DM searches (dashed lines/points)
 * AEDGE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/AEDGE.txt), [reference](https://arxiv.org/abs/2108.02468)
