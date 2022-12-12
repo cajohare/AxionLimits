@@ -301,6 +301,11 @@ class ScalarElectron():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
+    def IPTA(ax,text_label=r'{\bf IPTA}',text_pos=[5e-24,2e-7],rotation=0,col='#274f70',text_col='#274f70',fs=20,zorder=-1,text_on=True,Projection=False,edgealpha=1,lw=2):
+        dat = loadtxt("limit_data/ScalarElectron/IPTA.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+
 class VectorBL():
     def MICROSCOPE(ax,text_label=r'{\bf MICROSCOPE}',text_pos=[1.5e-22,2e-24],col='#84878c',text_col='k',fs=17,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/MICROSCOPE.txt")
