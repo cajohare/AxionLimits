@@ -2077,8 +2077,8 @@ class AxionNeutron():
         plt.text(1e-13,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def JEDI(ax,text_pos=[7e-10,2e-6],col='#a3435e',text_col='w',text_rot=90,fs=20,zorder=0.499):
-        dat = loadtxt('limit_data/AxionEDM/JEDI.txt')
+    def JEDI(ax,text_pos=[3.85e-10,1.2e-6],col='#a3435e',text_col='w',text_rot=90,fs=20,zorder=0.499):
+        dat = loadtxt('limit_data/AxionNeutron/JEDI.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
@@ -2439,6 +2439,11 @@ class AxionEDM():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
+    def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[0.15e-16,2e-12],text_rot=28,col='#c11a4e',text_col='w',fs=20,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/AxionEDM/RbQuartz.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
     def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
