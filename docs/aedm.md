@@ -31,6 +31,6 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
 
 ## Astro bounds
-* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
+* BBN (axion assumed to be dark matter): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/BBN.txt), [reference](https://arxiv.org/abs/1401.6460)
 * Planck+BAO thermal ALP bound: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/2205.01637)
 * SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)

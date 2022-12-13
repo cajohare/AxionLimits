@@ -36,7 +36,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 
 
 ## Other bounds
-* BBN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BBN.txt), [reference](https://arxiv.org/abs/1401.6460)
+* BBN (axion assumed to be dark matter): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BBN.txt), [reference](https://arxiv.org/abs/1401.6460)
 * Black hole spins (Mehta et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Black hole spins (Baryakhtar et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Baryakhtar.txt), [reference](https://arxiv.org/abs/2011.11646)
 * Black hole spins (Unal et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Unal.txt), [reference](https://arxiv.org/abs/2012.12790)

@@ -2420,24 +2420,24 @@ class AxionEDM():
              path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[3e-20,5e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1):
+    def nEDM(ax,text_pos=[3e-20,5e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/nEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def BeamEDM(ax,text_pos=[6e-18,2e-15],col='#822f2b',text_col='w',text_rot=32,fs=22,zorder=-1):
+    def BeamEDM(ax,text_pos=[6e-18,2e-15],col='#822f2b',text_col='w',text_rot=32,fs=22,zorder=-1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/BeamEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Beam EDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def HfF(ax,text_pos=[0.7e-19,1.5e-14],col='#a3435e',text_col='w',text_rot=33,fs=22,zorder=-1):
+    def HfF(ax,text_pos=[0.7e-19,1.5e-14],col='#a3435e',text_col='w',text_rot=33,fs=22,zorder=-1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/HfF.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2446,50 +2446,59 @@ class AxionEDM():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
-    def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1):
+    def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/SN1987A.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
 
-    def PlanckBAO(ax,text_pos=[3e-10,0.5e-9],col='#1a6e7a',text_col='w',text_rot=0,fs=26,zorder=0.8):
+    def PlanckBAO(ax,text_pos=[3e-10,0.5e-9],col='#1a6e7a',text_col='w',text_rot=0,fs=26,zorder=0.8,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/PlanckBAO.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Planck+BAO}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def CASPEr(ax,text_pos=[0.5e-5,0.25e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False,text_on=True):
+    def BBN(ax,text_pos=[3e-16,4e-18],col='#1f4969',text_col='w',text_rot=33.5,fs=23,zorder=-6,lw=1.5):
+        dat = loadtxt('limit_data/AxionEDM/BBN.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf BBN (dark matter)}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
+
+    def CASPEr(ax,text_pos=[0.5e-5,0.25e-3],col='crimson',text_col='w',fs=20,zorder=30,projection=False,text_on=True,lw=4):
         dat = loadtxt('limit_data/AxionEDM/CASPEr-electric.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=6,alpha=1,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],color=col,lw=4,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw+2,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color=col,lw=lw,alpha=1,zorder=zorder)
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=text_col,fontsize=fs,ha='right',zorder=zorder,path_effects=line_background(1.5,'k'))
         if projection:
-            dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseI.txt')
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
-            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+            # dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseI.txt')
+            # plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=lw-1,alpha=0.05,zorder=-10)
+            # plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=lw-1)
 
             dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseII.txt')
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=lw-1)
 
             dat = loadtxt('limit_data/AxionEDM/Projections/CASPEr-electric-PhaseIII.txt')
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=3)
-            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=4,alpha=0.05,zorder=-10)
+            plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,lw=lw-1,alpha=0.05,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=-10,lw=lw-1)
+
             if text_on:
-                plt.text(0.4e-12,0.2e-13,r'{\bf CASPEr-electric}',rotation=39.5,fontsize=25,color=col,clip_on=True)
-                plt.text(0.7e-10,0.08e-11,'phase I',rotation=40,fontsize=20,color=col,clip_on=True)
+                plt.text(0.4e-11,0.2e-19,r'{\bf CASPEr-electric}',rotation=43,fontsize=25,color=col,clip_on=True)
+                #plt.text(0.7e-10,0.08e-11,'phase I',rotation=40,fontsize=20,color=col,clip_on=True)
                 plt.text(1.5e-8,3e-15,'phase II',rotation=51.5,fontsize=20,color=col,clip_on=True)
                 plt.text(7e-8,0.3e-15,'phase III',rotation=52,fontsize=20,color=col,clip_on=True)
         return
 
-    def JEDI(ax,text_pos=[1.4e-10,1.5e-5],col='#a3435e',text_col='w',text_rot=90,fs=22,zorder=10):
+    def JEDI(ax,text_pos=[1.4e-10,1.5e-5],col='#a3435e',text_col='w',text_rot=90,fs=22,zorder=10,lw=1):
         dat = loadtxt('limit_data/AxionEDM/JEDI.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=1,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2521,8 +2530,8 @@ class Axion_fa():
     def nEDM(ax,text_pos=[3e-20,0.2e-13],col='darkred',text_col='w',text_rot=0,fs=28,zorder=-1):
         # Already accounts for stochastic correction
         dat = loadtxt('limit_data/fa/nEDM.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2561,26 +2570,24 @@ class Axion_fa():
 
     def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
-
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.text(text_pos[0],text_pos[1],r'{\bf GW170817}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
 
     def Pulsars(ax,text_pos=[3e-15,0.11e-16],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=21,zo=-6.9):
         dat = loadtxt('limit_data/fa/Pulsar.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
-
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
 
-    def BBN(ax,text_pos=[1.7e-17,0.8e-16],col='navy',text_col='w',text_rot=15,fs=20,zorder=-6):
+    def BBN(ax,text_pos=[1.7e-17,0.8e-16],col='#1f4969',text_col='w',text_rot=15,fs=20,zorder=-6):
         dat = loadtxt('limit_data/fa/BBN.txt')
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf BBN}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2593,44 +2600,44 @@ class Axion_fa():
 
     def NeutronStars(ax,text_pos=[0.5e-3,0.4e-12],col='#1f6ff0',text_col='#1f6ff0',text_rot=41,fs=29,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
     def Inspirals(ax,text_pos=[1e-16,2e-14],col='#b9befa',text_col='#b9befa',text_rot=0,fs=23,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NSBH-Inspiral.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
 
         dat = loadtxt('limit_data/fa/Projections/NSNS-Inspiral.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
 
         plt.text(text_pos[0],text_pos[1],r'{\bf Inspirals}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
 
     def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-10,text_rot=41,fs=20):
         dat = loadtxt('limit_data/fa/Projections/StorageRingEDM.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
         plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring}',color=col,alpha=0.4,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
     def CASPEr(ax,text_pos=[4e-11,1e-19],col='crimson',alpha=0.1,zorder=-10,text_rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
     def PiezoaxionicEffect(ax,text_pos=[7.6e-10,0.15e-14],col='darkred',alpha=0.4,zorder=-20,text_rot=90,fs=19):
         dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect1.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         dat = loadtxt('limit_data/fa/Projections/PiezoaxionicEffect64.txt')
-        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.text(text_pos[0],text_pos[1],r'{\bf Piezoaxionic}',color=col,alpha=0.6,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 #==============================================================================#
