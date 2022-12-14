@@ -2583,6 +2583,12 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
+    def PlanckBAO(ax,text_pos=[8e-3,1.5e-7],col='#1a6e7a',text_col='w',text_rot=0,fs=27,zorder=0.8,lw=1.5):
+        dat = loadtxt('limit_data/fa/PlanckBAO.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Planck+BAO}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
 
     def BBN(ax,text_pos=[1.7e-17,0.8e-16],col='#1f4969',text_col='w',text_rot=15,fs=20,zorder=-6):
         dat = loadtxt('limit_data/fa/BBN.txt')
