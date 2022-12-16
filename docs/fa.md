@@ -48,4 +48,5 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * *Solar core (neutrino line): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SolarCore.txt), [reference](https://arxiv.org/abs/1708.08464)
 * SN1987A: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SN1987A.txt), [reference](https://arxiv.org/abs/1306.6088)
 * White dwarfs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2211.02661)
+
 (*) Using corrected values from [here](https://arxiv.org/abs/2102.00012)
