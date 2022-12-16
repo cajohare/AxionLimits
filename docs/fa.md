@@ -42,6 +42,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * Black hole spins (Unal et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Unal.txt), [reference](https://arxiv.org/abs/2012.12790)
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
 * GW170817 [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/GW170817.txt), [reference](https://arxiv.org/abs/2105.13963)
+* *Neutron stars: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NeutronStars), [reference](https://arxiv.org/abs/1708.08464)
 * NS-NS Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSNS-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * NS-BH Inspiral: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NSBH-Inspiral.txt), [reference](https://arxiv.org/abs/1708.08464)
 * Planck+BAO thermal ALP bound (gluon coupling): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/SN1987A.txt), [reference](https://arxiv.org/abs/2205.01637)
