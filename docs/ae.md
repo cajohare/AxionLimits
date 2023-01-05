@@ -40,8 +40,8 @@
 * XENON1T (ALP DM search S1+S2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
 * XENON1T (ALP DM search single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
 * XENON1T (Solar axion basin): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_S2_SolarAxionBasin.txt), [reference](https://arxiv.org/abs/2006.12431)
-* XENONnT (ALP DM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENONnT.txt), [reference](http://xenonexperiment.org/)
-* XENONnT (Solar axions): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENONnT_Solar.txt), [reference](http://xenonexperiment.org/)
+* XENONnT (ALP DM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENONnT.txt), [reference](https://arxiv.org/abs/2207.11330)
+* XENONnT (Solar axions): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENONnT_Solar.txt), [reference](https://arxiv.org/abs/2207.11330)
 
 
 ### Haloscopes:
