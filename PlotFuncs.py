@@ -2787,7 +2787,6 @@ class DarkPhoton():
         dat[0,1] = 1e0
         plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
-
         if text_on:
             plt.text(1.4e-6,0.5e-14,r'{\bf ADMX}',fontsize=fs,color=ADMX_col,rotation=90,rotation_mode='anchor',ha='center',va='center')
             plt.text(0.8e-5,0.1e-13,r'{\bf CAPP}',fontsize=fs-2,color=CAPP_col,rotation=90,rotation_mode='anchor',ha='center',va='center')
@@ -3019,6 +3018,22 @@ class DarkPhoton():
 
         if text_on:
             plt.text(7e-6,4e-12,r'{\bf FAST}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+        return
+
+    def LOFAR(ax,col='red',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
+        # Solar corona bound
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/LOFAR.txt")
+        dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
+
+        if text_on:
+            plt.text(1.95e-7,3e-14,r'{\bf LOFAR (Sun)}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
         return
 
     def Jupiter(ax,col='Green',fs=15,text_on=True,lw=1.5):
