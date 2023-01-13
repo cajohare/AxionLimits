@@ -1210,7 +1210,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
         return
 
-    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[12,0.4e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
+    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[14,0.3e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_VIMOS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)

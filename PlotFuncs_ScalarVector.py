@@ -89,6 +89,11 @@ class ScalarPhoton():
         dat = loadtxt("limit_data/ScalarPhoton/BACON.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
+
+    def PTB(ax,text_label=r'{\bf PTB}',text_pos=[0.5e-20,1.5e-8],rotation=23,col='#d11b33',text_col='#d11b33',fs=19,zorder=-0.01,text_on=True,Projection=False,edgealpha=1,lw=1):
+        dat = loadtxt("limit_data/ScalarPhoton/PTB.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
     
     def SrSi(ax,text_label=r'{\bf Sr/Si}',text_pos=[0.3e-17,0.35e-3],rotation=13,col='#730f3a',text_col='w',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/SrSi.txt")

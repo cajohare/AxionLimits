@@ -40,6 +40,7 @@
 * GEO 600: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/GEO600.txt), [reference](https://arxiv.org/abs/2103.03783)
 * Holometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/Holometer.txt), [reference](https://arxiv.org/abs/2108.04746)
 * H/Quartz/Sapphire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/HQuartzSapphire.txt), [reference](https://arxiv.org/abs/2010.08107)
+* PTB (Yb+, Sr): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/PTB.txt), [reference](https://arxiv.org/abs/2301.03433)
 * I2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/I2.txt), [reference](https://arxiv.org/abs/2111.06883)
 * Rb/Cs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/RbCs.txt), [reference](https://arxiv.org/abs/1604.08514)
 * Sr/Si: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/SrSi.txt), [reference](https://arxiv.org/abs/2008.08773)
