@@ -1126,12 +1126,12 @@ class AxionPhoton():
         FilledLimit(ax,dat,None,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
-    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5,path_effects=[]):
+    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col='#195e3a',text_col='#195e3a',fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/Chandra_NGC1275.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def H1821643(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col= [0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5):
+    def H1821643(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col=[0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/AxionPhoton/Chandra_H1821643.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -1600,6 +1600,7 @@ class AxionPhoton():
         AxionPhoton.FermiQuasars(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if projection:
             AxionPhoton.NGC1275(ax,text_on=False,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             if GalacticSN:
                 AxionPhoton.Fermi_GalacticSN(ax,text_on=text_on,lw=lw)
@@ -1610,6 +1611,7 @@ class AxionPhoton():
             AxionPhoton.HAWC(ax,text_on=False,edgealpha=edgealpha,lw=lw)
         else:
             AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.HESS(ax,edgealpha=edgealpha,lw=lw,text_on=False)
             AxionPhoton.HAWC(ax,edgealpha=edgealpha,lw=lw,text_on=False)
