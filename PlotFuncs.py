@@ -1210,7 +1210,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
         return
 
-    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[14,0.3e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
+    def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[10,0.22e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_VIMOS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)
@@ -1222,6 +1222,11 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=edgealpha,path_effects=line_background(1,'k'))
         return
 
+    def GammaRayAttenuation(ax,text_label=r'{\bf $\gamma$}',text_pos=[12,1.1e-11],col=[0.0, 0.2, 0.6],text_col=[0.0, 0.2, 0.6],fs=13,zorder=1e-6,text_on=True,lw=1.5,edgealpha=1,edgecolor='k',rotation=0):
+        # Gamma ray attentuation on EBL, ALP dark atter bound
+        dat = loadtxt("limit_data/AxionPhoton/GammaRayAttenuation.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=edgealpha)
+        return
 
     def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.45e4,0.18e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=13,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
         dat = loadtxt("limit_data/AxionPhoton/SolarBasin.txt")
@@ -1632,6 +1637,7 @@ class AxionPhoton():
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
         AxionPhoton.HST(ax,text_on=text_on)
+        AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
         AxionPhoton.LeoT(ax,text_on=text_on)
         if projection:

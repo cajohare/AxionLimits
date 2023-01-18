@@ -169,6 +169,7 @@
 * Breakthrough Listen (Neutron stars) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/COBE-FIRAS.txt), [reference](https://arxiv.org/abs/2012.07292)
 * eROSITA (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/eROSITA.txt), [reference](https://arxiv.org/pdf/2103.13241.pdf)
+* Gamma-ray attenuation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GammaRayAttenuation.txt), [reference](https://arxiv.org/abs/2208.13794)
 * HST Cosmic optical background anisotropies (Nakayama and Yin): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST_Nakayama.txt), [reference](https://arxiv.org/abs/2205.01079)
 * HST Cosmic optical background anisotropies (Carenza et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST.txt), [reference](https://arxiv.org/abs/2301.06560)
 * INTEGRAL (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2209.06299)
