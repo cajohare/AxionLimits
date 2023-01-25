@@ -99,8 +99,9 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * Xenon100: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon100.txt), [reference](https://link.springer.com/article/10.1007%2FJHEP06%282017%29087)
 * Xenon1T S2 only: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T.txt), [reference](https://arxiv.org/abs/1907.11485)
 * Xenon1T S1+S2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Xenon1T_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
-* XENON1T (single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
-* XENON1T S2 (Solar DPs): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_Solar_S2.txt), [reference](https://arxiv.org/abs/2006.13929)
+* XENON1T (DM, single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
+* XENON1T (Solar DPs, S2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_Solar_S2.txt), [reference](https://arxiv.org/abs/2006.13929)
+* XENON1T (Solar DPs, single electron): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENON1T_Solar_SE.txt), [reference](https://arxiv.org/abs/2112.12116)
 * XENONnT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/XENONnT.txt), [reference](http://xenonexperiment.org/)
 
 ## Updated Experimental searches for DPDM
@@ -123,6 +124,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * FUNK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/FUNK.txt)
 * HAYSTAC (2018): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/HAYSTAC.txt)
 * HAYSTAC (2020): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/HAYSTAC_2020.txt)
+* HAYSTAC (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/HAYSTAC_2022.txt)
 * ORGAN-1a: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/ORGAN-1a.txt) [reference](https://arxiv.org/abs/2212.01971)
 * QUAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/QUAX.txt)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/SHUKET.txt)

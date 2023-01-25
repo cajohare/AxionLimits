@@ -2835,7 +2835,7 @@ class DarkPhoton():
         if text_on:
             plt.text(0.8e2,1.5e-14,r'{\bf Solar}',fontsize=fs,color='w',rotation=-41,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
             plt.text(1e3,0.7e-14,r'{\bf HB}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.8e4,0.68e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-37,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.7e4,0.68e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-37,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
         return
 
 
@@ -2845,32 +2845,34 @@ class DarkPhoton():
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
 
         plt.fill_between(1e3*dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
-        plt.plot(1e3*dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=lw)
+        plt.plot(1e3*dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
         dat = loadtxt("limit_data/DarkPhoton/Xenon1T_S1S2.txt")
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
 
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=lw)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
 
         dat = loadtxt("limit_data/DarkPhoton/XENON1T_SE.txt")
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=lw)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
 
-        dat = loadtxt("limit_data/DarkPhoton/XENON1T_Solar_S2.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=lw)
+        dat = loadtxt("limit_data/DarkPhoton/XENON1T_Solar_SE.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.0,lw=lw)
 
 
         dat = loadtxt("limit_data/DarkPhoton/XENONnT.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.5)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.5,lw=lw)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
         if text_on:
             plt.text(8e2,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color='w',rotation=-41,fontsize=15,path_effects=line_background(1,'k'))
+
 
         return
 
@@ -2890,11 +2892,11 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.001,lw=lw)
 
         if text_on:
-            plt.text(6e-1,1.3e-14,r'{\bf DAMIC}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([5e0,1e1],[3e-14,6e-14],'-',lw=2.5,color=col)
+            plt.text(4e-1,1.3e-14,r'{\bf DAMIC}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.plot([4e0,1e1],[3e-14,6e-14],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
-    def MuDHI(ax,col='#a82844',fs=15,text_on=True,lw=1.5):
+    def MuDHI(ax,col='#400927',fs=15,text_on=True,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/MuDHI.txt")
 
@@ -2904,8 +2906,8 @@ class DarkPhoton():
         plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=10,lw=lw)
 
         if text_on:
-            plt.text(0.42e-2,1.8e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([2.8e-2,1.5e0],[2e-11,4e-11],'-',lw=2,color=col,path_effects=line_background(1,'k'))
+            plt.text(0.18e-2,1e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.plot([1.2e-2,1.5e0],[1e-11,4e-11],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
 
@@ -2921,8 +2923,8 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.3,lw=lw)
 
         if text_on:
-            plt.text(2.6e-1,1e-13,r'{\bf FUNK}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([9e-1,3e0],[3e-13,1e-12],'-',lw=2.5,color=col)
+            plt.text(1.9e-1,0.8e-13,r'{\bf FUNK}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.plot([7e-1,3e0],[2.5e-13,1e-12],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
     def SENSEI(ax,col='firebrick',fs=21,text_on=True,lw=1.5):
@@ -2935,7 +2937,7 @@ class DarkPhoton():
 
         if text_on:
             plt.text(1.7e0,1e-15,r'{\bf SENSEI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([7e0,1e1],[3e-15,9e-15],'-',lw=2.5,color=col)
+            plt.plot([7e0,1e1],[3e-15,9e-15],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
     def SuperCDMS(ax,col=[0.4,0,0],fs=18,text_on=True,lw=1.5):
@@ -2947,7 +2949,7 @@ class DarkPhoton():
 
         if text_on:
             plt.text(0.5e1,1.5e-16,r'{\bf SuperCDMS}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([5e1,0.8e2],[3e-16,9e-16],'-',lw=2.5,color=col)
+            plt.plot([5e1,0.8e2],[3e-16,9e-16],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
     def Nanowire(ax,col='pink',fs=22,text_on=True,lw=1.5):
@@ -2975,7 +2977,7 @@ class DarkPhoton():
             plt.text(5.7e-6,0.65e-14,r'{\bf SQMS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
         return
 
-    def LAMPOST(ax,col='red',fs=15,text_on=True,lw=1.5):
+    def LAMPOST(ax,col='#471710',fs=15,text_on=True,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/LAMPOST.txt")
         dat[:,1] = dat[:,1]*sqrt(0.4/0.45)*sqrt(2/3/0.27)
@@ -2987,8 +2989,8 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color=col,alpha=1,zorder=0,lw=lw)
 
         if text_on:
-            plt.text(0.3e-1,5e-13,r'{\bf LAMPOST}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([3e-1,0.6e0],[6e-13,1e-12],'-',lw=1.5,color=col)
+            plt.text(0.3e-1,4.5e-13,r'{\bf LAMPOST}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.plot([3e-1,0.6e0],[6e-13,1e-12],'-',lw=1.5,color=col,path_effects=line_background(2,'k'))
         return
 
     def Tokyo(ax,col='darkred',fs=15,text_on=True,lw=1.5):
@@ -3011,8 +3013,8 @@ class DarkPhoton():
         if text_on:
             #plt.text(2e-4,1e-10,r'{\bf Tokyo-3}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
             plt.text(0.45e-3,3e-8,r'{\bf Tokyo-2}',fontsize=fs-2,color='k',rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.2e-1,4e-12,r'{\bf Tokyo-1}',fontsize=fs+4,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.plot([2.05e-1,4e0],[5e-12,8e-12],'-',lw=2.5,color=col)
+            plt.text(0.03e-1,2e-12,r'{\bf Tokyo-1}',fontsize=fs+4,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.plot([0.3e-1,3e0],[2e-12,8e-12],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
     def FAST(ax,col='tomato',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
@@ -3184,9 +3186,9 @@ class DarkPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/QuantumCyclotron.txt")
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
-        plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6)
+        plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6,path_effects=line_background(2.5,'k'))
         if text_on:
-            plt.text(0.95e-3,4e-10,r'{\bf QC}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.95e-3,1e-10,r'{\bf QC}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
         return
 
     def DarkMatter(ax,Witte_col='royalblue',Caputo_col='dodgerblue',Arias_col='navy',fs=20,projection=True,text_on=True):
