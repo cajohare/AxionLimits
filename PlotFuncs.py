@@ -372,11 +372,12 @@ class AxionPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/HAYSTAC.txt")
         dat2 = loadtxt("limit_data/AxionPhoton/HAYSTAC_2020.txt")
+        dat3 = loadtxt("limit_data/AxionPhoton/HAYSTAC_2022.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=2)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,zorder=zo,lw=2)
-
+            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zo)
             if text_on:
                 if projection==False:
                     plt.text(text_shift[0]*2.1e-5,text_shift[0]*5e-13,r'{\bf HAYSTAC}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
@@ -2759,7 +2760,8 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/HAYSTAC_2020.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
-
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/HAYSTAC_2022.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
         # CAPP
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-1.txt")
