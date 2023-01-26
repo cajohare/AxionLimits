@@ -92,6 +92,7 @@
 * GrAHal: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GrAHal.txt), [reference](https://arxiv.org/abs/2110.14406)
 * HAYSTAC (2018): [limit (low res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC.txt),[limit (high res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_highres.txt), [reference](https://arxiv.org/abs/1803.03690)
 * HAYSTAC (2020): [limit (low res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020.txt), [limit (high res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020_highres.txt), [reference](https://arxiv.org/abs/2008.01853)
+* HAYSTAC (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2022.txt), [reference](https://arxiv.org/abs/2301.09721)
 * LAMPOST: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/LAMPOST.txt), [reference](https://arxiv.org/abs/1803.11455)
 * MADMAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/MADMAX.txt), [reference](https://arxiv.org/abs/2003.10894)
 * ORGAN (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
