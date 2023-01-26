@@ -2103,6 +2103,15 @@ class AxionNeutron():
         plt.text(0.2e-15,1.5e-3,r'{\bf PSI HgM}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
+    def SuperfluidHe3(ax,col='darkred',zo=-10):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionNeutron/Projections/SuperfluidHe3.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=1.5)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.2)
+        plt.text(2.8e-8,1e-9,r'{\bf Supefluid $^3$He}',fontsize=16,color=col,ha='left',va='top',clip_on=True,rotation=90)
+        return
+
 
     class CASPEr():
         def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
@@ -2143,7 +2152,7 @@ class AxionNeutron():
             dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
-            plt.text(1.4e-9,2*1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27,clip_on=True)
+            plt.text(1.0e-9,0.7e-11,r'{\bf CASPEr}-gradient',fontsize=fs,color=col,ha='left',va='top',rotation=28,clip_on=True)
             return
 
     def K3He_Comagnetometer_DarkMatter(ax,col='#8a1d34',fs=23,projection=True):
@@ -2209,6 +2218,7 @@ class AxionNeutron():
 
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
+            AxionNeutron.SuperfluidHe3(ax)
         return
 
     def StellarBounds(ax,fs=24):
@@ -2328,7 +2338,7 @@ class AxionProton():
             dat[:,1] *= 2*AxionNeutron.m_n
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
-            plt.text(1.4e-9,2*1.1e-11,r'{\bf CASPEr}-wind',fontsize=fs,color=col,ha='left',va='top',rotation=27)
+            plt.text(0.7e-9,1.5*1.1e-11,r'{\bf CASPEr}-gradient',fontsize=fs,color=col,ha='left',va='top',rotation=30)
             return
 
     def LabExperiments(ax,projection=True,fs=20):
