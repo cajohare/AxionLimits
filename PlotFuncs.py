@@ -3231,9 +3231,9 @@ class DarkPhoton():
             plt.gcf().text(0.365,0.37,r'{\bf DPDM}',fontsize=17,color='w',ha='center',path_effects=line_background(1.5,'k'))
             plt.gcf().text(0.365,0.35,r'(Witte et al.)',fontsize=13,color='w',ha='center')
 
-            plt.gcf().text(0.49,0.48,r'{\bf DPDM}',fontsize=18,color='w',ha='center',path_effects=line_background(1.5,'k'))
-            plt.gcf().text(0.49,0.46,r'(Arias et al.)',fontsize=16,color='w',ha='center',path_effects=line_background(1,'k'))
-
+            plt.gcf().text(0.485,0.43,r'{\bf DPDM}',rotation=21.5,fontsize=18,color='w',va='center',ha='center',path_effects=line_background(1.5,'k'),rotation_mode='anchor')
+            plt.gcf().text(0.49,0.41,r'(Arias et al.)',rotation=21.5,fontsize=16,color='w',va='center',ha='center',path_effects=line_background(1,'k'),rotation_mode='anchor')
+    
         return
 
     def COBEFIRAS(ax,col=[0.1,0.2,0.5],text_on=True,lw=1.5):
@@ -3273,12 +3273,20 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.7, 0.2, 0.2],zorder=1.08)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.08,lw=lw)
 
+        dat = loadtxt("limit_data/DarkPhoton/DarkSRF.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.5, 0.2, 0.2],zorder=1.06)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.06,lw=lw)
+
+   
+
         if text_on:
             plt.text(0.4e-6,0.15e-3,r'{\bf LSW-ADMX}',fontsize=17,color='w',rotation=-58,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
             plt.text(1e-5,5e-5,r'{\bf LSW-UWA}',fontsize=14,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
             plt.text(0.55e0,0.9e-4,r'{\bf LSW-SPring-8}',fontsize=13,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
             plt.text(1.2e-4,0.9e-5,r'{\bf ALPS}',fontsize=25,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
             plt.text(0.75e-7,9.9e-5,r'{\bf CROWS}',fontsize=24,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(8.2e-7,0.4e-8,r'{\bf DarkSRF}',fontsize=17,color='w',rotation=-42,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+
         return
 
     def Coulomb(ax,text_on=True,lw=1.5):
@@ -3382,7 +3390,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.307,lw=lw)
 
         if text_on:
-            plt.text(0.86e-13,1e-10,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.86e-13,1e-10,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-38.5,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
         return
 
     def SuperMAG(ax,col='#b5403e',fs=18,text_on=True,lw=1.5):
