@@ -34,11 +34,12 @@ def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',text_col='#205e8a',
                       nlevels=100,alpha=0.05,m_max=2e-21,m_min=1e-24,
                       g_label=5e-13,fs=23,
                      text_label=r'{\bf Structure formation}',
-                     text_shift=[1,1],zorder=-100,rotation=90):
-    g_vals = array([1e-30,1e30])
+                     text_shift=[1,1],zorder=-100,rotation=90,
+                     ymax=1e30,ymin=1e-30):
+    g_vals = array([ymin,ymax])
     m_vals = logspace(log10(m_min),log10(m_max),nlevels)
     for m in m_vals:
-        ax.fill_between(array([1e-30,m]),array([1e30,1e30]),y2=1e-30,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
+        ax.fill_between(array([1e-30,m]),array([ymax,ymax]),y2=ymin,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
     ax.text(m_max*text_shift[0]*0.5,g_label*text_shift[1],text_label,fontsize=fs,color=text_col,rotation=rotation,path_effects=line_background(1,'k'),clip_on=True,zorder=zorder)
     return
 
