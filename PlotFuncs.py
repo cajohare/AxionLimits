@@ -1439,7 +1439,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
         
         if text_on:
-            plt.text(text_shift[0]*2e10,text_shift[1]*4e-5,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.3e10,text_shift[1]*4e-5,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def LHC_pp(ax,text_shift=[1,1],col='#a11366',text_col='#a11366',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
@@ -1448,7 +1448,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*4e11,text_shift[1]*2e-5,r'{\bf LHC ($pp$)}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*4.5e11,text_shift[1]*2.15e-5,r'{\bf LHC ($pp$)}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def NOMAD(ax,text_shift=[1,1],col='#96062a',text_col='w',fs=20,zorder=1.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
@@ -1478,7 +1478,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*0.6e9,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=[]):
+    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=line_background(3,'w')):
         dat = loadtxt("limit_data/AxionPhoton/PrimEx.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
@@ -2465,7 +2465,7 @@ class AxionEDM():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
-    def SN1987A(ax,text_pos=[2e-10,0.9e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
+    def SN1987A(ax,text_pos=[2e-10,1.2e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/SN1987A.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -2808,10 +2808,10 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
         if text_on:
-            plt.text(1.4e-6,0.5e-14,r'{\bf ADMX}',fontsize=fs,color=ADMX_col,rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.8e-5,0.1e-13,r'{\bf CAPP}',fontsize=fs-2,color=CAPP_col,rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.19e-4,3e-15,r'{\bf HAYSTAC}',fontsize=fs-5,color=HAYSTAC_col,rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.47e-4,3e-12,r'{\bf QUAX}',fontsize=fs-8,color=QUAX_col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(1.4e-6,0.5e-14,r'{\bf ADMX}',fontsize=fs,color=ADMX_col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(0.8e-5,0.1e-13,r'{\bf CAPP}',fontsize=fs-2,color=CAPP_col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(0.19e-4,3e-15,r'{\bf HAYSTAC}',fontsize=fs-5,color=HAYSTAC_col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(0.47e-4,3e-12,r'{\bf QUAX}',fontsize=fs-8,color=QUAX_col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
 
         return
 
@@ -2843,9 +2843,9 @@ class DarkPhoton():
         plt.plot(Solar[:,0],Solar[:,1]/Solar[:,0],color='k',alpha=1,zorder=1.021,lw=lw)
 
         if text_on:
-            plt.text(0.8e2,1.5e-14,r'{\bf Solar}',fontsize=fs,color='w',rotation=-41,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(1e3,0.7e-14,r'{\bf HB}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.7e4,0.68e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-37,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.8e2,1.5e-14,r'{\bf Solar}',fontsize=fs,color='w',rotation=-41,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1e3,0.7e-14,r'{\bf HB}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.7e4,0.68e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-37,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
 
@@ -2880,8 +2880,8 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
         if text_on:
-            plt.text(8e2,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color='w',rotation=-41,fontsize=15,path_effects=line_background(1,'k'))
+            plt.text(8e2,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color='w',rotation=-41,fontsize=15,path_effects=line_background(1,'k'),clip_on=True)
 
 
         return
@@ -2902,7 +2902,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.001,lw=lw)
 
         if text_on:
-            plt.text(4e-1,1.3e-14,r'{\bf DAMIC}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(4e-1,1.3e-14,r'{\bf DAMIC}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([4e0,1e1],[3e-14,6e-14],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -2916,7 +2916,7 @@ class DarkPhoton():
         plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=10,lw=lw)
 
         if text_on:
-            plt.text(0.18e-2,1e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.18e-2,1e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([1.2e-2,1.5e0],[1e-11,4e-11],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -2933,7 +2933,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.3,lw=lw)
 
         if text_on:
-            plt.text(1.9e-1,0.8e-13,r'{\bf FUNK}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(1.9e-1,0.8e-13,r'{\bf FUNK}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([7e-1,3e0],[2.5e-13,1e-12],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -2946,7 +2946,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
 
         if text_on:
-            plt.text(1.7e0,1e-15,r'{\bf SENSEI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(1.7e0,1e-15,r'{\bf SENSEI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([7e0,1e1],[3e-15,9e-15],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -2958,7 +2958,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.6,lw=lw)
 
         if text_on:
-            plt.text(0.5e1,1.5e-16,r'{\bf SuperCDMS}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.5e1,1.5e-16,r'{\bf SuperCDMS}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([5e1,0.8e2],[3e-16,9e-16],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -2973,7 +2973,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.3,lw=lw)
 
         if text_on:
-            plt.text(5e-4,1e-10,r'{\bf WSi Nanowire}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(5e-4,1e-10,r'{\bf WSi Nanowire}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([9e-3,3e-3],[3e-10,9e-10],'-',lw=2.5,color=col)
         return
 
@@ -2984,7 +2984,7 @@ class DarkPhoton():
         dat[:,1] = dat[:,1]*sqrt(1/3/0.019)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color=col,alpha=1,zorder=0.0)
         if text_on:
-            plt.text(5.7e-6,0.65e-14,r'{\bf SQMS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(5.7e-6,0.65e-14,r'{\bf SQMS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def LAMPOST(ax,col='#471710',fs=15,text_on=True,lw=1.5):
@@ -2999,7 +2999,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color=col,alpha=1,zorder=0,lw=lw)
 
         if text_on:
-            plt.text(0.3e-1,4.5e-13,r'{\bf LAMPOST}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.3e-1,4.5e-13,r'{\bf LAMPOST}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([3e-1,0.6e0],[6e-13,1e-12],'-',lw=1.5,color=col,path_effects=line_background(2,'k'))
         return
 
@@ -3022,8 +3022,8 @@ class DarkPhoton():
         plt.plot([dat[1,0],dat[1,0]],[dat[1,1],1e0],'-',color=col,lw=3,zorder=0.2)
         if text_on:
             #plt.text(2e-4,1e-10,r'{\bf Tokyo-3}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.45e-3,3e-8,r'{\bf Tokyo-2}',fontsize=fs-2,color='k',rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(0.03e-1,2e-12,r'{\bf Tokyo-1}',fontsize=fs+4,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.45e-3,3e-8,r'{\bf Tokyo-2}',fontsize=fs-2,color='k',rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(0.03e-1,2e-12,r'{\bf Tokyo-1}',fontsize=fs+4,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.plot([0.3e-1,3e0],[2e-12,8e-12],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
@@ -3039,7 +3039,7 @@ class DarkPhoton():
             plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
 
         if text_on:
-            plt.text(7e-6,4e-12,r'{\bf FAST}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(7e-6,4e-12,r'{\bf FAST}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def LOFAR(ax,col='red',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
@@ -3055,7 +3055,7 @@ class DarkPhoton():
             plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
 
         if text_on:
-            plt.text(1.95e-7,3e-14,r'{\bf LOFAR (Sun)}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(1.95e-7,3e-14,r'{\bf LOFAR (Sun)}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def Jupiter(ax,col='Green',fs=15,text_on=True,lw=1.5):
@@ -3064,7 +3064,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=2)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=2,lw=lw)
         if text_on:
-            plt.text(0.1e-14,4.5e-1,r'{\bf Jupiter}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
+            plt.text(0.1e-14,4.5e-1,r'{\bf Jupiter}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def Earth(ax,col='DarkGreen',fs=17,text_on=True,lw=1.5):
@@ -3073,7 +3073,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.9)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.9,lw=lw)
         if text_on:
-            plt.text(0.4e-13,2e-1,r'{\bf Earth}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
+            plt.text(0.4e-13,2e-1,r'{\bf Earth}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
 
@@ -3087,8 +3087,8 @@ class DarkPhoton():
     #     plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.9,lw=lw)
     #     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.9)
         if text_on:
-            plt.text(0.5e-6,3e-1,r'{\bf Crab}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
-            plt.text(0.8e-6,0.9e-1,r'{\bf nebula}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
+            plt.text(0.5e-6,3e-1,r'{\bf Crab}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(0.8e-6,0.9e-1,r'{\bf nebula}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
 
         return
 
@@ -3102,7 +3102,7 @@ class DarkPhoton():
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder)
         if text_on:
-            plt.text(3.5e-5,0.13e-12,r'{\bf QUALIPHIDE}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(3.5e-5,0.13e-12,r'{\bf QUALIPHIDE}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
         
     def SHUKET(ax,col='maroon',fs=13,text_on=False,edge_on=False,lw=0.8):
@@ -3113,7 +3113,7 @@ class DarkPhoton():
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
         if text_on:
-            plt.text(3.5e-5,0.13e-12,r'{\bf SHUKET}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(3.5e-5,0.13e-12,r'{\bf SHUKET}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def DarkEfield(ax,col='darkred',fs=17,text_on=True,edge_on=False,lw=0.8):
@@ -3125,8 +3125,8 @@ class DarkPhoton():
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
         if text_on:
-            plt.text(0.8e-7/1.2,0.2e-12,r'{\bf Dark}',fontsize=fs,color=col,rotation=90,rotation_mode='anchor',ha='center',va='center')
-            plt.text(2e-7/1.2,0.2e-12,r'{\bf E-field}',fontsize=fs,color=col,rotation=90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.8e-7/1.2,0.2e-12,r'{\bf Dark}',fontsize=fs,color=col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(2e-7/1.2,0.2e-12,r'{\bf E-field}',fontsize=fs,color=col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def ORPHEUS(ax,col='darkred',fs=10,text_on=True,edge_on=False,lw=0.8):
@@ -3138,7 +3138,7 @@ class DarkPhoton():
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
         if text_on:
-            plt.text(6.5e-5,0.5e-13,r'{\bf ORPHEUS}',color=col,rotation=-90,fontsize=fs)
+            plt.text(6.5e-5,0.5e-13,r'{\bf ORPHEUS}',color=col,rotation=-90,fontsize=fs,clip_on=True)
         return
 
     def WISPDMX(ax,col='crimson',fs=12,text_on=True,edge_on=False,lw=0.8):
@@ -3150,8 +3150,8 @@ class DarkPhoton():
             plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.202,lw=lw)
 
         if text_on:
-            plt.text(9e-7,4.1e-12/1.2,r'{\bf WISP}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.text(9e-7,1.8e-12/1.2,r'{\bf DMX}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(9e-7,4.1e-12/1.2,r'{\bf WISP}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(9e-7,1.8e-12/1.2,r'{\bf DMX}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
 
         return
 
@@ -3164,7 +3164,7 @@ class DarkPhoton():
             plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.202,lw=lw)
 
         if text_on:
-            plt.text(90e-6,0.26e-10,r'{\bf DOSUE-RR}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(90e-6,0.26e-10,r'{\bf DOSUE-RR}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
 
@@ -3176,7 +3176,7 @@ class DarkPhoton():
         if point_on:
             plt.plot(dat[0,0],dat[0,1],'o',mfc=col,mec='k',mew=lw+1,zorder=0.2,markersize=ms)
         if text_on:
-            plt.text(36e-6,0.25e-14,r'{\bf SQuAD}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(36e-6,0.25e-14,r'{\bf SQuAD}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
 
@@ -3186,8 +3186,8 @@ class DarkPhoton():
         dat[:,1] = dat[:,1]*sqrt(1/0.075)
         plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6)
         if text_on:
-            plt.text(2.1e-9,0.5e-8/1.9,r'{\bf DM}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
-            plt.text(2.1e-9,0.2e-8/1.9,r'{\bf Pathfinder}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center')
+            plt.text(2.1e-9,0.5e-8/1.9,r'{\bf DM}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(2.1e-9,0.2e-8/1.9,r'{\bf Pathfinder}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
 
         return
 
@@ -3198,7 +3198,7 @@ class DarkPhoton():
         dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
         plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6,path_effects=line_background(2.5,'k'))
         if text_on:
-            plt.text(0.95e-3,1e-10,r'{\bf QC}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center')
+            plt.text(0.95e-3,1e-10,r'{\bf QC}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
     def DarkMatter(ax,Witte_col='royalblue',Caputo_col='dodgerblue',Arias_col='navy',fs=20,projection=True,text_on=True):
@@ -3224,15 +3224,15 @@ class DarkPhoton():
         plt.fill_between(dat5[:,0],dat5[:,1],y2=y2,edgecolor='k',facecolor=Arias_col,zorder=0.306,alpha=1)
 
         if text_on:
-            plt.gcf().text(0.295,0.42-0.04,r'{\bf DPDM} HeII',fontsize=15,color='w',ha='center',path_effects=line_background(1.5,'k'))
-            plt.gcf().text(0.295,0.4-0.04,r'Reionisation',fontsize=15,color='w',ha='center')
-            plt.gcf().text(0.295,0.38-0.04,r'(Caputo et al.)',fontsize=13,color='w',ha='center')
+            plt.gcf().text(0.295,0.42-0.04,r'{\bf DPDM} HeII',fontsize=15,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.gcf().text(0.295,0.4-0.04,r'Reionisation',fontsize=15,color='w',ha='center',clip_on=True)
+            plt.gcf().text(0.295,0.38-0.04,r'(Caputo et al.)',fontsize=13,color='w',ha='center',clip_on=True)
 
-            plt.gcf().text(0.365,0.37,r'{\bf DPDM}',fontsize=17,color='w',ha='center',path_effects=line_background(1.5,'k'))
-            plt.gcf().text(0.365,0.35,r'(Witte et al.)',fontsize=13,color='w',ha='center')
+            plt.gcf().text(0.365,0.37,r'{\bf DPDM}',fontsize=17,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.gcf().text(0.365,0.35,r'(Witte et al.)',fontsize=13,color='w',ha='center',clip_on=True)
 
-            plt.gcf().text(0.485,0.43,r'{\bf DPDM}',rotation=21.5,fontsize=18,color='w',va='center',ha='center',path_effects=line_background(1.5,'k'),rotation_mode='anchor')
-            plt.gcf().text(0.49,0.41,r'(Arias et al.)',rotation=21.5,fontsize=16,color='w',va='center',ha='center',path_effects=line_background(1,'k'),rotation_mode='anchor')
+            plt.gcf().text(0.485,0.43,r'{\bf DPDM}',rotation=21.5,fontsize=18,color='w',va='center',ha='center',path_effects=line_background(1.5,'k'),rotation_mode='anchor',clip_on=True)
+            plt.gcf().text(0.49,0.41,r'(Arias et al.)',rotation=21.5,fontsize=16,color='w',va='center',ha='center',path_effects=line_background(1,'k'),rotation_mode='anchor',clip_on=True)
     
         return
 
@@ -3242,8 +3242,8 @@ class DarkPhoton():
         plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.5,alpha=1)
         plt.plot(dat3[:,0],dat3[:,1],'k-',lw=lw,zorder=0.5)
         if text_on:
-            plt.gcf().text(0.29,0.70,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'))
-            plt.gcf().text(0.29,0.67,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'))
+            plt.gcf().text(0.29,0.70,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.gcf().text(0.29,0.67,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
 
@@ -3280,12 +3280,12 @@ class DarkPhoton():
    
 
         if text_on:
-            plt.text(0.4e-6,0.15e-3,r'{\bf LSW-ADMX}',fontsize=17,color='w',rotation=-58,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(1e-5,5e-5,r'{\bf LSW-UWA}',fontsize=14,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.55e0,0.9e-4,r'{\bf LSW-SPring-8}',fontsize=13,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(1.2e-4,0.9e-5,r'{\bf ALPS}',fontsize=25,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.75e-7,9.9e-5,r'{\bf CROWS}',fontsize=24,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(8.2e-7,0.4e-8,r'{\bf DarkSRF}',fontsize=17,color='w',rotation=-42,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.4e-6,0.15e-3,r'{\bf LSW-ADMX}',fontsize=17,color='w',rotation=-58,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1e-5,5e-5,r'{\bf LSW-UWA}',fontsize=14,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.55e0,0.9e-4,r'{\bf LSW-SPring-8}',fontsize=13,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1.2e-4,0.9e-5,r'{\bf ALPS}',fontsize=25,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.75e-7,9.9e-5,r'{\bf CROWS}',fontsize=24,color='w',rotation=-56,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(8.2e-7,0.4e-8,r'{\bf DarkSRF}',fontsize=17,color='w',rotation=-42,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
         return
 
@@ -3307,10 +3307,10 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.4, 0.2, 0.2],zorder=1.5)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.5,lw=lw)
         if text_on:
-            plt.text(2.5e-10,0.35e-1,r'{\bf Plimpton-Lawton}',fontsize=15,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(3e1,3e-1,r'{\bf AFM}',fontsize=20,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.5e-8,4e-6,r'{\bf Cavendish-Coulomb}',fontsize=23,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(0.2e2,1e-3,r'{\bf Spectroscopy}',fontsize=23,color='w',rotation=-34,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(2.5e-10,0.35e-1,r'{\bf Plimpton-Lawton}',fontsize=15,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(3e1,3e-1,r'{\bf AFM}',fontsize=20,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.5e-8,4e-6,r'{\bf Cavendish-Coulomb}',fontsize=23,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.2e2,1e-3,r'{\bf Spectroscopy}',fontsize=23,color='w',rotation=-34,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
         return
 
@@ -3320,7 +3320,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
-            plt.text(0.9e4,0.4e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'))
+            plt.text(0.9e4,0.4e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def CAST(ax,col='maroon',fs=19,text_on=True,lw=1.5):
@@ -3329,7 +3329,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1,lw=lw)
         if text_on:
-            plt.text(0.95e-3,6e-6,r'{\bf CAST}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.95e-3,6e-6,r'{\bf CAST}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def HINODE(ax,col='#700606',fs=16,text_on=True,lw=1.5):
@@ -3338,7 +3338,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
-            plt.text(5e-3,0.3e-5,r'{\bf HINODE}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(5e-3,0.3e-5,r'{\bf HINODE}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def SHIPS(ax,col='indianred',fs=20,text_on=True,lw=1.5):
@@ -3349,7 +3349,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.09,lw=lw)
 
         if text_on:
-            plt.text(0.6e-1,0.08e-8,r'{\bf SHIPS}',fontsize=fs,color='w',rotation=-32,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.6e-1,0.08e-8,r'{\bf SHIPS}',fontsize=fs,color='w',rotation=-32,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def TEXONO(ax,col=[0.5, 0.0, 0.13],fs=15,text_on=True,lw=1.5):
@@ -3358,7 +3358,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.101)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.101,lw=lw)
         if text_on:
-            plt.text(0.25e2,0.1e-4,r'{\bf TEXONO}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.25e2,0.1e-4,r'{\bf TEXONO}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def IGM(ax,col='seagreen',fs=18,text_on=True,lw=1.5):
@@ -3368,7 +3368,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.49,lw=lw)
 
         if text_on:
-            plt.text(4e-12,0.03e-7,r'{\bf IGM}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(4e-12,0.03e-7,r'{\bf IGM}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
             plt.gcf().text(0.233,0.565,r'{\bf DPDM heating}',color='w',fontsize=23,path_effects=line_background(1.5,'k'))
 
         return
@@ -3380,7 +3380,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.3062,lw=lw)
 
         if text_on:
-            plt.text(7e-13,0.2e-9,r'{\bf Leo T}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(7e-13,0.2e-9,r'{\bf Leo T}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def GasClouds(ax,col='#00cc66',fs=18,text_on=True,lw=1.5):
@@ -3390,7 +3390,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.307,lw=lw)
 
         if text_on:
-            plt.text(0.86e-13,1e-10,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-38.5,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(0.86e-13,1e-10,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-38.5,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def SuperMAG(ax,col='#b5403e',fs=18,text_on=True,lw=1.5):
@@ -3400,8 +3400,8 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
 
         if text_on:
-            plt.text(1.5e-17,1e-1/1.4,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
-            plt.text(1.5e-17,0.2e-1/1.4,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'))
+            plt.text(1.5e-17,1e-1/1.4,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1.5e-17,0.2e-1/1.4,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
         return
 

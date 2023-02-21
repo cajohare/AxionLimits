@@ -1,4 +1,4 @@
-# SN1987A https://arxiv.org/abs/1306.6088
+# SN1987A https://arxiv.org/abs/2203.15812
 # Mass [eV]	C_{a-gamma-n} [GeV^-2]
-1e-30 4e-9
-1e3 4e-9
+1e-30 6.7e-9
+1e3 6.7e-9

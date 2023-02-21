@@ -23,7 +23,7 @@
 
 ## Fifth force etc.
 * Casimir: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Casimir.txt), [reference1](https://arxiv.org/abs/quant-ph/0106045), [reference2](https://arxiv.org/abs/hep-ph/0502025), [reference2](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.171101)
-* Eot-Wash (Equivalence principle test): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/EotwashEP.txt), [reference](https://arxiv.org/abs/1807.04512)
+* Eot-Wash (Equivalence principle test): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/EotwashEP.txt), [reference](https://arxiv.org/abs/1207.2442)
 * Fifth force (ISL): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/InverseSquareLaw.txt), [reference](https://www.sciencedirect.com/science/article/pii/S0146641008000720?via%3Dihub)
 * MICROSCOPE (Equivalence principle test): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/MICROSCOPE.txt), [reference](http://dx.doi.org/10.1103/PhysRevLett.129.121102)
 

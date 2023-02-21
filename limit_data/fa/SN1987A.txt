@@ -1,4 +1,4 @@
-# Most conservative limit from EDM coupling https://arxiv.org/abs/1306.6088
+# SN1987A electric dipole moment portal 2203.15812
 # Mass [eV]	1/fa [GeV^-1]
-1e-30 1e-6
-1e3 1e-6
+1e-30 1.8e-6
+1e3 1.8e-6
