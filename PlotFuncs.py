@@ -2190,7 +2190,7 @@ class AxionNeutron():
         zo = 0.03
         col = 'darkred'
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
-        dat[:,1] *= 2*AxionNeutron.m_n
+        dat[:,1] *= AxionNeutron.m_n # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
         plt.text(0.8e-2,3*1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
@@ -2357,7 +2357,7 @@ class AxionProton():
         zo = 0.03
         col = 'darkred'
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
-        dat[:,1] *= 2*AxionProton.m_p
+        dat[:,1] *= AxionProton.m_p # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
         plt.text(0.8e-2,3*1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
