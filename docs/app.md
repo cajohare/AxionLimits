@@ -28,6 +28,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * NASDUCK (SERF): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/NASDUCK-SERF.txt), [reference](https://arxiv.org/abs/2209.13588)
 
 ## Fifth force
+* Casimir effect: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Casimir), [reference](https://arxiv.org/abs/2009.04517)
 * Torsion balance: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
 
 ## Other experiments

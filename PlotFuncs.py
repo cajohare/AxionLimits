@@ -1994,8 +1994,7 @@ class AxionNeutron():
     # this makes essentially no observable difference to the plot but it useful to remember.
     m_n = 0.93957
 
-    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
-                      cmap='YlOrBr',fs=25,Mpl_lab=False,DFSZ_label_mass=1e-8,KSVZ_label_mass=1e-7):
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,edgecolor='goldenrod',facecolor='gold',alpha=0.04,nlevels=50,fs=25,Mpl_lab=False,DFSZ_label_mass=1e-7,KSVZ_label_mass=1e-6):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -2013,9 +2012,9 @@ class AxionNeutron():
 
         m_vals = array([1e-10,1e-2])
         g_QCD_upper = 1.644e-7*0.26*m_vals
-        for i in logspace(1,8,40):
-            ax.fill_between(m_vals,g_QCD_upper/i,y2=g_QCD_upper,color='orange',\
-                            alpha=0.01,zorder=-100,lw=3)
+        for i in flipud(logspace(0,6.5,nlevels)):
+            ax.fill_between(m_vals,g_QCD_upper/i,y2=g_QCD_upper,color=facecolor,\
+                            alpha=alpha,zorder=-100,lw=3)
 
         # QCD Axion models
         n = 200
@@ -2023,19 +2022,16 @@ class AxionNeutron():
         rot = 45.0
         trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
         if KSVZ_on:
-            col = 'goldenrod'
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0)
-            plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=col)
+            plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=edgecolor)
             plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)/2,r'{\bf KSVZ}',fontsize=fs,
-            rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+            rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if DFSZ_on:
-            col = 'goldenrod'
-            #plt.fill_between(m,g_x(DFSZ_u,m),y2=1e-99,facecolor=col,zorder=0,alpha=0.5)
             plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
-            plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=col)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ}',fontsize=fs,
-            rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+            plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=edgecolor)
+            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ models}',fontsize=fs,
+            rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def OldComagnetometers(ax,col=[0.75, 0.2, 0.2],fs=20,projection=True):
@@ -2055,20 +2051,19 @@ class AxionNeutron():
             plt.text(5e-18,2*0.5e-12,r'{\bf Future comagnetometers}',fontsize=fs-1,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def UltracoldNeutronsAndMercury(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
+    def nEDM(ax,col=[0.5, 0.0, 0.13],fs=20,projection=True):
         # arXiv:[1902.04644]
-        StochasticCorrection = 18.0 #<---- From 1905.13650
         y2 = ax.get_ylim()[1]
         zo = 1
-        dat = loadtxt("limit_data/AxionNeutron/UltracoldNeutronsAndMercury.txt")
+        dat = loadtxt("limit_data/AxionNeutron/nEDM.txt")
         dat[:,1] *= 2*AxionNeutron.m_n
-        plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
-        plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.5e-19,2*StochasticCorrection*2.5e-5,r'$\nu_n/\nu_{\rm Hg}$',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.5e-19,3e-4,r'{\bf nEDM}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
 
-    def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=20,projection=True):
+    def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=24,projection=True):
         y2 = ax.get_ylim()[1]
         zo = 1
         dat = loadtxt("limit_data/AxionNeutron/NASDUCK.txt")
@@ -2077,16 +2072,16 @@ class AxionNeutron():
         dat2 = loadtxt("limit_data/AxionNeutron/NASDUCK-SERF.txt")
         dat2[:,1] *= 2*AxionNeutron.m_n
 
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
 
         i1 = 0
-        plt.plot(dat2[i1:,0],dat2[i1:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat2[i1:,0],dat2[i1:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(1e-13,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.plot(dat2[i1:,0],dat2[i1:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
+        plt.text(0.7e-13,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def JEDI(ax,text_pos=[3.85e-10,1.2e-6],col='#a3435e',text_col='w',text_rot=90,fs=20,zorder=0.499):
+    def JEDI(ax,text_pos=[3.85e-10,1.1e-6],col='#a3435e',text_col='w',text_rot=90,fs=20,zorder=0.499):
         dat = loadtxt('limit_data/AxionNeutron/JEDI.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1,alpha=1,zorder=zorder)
@@ -2100,7 +2095,7 @@ class AxionNeutron():
         dat[:,1] *= 2*AxionNeutron.m_n
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.2e-15,1.5e-3,r'{\bf PSI HgM}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(0.2e-15,1.3e-3,r'{\bf PSI HgM}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SuperfluidHe3(ax,col='darkred',zo=-10):
@@ -2116,20 +2111,18 @@ class AxionNeutron():
     class CASPEr():
         def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
             # arXiv:[1902.04644]
-            StochasticCorrection = 18.0 #<---- From 1905.13650
             y2 = ax.get_ylim()[1]
             zo = 2
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
             dat[:,1] *= 2*AxionNeutron.m_n
-            plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
-            plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5)
-            plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(0.5e-16,StochasticCorrection*1.8e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-6,color='w',ha='left',va='top',rotation=40,rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=1.5)
+            plt.text(3.5e-16,7e-4,r'{\bf CASPEr-ZULF}',fontsize=fs-3,color='w',ha='left',va='top',rotation=40.5,rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
             if projection:
                 dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
                 dat[:,1] *= 2*AxionNeutron.m_n
-                plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
+                plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
                 plt.text(1.3e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top',clip_on=True)
             return
 
@@ -2139,9 +2132,9 @@ class AxionNeutron():
             zo = 1.5
             dat = loadtxt("limit_data/AxionNeutron/CASPEr_Comagnetometer.txt")
             dat[:,1] *= 2*AxionNeutron.m_n
-            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(1e-21,1.5*5e-3,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
+            plt.text(0.2e-21,8e-3,r'{\bf CASPEr-ZULF (Comag.)}',fontsize=fs-1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
             return
 
         def wind(ax,col='red',fs=20,projection=True):
@@ -2150,8 +2143,8 @@ class AxionNeutron():
             zo = -1
             dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_wind.txt")
             dat[:,1] *= 2*AxionNeutron.m_n
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.text(1.0e-9,0.7e-11,r'{\bf CASPEr}-gradient',fontsize=fs,color=col,ha='left',va='top',rotation=28,clip_on=True)
             return
 
@@ -2160,8 +2153,8 @@ class AxionNeutron():
         zo = 0.5
         dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer_DarkMatter.txt")
         dat[:,1] *= 2*AxionNeutron.m_n
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(0.5e-15,8e-9,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2172,18 +2165,27 @@ class AxionNeutron():
         zo = 0.2
         col = 'dimgray'
         dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer.txt")
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(2.0e-8,1.5e-4,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(2.0e-8,3e-4,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         # Torsion balance test of gravitational inverse square law: hep-ph/0611184
         # reinterpreted in: hep-ph/0611223
         zo = 0.21
         col = [0.2, 0.25, 0.25]
+        #scale = 1.5/4.9 # to convert from pseudoscalar constraint to derivative constraint
         dat = loadtxt("limit_data/AxionNeutron/TorsionBalance.txt")
-        plt.fill_between(dat[:,0],dat[:,1]*11500,y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1]*11500,'-',color='k',alpha=1,zorder=zo,lw=3)
-        plt.text(1e-8,3e-3,r'{\bf Torsion balance}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(1e-8,2.5e-3,r'{\bf Torsion balance}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+
+        # Casimir effect
+        zo = 0.21
+        col = [0.2, 0.15, 0.15]
+        dat = loadtxt("limit_data/AxionNeutron/Casimir.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(1e-5,3e-2,r'{\bf Casimir}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
 
         # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
@@ -2191,9 +2193,9 @@ class AxionNeutron():
         col = 'darkred'
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
         dat[:,1] *= AxionNeutron.m_n # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.8e-2,3*1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(0.7e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if projection:
             # Proton storage ring arXiv:[2005.11867]
@@ -2201,8 +2203,8 @@ class AxionNeutron():
             col = 'crimson'
             dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
             dat[:,1] *= 2*AxionNeutron.m_n
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.2)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.text(1.3e-22,2*3e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top',clip_on=True)
 
 
@@ -2211,7 +2213,7 @@ class AxionNeutron():
         AxionNeutron.NASDUCK(ax,fs=fs)
         AxionNeutron.CASPEr.ZULF(ax,projection=projection,fs=fs)
         AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
-        AxionNeutron.UltracoldNeutronsAndMercury(ax,projection=projection,fs=fs+5)
+        AxionNeutron.nEDM(ax,projection=projection,fs=fs+5)
         AxionNeutron.K3He_Comagnetometer_DarkMatter(ax)
         AxionNeutron.JEDI(ax)
         AxionNeutron.PSI_HgM(ax)
@@ -2246,7 +2248,7 @@ class AxionProton():
     m_p = 0.93828
 
     def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,
-                      cmap='YlOrBr',fs=25,Mpl_lab=False,DFSZ_label_mass=1e-8,KSVZ_label_mass=1e-7):
+                      edgecolor='goldenrod',facecolor='gold',fs=25,Mpl_lab=False,DFSZ_label_mass=1e-6,KSVZ_label_mass=1e-6):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -2268,17 +2270,15 @@ class AxionProton():
         rot = 45.0
         trans_angle = plt.gca().transData.transform_angles(array((rot,)),array([[0, 0]]))[0]
         if KSVZ_on:
-            col = 'goldenrod'
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0)
-            plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=col)
+            plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=edgecolor)
             plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*6,r'{\bf KSVZ}',fontsize=fs,
-                rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+                rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if DFSZ_on:
-            col = 'goldenrod'
-            plt.fill_between(m,g_x(DFSZ_l,m),y2=g_x(DFSZ_u,m),facecolor=col,zorder=0,alpha=0.5)
+            plt.fill_between(m,g_x(DFSZ_l,m),y2=g_x(DFSZ_u,m),facecolor=facecolor,zorder=0,alpha=0.5)
             plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)/2,r'{\bf DFSZ models}',fontsize=fs,
-                    rotation=trans_angle,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+                    rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=20,projection=True):
@@ -2289,57 +2289,12 @@ class AxionProton():
 
         dat1 = loadtxt("limit_data/AxionProton/NASDUCK-SERF.txt")
         dat1[:,1] *= 2*AxionProton.m_p
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat1[:,0],dat1[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.fill_between(dat1[:,0],dat1[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-
+        plt.plot(dat1[:,0],dat1[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(1.5e-14,5e-5,r'{\bf NASDUCK}',fontsize=fs,color='w',ha='left',va='top',path_effects=line_background(1.5,'k'))
         return
-
-
-
-    class CASPEr():
-        def ZULF(ax,col=[0.6, 0.1, 0.1],fs=20,projection=True):
-            # arXiv:[1902.04644]
-            StochasticCorrection = 18.0 #<---- From 1905.13650
-            y2 = ax.get_ylim()[1]
-            zo = 2
-            dat = loadtxt("limit_data/AxionNeutron/CASPEr_ZULF.txt")
-            dat[:,1] *= 2*AxionProton.m_p
-            plt.plot(dat[:,0],StochasticCorrection*dat[:,1],'-',color='k',alpha=1.0,zorder=zo,lw=0.5)
-            plt.plot(dat[0:2,0],StochasticCorrection*dat[0:2,1],'k-',lw=2.5,zorder=zo)
-            plt.fill_between(dat[:,0],StochasticCorrection*dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(0.3e-16,StochasticCorrection*0.95e-5,r'{\bf CASPEr-ZULF}',fontsize=fs-4,color='w',ha='left',va='top',rotation=40,rotation_mode='anchor',path_effects=line_background(1.5,'k'),clip_on=True)
-            if projection:
-                dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_ZULF.txt")
-                dat[:,1] *= 2*AxionProton.m_p
-                plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=0.1,lw=3)
-                plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.0,alpha=0.3)
-                plt.text(1.3e-22,2*8e-11,r'{\bf CASPEr-ZULF} (projected)',fontsize=fs,color=col,ha='left',va='top')
-            return
-
-        def Comagnetometer(ax,col='darkred',fs=20,projection=True):
-            # arXiv:[1901.10843]
-            y2 = ax.get_ylim()[1]
-            zo = 1.5
-            dat = loadtxt("limit_data/AxionNeutron/CASPEr_Comagnetometer.txt")
-            dat[:,1] *= 2*AxionProton.m_p
-            plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=0.8,zorder=zo,lw=1.5)
-            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
-            plt.text(1e-21,1.5*5e-3,r'{\bf CASPEr-comag.}',fontsize=fs-1,color='w',ha='left',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
-            return
-
-        def wind(ax,col='red',fs=20,projection=True):
-            # arXiv:[1711.08999]
-            y2 = ax.get_ylim()[1]
-            zo = -1
-            dat = loadtxt("limit_data/AxionNeutron/Projections/CASPEr_wind.txt")
-            dat[:,1] *= 2*AxionNeutron.m_n
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
-            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.3)
-            plt.text(0.7e-9,1.5*1.1e-11,r'{\bf CASPEr}-gradient',fontsize=fs,color=col,ha='left',va='top',rotation=30)
-            return
 
     def LabExperiments(ax,projection=True,fs=20):
         y2 = ax.get_ylim()[1]
@@ -2348,19 +2303,28 @@ class AxionProton():
         # reinterpreted in: hep-ph/0611223
         zo = 0.21
         col = [0.2, 0.25, 0.25]
-        dat = loadtxt("limit_data/AxionNeutron/TorsionBalance.txt")
-        plt.fill_between(dat[:,0],dat[:,1]*11500,y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1]*11500,'-',color='k',alpha=1,zorder=zo,lw=1.5)
-        plt.text(1e-8,3e-3,r'{\bf Torsion balance}',fontsize=fs*1.1,color='w',ha='left',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+        dat = loadtxt("limit_data/AxionProton/TorsionBalance.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
+        plt.text(1e-8,2e-3,r'{\bf Torsion balance}',fontsize=fs*1.1,color='w',ha='left',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+
+        # Casimir effect
+        zo = 0.21
+        col = [0.2, 0.15, 0.15]
+        dat = loadtxt("limit_data/AxionProton/Casimir.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(1e-5,3e-2,r'{\bf Casimir}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+
 
         # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
         zo = 0.03
         col = 'darkred'
-        dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
+        dat = loadtxt("limit_data/AxionProton/SNO.txt")
         dat[:,1] *= AxionProton.m_p # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.8e-2,3*1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.text(0.7e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
 
         if projection:
             # Proton storage ring arXiv:[2005.11867]
@@ -2368,8 +2332,8 @@ class AxionProton():
             col = 'crimson'
             dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
             dat[:,1] *= 2*AxionProton.m_p
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.2)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
             plt.text(1.3e-22,2*3e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top')
 
     def Haloscopes(ax,projection=True,fs=20):
