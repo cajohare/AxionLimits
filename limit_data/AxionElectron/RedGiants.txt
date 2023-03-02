@@ -1,4 +1,4 @@
 # Red Giants in Globular clusters + Gaia distance measurement 2007.03694
 # m_a [eV]  g_ae [dimensionless]
-1e-10 1.3e-13
+1e-30 1.3e-13
 1.0e4 1.3e-13

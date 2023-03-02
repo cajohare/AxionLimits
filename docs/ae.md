@@ -48,7 +48,8 @@
 <!---* Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)-->
 * Axion-magnon conversion:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Magnon.txt),  [reference](https://arxiv.org/abs/2005.10256)
 * Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
-* Magnon nondemolition:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Magnons.txt),  [reference](https://arxiv.org/abs/2102.08764)
+* Magnon quantum nondemolition:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Magnons.txt),  [reference](https://arxiv.org/abs/2102.08764)
+* NV Centers [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/NVCenters.txt), [reference](https://arxiv.org/abs/2302.12756)
 * QUAX:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/QUAX.txt),  [reference 2018](https://arxiv.org/abs/1806.00310), [reference 2020](https://arxiv.org/abs/2001.08940)
 
 ### Astro bounds:

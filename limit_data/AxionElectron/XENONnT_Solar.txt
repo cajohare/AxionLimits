@@ -1,4 +1,4 @@
 # XENONnT (Solar axions)
 # m_a [eV]  g_ae [dimensionless]
-1e-10 1.9e-12
+1e-30 1.9e-12
 1.0e3 1.9e-12
