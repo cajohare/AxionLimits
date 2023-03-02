@@ -1841,7 +1841,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf GERDA}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def EDELWEISS(ax,col='darkred',projection=False,fs=10,text_col='w',text_on=True,text_pos=[1.25e4,1.4e-12],zorder=0.57,lw=2,rotation=60,**kwargs):
+    def EDELWEISS(ax,col='#8f2a1f',projection=False,fs=10,text_col='w',text_on=True,text_pos=[1.25e4,1.4e-12],zorder=0.57,lw=2,rotation=60,**kwargs):
         # EDELWEISS arXiv:[1808.02340]
         dat = loadtxt("limit_data/AxionElectron/EDELWEISS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1894,7 +1894,7 @@ class AxionElectron():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.2,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=0.7,zorder=zorder,lw=lw)
         if text_on:
-            plt.text(text_shift[0]*1.2e-9,text_shift[1]*0.5e-13,r'{\bf NVCenters}',rotation=rotation,alpha=0.7,fontsize=fs-1,color=col,ha='center',va='top',clip_on=True,**kwargs)
+            plt.text(text_shift[0]*2.4e-9,text_shift[1]*0.8e-13,r'{\bf NVCenters}',rotation=rotation,alpha=0.7,fontsize=fs-1,color=col,ha='center',va='top',clip_on=True,**kwargs)
         return
 
     def Magnon(ax,col='crimson',fs=18,text_on=True,text_pos=[1.2e-6,1e-14],lw=2,zorder=0.51,**kwargs):
@@ -1916,11 +1916,11 @@ class AxionElectron():
             plt.text(text_shift[0]*1.3e-5,text_shift[1]*0.7*0.5e-13,r'{\bf (Scanning)}',fontsize=fs-1,alpha=0.7,color=col,ha='center',va='top',clip_on=True,**kwargs)
         return
 
-    def QUAX(ax,col='maroon',fs=17,text_on=True,text_pos=[50e-6,0.9e-10],lw=3,zorder=10.0,text_rot=-90,**kwargs):
+    def QUAX(ax,col='crimson',fs=17,text_on=True,text_pos=[50e-6,0.9e-10],lw=1,zorder=10.0,text_rot=-90,**kwargs):
         # QUAX https://inspirehep.net/literature/1777123
         dat = loadtxt("limit_data/AxionElectron/QUAX.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.4,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=zorder,lw=lw)
+        plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=zorder,lw=lw,path_effects=line_background(lw+2,'k'))
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf QUAX}',fontsize=fs,color=col,rotation=text_rot,ha='left',va='top',clip_on=True,**kwargs)
         return
