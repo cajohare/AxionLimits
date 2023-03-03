@@ -887,7 +887,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=15,text_on=True,text_pos=[1.3e-11,1.65e-12],rotation=26):
+    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.66e-11,0.6e-12],rotation=26):
         # ADBC arXiv[1809.01656]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/ADBC.txt")
@@ -1127,9 +1127,9 @@ class AxionPhoton():
         FilledLimit(ax,dat,None,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
-    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col='#195e3a',text_col='#195e3a',fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5,path_effects=[]):
+    def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1.1e-12,1.5e-12],col='#195e3a',text_col='w',fs=11,zorder=0.1,text_on=True,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/AxionPhoton/Chandra_NGC1275.txt")
-        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
     def H1821643(ax,text_label=r'{\bf Chandra}',text_pos=[1e-11,1.5e-12],col=[0.0, 0.3, 0.24],text_col=[0.0, 0.3, 0.24],fs=15,zorder=0.1,text_on=True,edgealpha=1,lw=1.5):
@@ -1414,6 +1414,19 @@ class AxionPhoton():
                 plt.plot([3.5e-7*text_shift[0],2e-5],[6e3*text_shift[1],8e3],lw=1.5,color=col,path_effects=line_background(2,'w'))
         return
 
+    def AxionStarExplosions(ax,text_label=r'{\bf Axion star explosions}',text_pos=[4e-11,1.8e-12],col='#124f5e',rotation=27,text_col='w',fs=12,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
+        # Axion star explosions - assumes 100% dark matter and a certain core-soliton mass relation
+        dat = loadtxt('limit_data/AxionPhoton/AxionStarExplosions-1.txt')
+        plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder,alpha=edgealpha)
+        dat = loadtxt('limit_data/AxionPhoton/AxionStarExplosions-2.txt')
+        plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder,alpha=edgealpha)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf Axion star}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'))
+            plt.text(text_pos[0]*0.8,text_pos[1]/2,r'{\bf explosions}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'))
+        return
+
     def BeamDump(ax,text_shift=[1,1],col='purple',text_col='w',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/BeamDump.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1605,7 +1618,7 @@ class AxionPhoton():
         AxionPhoton.StarClusters(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.FermiQuasars(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if projection:
-            AxionPhoton.NGC1275(ax,text_on=False,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.SN1987A_gamma(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             if GalacticSN:
@@ -1618,7 +1631,7 @@ class AxionPhoton():
         else:
             AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)
-            AxionPhoton.SN1987A_gamma(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+            AxionPhoton.SN1987A_gamma(ax,text_on=False,edgealpha=edgealpha,lw=lw)
             AxionPhoton.HESS(ax,edgealpha=edgealpha,lw=lw,text_on=False)
             AxionPhoton.HAWC(ax,edgealpha=edgealpha,lw=lw,text_on=False)
             AxionPhoton.MWDXrays(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
