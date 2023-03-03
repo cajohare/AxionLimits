@@ -1423,8 +1423,8 @@ class AxionPhoton():
         plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder,alpha=edgealpha)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf Axion star}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'))
-            plt.text(text_pos[0]*0.8,text_pos[1]/2,r'{\bf explosions}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'))
+            plt.text(text_pos[0],text_pos[1],r'{\bf Axion star}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(text_pos[0]*0.8,text_pos[1]/2,r'{\bf explosions}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def BeamDump(ax,text_shift=[1,1],col='purple',text_col='w',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
@@ -1724,7 +1724,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],'--',lw=lw,color=col,alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*4e-19,text_shift[1]*0.7e-15,r'{\bf Twisted Anyon Cavity}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*4e-20,text_shift[1]*0.7e-15,r'{\bf Twisted Anyon Cavity}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 #==============================================================================#
 

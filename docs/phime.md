@@ -28,6 +28,7 @@
 
 ## Astrophysical bounds (green)
 * Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/RedGiants.txt), [reference](https://arxiv.org/abs/1611.05852)
+* White dwarfs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2303.00778)
 
 ## DM Searches (red)
 * AURIGA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/AURIGA.txt), [reference](https://arxiv.org/abs/1607.07327)

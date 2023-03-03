@@ -1,0 +1,5 @@
+# White dwarf luminosity function
+# https://arxiv.org/pdf/2303.00778.pdf
+# m_phi d_me
+1e-30   2579294.2765632626
+1.e2    2579294.2765632626

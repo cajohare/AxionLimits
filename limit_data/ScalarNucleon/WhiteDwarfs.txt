@@ -1,0 +1,6 @@
+# White dwarf luminosity function
+# https://arxiv.org/pdf/2303.00778.pdf
+# Still needs to include suppression if plotting at masses higher than ~keV.
+# m_phi g_N
+1e-30   6.536486830769353e-13
+10.e3    6.536486830769353e-13

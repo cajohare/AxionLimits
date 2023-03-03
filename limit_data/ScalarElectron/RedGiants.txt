@@ -1,5 +1,5 @@
 # Red giant cooling
 # https://arxiv.org/pdf/1611.05852.pdf
 # m_phi d_me
-1e-30   4.7e6
-1.e2    4.7e6
+1e-30   4709125.525725558
+1.e2    4709125.525725558

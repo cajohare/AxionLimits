@@ -60,7 +60,7 @@ class ScalarPhoton():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def GlobularClusters(ax,text_label=r'{\bf Globular clusters}',text_pos=[2e-24,4e9],col=[0.0, 0.66, 0.42],text_col='w',fs=27,zorder=1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def GlobularClusters(ax,text_label=r'{\bf Globular clusters}',text_pos=[2e-24,3.3e9],col=[0.0, 0.66, 0.42],text_col='w',fs=27,zorder=1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/GlobularClusters.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -123,13 +123,13 @@ class ScalarPhoton():
         return
 
         
-    def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.15e-10,0.2e9],rotation=0,col='#b53724',text_col='w',fs=18,zorder=0.17,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.35e-10,0.15e9],rotation=0,col='#b53724',text_col='w',fs=15,zorder=0.17,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Holometer.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
     
             
-    def DynamicDecoupling(ax,text_label=r'\center{\bf Dynamic \newline decoupling}',text_pos=[0.6e-13,0.25e9],rotation=-26,col='crimson',text_col='w',fs=12,zorder=0.14,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def DynamicDecoupling(ax,text_label=r'\center{\bf Dynamic \newline decoupling}',text_pos=[0.8e-13,0.15e9],rotation=-26,col='crimson',text_col='w',fs=10,zorder=0.14,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/DynamicDecoupling.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
@@ -206,6 +206,11 @@ class ScalarElectron():
         dat = loadtxt("limit_data/ScalarElectron/RedGiants.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
+    
+    def WhiteDwarfs(ax,text_label=r'{\bf White Dwarfs}',text_pos=[2e-24,4.2e7],col=[0.0, 0.66, 0.42],text_col='w',fs=30,zorder=2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/WhiteDwarfs.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
 
     def HSi(ax,text_label=r'{\bf H/Si}',text_pos=[1e-20,2e-4],rotation=23,col='#730f3a',text_col='w',fs=20,zorder=-0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/HSi.txt")
@@ -217,12 +222,12 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def I2(ax,text_label=r'{\bf I}$_2$',text_pos=[0.4e-12,2.5e6],rotation=20,col='#b52452',text_col='w',fs=21,zorder=0.11,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def I2(ax,text_label=r'{\bf I}$_2$',text_pos=[0.33e-12,2.0e6],rotation=20,col='#b52452',text_col='w',fs=19,zorder=0.11,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/I2.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def GEO600(ax,text_label=r'{\bf GEO600}',text_pos=[4e-13,1e2],rotation=0,col='#b5260d',text_col='w',fs=20,zorder=0.109,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def GEO600(ax,text_label=r'{\bf GEO600}',text_pos=[4e-13,2e2],rotation=0,col='#b5260d',text_col='w',fs=20,zorder=0.109,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/GEO600.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -232,12 +237,12 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def DAMNED(ax,text_label=r'{\bf DAMNED}',text_pos=[4.6e-11,1.6e4],rotation=90,col='#b5243f',text_col='w',fs=13.5,zorder=0.12,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def DAMNED(ax,text_label=r'{\bf DAMNED}',text_pos=[4.6e-11,1.5e4],rotation=90,col='#b5243f',text_col='w',fs=12,zorder=0.12,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/DAMNED.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def CsCav(ax,text_label=r'{\bf Cs/Cav}',text_pos=[3e-9,0.08e7],rotation=21,col='red',text_col='w',fs=18,zorder=0.11,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def CsCav(ax,text_label=r'{\bf Cs/Cav}',text_pos=[2.9e-9,0.07e7],rotation=20,col='red',text_col='w',fs=16,zorder=0.11,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/CsCav.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
