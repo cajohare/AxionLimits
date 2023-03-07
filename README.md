@@ -94,7 +94,7 @@ Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/
 
 # [**Axion DM predictions**](docs/am.md)
 [**Data files**](docs/am.md)\
-Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup_withTheory.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png))\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionMass.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionMass.png))\
    &nbsp; \
    &nbsp; \
    &nbsp; \

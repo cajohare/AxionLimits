@@ -9,7 +9,6 @@
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
-### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup_withTheory.png)
 ## QCD axion (haloscope closeup)
@@ -48,7 +47,7 @@
 * Petreczky et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Petreczky16.txt),  [reference](https://arxiv.org/abs/1606.03145)
 * VISHnu.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/VISHnu.txt),  [reference](https://arxiv.org/abs/2206.11598)
 * Saikawa et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/SaikawaDW_6_10.txt),  [reference](https://arxiv.org/abs/1412.0789)
-* Gorghetto et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/SaikawaDW_6_10.txt),  [reference](https://arxiv.org/abs/2007.04990)
+* Gorghetto et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/GorghettoDW_6.txt),  [reference](https://arxiv.org/abs/2007.04990)
 
 ### Other dark matter predictions
 Go to the [notebook](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb) for details on plotting
