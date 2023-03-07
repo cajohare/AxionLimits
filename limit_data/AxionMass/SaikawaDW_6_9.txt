@@ -1,0 +1,3 @@
+# N_DW = 6, N = 9 post-inflation
+# https://arxiv.org/pdf/1904.09155.pdf
+5.8e-4  1.3e-1

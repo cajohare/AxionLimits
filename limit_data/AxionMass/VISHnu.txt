@@ -1,0 +1,4 @@
+# VISHnu model Sopov and Volkas
+# https://arxiv.org/abs/2206.11598
+# Lattice topological susceptibility calculation
+40e-6  2e-3

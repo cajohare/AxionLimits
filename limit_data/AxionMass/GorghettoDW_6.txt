@@ -1,0 +1,3 @@
+# N_DW = 6 lower limit
+# https://arxiv.org/pdf/2007.04990.pdf
+3.5e-3	0.16

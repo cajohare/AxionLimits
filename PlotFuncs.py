@@ -1726,6 +1726,7 @@ class AxionPhoton():
         if text_on:
             plt.text(text_shift[0]*4e-20,text_shift[1]*0.7e-15,r'{\bf Twisted Anyon Cavity}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
+    
 #==============================================================================#
 
 
