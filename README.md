@@ -98,8 +98,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionMass.p
    &nbsp; \
    &nbsp; \
    &nbsp; \
-   &nbsp; \
-      &nbsp; \
+   &nbsp;
 ---
 
 [<img align="right" width="300" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
