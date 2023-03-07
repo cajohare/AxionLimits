@@ -61,8 +61,9 @@
 
 ### Haloscopes:
 
-* [Data file for all haloscopes combined: ](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt)
-* [Data file for all haloscope projections combined: ](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HaloscopeProjections_Combined.txt)
+Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) for a .txt file of all haloscopes combined
+
+Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HaloscopeProjections_Combined.txt) for .txt file of all haloscope **projections** combined
 
 * ABRACADABRA (Run 1): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt),  [reference](https://arxiv.org/abs/1810.12257)
 * ABRACADABRA (Run 2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA_run2.txt), [reference](https://arxiv.org/abs/2102.06722)
