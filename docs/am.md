@@ -35,7 +35,7 @@
 
 Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) for a .txt file of all haloscopes combined
 
-Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HaloscopeProjections_Combined.txt) for .txt file of all haloscope **projections** combined
+Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt) for .txt file of all haloscope **projections** combined
 
 ### QCD Axion masses:
 * Ballesteros et al. (SMASH): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Ballesteros16.txt),  [reference](https://arxiv.org/abs/1608.05414)
