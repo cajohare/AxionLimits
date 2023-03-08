@@ -41,7 +41,9 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ---
 # Data files and references
 ## Combined limits
-* Direct detection (without axion haloscopes): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
+* Combined DP haloscopes (without axion haloscopes): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
+* Combined DP haloscopes (rescaled from axion limit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_AxionSearchesRescaled.txt)
+* Combined DP haloscopes projections: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DP_Combined_AxionSearchesRescaled.txt)
 * photon-DP transitions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Laboratory.txt)
 * Stellar bounds: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Stellar.txt)
 

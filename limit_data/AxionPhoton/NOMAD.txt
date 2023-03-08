@@ -1,7 +1,7 @@
 # NOMAD Search for eV (pseudo)scalar penetrating particles in the SPS neutrino beam
 # https://www.sciencedirect.com/science/article/abs/pii/S0370269300003750?via%3Dihub
 # m_a [eV]  g_ap [GeV^-1]
-1e-20	0.0001563878375340895
+1e-30	0.0001563878375340895
 13.47517109489036	0.0001563878375340895
 18.714514435819193	0.0001563878375340895
 25.989902962800922	0.0001597955804675771

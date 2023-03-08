@@ -140,9 +140,9 @@ def AlternativeCouplingAxis(ax,scale=1,tickdir='out',labelsize=25,ylabel=r"$g_\g
 def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
                  g_min = 1.0e-19,g_max = 1.0e-6,\
                  m_min = 1.0e-12,m_max = 1.0e7,\
-                 lw=2.5,lfs=45,tfs=25,tickdir='out',\
+                 lw=2.5,lfs=45,tfs=25,tickdir='out',figsize=(16.5,11),\
                  Grid=False,Shape='Rectangular',\
-                 mathpazo=False,TopAndRightTicks=False,\
+                 mathpazo=False,TopAndRightTicks=False,majorticklength=13,minorticklength=10,\
                 xtick_rotation=20.0,tick_pad=8,x_labelpad=10,y_labelpad=10,\
              FrequencyAxis=False,N_Hz=1,upper_xlabel=r"$\nu_a$ [Hz]",**freq_kwargs):
 
@@ -163,14 +163,16 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
         fig = plt.figure(figsize=(16.5,11))
     elif Shape=='Square':
         fig = plt.figure(figsize=(14.2,14))
+    elif Shape=='Custom':
+        fig = plt.figure(figsize=figsize)
 
     ax = fig.add_subplot(111)
 
     ax.set_xlabel(xlab,fontsize=lfs,labelpad=x_labelpad)
     ax.set_ylabel(ylab,fontsize=lfs,labelpad=y_labelpad)
 
-    ax.tick_params(which='major',direction=tickdir,width=2.5,length=13,right=TopAndRightTicks,top=TopAndRightTicks,pad=tick_pad)
-    ax.tick_params(which='minor',direction=tickdir,width=1,length=10,right=TopAndRightTicks,top=TopAndRightTicks)
+    ax.tick_params(which='major',direction=tickdir,width=2.5,length=majorticklength,right=TopAndRightTicks,top=TopAndRightTicks,pad=tick_pad)
+    ax.tick_params(which='minor',direction=tickdir,width=1,length=minorticklength,right=TopAndRightTicks,top=TopAndRightTicks)
 
     ax.set_yscale('log')
     ax.set_xscale('log')
@@ -3237,8 +3239,8 @@ class DarkPhoton():
     def LSW(ax,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SPring-8.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.45, 0.05, 0.1],zorder=1.1001)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.45, 0.05, 0.1],zorder=1.101)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.101,lw=lw)
 
         dat = loadtxt("limit_data/DarkPhoton/ALPS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=[0.55, 0.0, 0.16],zorder=1.091)

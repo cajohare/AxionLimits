@@ -31,7 +31,7 @@ def NaturalnessCorner(ax,scale,Lambda_min_TeV,dim,edgecolor='gold',facecolor='go
     
 def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',text_col='#205e8a',
                       lw=3,path_effects=line_background(0,'k'),
-                      nlevels=100,alpha=0.05,m_max=2e-21,m_min=1e-24,
+                      nlevels=100,alpha=0.05,m_max=2e-20,m_min=1e-24,
                       g_label=5e-13,fs=23,
                      text_label=r'{\bf Structure formation}',
                      text_shift=[1,1],zorder=-100,rotation=90,
