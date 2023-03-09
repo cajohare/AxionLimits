@@ -43,9 +43,12 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ## Combined limits
 * Combined DP haloscopes (without axion haloscopes): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)
 * Combined DP haloscopes (rescaled from axion limit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_AxionSearchesRescaled.txt)
-* Combined DP haloscopes projections: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DP_Combined_DarkMatterSearches.txt)
 * photon-DP transitions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Laboratory.txt)
 * Stellar bounds: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_Stellar.txt)
+
+## Combined projections
+* Combined DP LSW projections [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/LSW_Projections_Combined.txt)
+* Combined DP haloscopes projections: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DP_Combined_DarkMatterSearches.txt)
 
 ## Tests of coulomb law/photon mass
 * Atomic spectroscopy: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Spectroscopy.txt), [reference](https://arxiv.org/abs/1008.3536)
@@ -56,6 +59,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ## Light-shining through walls/Helioscopes
 * Aharonov-Bohm: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/AharonovBohm.txt), [reference](https://arxiv.org/abs/1603.01282)
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)
+* ALPS-II: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPS.txt), [reference](https://arxiv.org/abs/1302.5647)
 * CAST: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CAST.txt), [reference](https://arxiv.org/abs/0801.1527)
 * CROWS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/CROWS.txt), [reference](https://arxiv.org/abs/1310.8098)
 * DarkSRF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkSRF.txt), [reference](https://arxiv.org/abs/2301.11512)
@@ -65,7 +69,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * LSW-SPring-8: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SPring-8.txt), [reference](https://arxiv.org/abs/1502.04490)
 * LSW-UWA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_UWA.txt), [reference](https://arxiv.org/abs/1003.0964)
 * SHIPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHIPS.txt), [reference](https://arxiv.org/abs/1502.04490)
-
+* STAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/STAX.txt), [reference](https://arxiv.org/abs/2212.01139)
 
 ## Experimental searches for DPDM
 ### All files are true to their *original* sources, i.e. without any rescaling

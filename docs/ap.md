@@ -90,8 +90,8 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * CAPP-5: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-5.txt), [reference](https://arxiv.org/abs/2207.13597)
 * CAPP-6 (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-5.txt), [reference](https://arxiv.org/abs/2210.10961)
 * CAST-CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST-CAPP.txt), [reference](https://arxiv.org/abs/2211.02902)
-* DANCE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
-* DANCE (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2105.06252)
+* DANCE concept: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
+* DANCE (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2303.03594)
 * DM-Radio: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DMRadio.txt), [reference](https://arxiv.org/abs/2204.13781)
 * FLASH: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FLASH.txt), [reference](https://indico.cern.ch/event/1115163/)
 * GrAHal: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GrAHal.txt), [reference](https://arxiv.org/abs/2110.14406)
@@ -115,7 +115,8 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * TOORAD: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD1.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TOORAD2.txt), [reference](https://arxiv.org/abs/2102.05366)
 * Twisted Anyon Cavity: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/TwistedAnyonCavity.txt), [reference](https://arxiv.org/abs/2208.01640)
 * UF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UF.txt), [reference](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.42.1297)
-* UPLOAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
+* UPLOAD (2019): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
+* UPLOAD (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD-2.txt), [reference](https://arxiv.org/abs/2301.06778)
 * WISPLC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPLC.txt), [reference](https://arxiv.org/abs/2111.04541)
 
 ### Helioscopes/LSW
