@@ -1,5 +1,6 @@
 # RADES
 # https://arxiv.org/abs/2104.13798
-# mass [eV]  g_ap [GeV^-1]
+# mass [eV]  g_aphoton [GeV^-1]
 34.6738e-6  4e-13
 34.6771e-6  4e-13
+34.6771e-6  1e0
