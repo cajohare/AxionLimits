@@ -115,8 +115,8 @@ def UpperFrequencyAxis_Simple(ax,tickdir='out',xtick_rotation=0,labelsize=25,xla
     ax2.xaxis.set_major_locator(locmaj)
     ax2.xaxis.set_minor_locator(locmin)
     ax2.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
-    ax2.set_xticks([1e-9,1e-6,1e-3,1e0,1e3,1e6,1e9,1e12])
-    ax2.set_xticklabels(['nHz',r'\textmu Hz','mHz','Hz','kHz','MHz','GHz','THz']);
+    ax2.set_xticks(10.0**arange(-9,18))
+    ax2.set_xticklabels(['nHz','','',r'\textmu Hz','','','mHz','','','Hz','','','kHz','','','MHz','','','GHz','','','THz','','','PHz','','']);
     ax2.set_xlim([m_min*241.8*1e12,m_max*241.8*1e12])
     plt.sca(ax)
     return

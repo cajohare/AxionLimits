@@ -98,7 +98,9 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionMass.p
    &nbsp; \
    &nbsp; \
    &nbsp; \
+    &nbsp; \
    &nbsp;
+
 ---
 
 [<img align="right" width="300" src="plots/plots_png/DarkPhoton.png">](docs/dp.md)
@@ -143,6 +145,18 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_w
    &nbsp; \
   &nbsp; \
    &nbsp; 
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/AxionPhoton_FIPS.png">](docs/fips.md)
+
+# [**FIPS Workshop plots**](docs/fips.md)
+[**Data files**](docs/dp.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png))\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
 
 ---
 
