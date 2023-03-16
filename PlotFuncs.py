@@ -1703,6 +1703,16 @@ class AxionPhoton():
         if text_on:
             plt.text(text_shift[0]*2e-23,text_shift[1]*2e-11,r'{\bf BICEP/KECK}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
+    
+    def POLARBEAR(ax,text_shift=[1,1],col='dodgerblue',text_col='w',fs=12,zorder=1.2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/POLARBEAR.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*3.5e-22,text_shift[1]*0.5e-10,r'{\bf POLARBEAR}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
 
     def MOJAVE(ax,text_shift=[1,1],col='royalblue',text_col='w',fs=20,zorder=1.2,text_on=True,lw=1.5,rotation=32,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/MOJAVE.txt")
@@ -1710,7 +1720,7 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*3e-22,text_shift[1]*2e-11,r'{\bf MOJAVE}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*3e-22,text_shift[1]*1.5e-11,r'{\bf MOJAVE}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def SPT(ax,text_shift=[1,1],col='#403c75',text_col='w',fs=18,zorder=1.01,text_on=True,lw=1.5,rotation=39,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):

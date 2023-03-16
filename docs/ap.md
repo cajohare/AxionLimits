@@ -184,6 +184,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * INTEGRAL (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2209.06299)
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
 * MOJAVE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MOJAVE.txt), [reference](https://arxiv.org/abs/1811.10997)
+* POLARBEAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/POLARBEAR.txt), [reference](https://arxiv.org/abs/2303.08410)
 * PPTA+QUIJOTE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PPTA_QUIJOTE.txt), [reference](https://arxiv.org/abs/2201.03422)
 * Pulsar Polarisation Arrays: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PPA.txt), [reference](https://arxiv.org/abs/2111.10615)
 * SPT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SPT.txt), [reference](https://arxiv.org/abs/2203.16567)
