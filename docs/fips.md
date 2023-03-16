@@ -1,5 +1,7 @@
 # FIPS Workshop 2022
+
 Alternate versions of the axion-photon and dark-photon plot for the FIPS Workshop 2022 report (to appear soon)
+
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
 ## Axion-photon coupling

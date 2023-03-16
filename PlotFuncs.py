@@ -717,11 +717,31 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.5e-4,text_shift[1]*3.5e-15,r'{\bf MADMAX}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
-                plt.plot([3e-4,1.3e-4],[4.5e-15,2.6e-14],'k-',lw=1.5)
+                plt.text(text_shift[0]*1.5e-4,text_shift[1]*4.5e-15,r'{\bf MADMAX}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([3e-4,1.3e-4],[5.5e-15,2.6e-14],'k-',lw=1.5)
             else:
                 plt.text(text_shift[0]*5e-5,text_shift[1]*3.5e0,r'{\bf MADMAX}',fontsize=14,color=col,rotation=0,ha='left',va='top',clip_on=True)
 
+        return
+
+    def DALI(ax,col='darkred',fs=18,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+        y2 = ax.get_ylim()[1]
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+        dat = loadtxt("limit_data/AxionPhoton/Projections/DALI.txt")
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=2,color=col,zorder=0)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
+        if text_on:
+            if rs1==0:
+                plt.text(text_shift[0]*1.0e-4,text_shift[1]*0.6e-15,r'{\bf DALI}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([0.9e-4,0.32e-4],[0.6e-15,0.4e-14],'k-',lw=1.5)
+            else:
+                plt.text(text_shift[0]*1.3e-4,text_shift[1]*6e-1,r'{\bf DALI}',fontsize=fs/1.3,color=col,rotation=20,ha='center',va='top',clip_on=True)
+                #plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
         return
 
     def ALPHA(ax,col='darkred',fs=18,RescaleByMass=False,text_on=True,text_shift=[1,1]):
@@ -738,8 +758,8 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
         if text_on:
             if rs1==0:
-                plt.text(text_shift[0]*1.5e-4,text_shift[1]*1e-15,r'{\bf ALPHA}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
-                plt.plot([1.3e-4,0.5e-4],[1e-15,0.7e-14],'k-',lw=1.5)
+                plt.text(text_shift[0]*1.4e-4,text_shift[1]*1.6e-15,r'{\bf ALPHA}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([1.4e-4,0.6e-4],[1.6e-15,0.9e-14],'k-',lw=1.5)
             else:
                 plt.text(text_shift[0]*2.3e-4,text_shift[1]*5e-1,r'{\bf ALPHA}',fontsize=fs,color=col,rotation=0,ha='center',va='top',clip_on=True)
                 #plt.text(2.3e-4,2e-1,r'{\bf haloscope}',fontsize=fs,color=col,rotation=0,ha='center',va='top')
@@ -1545,6 +1565,7 @@ class AxionPhoton():
             AxionPhoton.DMRadio(ax,text_on=text_on)
             AxionPhoton.SRF(ax,text_on=text_on)
             AxionPhoton.ALPHA(ax,text_on=text_on)
+            AxionPhoton.DALI(ax,text_on=text_on)
             AxionPhoton.MADMAX(ax,text_on=text_on)
             AxionPhoton.FLASH(ax,text_on=text_on)
             AxionPhoton.TOORAD(ax,text_on=text_on)
@@ -2462,7 +2483,7 @@ class AxionEDM():
         return
 
 
-    def PlanckBAO(ax,text_pos=[3e-10,0.5e-9],col='#1a6e7a',text_col='w',text_rot=0,fs=26,zorder=0.8,lw=1.5):
+    def PlanckBAO(ax,text_pos=[3e-10,0.5e-9],col='#136919',text_col='w',text_rot=0,fs=26,zorder=0.8,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/PlanckBAO.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -2535,7 +2556,7 @@ class Axion_fa():
                  path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[3e-20,0.2e-13],col='darkred',text_col='w',text_rot=0,fs=28,zorder=-1):
+    def nEDM(ax,text_pos=[20e-20,0.3e-14],col='darkred',text_col='w',text_rot=40,fs=23,zorder=-1.1):
         # Already accounts for stochastic correction
         dat = loadtxt('limit_data/fa/nEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
@@ -2562,21 +2583,21 @@ class Axion_fa():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
-    def SolarCore(ax,text_pos=[0.08e-10,0.12e-10],col='#0d4dba',text_col='w',text_rot=41,fs=30,zorder=-5,lw=2):
+    def SolarCore(ax,text_pos=[0.08e-10,0.12e-10],col='#50946e',text_col='w',text_rot=41,fs=30,zorder=-5,lw=2):
         dat = loadtxt('limit_data/fa/SolarCore.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Solar core}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def WhiteDwarfs(ax,text_pos=[0.9e-10,0.03e-11],col='#0356fc',text_col='w',text_rot=41,fs=28,zorder=-10,lw=2):
+    def WhiteDwarfs(ax,text_pos=[0.9e-10,0.03e-11],col='#599967',text_col='w',text_rot=41,fs=28,zorder=-10,lw=2):
         dat = loadtxt('limit_data/fa/WhiteDwarfs.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf White dwarfs}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col=col_alpha('teal',0.4),text_col='teal',text_rot=0,fs=23):
+    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col='#95bd93',text_col='k',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
@@ -2584,21 +2605,21 @@ class Axion_fa():
         return
 
 
-    def Pulsars(ax,text_pos=[3e-15,0.11e-16],linespacing_y=0.65,col='#05526e',text_col='#05526e',text_rot=0,fs=21,zo=-6.9):
+    def Pulsars(ax,text_pos=[3e-15,0.11e-16],linespacing_y=0.65,col='#30693d',text_col='#30693d',text_rot=0,fs=21,zo=-6.9):
         dat = loadtxt('limit_data/fa/Pulsar.txt')
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
-    def PlanckBAO(ax,text_pos=[8e-3,1.5e-7],col='#1a6e7a',text_col='w',text_rot=0,fs=27,zorder=0.8,lw=1.5):
+    def PlanckBAO(ax,text_pos=[8e-3,1.5e-7],col='#136919',text_col='w',text_rot=0,fs=27,zorder=0.8,lw=1.5):
         dat = loadtxt('limit_data/fa/PlanckBAO.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Planck+BAO}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def BBN(ax,text_pos=[1.7e-17,0.8e-16],col='#1f4969',text_col='w',text_rot=15,fs=20,zorder=-6):
+    def BBN(ax,text_pos=[1.9e-17,0.95e-16],col='#1f4969',text_col='w',text_rot=15,fs=14,zorder=-6):
         dat = loadtxt('limit_data/fa/BBN.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
@@ -2612,14 +2633,21 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def NeutronStars(ax,text_pos=[0.5e-3,0.4e-12],col='#1f6ff0',text_col='#1f6ff0',text_rot=41,fs=29,zorder=-10):
+    def NeutronStars(ax,text_pos=[0.5e-3,0.4e-12],col='#599967',text_col='#599967',text_rot=41,fs=29,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
         plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
-    def Inspirals(ax,text_pos=[1e-16,2e-14],col='#b9befa',text_col='#b9befa',text_rot=0,fs=23,zorder=-10):
+    def Axinovae(ax,text_pos=[1.7e-20,0.02e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):
+        dat = loadtxt('limit_data/fa/Axinovae.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Axinovae}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
+    def Inspirals(ax,text_pos=[1e-16,2e-14],col='darkgreen',text_col='darkgreen',text_rot=0,fs=23,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NSBH-Inspiral.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
         plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
@@ -2638,7 +2666,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring}',color=col,alpha=0.4,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
-    def CASPEr(ax,text_pos=[4e-11,1e-19],col='crimson',alpha=0.1,zorder=-10,text_rot=57,fs=23):
+    def CASPEr(ax,text_pos=[5e-11,1e-19],col='crimson',alpha=0.1,zorder=-10,text_rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
