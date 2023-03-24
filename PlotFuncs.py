@@ -1256,7 +1256,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1)
         return
 
-    def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[2.3e2,0.25e-13],col='midnightblue',text_col='w',fs=16,zorder=0.00003,text_on=True,rotation=-46,edgealpha=1,lw=1.5):
+    def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[0.7e2,0.29e-13],col='midnightblue',text_col='midnightblue',fs=15,zorder=0.00003,text_on=True,rotation=-54,edgealpha=1,lw=1.5):
         # anomalous gas heating in Leo T dwarf
         dat = loadtxt("limit_data/AxionPhoton/LeoT.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw)
@@ -1293,8 +1293,12 @@ class AxionPhoton():
         return
 
     def COBEFIRAS(ax,text_label=r'{\bf COBE/FIRAS}',text_pos=[0.45e2,4e-13],col='#234f8c',text_col='w',fs=13,zorder=0.0001,text_on=True,rotation=-46,lw=1.5,edgealpha=1):
-        # anomalous gas heating in Leo T dwarf
         dat = loadtxt("limit_data/AxionPhoton/COBE-FIRAS.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+    
+    def CMBAnisotropies(ax,text_label=r'{\bf CMB}',text_pos=[1.8e2,1.4e-13],col='#234f8c',text_col='w',fs=16,zorder=0.0001,text_on=True,rotation=-53,lw=1.5,edgealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/CMB_Anisotropies.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
@@ -1330,7 +1334,8 @@ class AxionPhoton():
         #FilledLimit(ax,EBL2,'',col=[0.0, 0.2, 0.6],text_on=False,zorder=0.001,edgealpha=edgealpha,lw=lw)
 
         # Spectral distortions of CMB
-        AxionPhoton.COBEFIRAS(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        AxionPhoton.COBEFIRAS(ax,text_on=False,edgealpha=edgealpha,lw=lw)
+        AxionPhoton.CMBAnisotropies(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
 
         # Freezein
         AxionPhoton.IrreducibleFreezeIn(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
