@@ -207,8 +207,9 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
 
 #==============================================================================#
 class AxionPhoton():
-    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap='YlOrBr',fs=18,RescaleByMass=False,text_on=True,
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,cmap=cm.YlOrBr,fs=18,RescaleByMass=False,text_on=True,
                 thick_lines=False,C_center=1,C_width=0.8,
+                C_upper = 44/3-1.92,C_lower = abs(5/3-1.92),level_max = 4,nlevels=20,alpha=0.2,line_color='#a35c2f',
                 KSVZ_label_mass=1e-8,DFSZ_label_mass=5e-8,vmax=0.9):
         if RescaleByMass:
             rs1 = 1.0
@@ -228,20 +229,28 @@ class AxionPhoton():
         DFSZ = 0.75
 
         if rs1==0:
-            # Plot Band
-            n = 200
-            g = logspace(log10(g_min),log10(g_max),n)
-            m = logspace(log10(m_min),log10(m_max),n)
-            QCD = zeros(shape=(n,n))
-            for i in range(0,n):
-                QCD[:,i] = norm.pdf(log10(g)-log10(g_x(C_center,m[i])),0.0,C_width)
-            cols = cm.get_cmap(cmap)
+            # # Plot Band
+            # n = 200
+            # g = logspace(log10(g_min),log10(g_max),n)
+            # m = logspace(log10(m_min),log10(m_max),n)
+            # QCD = zeros(shape=(n,n))
+            # for i in range(0,n):
+            #     QCD[:,i] = norm.pdf(log10(g)-log10(g_x(C_center,m[i])),0.0,C_width)
+            # cols = cm.get_cmap(cmap)
 
-            cols.set_under('w') # Set lowest color to white
-            vmin = amax(QCD)/(C_logwidth/4.6)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
-            plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+            # cols.set_under('w') # Set lowest color to white
+            # vmin = amax(QCD)/(C_logwidth/4.6)
+            # plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+            # plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+            # plt.contourf(m, g, QCD, 50,cmap=cols,vmin=vmin,vmax=vmax,zorder=0)
+
+            # QCD axion hadronic band
+            m = array([1e-30,1e20])
+            ga = 2e-10*m
+            cols = cmap(linspace(0.1,0.45,nlevels))
+            levels = (linspace(1,sqrt(level_max),nlevels))**2
+            for i in range(nlevels-1):
+                ax.fill_between(m,C_upper*ga/levels[i],C_lower*ga*levels[i],alpha=alpha,color=cols[i,:],zorder=-1000,lw=0)
 
             # QCD Axion models
             rot = 45.0
@@ -250,50 +259,45 @@ class AxionPhoton():
             if KSVZ_on:
                 if thick_lines:
                     plt.plot(m,g_x(KSVZ,m),'-',linewidth=5,color='k',zorder=0)
-                    plt.plot(m,g_x(KSVZ,m),'-',linewidth=3,color=cols(0.7),zorder=0)
+                    plt.plot(m,g_x(KSVZ,m),'-',linewidth=3,color=line_color,zorder=0)
                 else:
-                    plt.plot(m,g_x(KSVZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
+                    plt.plot(m,g_x(KSVZ,m),'-',linewidth=2,color=line_color,zorder=0)
                 if text_on:
-                    plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='bottom',rotation_mode='anchor',clip_on=True)
+                    plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)*1.05,r'{\bf KSVZ}',fontsize=fs,rotation=trans_angle,color=line_color,ha='left',va='bottom',rotation_mode='anchor',clip_on=True)
             if DFSZ_on:
                 if thick_lines:
                     plt.plot(m,g_x(DFSZ,m),'-',linewidth=5,color='k',zorder=0)
-                    plt.plot(m,g_x(DFSZ,m),'-',linewidth=3,color=cols(0.7),zorder=0)
+                    plt.plot(m,g_x(DFSZ,m),'-',linewidth=3,color=line_color,zorder=0)
                 else:
-                    plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=cols(1.0),zorder=0)
+                    plt.plot(m,g_x(DFSZ,m),'-',linewidth=2,color=line_color,zorder=0)
                 if text_on:
-                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=cols(1.0),ha='left',va='top',rotation_mode='anchor',clip_on=True)
+                    plt.text(DFSZ_label_mass,g_x(DFSZ,DFSZ_label_mass)/1.5,r'{\bf DFSZ}',fontsize=fs,rotation=trans_angle,color=line_color,ha='left',va='top',rotation_mode='anchor',clip_on=True)
         else:
-            C_min,C_max = ax.get_ylim()
-            n = 200
-            C = logspace(log10(C_min),log10(C_max),n)
-            m = logspace(log10(m_min),log10(m_max),n)
-            QCD = zeros(shape=(n,n))
-            for i in range(0,n):
-                QCD[:,i] = norm.pdf(log10(C),0.0,0.8)
-            cols = cm.get_cmap(cmap)
-            cols.set_under('w') # Set lowest color to white
-            vmin = amax(QCD)/(C_logwidth/2)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
-            plt.contourf(m, C, QCD, 50,cmap=cols,vmin=vmin,vmax=0.9,zorder=0)
+            # QCD axion hadronic band
+            m = array([1e-30,1e20])
+            ga = 2e-10*m
+            cols = cmap(linspace(0.1,0.45,nlevels))
+            levels = (linspace(1,sqrt(level_max),nlevels))**2
+            for i in range(nlevels-1):
+                ax.fill_between(m,C_upper/levels[i],C_lower*levels[i],alpha=alpha,color=cols[i,:],zorder=-1000,lw=0)
+
             if DFSZ_on:
                 if thick_lines:
-                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=5,color='k')
-                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=3,color='k')
+                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=5,color=line_color)
+                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=3,color=line_color)
                 else:
-                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=2,color='k')
+                    plt.plot([m_min,m_max],[0.75,0.75],'-',lw=2,color=line_color)
                 if text_on:
-                    plt.text(DFSZ_label_mass,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color='k',clip_on=True)
+                    plt.text(DFSZ_label_mass,0.75/3,r'{\bf DFSZ II}',fontsize=fs,color=line_color,clip_on=True)
 
             if KSVZ_on:
                 if thick_lines:
-                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=5,color='k')
-                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=3,color='k')
+                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=5,color=line_color)
+                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=3,color=line_color)
                 else:
-                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=2,color='k')
+                    plt.plot([m_min,m_max],[1.92,1.92],'-',lw=2,color=line_color)
                 if text_on:
-                    plt.text(KSVZ_label_mass,0.75/3,r'{\bf KSVZ}',fontsize=fs,color='k',clip_on=True)
+                    plt.text(KSVZ_label_mass,0.75/3,r'{\bf KSVZ}',fontsize=fs,color=line_color,clip_on=True)
         return
 
     def ADMX(ax,col=[0.8, 0.0, 0.0],projection=False,fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1],zorder=0.1):
