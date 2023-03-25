@@ -1775,7 +1775,7 @@ class AxionPhoton():
 
 #==============================================================================#
 class AxionElectron():
-    def QCDAxion(ax,text_on=True,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,Hadronic_on=True,fs=25,DFSZ_col='gold',KSVZ_col='brown',Hadronic_col='goldenrod',DFSZ_label_mass=1e-4,KSVZ_label_mass=0.8e-1,Hadronic_label_mass=5e-3):
+    def QCDAxion(ax,text_on=True,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,Hadronic_on=True,fs=25,DFSZ_col='gold',KSVZ_col='#857c20',Hadronic_col='goldenrod',DFSZ_label_mass=1e-4,KSVZ_label_mass=0.8e-1,Hadronic_label_mass=5e-3):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -1820,7 +1820,7 @@ class AxionElectron():
 
         return
 
-    def XENON1T(ax,col='darkred',fs=19,text_on=True,zorder=0.51,lw=2,text_shift=[1,1],**kwargs):
+    def XENON1T(ax,col='darkred',fs=19,text_on=True,zorder=0.51,lw=1.5,text_shift=[1,1],**kwargs):
         # XENON1T S2 analysis arXiv:[1907.11485]
         dat = loadtxt("limit_data/AxionElectron/XENON1T_DM_S2.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1841,7 +1841,7 @@ class AxionElectron():
             #plt.text(text_shift[0]*1.2e2,text_shift[1]*2.5e-14,r'(DM)',fontsize=fs,color=col,ha='center',va='top',clip_on=True,**kwargs)
         return
 
-    def XENONnT(ax,col='darkred',fs=19,text_on=True,zorder=0.51,lw=2,text_shift=[1,1],**kwargs):
+    def XENONnT(ax,col='darkred',fs=19,text_on=True,zorder=0.51,lw=1.5,text_shift=[1,1],**kwargs):
         # XENONnT ALP DM
         dat = loadtxt("limit_data/AxionElectron/XENONnT.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1859,7 +1859,7 @@ class AxionElectron():
             plt.text(text_shift[0]*0.2e-8,text_shift[1]*4e-12,r'{\bf XENONnT (Solar axions)}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def SolarBasin(ax,col='#7d203c',fs=20,text_on=True,lw=2,text_shift=[0.8,1],zorder=0.6,**kwargs):
+    def SolarBasin(ax,col='#7d203c',fs=20,text_on=True,lw=1.5,text_shift=[0.8,1],zorder=0.6,**kwargs):
         # Solar axion basin arXiv:[2006.12431]
         dat = loadtxt("limit_data/AxionElectron/XENON1T_S2_SolarAxionBasin.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1870,7 +1870,7 @@ class AxionElectron():
             plt.text(text_shift[0]*3e3,text_shift[1]*0.8e-11,r' basin)',fontsize=fs,color='w',ha='center',va='top',clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def LUX(ax,col='indianred',fs=30,text_on=True,lw=2,text_pos=[0.2e-8,7e-12],zorder=0.52,**kwargs):
+    def LUX(ax,col='indianred',fs=30,text_on=True,lw=1.5,text_pos=[0.2e-8,7e-12],zorder=0.52,**kwargs):
         # LUX arXiv:[1704.02297]
         dat = loadtxt("limit_data/AxionElectron/LUX.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1880,7 +1880,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf LUX (Solar axions)}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def PandaX(ax,col='firebrick',fs=20,text_on=True,lw=2,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
+    def PandaX(ax,col='firebrick',fs=20,text_on=True,lw=1.5,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/PandaX.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
@@ -1889,7 +1889,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf PandaX}',fontsize=fs-2,color='w',ha='left',va='top',rotation=rotation,clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def GERDA(ax,col='#d13617',fs=22,text_on=True,text_pos=[1.6e5,1.9e-11],zorder=0.52,lw=2,text_col='w',**kwargs):
+    def GERDA(ax,col='#d13617',fs=22,text_on=True,text_pos=[1.6e5,1.9e-11],zorder=0.52,lw=1.5,text_col='w',**kwargs):
         dat = loadtxt("limit_data/AxionElectron/GERDA.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
@@ -1898,7 +1898,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf GERDA}',fontsize=fs,color=text_col,ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
-    def EDELWEISS(ax,col='#8f2a1f',projection=False,fs=10,text_col='w',text_on=True,text_pos=[1.25e4,1.4e-12],zorder=0.57,lw=2,rotation=60,**kwargs):
+    def EDELWEISS(ax,col='#8f2a1f',projection=False,fs=10,text_col='w',text_on=True,text_pos=[1.25e4,1.4e-12],zorder=0.57,lw=1.5,rotation=60,**kwargs):
         # EDELWEISS arXiv:[1808.02340]
         dat = loadtxt("limit_data/AxionElectron/EDELWEISS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
@@ -1912,13 +1912,21 @@ class AxionElectron():
 
         return
 
-    def SuperCDMS(ax,col='#800f24',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,lw=2,**kwargs):
+    def SuperCDMS(ax,col='#800f24',fs=20,text_on=True,text_pos=[5e1,2.7e-11],text_col='w',zorder=0.58,rotation=-84,lw=1.5,**kwargs):
         # SuperCDMS arXiv:[1911.11905]
         dat = loadtxt("limit_data/AxionElectron/SuperCDMS.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zorder,lw=lw)
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf SuperCDMS}',fontsize=fs-1,color=text_col,ha='left',va='top',alpha=1.0,rotation=rotation,clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
+        return
+
+    def DarkSide(ax,col='#921f24',fs=20,text_on=True,text_pos=[4.3e1,1.45e-12],text_col='w',zorder=0.55,rotation=-66,lw=1.5,**kwargs):
+        dat = loadtxt("limit_data/AxionElectron/DarkSide.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zorder,lw=lw)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf DarkSide}',fontsize=fs-1,color=text_col,ha='left',va='top',alpha=1.0,rotation=rotation,clip_on=True,path_effects=line_background(1.5,'k'),**kwargs)
         return
 
     def DARWIN(ax,col='brown',fs=20,text_on=True,text_pos=[0.3e3,2e-14],zorder=0.1,lw=3,**kwargs):
@@ -2039,6 +2047,7 @@ class AxionElectron():
         AxionElectron.SolarBasin(ax,fs=fs-2,text_on=text_on)
         AxionElectron.SuperCDMS(ax,fs=fs,text_on=text_on)
         AxionElectron.EDELWEISS(ax,fs=fs-5,projection=projection,text_on=text_on)
+        AxionElectron.DarkSide(ax,fs,text_on=text_on)
         if projection:
             AxionElectron.DARWIN(ax,fs=fs,text_on=text_on)
             AxionElectron.LZ(ax,fs=fs,text_on=text_on)
@@ -2917,7 +2926,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
         if text_on:
-            plt.text(8e2,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(1.5e3,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color='w',rotation=-41,fontsize=15,path_effects=line_background(1,'k'),clip_on=True)
 
 
@@ -2987,6 +2996,17 @@ class DarkPhoton():
             plt.plot([7e0,1e1],[3e-15,9e-15],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
+    def DarkSide(ax,col='#f72a38',fs=18,text_on=True,lw=1.5):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/DarkSide.txt")
+        dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,lw=lw,zorder=0.1)
+
+        if text_on:
+            plt.text(0.5e1,0.5e-16,r'{\bf DarkSide}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+        return
+
     def SuperCDMS(ax,col=[0.4,0,0],fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SuperCDMS.txt")
@@ -2995,10 +3015,10 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=0.5,zorder=0.6,lw=lw)
 
         if text_on:
-            plt.text(0.5e1,1.5e-16,r'{\bf SuperCDMS}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
-            plt.plot([5e1,0.8e2],[3e-16,9e-16],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
+            plt.text(0.4e0,2.5e-16,r'{\bf SuperCDMS}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.plot([1e1,0.8e2],[3e-16,9e-16],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
-
+    
     def Nanowire(ax,col='pink',fs=22,text_on=True,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/WSi_Nanowire.txt")

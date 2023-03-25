@@ -76,6 +76,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPHA.txt), [reference](https://arxiv.org/abs/2006.06836)
 * BREAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/BREAD.txt), [reference](https://arxiv.org/abs/2111.12103)
 * DAMIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DAMIC.txt), [reference](https://arxiv.org/abs/1907.12628)
+* DarkSide-50: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkSide.txt), [reference](https://arxiv.org/abs/2207.11968)
 * Dark E-field Pilot: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkEfield.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DarkEfield.txt), [reference](https://arxiv.org/abs/2101.02805)
 * DM-Radio: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DMRadio.txt), [reference](https://irwinlab.sites.stanford.edu/dark-matter-radio-dmradio)
 * DM-Pathfinder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DM-Pathfinder.txt), [reference](https://arxiv.org/abs/1906.08814)

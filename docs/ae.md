@@ -29,6 +29,7 @@
 
 ### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
+* DarkSide-50: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/DarkSide.txt), [reference](https://arxiv.org/abs/2207.11968)
 * EDELWEISS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/EDELWEISS.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/EDELWEISS.txt), [reference](https://arxiv.org/abs/1808.02340)
 * GERDA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/GERDA.txt), [reference](https://arxiv.org/abs/2005.14184)
 * LUX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/LUX.txt), [reference](https://arxiv.org/abs/1704.02297)
@@ -45,7 +46,6 @@
 
 
 ### Haloscopes:
-<!---* Electron spin magnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronSpinMagnetometers.txt), (in prep.)-->
 * Axion-magnon conversion:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Magnon.txt),  [reference](https://arxiv.org/abs/2005.10256)
 * Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
 * Magnon quantum nondemolition:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Magnons.txt),  [reference](https://arxiv.org/abs/2102.08764)
