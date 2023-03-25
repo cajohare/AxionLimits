@@ -1255,12 +1255,13 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=edgealpha)
         return
 
-    def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.45e4,0.18e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=13,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
+    def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.7e4,0.1e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=15,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
         dat = loadtxt("limit_data/AxionPhoton/SolarBasin.txt")
-        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1)
+        dat = loadtxt("limit_data/AxionPhoton/SolarBasin_Beaufort.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1,path_effects=line_background(1,'k'))
         return
 
-    def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[0.7e2,0.29e-13],col='midnightblue',text_col='midnightblue',fs=15,zorder=0.00003,text_on=True,rotation=-54,edgealpha=1,lw=1.5):
+    def LeoT(ax,text_label=r'{\bf Leo T}',text_pos=[0.7e2,0.29e-13],col='midnightblue',text_col='midnightblue',fs=15,zorder=0.00003,text_on=True,rotation=-55,edgealpha=1,lw=1.5):
         # anomalous gas heating in Leo T dwarf
         dat = loadtxt("limit_data/AxionPhoton/LeoT.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw)
@@ -1306,7 +1307,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
-    def IrreducibleFreezeIn(ax,text_label=r'{\bf Freeze-in}',text_pos=[0.7e6,7e-14],col='#376631',edgecolor='k',text_col='w',fs=24,zorder=0.009,text_on=True,lw=1.5,facealpha=1,rotation=-55,edgealpha=1):
+    def IrreducibleFreezeIn(ax,text_label=r'{\bf Freeze-in}',text_pos=[1.3e6,7e-14],col='#376631',edgecolor='k',text_col='w',fs=24,zorder=0.009,text_on=True,lw=1.5,facealpha=1,rotation=-55,edgealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/IrreducibleFreezeIn.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,
                     rotation=rotation,edgecolor=edgecolor,fs=fs,
