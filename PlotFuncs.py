@@ -3301,7 +3301,7 @@ class DarkPhoton():
     
         return
 
-    def COBEFIRAS(ax,col=[0.1,0.2,0.5],text_on=True,lw=1.5):
+    def COBEFIRAS(ax,col='#247840',text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat3 = loadtxt("limit_data/DarkPhoton/COBEFIRAS.txt",delimiter=',')
         plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.5,alpha=1)
