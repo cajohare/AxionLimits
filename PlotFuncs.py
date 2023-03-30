@@ -3426,7 +3426,7 @@ class DarkPhoton():
             plt.text(0.25e2,0.1e-4,r'{\bf TEXONO}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def IGM(ax,col='seagreen',fs=18,text_on=True,lw=1.5):
+    def IGM(ax,col='#236991',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/IGM.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.49)
@@ -3434,11 +3434,9 @@ class DarkPhoton():
 
         if text_on:
             plt.text(4e-12,0.03e-7,r'{\bf IGM}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.gcf().text(0.233,0.565,r'{\bf DPDM heating}',color='w',fontsize=23,path_effects=line_background(1.5,'k'))
-
         return
 
-    def LeoT(ax,col='mediumseagreen',fs=18,text_on=True,lw=1.5):
+    def LeoT(ax,col='#4a7e91',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/LeoT.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.3061)
@@ -3448,7 +3446,7 @@ class DarkPhoton():
             plt.text(7e-13,0.2e-9,r'{\bf Leo T}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def GasClouds(ax,col='#00cc66',fs=18,text_on=True,lw=1.5):
+    def GasClouds(ax,col='#436991',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/GasClouds.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.306)
