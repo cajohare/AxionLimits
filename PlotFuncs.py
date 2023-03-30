@@ -1436,6 +1436,14 @@ class AxionPhoton():
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt')
         plt.fill_between(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),'k-',alpha=edgealpha,lw=lw,zorder=0.1)
+        if xskip>1:
+            plt.plot([dat[-2,0],dat[-1,0]],[dat[-2,1],dat[-1,1]],'k-',alpha=edgealpha,lw=lw,zorder=0.1)
+
+        dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye2.txt')
+        plt.fill_between(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        plt.plot(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),'k-',alpha=edgealpha,lw=lw,zorder=0.1)
+        if xskip>1:
+            plt.plot([dat[-2,0],dat[-1,0]],[dat[-2,1],dat[-1,1]],'k-',alpha=edgealpha,lw=lw,zorder=0.1)
 
         if text_on:
             if rs1==0:
