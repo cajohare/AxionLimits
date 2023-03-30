@@ -12,7 +12,7 @@ Alternate versions of the axion-photon and dark-photon plot for the FIPS Worksho
 ### &nbsp;
 ### &nbsp;
 ---
-[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
 ## Axion-photon coupling closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_FIPS.pdf)
