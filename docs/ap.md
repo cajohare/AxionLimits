@@ -108,7 +108,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * QUAX (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX3.txt), [reference](https://arxiv.org/abs/2208.12670)
 * QUAX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/QUAX2005.txt), [reference](https://agenda.infn.it/event/20431/contributions/137687/attachments/82511/108428/Rettaroli_Patras2021_compressed.pdf)
 * RADES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RADES.txt), [reference](https://arxiv.org/abs/2104.13798)
-* RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF_UF_Haloscopes.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
+* RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SHAFT.txt), [reference](https://arxiv.org/abs/2003.03348)
 * SRF: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/SRF.txt), [reference](https://arxiv.org/abs/2007.15656)
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SuperMAG.txt), [reference](https://arxiv.org/abs/2112.09620)

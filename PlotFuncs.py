@@ -913,7 +913,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],r'{\bf aLIGO}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.66e-11,0.6e-12],rotation=26):
+    def ADBC(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[2e-11,0.6e-12],rotation=26):
         # ADBC arXiv[1809.01656]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/ADBC.txt")
@@ -1038,7 +1038,7 @@ class AxionPhoton():
             if RescaleByMass:
                 plt.text(9e-4*text_shift_x,2.5e3*text_shift_y,r'{\bf ALPS-II}',fontsize=20,color='k',rotation=20,alpha=0.5,clip_on=True)
             else:
-                if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=60,fontsize=18,color='w',zorder=10,clip_on=True,path_effects=line_background(1.5,'k'))
+                if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=61,fontsize=18,color='w',zorder=10,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.91,text_on=True,edgealpha=1,lw=1.5):
@@ -1054,7 +1054,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
-    def PVLAS(ax,text_label=r'{\bf PVLAS}',text_pos=[2e-3,9e-8],col=[0.4, 0.2, 0.2],text_col='w',fs=17,zorder=1.51,text_on=True,edgealpha=1,rotation=45,lw=1.5):
+    def PVLAS(ax,text_label=r'{\bf PVLAS}',text_pos=[2e-3,1.2e-7],col=[0.4, 0.2, 0.2],text_col='w',fs=17,zorder=1.51,text_on=True,edgealpha=1,rotation=45,lw=1.5):
         # PVLAS arXiv:[]
         dat = loadtxt("limit_data/AxionPhoton/PVLAS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,rotation=rotation,lw=lw,path_effects=line_background(1.5,'k'))
@@ -1436,13 +1436,13 @@ class AxionPhoton():
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt')
         plt.fill_between(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),'k-',alpha=edgealpha,lw=lw,zorder=0.1)
-        if xskip>1:
+        if (xskip>1)&(rs1==0.0):
             plt.plot([dat[-2,0],dat[-1,0]],[dat[-2,1],dat[-1,1]],'k-',alpha=edgealpha,lw=lw,zorder=0.1)
 
         dat = loadtxt('limit_data/AxionPhoton/NeutronStars_Battye2.txt')
         plt.fill_between(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
         plt.plot(dat[0::xskip,0],dat[0::xskip,1]/(rs1*2e-10*dat[0::xskip,0]+rs2),'k-',alpha=edgealpha,lw=lw,zorder=0.1)
-        if xskip>1:
+        if (xskip>1)&(rs1==0.0):
             plt.plot([dat[-2,0],dat[-1,0]],[dat[-2,1],dat[-1,1]],'k-',alpha=edgealpha,lw=lw,zorder=0.1)
 
         if text_on:
@@ -1454,7 +1454,7 @@ class AxionPhoton():
                 plt.plot([3.5e-7*text_shift[0],2e-5],[6e3*text_shift[1],8e3],lw=1.5,color=col,path_effects=line_background(2,'w'))
         return
 
-    def AxionStarExplosions(ax,text_label=r'{\bf Axion star explosions}',text_pos=[4e-11,1.8e-12],col='#124f5e',rotation=27,text_col='w',fs=12,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
+    def AxionStarExplosions(ax,text_label=r'{\bf Axion star explosions}',text_pos=[4e-11,1.8e-12],col='#016682',rotation=27,text_col='w',fs=12,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
         # Axion star explosions - assumes 100% dark matter and a certain core-soliton mass relation
         dat = loadtxt('limit_data/AxionPhoton/AxionStarExplosions-1.txt')
         plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
