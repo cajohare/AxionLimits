@@ -61,7 +61,7 @@
 
 ### Haloscopes:
 
-Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) for a .txt file of all haloscopes combined
+Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) for a .txt file of all haloscopes combined (except ABRA and SHAFT)
 
 Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt) for .txt file of all haloscope **projections** combined
 
