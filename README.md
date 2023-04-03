@@ -152,9 +152,30 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_w
 [<img align="right" width="300" src="plots/plots_png/AxionPhoton_FIPS.png">](docs/fips.md)
 
 # [**FIPS Workshop plots**](docs/fips.md)
-[**Data files**](docs/dp.md)\
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png))\
    &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/plots_png/AxionPhoton_FIPS.png">](docs/fips.md)
+
+# [**Dark matter cheatsheet**](docs/cs.md)
+[**Data files**](docs/cs.md)\
+Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet.png))\
+   &nbsp; \
+  &nbsp; \
+   &nbsp; \
+  &nbsp;
+
+---
+
+[<img align="right" width="300" src="plots/Wavy_Map.png">]
+# **Experiment map**
+Download [png](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png))\
+Download [keynote](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key))\
   &nbsp; \
    &nbsp; \
   &nbsp;
