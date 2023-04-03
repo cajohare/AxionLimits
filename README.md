@@ -177,8 +177,6 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
      &nbsp; \
    &nbsp; \
       &nbsp; \
-  &nbsp; \
-   &nbsp; \
   &nbsp;
 
 ---
@@ -189,9 +187,8 @@ Work in progress (comments welcome)\
 Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)\
 Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key)\
   &nbsp; \
-   &nbsp; \
-  &nbsp;
-
+   &nbsp;
+   
 ---
 
 If you use something here, you can give credit by citing the zenodo DOI attached to this repository

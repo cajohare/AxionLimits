@@ -40,7 +40,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/DarkPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
-## Dark photon
+## FIPs White paper version
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
@@ -49,7 +49,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/DarkPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)
-## Dark photon closeup
+## FIPs White paper version (closeup)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_Closeup_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)
