@@ -160,7 +160,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/Cheatsheet.png">](docs/fips.md)
+[<img align="right" width="300" src="plots/plots_png/Cheatsheet.png">](docs/cs.md)
 
 # [**Dark matter cheatsheet**](docs/cs.md)
 [**Data files**](docs/cs.md)\
@@ -187,9 +187,6 @@ Work in progress (comments welcome)\
 Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)\
 Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key)\
   &nbsp; \
-   &nbsp;
-   
----
 
 If you use something here, you can give credit by citing the zenodo DOI attached to this repository
 ```
