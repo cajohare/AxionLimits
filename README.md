@@ -181,12 +181,14 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
 
 ---
 
-[<img align="right" width="300" src="plots/Wavy_Map.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)
+[<img align="right" width="300" src="plots/Wavy_Map.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.png)
 # **Experiment map**
 Work in progress (comments welcome)\
-Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)\
-Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key)\
+Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.png)\
+Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.key)\
   &nbsp; \
+
+---
 
 If you use something here, you can give credit by citing the zenodo DOI attached to this repository
 ```
