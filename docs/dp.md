@@ -39,6 +39,24 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/DarkPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
+## Dark photon
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_FIPS.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
+[<img align="right" height="350" src="../plots/plots_png/DarkPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)
+## Dark photon closeup
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_Closeup_FIPS.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 # Data files and references
 ## Combined limits
 * Combined DP haloscopes (without axion haloscopes): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DP_Combined_DarkMatterSearches.txt)

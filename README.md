@@ -174,6 +174,11 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
       &nbsp; \
   &nbsp; \
    &nbsp; \
+     &nbsp; \
+   &nbsp; \
+      &nbsp; \
+  &nbsp; \
+   &nbsp; \
   &nbsp;
 
 ---

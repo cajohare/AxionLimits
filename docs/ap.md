@@ -56,6 +56,24 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
+## FIPs White Paper version 
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
+## FIPs White Paper version (closeup)
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_FIPS.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 
 ## Data files and references
 
