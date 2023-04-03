@@ -6,6 +6,3 @@ Here you can find a sort of "cheatsheet" for converting between the dark matter 
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Cheatsheet.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet.png)
-### &nbsp;
-### &nbsp;
----
