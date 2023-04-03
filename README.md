@@ -160,7 +160,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton
 
 ---
 
-[<img align="right" width="300" src="plots/plots_png/AxionPhoton_FIPS.png">](docs/fips.md)
+[<img align="right" width="300" src="plots/plots_png/Cheatsheet.png">](docs/fips.md)
 
 # [**Dark matter cheatsheet**](docs/cs.md)
 [**Data files**](docs/cs.md)\
@@ -172,10 +172,10 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
 
 ---
 
-[<img align="right" width="300" src="plots/Wavy_Map.png">]
+[<img align="right" width="300" src="plots/Wavy_Map.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)
 # **Experiment map**
-Download [png](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png))\
-Download [keynote](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key))\
+Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.png)\
+Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wave_Map.key)\
   &nbsp; \
    &nbsp; \
   &nbsp;
