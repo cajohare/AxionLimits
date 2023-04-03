@@ -186,7 +186,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
 Work in progress (comments welcome)\
 Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.png)\
 Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.key)\
-  &nbsp; \
+  &nbsp;
 
 ---
 
