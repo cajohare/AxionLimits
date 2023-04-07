@@ -1268,7 +1268,7 @@ class AxionPhoton():
         return
 
 
-    def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[8e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=0.1):
+    def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[7e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=0.1):
         # THESEUS 2008.08306
         dat = loadtxt("limit_data/AxionPhoton/Projections/THESEUS.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
@@ -1284,17 +1284,23 @@ class AxionPhoton():
         plt.plot([2.1e3,3.5e3],[0.3e-18,0.4e-18],'-',lw=2,color=col)
         return
 
+    def NuSTAR(ax,text_label=r'{\bf NuSTAR}',text_pos=[2e3,0.7e-18],col='#676fa3',edgecolor='k',text_col='#676fa3',fs=17,zorder=-1,text_on=True,lw=0.5,facealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/NuSTAR.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        plt.plot([2.2e3,25e3],[0.5e-18,0.7e-18],'-',lw=2,color=col,path_effects=line_background(3,'k'))
+        return
+
     def XMMNewton(ax,text_label=r'{\bf XMM-Newton}',text_pos=[1e3,1.8e-18],col='#3b4ba1',edgecolor='k',text_col='#3b4ba1',fs=17,zorder=0.00001,text_on=True,lw=0.5,facealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/XMM-Newton.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
         plt.plot([1.2e3,6e3],[1.3e-18,2e-18],'-',lw=2,color=col,path_effects=line_background(3,'k'))
         return
 
-    def INTEGRAL(ax,text_label=r'{\bf INTEGRAL}',text_pos=[1.7e4,2.7e-19],col='#3b4ba1',edgecolor='k',text_col='#3b4ba1',fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=1):
+    def INTEGRAL(ax,text_label=r'{\bf INTEGRAL}',text_pos=[0.7e4,2.7e-19],col='#6a919e',edgecolor='k',text_col='#6a919e',fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/INTEGRAL.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
         if text_on: 
-            plt.plot([2e4,8e4],[1.9e-19,2.3e-19],'-',lw=2,color=col,path_effects=line_background(3,'k'))
+            plt.plot([0.8e4,8e4],[1.9e-19,2.3e-19],'-',lw=2,color=col,path_effects=line_background(3,'k'))
         return
 
     def COBEFIRAS(ax,text_label=r'{\bf COBE/FIRAS}',text_pos=[0.45e2,4e-13],col='#234f8c',text_col='w',fs=13,zorder=0.0001,text_on=True,rotation=-46,lw=1.5,edgealpha=1):
@@ -1694,13 +1700,12 @@ class AxionPhoton():
         AxionPhoton.HST(ax,text_on=text_on)
         AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
+        AxionPhoton.INTEGRAL(ax,text_on=text_on)
+        AxionPhoton.NuSTAR(ax,text_on=text_on)
         AxionPhoton.LeoT(ax,text_on=text_on)
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
-            AxionPhoton.eROSITA(ax,text_on=text_on)
-            AxionPhoton.INTEGRAL(ax,text_on=False)
-        else:
-            AxionPhoton.INTEGRAL(ax,text_on=text_on)
+            #AxionPhoton.eROSITA(ax,text_on=text_on)
         return
         
     # ULTRALIGHT AXIONS:
