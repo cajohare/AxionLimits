@@ -70,7 +70,7 @@ class ScalarPhoton():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def DyDy(ax,text_label=r'{\bf Dy/Dy}',text_pos=[0.4e-22,0.2e-6],rotation=28,col='#a11a4e',text_col='w',fs=20,zorder=0.02,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def DyDy(ax,text_label=r'{\bf Dy/Dy}',text_pos=[0.4e-22,0.3e-6],rotation=28,col='#a11a4e',text_col='w',fs=19,zorder=0.02,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/DyDy.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -80,23 +80,29 @@ class ScalarPhoton():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
+
+    def YbSr(ax,text_label=r'{\bf Yb$^+$/Sr}',text_pos=[2e-20,1.5e-6],rotation=23,col='#a11b33',text_col='w',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/ScalarPhoton/YbSr.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=path_effects)
+        return
+
     
     def RbCs(ax,text_label=r'\center{{\bf SYRTE \newline Rb/Cs}}',text_pos=[0.25e-23,4e-7],rotation=-30,col='#c7345d',text_col='w',fs=17,zorder=0.01,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/RbCs.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
     
-    def BACON(ax,text_label=r'{\bf BACON}',text_pos=[0.1e-21,0.075e-7],rotation=26,col='#59042d',text_col='#59042d',fs=19,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1):
+    def BACON(ax,text_label=r'{\bf BACON}',text_pos=[0.1e-21,0.075e-7],rotation=26,col='#59042d',text_col='#59042d',fs=18,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/BACON.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def PTB(ax,text_label=r'{\bf PTB}',text_pos=[0.5e-20,1.5e-8],rotation=23,col='#d11b33',text_col='#d11b33',fs=19,zorder=-0.01,text_on=True,Projection=False,edgealpha=1,lw=1):
+    def PTB(ax,text_label=r'{\bf PTB}',text_pos=[0.3e-20,1.2e-8],rotation=23,col='#d11b33',text_col='#d11b33',fs=19,zorder=-0.01,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/PTB.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def SrSi(ax,text_label=r'{\bf Sr/Si}',text_pos=[0.3e-17,0.35e-3],rotation=13,col='#730f3a',text_col='w',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1):
+    def SrSi(ax,text_label=r'{\bf Sr/Si}',text_pos=[0.3e-17,0.4e-3],rotation=13,col='#730f3a',text_col='w',fs=14,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarPhoton/SrSi.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -123,7 +129,7 @@ class ScalarPhoton():
         return
 
         
-    def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.35e-10,0.15e9],rotation=0,col='#b53724',text_col='w',fs=15,zorder=0.17,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.85e-10,0.15e9],rotation=0,col='#b53724',text_col='w',fs=15,zorder=0.17,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Holometer.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
