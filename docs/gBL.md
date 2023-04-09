@@ -43,4 +43,5 @@
 * MAGIS-100: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/MAGIS100-Initial.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/MAGIS100-Upgrade.txt) [reference](https://iopscience.iop.org/article/10.1088/2058-9565/abf719)
 * Optomechanical membranes: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/OptomechanicalMembranes.txt), [reference](https://arxiv.org/abs/2007.04899)
 * SKA Pulsar timing array: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/SKA.txt), [reference](https://arxiv.org/abs/1512.06165)
+* STE-QUEST: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/STE-QUEST.txt), [reference](https://arxiv.org/abs/2211.15412)
 * Torsion balance (future): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/TorsionBalance.txt), [reference](https://arxiv.org/abs/1512.06165)

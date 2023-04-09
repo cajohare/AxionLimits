@@ -392,14 +392,20 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def MAGIS(ax,text_label=r'{\bf MAGIS-100}',text_pos=[0.02e-20,3e-27],rotation=0,col='#a10649',text_col='#a10649',fs=21,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
-        dat = loadtxt("limit_data/VectorB-L/Projections/MAGIS100-Initial.txt")
-        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+    def MAGIS(ax,text_label=r'{\bf MAGIS-100} (upgrade)',text_pos=[0.02e-20,0.75e-28],rotation=0,col='#a10649',text_col='#a10649',fs=16,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        #dat = loadtxt("limit_data/VectorB-L/Projections/MAGIS100-Initial.txt")
+        #UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         dat = loadtxt("limit_data/VectorB-L/Projections/MAGIS100-Upgrade.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         
-        plt.text(0.04e-19,0.6e-26,'Initial',color=text_col,fontsize=fs*0.75,ha='center')
-        plt.text(0.04e-19,2.3e-28,'Upgrade',color=text_col,fontsize=fs*0.75,ha='center')
+        #plt.text(0.04e-19,0.6e-26,'Initial',color=text_col,fontsize=fs*0.75,ha='center')
+        #plt.text(0.04e-19,2.3e-28,'Upgrade',color=text_col,fontsize=fs*0.75,ha='center')
+        return
+    
+
+    def STE_QUEST(ax,text_label=r'{\bf STE-QUEST}',text_pos=[1.5e-22,0.9e-26],rotation=0,col='#752b29',text_col='#752b29',fs=13,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
+        dat = loadtxt("limit_data/VectorB-L/Projections/STE-QUEST.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
     def OptomechanicalMembranes(ax,text_label=r'{\bf \noindent Optomechanical \newline \indent membranes}',text_pos=[0.3e-11,0.4e-25],rotation=55,col='#961c06',text_col='#961c06',fs=15,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=1.2):
@@ -407,12 +413,12 @@ class VectorBL():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def LISA(ax,text_label=r'{\bf LISA}',text_pos=[1.5e-17,1.5e-27],rotation=0,col='darkred',text_col='darkred',fs=15,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
+    def LISA(ax,text_label=r'{\bf LISA}',text_pos=[1.3e-17,1.5e-27],rotation=0,col='darkred',text_col='darkred',fs=15,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/LISA.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def Asteroids(ax,text_label=r'{\bf Asteroids}',text_pos=[4.2e-20,1.5e-26],rotation=0,col='red',text_col='red',fs=14,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
+    def Asteroids(ax,text_label=r'{\bf Asteroids}',text_pos=[4.2e-20,0.35e-26],rotation=0,col='red',text_col='red',fs=14,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/Asteroids.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
