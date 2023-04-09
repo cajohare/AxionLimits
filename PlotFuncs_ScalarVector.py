@@ -127,6 +127,11 @@ class ScalarPhoton():
         dat = loadtxt("limit_data/ScalarPhoton/GEO600.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
+    
+    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.53e-13,0.15e3],rotation=90,col='#c3151d',text_col='w',fs=15,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarPhoton/LIGO.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
 
         
     def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.85e-10,0.15e9],rotation=0,col='#b53724',text_col='w',fs=15,zorder=0.17,text_on=True,Projection=False,edgealpha=1,lw=1.5):
@@ -243,7 +248,7 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def DAMNED(ax,text_label=r'{\bf DAMNED}',text_pos=[4.6e-11,1.5e4],rotation=90,col='#b5243f',text_col='w',fs=12,zorder=0.12,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def DAMNED(ax,text_label=r'{\bf DAMNED}',text_pos=[4.6e-11,1.55e4],rotation=90,col='#b5243f',text_col='w',fs=12,zorder=0.12,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/DAMNED.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -263,6 +268,17 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
+    def YbCs(ax,text_label=r'{\bf Yb/Cs}',text_pos=[1.8e-22,1.3e-5],rotation=0,col='#a11b33',text_col='w',fs=16,zorder=-1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/YbCs.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+    
+    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.53e-13,0.07e3],rotation=90,col='#c3151d',text_col='w',fs=15,zorder=0.101,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/LIGO.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
+    
     # Projections
     def AEDGE(ax,text_label=r'{\bf AEDGE}',text_pos=[1e-16,0.1e-11],rotation=51,col='#eb4034',text_col='#eb4034',fs=20,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Projections/AEDGE.txt")
@@ -279,6 +295,8 @@ class ScalarElectron():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return    
    
+
+
         
     def DUAL(ax,text_label=r'{\bf DUAL}',text_pos=[3e-11,0.1e-4],rotation=0,col='#eb4034',text_col='#eb4034',fs=15,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1):
         dat = loadtxt("limit_data/ScalarElectron/Projections/DUAL.txt")
