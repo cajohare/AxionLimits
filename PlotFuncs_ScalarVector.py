@@ -352,7 +352,7 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def InverseSquareLaw(ax,text_label=r'{\bf Fifth force}',rotation=61,text_pos=[3.5e-4,0.7e-19],col='darkgray',text_col='k',fs=18,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def InverseSquareLaw(ax,text_label=r'{\bf ISL}',rotation=60,text_pos=[9.9e-4,5.5e-19],col='darkgray',text_col='k',fs=18,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/InverseSquareLaw.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
