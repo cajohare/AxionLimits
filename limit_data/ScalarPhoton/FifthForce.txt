@@ -1,5 +1,5 @@
 # Composition-independent fifth force combined constraints 
-#  Union of ScalarBaryon/FifthForce_CI.txt and ScalarBaryon_Mars.txt 
+#  Union of ScalarBaryon/FifthForce_CI.txt and ScalarBaryon/FifthForce_Mars.txt assuming Q_e = 1/500 
 #  mass [eV] 	 d_e
 9.999999999999999237e-25 2.658107137200207035e+03
 1.061759183483003360e-24 2.495620061037358937e+03
