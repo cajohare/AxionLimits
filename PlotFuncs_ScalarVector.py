@@ -55,7 +55,7 @@ class ScalarPhoton():
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def FifthForce(ax,text_label=r'{\bf Fifth force}',text_pos=[2e-21,1e2],rotation=-28,col='darkgray',text_col='k',fs=20,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def FifthForce(ax,text_label=r'{\bf Fifth force (ISL)}',text_pos=[0.5e-21,0.6e2],rotation=-25,col='darkgray',text_col='k',fs=20,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/FifthForce.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -157,17 +157,17 @@ class ScalarPhoton():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
         
-    def AION(ax,text_label=r'{\bf AION-km}',text_pos=[1e-14,6e-7],rotation=51,col='#eb4034',text_col='#eb4034',fs=18,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def AION(ax,text_label=r'{\bf AION}',text_pos=[1e-14,6e-7],rotation=51,col='#eb4034',text_col='#eb4034',fs=18,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Projections/AION-km.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def MAGIS(ax,text_label=r'{\bf MAGIS-km}',text_pos=[3e-16,0.14e-5],rotation=32,col='#eb4034',text_col='#eb4034',fs=17,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def MAGIS(ax,text_label=r'{\bf MAGIS}',text_pos=[4e-16,2e-7],rotation=35,col='#eb4034',text_col='#eb4034',fs=17,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Projections/MAGIS-km.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def NuclearClock(ax,text_label=r'{\bf Nuclear clock}',text_pos=[2e-19,2e-12],rotation=28,col='#703e41',text_col='#703e41',fs=20,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def NuclearClock(ax,text_label=r'{\bf Nuclear clock}',text_pos=[2e-19,2e-12],rotation=30,col='darkred',text_col='darkred',fs=20,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Projections/NuclearClock.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -177,6 +177,11 @@ class ScalarPhoton():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
+    def FOCOS(ax,text_label=r'{\bf FOCOS}',text_pos=[9e-17,3e-5],rotation=0,col='gray',text_col='gray',fs=17,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarPhoton/Projections/FOCOS.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+        
 
     def Resonators(ax,text_label=r'{\bf Resonators}',ms=7,alpha=0.75,text_pos=[0.1e-9,0.9e-4],rotation=23,rotation2=90,col='#690c43',text_col='#690c43',fs=25,fs2=13,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Projections/Resonator-Sapphire.txt")
@@ -208,7 +213,7 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
         
-    def FifthForce(ax,text_label=r'{\bf Fifth force}',text_pos=[2e-21,4e2],rotation=-28,col='darkgray',text_col='k',fs=20,zorder=0.101,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def FifthForce(ax,text_label=r'{\bf Fifth force (ISL)}',text_pos=[0.5e-21,4e2],rotation=-26,col='darkgray',text_col='k',fs=20,zorder=0.101,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/FifthForce.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return

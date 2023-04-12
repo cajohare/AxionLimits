@@ -1,6 +1,6 @@
 # Neutron Star cooling
 # https://arxiv.org/abs/2111.09892
-# m_a [eV]  g_an/2m_n [GeV^-1]
+# m_a [eV]  g_an
 1e-23	1.3e-9
 1e0	1.3e-9
 1e0	1.9e-4

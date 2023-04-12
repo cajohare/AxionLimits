@@ -23,7 +23,7 @@
 
 ## Fifth force etc. (gray)
 * Eot-Wash (Equivalence principle): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/EotWashEP.txt), [reference](https://arxiv.org/abs/1807.04512)
-* Fifth force (Eot-Wash): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/FifthForce.txt), [reference](https://arxiv.org/abs/1508.01798)
+* Fifth force (Eot-Wash): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/FifthForce.txt), compiled from [ref1](https://arxiv.org/abs/hep-ph/0307284), [ref2](https://arxiv.org/abs/hep-ph/9606249), [ref3](https://www.sciencedirect.com/science/article/abs/pii/S0019103510003830)
 * MICROSCOPE (Equivalence principle): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/MICROSCOPE.txt), [reference](https://arxiv.org/abs/1712.00483)
 
 ## Astrophysical bounds (green)
