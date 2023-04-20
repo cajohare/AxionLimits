@@ -45,12 +45,12 @@ def FuzzyDM(ax,edgecolor='#205e8a',facecolor='#205e8a',text_col='#205e8a',
 
 
 class ScalarPhoton():
-    def MICROSCOPE(ax,text_label=r'{\bf MICROSCOPE}',text_pos=[2e-16,0.5e-3],col='#84878c',text_col='k',fs=17.5,zorder=-1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def MICROSCOPE(ax,text_label=r'{\bf MICROSCOPE}',text_pos=[1e-16,0.34e-3],col='#84878c',text_col='k',fs=15,zorder=-1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/MICROSCOPE.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def EotWashEP(ax,text_label=r'{\bf E\"ot-Wash (EP)}',text_pos=[2e-24,0.5e-2],col='gray',text_col='k',fs=20,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def EotWashEP(ax,text_label=r'{\bf E\"ot-Wash (EP)}',text_pos=[1.4e-24,1.8e-3],col='gray',text_col='k',fs=20,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/EotWashEP.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -319,8 +319,8 @@ class ScalarElectron():
         plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
 
         ax.text(1.8e-11,2.5e-1,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(1.3e-10,3e-1,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
-        ax.text(4e-9,0.7e0,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(1.2e-10,1e-2,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        ax.text(4e-9,0.5e-1,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         ax.text(4.5e-7,0.8e3,'Quartz BAW',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         plt.text(text_pos[0],text_pos[1],text_label,rotation=rotation,color=text_col,fontsize=fs,alpha=alpha)
 
