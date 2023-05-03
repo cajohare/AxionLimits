@@ -1335,8 +1335,8 @@ class AxionPhoton():
 
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
-        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[2.5e5,3e-11],col='#17570a',
-        text_col='w',fs=fs,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[3.5e5,1.5e-11],col='#17570a',
+        text_col='w',fs=fs*0.9,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
@@ -1376,7 +1376,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
-    def DiffuseGammaRays(ax,text_label=r'{\bf Diffuse}-$\gamma$',text_pos=[3e5,4e-10],col='#318c49',text_col='w',fs=21,zorder=0.0299,text_on=True,lw=1.5,rotation=0):
+    def DiffuseGammaRays(ax,text_label=r'{\bf Diffuse}-$\gamma$',text_pos=[1.5e5,2.5e-10],col='#318c49',text_col='w',fs=18,zorder=0.0299,text_on=True,lw=1.5,rotation=0):
         # https://arxiv.org/pdf/2109.03244.pdf
         dat = loadtxt("limit_data/AxionPhoton/DiffuseGammaRays.txt")
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
@@ -1394,8 +1394,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*1.5e7,text_shift[1]*1e-6,r'\noindent {\bf Low-Energy}\newline \indent \indent \indent  {\bf SNe}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def SN1987A_HeavyALP_gamma(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[0.8e5,2.0e-10],col='#067034',text_col='w',fs=18,zorder=0.029,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
-        # https://arxiv.org/pdf/2109.03244.pdf + Jaeckel et al. for high mass part
+    def SN1987A_decay(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[1.5e5,0.7e-10],col='#067034',text_col='w',fs=15,zorder=0.029,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
         dat = loadtxt('limit_data/AxionPhoton/SN1987A_decay.txt')
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
@@ -1404,7 +1403,7 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1,'k'))
         return
 
-    def SN1987A_HeavyALP_nu(ax,text_shift=[1,1],col='darkgreen',text_col='w',fs=17,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1):
+    def SN1987A_HeavyALP_nu(ax,text_shift=[1,1.0],col='darkgreen',text_col='w',fs=16,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1):
         # https://arxiv.org/pdf/2109.03244.pdf
         dat = loadtxt("limit_data/AxionPhoton/SN1987A_HeavyALP_nu.txt")
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
@@ -1693,7 +1692,8 @@ class AxionPhoton():
         return
 
     def ALPdecay(ax,projection=False,text_on=True):
-        AxionPhoton.SN1987A_HeavyALP_gamma(ax,text_on=text_on)
+        AxionPhoton.DiffuseGammaRays(ax,text_on=text_on)
+        AxionPhoton.SN1987A_decay(ax,text_on=text_on)
         AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
