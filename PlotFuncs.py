@@ -1385,13 +1385,13 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SNe_decay(ax,text_shift=[1,1],col='#15732e',text_col='w',fs=23,zorder=0.03,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def SNe_decay(ax,text_pos=[4.5e7,0.3e-8],text_label=r'{\bf Low-E SNe}',col='#15732e',text_col='w',fs=19,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/SNe-decay.txt")
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1.5e7,text_shift[1]*1e-6,r'\noindent {\bf Low-Energy}\newline \indent \indent \indent  {\bf SNe}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def SN1987A_decay(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[1.5e5,0.7e-10],col='#067034',text_col='w',fs=15,zorder=0.029,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
