@@ -1,5 +1,7 @@
-# Planck BBN + N_eff updated constraints
-# m_a [eV]  g_ap [GeV^-1]
+# BBN + N_eff
+# https://arxiv.org/pdf/2002.08370.pdf
+# Least conservative  see Fig. 5
+# mass [eV]  photon coupling [GeV^-1]
 1e20  8.930429137631358e-28
 1e9	2.8240496557648414e-11
 740514242.9787097	3.877899111368547e-11

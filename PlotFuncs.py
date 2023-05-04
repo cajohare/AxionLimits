@@ -33,6 +33,30 @@ def col_alpha(col,alpha=0.1):
 #==============================================================================#
 
 
+def PlotBound(ax,filename,edgecolor='k',facecolor='crimson',alpha=1,lw=1.5,y2=1e10,zorder=0.1,
+              linestyle='-',skip=1,FillBetween=True,edgealpha=1,rescale_m=False,
+              scale_x=1,scale_y=1,start_x=0,end_x=nan,MinorEdgeScale=1.5,AddMinorEdges=False):
+    dat = loadtxt(filename)
+    if end_x/end_x==1:
+        dat = dat[start_x:end_x,:]
+    else:
+        dat = dat[start_x:,:]
+    dat[:,0] *= scale_x
+    dat[:,1] *= scale_y
+    if rescale_m:
+        dat[:,1] = dat[:,1]/dat[:,0]
+    if FillBetween:
+        ax.fill_between(dat[0::skip,0],dat[0::skip,1],y2=y2,color=facecolor,alpha=alpha,zorder=zorder,lw=0)
+    else:        
+        ax.fill(dat[0::skip,0],dat[0::skip,1],color=facecolor,alpha=alpha,zorder=zorder,lw=0)
+    ax.plot(dat[0::skip,0],dat[0::skip,1],color=edgecolor,zorder=zorder,lw=lw,linestyle=linestyle,alpha=edgealpha)
+    if skip>1:
+        ax.plot([dat[-2,0],dat[-1,0]],[dat[-2,1],dat[-1,1]],color=edgecolor,zorder=zorder,lw=lw,linestyle=linestyle,alpha=edgealpha)
+    if AddMinorEdges:
+        ax.plot([dat[-1,0],dat[-1,0]],[dat[-1,1],MinorEdgeScale*dat[-1,1]],color=edgecolor,zorder=zorder,lw=lw,linestyle=linestyle,alpha=edgealpha)
+        ax.plot([dat[0,0],dat[0,0]],[dat[0,1],MinorEdgeScale*dat[0,1]],color=edgecolor,zorder=zorder,lw=lw,linestyle=linestyle,alpha=edgealpha)
+    return
+
 def line_background(lw,col):
     return [pe.Stroke(linewidth=lw, foreground=col), pe.Normal()]
 
@@ -40,12 +64,12 @@ def line_background(lw,col):
 
 def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
                     lw=2,y2=1e0,edgealpha=0.6,text_on=False,text_pos=[0,0],\
-                    ha='left',va='top',clip_on=True,fs=15,text_col='k',rotation=0,facealpha=1,path_effects=None):
+                    ha='left',va='top',clip_on=True,fs=15,text_col='k',rotation=0,facealpha=1,path_effects=None,textalpha=1):
     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,alpha=facealpha,zorder=zorder)
     plt.plot(dat[:,0],dat[:,1],'-',color=edgecolor,alpha=edgealpha,zorder=zorder,lw=lw)
     if text_on:
         plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,\
-            ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor',path_effects=path_effects)
+            ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor',path_effects=path_effects,alpha=textalpha)
     return
 
 def UnfilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
@@ -1320,6 +1344,17 @@ class AxionPhoton():
                     zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha,edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
+    def BBN_10MeV(ax,text_label=r'{\bf BBN}',text_pos=[0.4e7,3e-12],col='#027034',text_col='w',fs=15,zorder=0.02,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
+        # Most conservative BBN bound from https://arxiv.org/pdf/2002.08370.pdf (reheating temp = 10 MeV)
+        dat = loadtxt('limit_data/AxionPhoton/BBN_10MeV.txt')
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1,'k'))
+        return
+
+
     def Cosmology(ax,fs=30,text_on=True,edgealpha=1,lw=1.5):
         ## Cosmology constraints see arXiv:[1210.3196] for summary
         # Xray Background
@@ -1335,8 +1370,7 @@ class AxionPhoton():
 
         # BBN+N_eff arXiv:[2002.08370]
         dat = loadtxt("limit_data/AxionPhoton/BBN_Neff.txt")
-        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[3.5e5,1.5e-11],col='#17570a',
-        text_col='w',fs=fs*0.9,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        FilledLimit(ax,dat,r'{\bf BBN}+$N_{\rm eff}$',text_pos=[3.5e5,1.5e-11],col='#17570a',text_col='w',fs=fs*0.9,zorder=0.001,text_on=text_on,rotation=-55,ha='left',va='top',edgealpha=0.5,lw=lw,path_effects=line_background(1.5,'k'))
 
         # Extragalactic background light
         EBL = loadtxt("limit_data/AxionPhoton/EBL.txt")
