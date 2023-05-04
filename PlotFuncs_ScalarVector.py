@@ -401,6 +401,11 @@ class VectorBL():
         dat = loadtxt("limit_data/VectorB-L/LISAPathfinder.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
+    
+    def PPTA(ax,text_label=r'{\bf PPTA}',text_pos=[2e-22,1e-21],rotation=90,col='#692820',text_col='w',fs=19,zorder=0.21,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/PPTA.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
 
     def MAGIS(ax,text_label=r'{\bf MAGIS-100} (upgrade)',text_pos=[0.02e-20,0.75e-28],rotation=0,col='#a10649',text_col='#a10649',fs=16,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         #dat = loadtxt("limit_data/VectorB-L/Projections/MAGIS100-Initial.txt")
