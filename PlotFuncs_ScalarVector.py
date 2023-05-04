@@ -382,7 +382,7 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def EotWashDM(ax,text_label=r'{\bf E\"ot-Wash (DM)}',text_pos=[0.6e-17,3e-22],rotation=90,col='darkred',text_col='w',fs=20,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def EotWashDM(ax,text_label=r'{\bf E\"ot-Wash (DM)}',text_pos=[0.08e-17,0.5e-23],rotation=90,col='darkred',text_col='w',fs=20,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/EotWashDM.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -397,6 +397,11 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
+    def LISAPathfinder(ax,text_label=r'{\bf LISA Pathfinder',text_pos=[3e-17,0.3e-15],rotation=70,col='#6b0a24',text_col='w',fs=17,zorder=0.21,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/LISAPathfinder.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
     def MAGIS(ax,text_label=r'{\bf MAGIS-100} (upgrade)',text_pos=[0.02e-20,0.75e-28],rotation=0,col='#a10649',text_col='#a10649',fs=16,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         #dat = loadtxt("limit_data/VectorB-L/Projections/MAGIS100-Initial.txt")
         #UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
