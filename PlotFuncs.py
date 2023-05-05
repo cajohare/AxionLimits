@@ -2288,7 +2288,7 @@ class AxionNeutron():
         col = 'dimgray'
         dat = loadtxt("limit_data/AxionNeutron/K-3He_Comagnetometer.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(2.0e-8,3e-4,r'{\bf K-}$^3${\bf He}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         # Torsion balance test of gravitational inverse square law: hep-ph/0611184
@@ -2298,7 +2298,7 @@ class AxionNeutron():
         #scale = 1.5/4.9 # to convert from pseudoscalar constraint to derivative constraint
         dat = loadtxt("limit_data/AxionNeutron/TorsionBalance.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(1e-8,2.5e-3,r'{\bf Torsion balance}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         # Casimir effect
@@ -2306,7 +2306,7 @@ class AxionNeutron():
         col = [0.2, 0.15, 0.15]
         dat = loadtxt("limit_data/AxionNeutron/Casimir.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(1e-5,3e-2,r'{\bf Casimir}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
 
@@ -2316,18 +2316,19 @@ class AxionNeutron():
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
         dat[:,1] *= AxionNeutron.m_n # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(0.7e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
-
-        if projection:
-            # Proton storage ring arXiv:[2005.11867]
-            zo = -1
-            col = 'crimson'
-            dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
-            dat[:,1] *= 2*AxionNeutron.m_n
-            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.2)
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
-            plt.text(1.3e-22,2*3e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top',clip_on=True)
+        return
+    
+    def ElectrostaticStorageRing(ax,col='red',fs=18):
+        y2 = ax.get_ylim()[1]
+        zo = -1
+        dat = loadtxt("limit_data/AxionNeutron/Projections/ElectrostaticStorageRing.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.1)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=0.7,zorder=zo,lw=2.3)
+        plt.text(0.70e-15,0.7e-12,r'{\bf Electrostatic storage ring}',fontsize=fs,color=col,ha='left',va='top',rotation=43,clip_on=True)
+        return
 
 
     def Haloscopes(ax,projection=True,fs=20):
@@ -2343,6 +2344,7 @@ class AxionNeutron():
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
             AxionNeutron.SuperfluidHe3(ax)
+            AxionNeutron.ElectrostaticStorageRing(ax)
         return
 
     def StellarBounds(ax,fs=24):
@@ -2435,7 +2437,7 @@ class AxionProton():
         col = [0.2, 0.15, 0.15]
         dat = loadtxt("limit_data/AxionProton/Casimir.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(1e-5,3e-2,r'{\bf Casimir}',fontsize=fs*1.1,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
 
@@ -2445,18 +2447,19 @@ class AxionProton():
         dat = loadtxt("limit_data/AxionProton/SNO.txt")
         dat[:,1] *= AxionProton.m_p # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(0.7e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
-
-        if projection:
-            # Proton storage ring arXiv:[2005.11867]
-            zo = -1
-            col = 'crimson'
-            dat = loadtxt("limit_data/AxionNeutron/Projections/StorageRing.txt")
-            dat[:,1] *= 2*AxionProton.m_p
-            plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.2)
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1.0,zorder=zo,lw=3)
-            plt.text(1.3e-22,2*3e-13,r'{\bf Proton Storage Ring}',fontsize=18,color=col,ha='left',va='top')
+        return
+    
+    def ProtonStorageRing(ax,col='red',fs=20):
+        y2 = ax.get_ylim()[1]
+        zo = -1
+        dat = loadtxt("limit_data/AxionProton/Projections/ProtonStorageRing.txt")
+        dat[:,1] *= 2*AxionProton.m_p
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.1)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=0.7,zorder=zo,lw=2.3)
+        plt.text(0.2e-21,0.4e-11,r'{\bf Proton storage ring}',fontsize=fs,color=col,ha='left',va='top',rotation=0,clip_on=True)
+        return
 
     def Haloscopes(ax,projection=True,fs=20):
         AxionProton.NASDUCK(ax)
@@ -2464,6 +2467,7 @@ class AxionProton():
         AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
+            AxionProton.ProtonStorageRing(ax)
         return
 
     def StellarBounds(ax,fs=30):
@@ -2606,6 +2610,7 @@ class AxionEDM():
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
+
 
 
 #==============================================================================#
