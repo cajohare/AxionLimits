@@ -167,15 +167,15 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Earth: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Earth.txt), [reference](https://inspirehep.net/literature/380466)
 * Crab Nebula gamma rays (2008, DP-photon oscillations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab.txt), [reference](https://arxiv.org/abs/0810.5501)
 * Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
-* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/1305.2920)
+* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2304.12907)
 * Gas cloud heating: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GasClouds.txt), [reference](https://arxiv.org/abs/1812.10919)
 * IGM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
 * Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2110.02875)
 * LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
 * Neutron Star Cooling (Cas A + NS1987A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/NeutronStarCooling.txt), [reference](https://arxiv.org/abs/2012.05427)
-* Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/1305.2920)
+* Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/2304.12907)
 * Solar luminosity (global fit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar-Global.txt), [reference](https://arxiv.org/abs/1501.01639)
-* Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/1305.2920)
+* Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/2304.12907)
 
 ## Cosmological bounds on Dark photons
 * COBE/FIRAS (Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/2002.05165)
