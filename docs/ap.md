@@ -172,6 +172,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * Freeze-in ALPs (irreducible axions): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/IrreducibleFreezeIn.txt), [reference](https://arxiv.org/abs/2209.06216)
 * Globular cluster R-parameter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GlobularClusters-R.txt), [reference](https://arxiv.org/abs/1406.6053)
 * Globular cluster R2-parameter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GlobularClusters-R2.txt), [reference](https://arxiv.org/abs/2207.03102)
+* GW170817 (binary neutron star): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GW170817.txt), [reference](https://arxiv.org/abs/2305.10327)
 * HAWC (TeV Blazars): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAWC.txt), [reference](https://arxiv.org/abs/2203.04332)
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
 * Magnetic white dwarf X-rays: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_electron_equals_photon.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_Wphobic.txt), [reference](https://arxiv.org/abs/2104.12772)

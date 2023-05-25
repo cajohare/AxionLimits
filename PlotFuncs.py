@@ -1425,7 +1425,17 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+
+    def GW170817(ax,text_pos=[1.2e9,0.03e-8],text_label=r'{\bf GW170817}',col='#35732e',text_col='#35732e',fs=12,zorder=0.01,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=None):
+        dat = loadtxt("limit_data/AxionPhoton/GW170817.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def SN1987A_decay(ax,text_label=r'{\bf SN1987A} ($\gamma$)',text_pos=[1.5e5,0.7e-10],col='#067034',text_col='w',fs=15,zorder=0.029,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
