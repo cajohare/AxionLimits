@@ -1344,14 +1344,14 @@ class AxionPhoton():
                     zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha,edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
-    def BBN_10MeV(ax,text_label=r'{\bf BBN}',text_pos=[0.4e7,3e-12],col='#027034',text_col='w',fs=15,zorder=0.02,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1):
+    def BBN_10MeV(ax,text_label=r'{\bf BBN}',text_pos=[0.4e7,3e-12],col='#027034',text_col='w',fs=15,zorder=0.02,text_on=True,lw=1.5,rotation=-25.5,edgealpha=1,path_effects=line_background(1,'k')):
         # Most conservative BBN bound from https://arxiv.org/pdf/2002.08370.pdf (reheating temp = 10 MeV)
         dat = loadtxt('limit_data/AxionPhoton/BBN_10MeV.txt')
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1,'k'))
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=path_effects)
         return
 
 
