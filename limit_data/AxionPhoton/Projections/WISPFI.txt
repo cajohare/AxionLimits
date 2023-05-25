@@ -1,0 +1,7 @@
+# WISPFI - magnetised fibre interferometer
+# 2305.12969
+# mass [ev] photon coupling [GeV^-1]
+0.0501187233627272	 1e0
+0.0501187233627272	 7.001663558934888e-12
+0.1	 1.388081163091984e-11
+0.1	 1e0
