@@ -3511,17 +3511,17 @@ class DarkPhoton():
             plt.text(0.25e2,0.1e-4,r'{\bf TEXONO}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def IGM(ax,col='#236991',fs=18,text_on=True,lw=1.5):
+    def ISM(ax,col='#236991',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/DarkPhoton/IGM.txt")
+        dat = loadtxt("limit_data/DarkPhoton/ISM.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.49)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.49,lw=lw)
 
         if text_on:
-            plt.text(4e-12,0.03e-7,r'{\bf IGM}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(4e-12,0.03e-7,r'{\bf ISM}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def LeoT(ax,col='#4a7e91',fs=18,text_on=True,lw=1.5):
+    def LeoT(ax,col='#436991',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/LeoT.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.3061)
@@ -3531,14 +3531,14 @@ class DarkPhoton():
             plt.text(7e-13,0.2e-9,r'{\bf Leo T}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def GasClouds(ax,col='#436991',fs=18,text_on=True,lw=1.5):
+    def GasClouds(ax,col='#4a7e91',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/GasClouds.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.306)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.307,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.3062)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.3062,lw=lw)
 
         if text_on:
-            plt.text(0.86e-13,1e-10,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(0.6e-13,1.8e-8,r'{\bf Gas clouds}',fontsize=fs,color='w',rotation=-39,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def SuperMAG(ax,col='#b5403e',fs=18,text_on=True,lw=1.5):
