@@ -1255,7 +1255,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha,edgealpha=edgealpha)
         return
 
-    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.7e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
+    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.1e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (MUSE) [2009.01310]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
@@ -3097,7 +3097,7 @@ class DarkPhoton():
         return
 
 
-    def SQMS(ax,col='#02734b',fs=17,text_on=True,lw=0.5,ms=10):
+    def SQMS(ax,col='#02734b',fs=17,text_on=False,lw=0.5,ms=10):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SQMS.txt")
         dat[:,1] = dat[:,1]*sqrt(1/3/0.019)
@@ -3105,6 +3105,7 @@ class DarkPhoton():
         if text_on:
             plt.text(5.7e-6,0.65e-14,r'{\bf SQMS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
+
 
     def LAMPOST(ax,col='#471710',fs=15,text_on=True,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
@@ -3122,7 +3123,7 @@ class DarkPhoton():
             plt.plot([3e-1,0.6e0],[6e-13,1e-12],'-',lw=1.5,color=col,path_effects=line_background(2,'k'))
         return
 
-    def Tokyo(ax,col='darkred',fs=15,text_on=True,lw=1.5):
+    def Tokyo(ax,col='darkred',fs=15,text_on=False,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/Tokyo-Dish.txt")
         dat[:,1] = dat[:,1]*sqrt(2/3/0.6)
@@ -3146,7 +3147,7 @@ class DarkPhoton():
             plt.plot([0.3e-1,3e0],[2e-12,8e-12],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
-    def FAST(ax,col='tomato',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
+    def FAST(ax,col='tomato',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.11):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/FAST.txt")
         dat[:,1] = dat[:,1]*sqrt(2/3/0.6)
@@ -3160,8 +3161,38 @@ class DarkPhoton():
         if text_on:
             plt.text(7e-6,4e-12,r'{\bf FAST}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
+    
+    def BRASS(ax,col='darkred',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.01):
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/BRASS-p.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.0245)*sqrt(0.3/0.45)
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
 
-    def LOFAR(ax,col='red',fs=10,text_on=True,lw=1.5,edge_on=False,zorder=0.11):
+        if text_on:
+            plt.text(7e-5,4e-14,r'{\bf BRASS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+        return
+    
+    def SRF_scanning(ax,col='darkred',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.01):
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/SRF_scanning.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.02472551)
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
+
+        if text_on:
+            plt.text(7e-5,4e-14,r'{\bf SRF scanning}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+        return
+
+    def LOFAR(ax,col='red',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.11):
         # Solar corona bound
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/LOFAR.txt")
@@ -3451,13 +3482,13 @@ class DarkPhoton():
             plt.text(0.95e-3,6e-6,r'{\bf CAST}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
-    def HINODE(ax,col='#700606',fs=16,text_on=True,lw=1.5):
+    def Hinode(ax,col='#700606',fs=16,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/DarkPhoton/HINODE.txt")
+        dat = loadtxt("limit_data/DarkPhoton/Hinode.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
-            plt.text(5e-3,0.3e-5,r'{\bf HINODE}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(5e-3,0.3e-5,r'{\bf Hinode}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
     def SHIPS(ax,col='indianred',fs=20,text_on=True,lw=1.5):

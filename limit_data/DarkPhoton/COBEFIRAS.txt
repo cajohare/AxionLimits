@@ -1,8 +1,8 @@
 #m_Ap [eV],\epsilon
 # FIRAS/COBE
-# combination of two limits Caputo et al. and Witte et al.
-# https://arxiv.org/abs/1911.05086
-# https://arxiv.org/abs/1911.05086
+# combination of two limits Caputo et al. (reionisation) with Witte and McDermott (recombination)
+# Caputo: https://arxiv.org/abs/2002.05165
+# Witte: https://arxiv.org/pdf/1911.05086.pdf
 1e-17,2.0
 1.0233165783302449e-17,2.0
 1.0471768194855203e-17,2.0
