@@ -120,7 +120,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * SuperCDMS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/SuperCDMS.txt), [reference](https://link.springer.com/article/10.1007/JHEP06(2017)087)
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperMAG.txt), [reference1](https://arxiv.org/abs/2106.00022), [reference2](https://arxiv.org/abs/2108.08852)
 * Tokyo (Knirck et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Knirck.txt), [reference](https://arxiv.org/abs/1806.05120)
-* Tokyo (Suzuki et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Dish.txt), [reference](https://arxiv.org/abs/2003.13144)
+* Tokyo (Suzuki et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Dish.txt), [reference](https://arxiv.org/abs/1504.00118)
 * Tokyo (Tomita et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Tokyo-Tomita.txt), [reference](https://arxiv.org/abs/2006.02828)
 * WISPDMX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WISPDMX.txt), [reference](https://arxiv.org/abs/1907.12449)
 * WSi Nanowire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/WSi_Nanowire.txt), [reference](https://arxiv.org/abs/1903.05101)
