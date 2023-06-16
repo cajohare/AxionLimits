@@ -3014,7 +3014,7 @@ class DarkPhoton():
             plt.plot([4e0,1e1],[3e-14,6e-14],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
         return
 
-    def MuDHI(ax,col='#400927',fs=15,text_on=True,lw=1.5):
+    def MuDHI(ax,col='#a8324a',fs=15,text_on=True,lw=1.5):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/MuDHI.txt")
 
@@ -3025,7 +3025,7 @@ class DarkPhoton():
 
         if text_on:
             plt.text(0.18e-2,1e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
-            plt.plot([1.2e-2,1.5e0],[1e-11,4e-11],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'))
+            plt.plot([1.2e-2,1.5e0],[1e-11,4e-11],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'),zorder=10)
         return
 
 
@@ -3386,14 +3386,15 @@ class DarkPhoton():
     
         return
 
+
     def COBEFIRAS(ax,col='#247840',text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat3 = loadtxt("limit_data/DarkPhoton/COBEFIRAS.txt",delimiter=',')
         plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.5,alpha=1)
         plt.plot(dat3[:,0],dat3[:,1],'k-',lw=lw,zorder=0.5)
         if text_on:
-            plt.gcf().text(0.29,0.70,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.gcf().text(0.29,0.67,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(3e-13,0.35e-5,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(3e-13,0.35e-5/4.5,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
 
@@ -3550,6 +3551,18 @@ class DarkPhoton():
         if text_on:
             plt.text(1.5e-17,1e-1/1.4,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
             plt.text(1.5e-17,0.2e-1/1.4,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+
+        return
+    
+    def SynchronisedMagnetometers(ax,col='#b2413e',fs=13,text_on=True,lw=1.5):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/SynchronisedMagnetometers.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
+
+        if text_on:
+            plt.text(1.5e-13,0.4e-2,r'{\bf Synchronised}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1.5e-13,0.4e-2/3,r'{\bf magnetometers}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
         return
 
