@@ -2172,8 +2172,8 @@ class AxionNeutron():
         zo = 0.3
         dat = loadtxt("limit_data/AxionNeutron/OldComagnetometers.txt")
         dat[:,1] *= 2*AxionNeutron.m_n
-        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=2.5)
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
+        plt.plot(dat[:-30,0],dat[:-30,1],'-',color='k',alpha=1,zorder=zo,lw=2.5)
+        plt.fill_between(dat[:-30,0],dat[:-30,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=1.0)
         plt.text(2e-20,3e-5,r'{\bf Old comagnetometers}',fontsize=fs,color='w',ha='center',va='top',rotation=-10,clip_on=True,path_effects=line_background(1.5,'k'))
         if projection:
             dat = loadtxt("limit_data/AxionNeutron/Projections/FutureComagnetometers.txt")
@@ -2194,6 +2194,15 @@ class AxionNeutron():
         plt.text(0.5e-19,3e-4,r'{\bf nEDM}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
+    def ChangE(ax,col='#5e2220',fs=21,rotation=42):
+        y2 = ax.get_ylim()[1]
+        zo = 0.31
+        dat = loadtxt("limit_data/AxionNeutron/ChangE.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.5e-13,5.0e-8,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=24,projection=True):
         y2 = ax.get_ylim()[1]
@@ -2228,6 +2237,16 @@ class AxionNeutron():
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
         plt.text(0.2e-15,1.3e-3,r'{\bf PSI HgM}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
+    def Hefei(ax,col='#b33955',fs=15,rotation=90):
+        y2 = ax.get_ylim()[1]
+        zo = 0.9
+        dat = loadtxt("limit_data/AxionNeutron/Hefei.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(2.9e-15,6.2e-6,r'{\bf Hefei \newline \newline \newline \phantom{,}$^{129}$Xe}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SuperfluidHe3(ax,col='darkred',zo=-10):
@@ -2350,6 +2369,8 @@ class AxionNeutron():
         AxionNeutron.K3He_Comagnetometer_DarkMatter(ax)
         AxionNeutron.JEDI(ax)
         AxionNeutron.PSI_HgM(ax)
+        AxionNeutron.ChangE(ax)
+        AxionNeutron.Hefei(ax)
 
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
@@ -2460,6 +2481,16 @@ class AxionProton():
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=1.5)
         plt.text(0.7e-2,1.6e-4,r'{\bf SNO}',fontsize=fs+6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
         return
+
+    def ChangE(ax,col='#5e2220',fs=23,rotation=0):
+        y2 = ax.get_ylim()[1]
+        zo = 0.31
+        dat = loadtxt("limit_data/AxionProton/ChangE.txt")
+        dat[:,1] *= 2*AxionProton.m_p
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+        plt.text(0.7e-15,2.0e-6,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
     
     def ProtonStorageRing(ax,col='red',fs=20):
         y2 = ax.get_ylim()[1]
@@ -2473,6 +2504,7 @@ class AxionProton():
 
     def Haloscopes(ax,projection=True,fs=20):
         AxionProton.NASDUCK(ax)
+        AxionProton.ChangE(ax)
         AxionNeutron.CASPEr.ZULF(ax,projection=projection,fs=fs)
         AxionNeutron.CASPEr.Comagnetometer(ax,projection=projection,fs=fs)
         if projection:

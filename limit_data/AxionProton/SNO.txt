@@ -1,5 +1,5 @@
 # SNO axion-induced dissociation of neutrons
-# m_a [eV]  g_ap/2m_p [GeV^-1]
+# m_a [eV]  g_ap/m_p [GeV^-1]
 1e-23	0.000017193855413971386
 2e6	0.000017193855413971386
 2e6	0.0009758752778313259
