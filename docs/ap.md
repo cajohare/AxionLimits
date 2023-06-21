@@ -128,6 +128,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * RADES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RADES.txt), [reference](https://arxiv.org/abs/2104.13798)
 * RBF: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/RBF.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.839)
 * SHAFT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SHAFT.txt), [reference](https://arxiv.org/abs/2003.03348)
+* SNIPE Hunt: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNIPE.txt), [reference](https://arxiv.org/abs/2306.11575)
 * SRF: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/SRF.txt), [reference](https://arxiv.org/abs/2007.15656)
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SuperMAG.txt), [reference](https://arxiv.org/abs/2112.09620)
 * TASEH: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/TASEH.txt), [reference](https://arxiv.org/abs/2205.05574)

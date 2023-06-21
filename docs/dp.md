@@ -113,6 +113,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * Quantum cyclotron: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/QuantumCyclotron.txt), [reference](https://arxiv.org/abs/2208.06519)
 * SENSEI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SENSEI.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.171802)
 * SHUKET: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHUKET.txt), [reference](https://arxiv.org/abs/1905.05579)
+* SNIPE Hunt: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SNIPE.txt), [reference](https://arxiv.org/abs/2306.11575)
 * SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)
 * SQMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQMS.txt), [reference](https://arxiv.org/abs/2208.03183)
 * SRF scanning: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SRF_scanning.txt), [reference](https://arxiv.org/abs/2305.09711)

@@ -2243,10 +2243,10 @@ class AxionNeutron():
         y2 = ax.get_ylim()[1]
         zo = 0.9
         dat = loadtxt("limit_data/AxionNeutron/Hefei.txt")
-        dat[:,1] *= 2*AxionNeutron.m_n
+        dat[:,1] *= 2*AxionNeutron.m_n/0.63 # last factor is to correct for missing spin fraction in that analysis
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(2.9e-15,6.2e-6,r'{\bf Hefei \newline \newline \newline \phantom{,}$^{129}$Xe}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(2.9e-15,9.2e-6,r'{\bf Hefei \newline \newline \newline \phantom{,}$^{129}$Xe}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SuperfluidHe3(ax,col='darkred',zo=-10):
@@ -3596,6 +3596,16 @@ class DarkPhoton():
             plt.text(1.5e-13,0.4e-2,r'{\bf Synchronised}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
             plt.text(1.5e-13,0.4e-2/3,r'{\bf magnetometers}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
+        return
+    
+    def SNIPE(ax,col='#851c34',fs=14,text_on=True,lw=1.5):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/SNIPE.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.9)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.9,lw=lw)
+
+        if text_on:
+            plt.text(0.6e-14,1.2e-3,r'{\bf SNIPE}',fontsize=fs,color='w',rotation=-42,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
 

@@ -1,4 +1,5 @@
 # Hefei Xe129 
+# Warning: does not account for neutron spin fraction in Xe129 ~ 63\%, so bounds must be suppressed by factor of 1/0.63
 # https://arxiv.org/pdf/2306.08039.pdf
 # mass [eV] g_ap/2m_p [GeV^-1]
 1.4105993219917266e-14	 1e0
