@@ -3366,7 +3366,7 @@ class DarkPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/DM-Pathfinder.txt")
         dat[:,1] = dat[:,1]*sqrt(1/0.075)
-        plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.6)
+        plt.plot([dat[0,0],dat[0,0]],[y2,dat[0,1]],lw=2,color=col,alpha=1,zorder=0.49)
         if text_on:
             plt.text(2.1e-9,0.5e-8/1.9,r'{\bf DM}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
             plt.text(2.1e-9,0.2e-8/1.9,r'{\bf Pathfinder}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
@@ -3425,8 +3425,8 @@ class DarkPhoton():
         plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.5,alpha=1)
         plt.plot(dat3[:,0],dat3[:,1],'k-',lw=lw,zorder=0.5)
         if text_on:
-            plt.text(3e-13,0.35e-5,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(3e-13,0.35e-5/4.5,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(1.5e-10,0.35e-6,r'{\bf COBE/FIRAS}',fontsize=22,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True,rotation=-38)
+            plt.text(1.5e-10/2,0.35e-6,r'$\gamma \rightarrow X$',fontsize=22,color='w',ha='center',path_effects=line_background(1,'k'),clip_on=True,rotation=-38)
         return
 
 
@@ -3586,11 +3586,11 @@ class DarkPhoton():
 
         return
     
-    def SynchronisedMagnetometers(ax,col='#b2413e',fs=13,text_on=True,lw=1.5):
+    def SynchronisedMagnetometers(ax,col='#b2413e',fs=13,text_on=True,lw=1):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SynchronisedMagnetometers.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
+        plt.fill_between(dat[::2,0],dat[::2,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
+        plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=1,lw=lw)
 
         if text_on:
             plt.text(1.5e-13,0.4e-2,r'{\bf Synchronised}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)

@@ -196,7 +196,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * Axion star explosions: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/AxionStarExplosions-1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/AxionStarExplosions-2.txt), [reference](https://arxiv.org/abs/2302.10206)
 * BICEP/KECK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BICEP-KECK.txt), [reference](https://arxiv.org/abs/2108.03316)
 * Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
-* CMB Anisotropies [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
+* CMB-S4 (birefringence) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CMB-S4.txt), [reference](https://arxiv.org/abs/2203.16567)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CMB_Anisotropies.txt), [reference1](https://arxiv.org/abs/2303.07370), [reference2](https://arxiv.org/abs/2303.07426)
 * eROSITA (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/eROSITA.txt), [reference](https://arxiv.org/pdf/2103.13241.pdf)
 * Gamma-ray attenuation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GammaRayAttenuation.txt), [reference](https://arxiv.org/abs/2208.13794)

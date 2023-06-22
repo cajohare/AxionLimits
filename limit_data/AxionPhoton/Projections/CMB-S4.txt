@@ -1,0 +1,5 @@
+# CMB-S4 DM detection via time-dependent birefringence
+# estimated in https://arxiv.org/pdf/2203.16567.pdf
+# axion mass [eV]   photon coupling [GeV^-1]
+4.849693428528171e-22	4.175318936560426e-14
+9.425094520945682e-20	8.531678524172814e-12
