@@ -2038,13 +2038,13 @@ class AxionElectron():
             plt.text(text_shift[0]*1.3e-5,text_shift[1]*0.7*0.5e-13,r'{\bf (Scanning)}',fontsize=fs-1,alpha=0.7,color=col,ha='center',va='top',clip_on=True,**kwargs)
         return
 
-    def QUAX(ax,col='crimson',fs=17,text_on=True,text_pos=[50e-6,0.9e-10],lw=1,zorder=10.0,text_rot=-90,**kwargs):
+    def QUAX(ax,col='orangered',fs=17,text_on=True,text_pos=[50e-6,0.9e-10],lw=1,zorder=10.0,text_rot=-90,path_effects=line_background(1,'k'),**kwargs):
         # QUAX https://inspirehep.net/literature/1777123
         dat = loadtxt("limit_data/AxionElectron/QUAX.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.4,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'-',color=col,alpha=1.0,zorder=zorder,lw=lw,path_effects=line_background(lw+2,'k'))
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf QUAX}',fontsize=fs,color=col,rotation=text_rot,ha='left',va='top',clip_on=True,**kwargs)
+            plt.text(text_pos[0],text_pos[1],r'{\bf QUAX}',fontsize=fs,color=col,rotation=text_rot,ha='left',va='top',clip_on=True,path_effects=path_effects,**kwargs)
         return
 
     def RedGiants(ax,col=[0.0, 0.66, 0.42],text_pos=[0.2e-8,2e-13],text_on=True,zorder=0.5,fs=30,lw=2,**kwargs):
