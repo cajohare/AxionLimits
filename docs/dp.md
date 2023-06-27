@@ -92,6 +92,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ## Experimental searches for DPDM
 ### All files are true to their *original* sources, i.e. without any rescaling
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPHA.txt), [reference](https://arxiv.org/abs/2006.06836)
+* AMAILS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/AMAILS), [reference](https://arxiv.org/abs/2305.00890)
 * BREAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/BREAD.txt), [reference](https://arxiv.org/abs/2111.12103)
 * BRASS-p: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/BRASS-p.txt), [reference](https://arxiv.org/abs/2306.05934)
 * DAMIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DAMIC.txt), [reference](https://arxiv.org/abs/1907.12628)
@@ -172,6 +173,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
 * Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2304.12907)
 * Gas cloud heating: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GasClouds.txt), [reference](https://arxiv.org/abs/1903.12190)
+* Globular clusters (R + R2 + TRGB): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GlobularClusters), [reference](https://arxiv.org/abs/2306.13335)
 * ISM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
 * Jupiter: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2110.02875)
 * LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)

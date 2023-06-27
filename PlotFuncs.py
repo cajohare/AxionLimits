@@ -2961,16 +2961,16 @@ class DarkPhoton():
         # Stellar physics constraints
 
         # Globular clusters
-        HB_col = [0.01, 0.75, 0.24]
-        HB = loadtxt("limit_data/DarkPhoton/RG.txt")
-        plt.fill_between(HB[:,0],HB[:,1],y2=y2,edgecolor=None,facecolor=HB_col,zorder=0.9)
-        plt.plot(HB[:,0],HB[:,1],color='k',alpha=1,zorder=0.9,lw=lw)
+        col = 'DarkGreen'
+        dat = loadtxt("limit_data/DarkPhoton/GlobularClusters.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.9)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.9,lw=lw)
 
-        # Globular clusters
-        HB_col = 'DarkGreen'
-        HB = loadtxt("limit_data/DarkPhoton/HB.txt")
-        plt.fill_between(HB[:,0],HB[:,1],y2=y2,edgecolor=None,facecolor=HB_col,zorder=0.95)
-        plt.plot(HB[:,0],HB[:,1],color='k',alpha=1,zorder=0.95,lw=lw)
+        # # Globular clusters
+        # HB_col = 'DarkGreen'
+        # HB = loadtxt("limit_data/DarkPhoton/HB.txt")
+        # plt.fill_between(HB[:,0],HB[:,1],y2=y2,edgecolor=None,facecolor=HB_col,zorder=0.95)
+        # plt.plot(HB[:,0],HB[:,1],color='k',alpha=1,zorder=0.95,lw=lw)
 
         # Solar bound
         Solar_col = 'ForestGreen'
@@ -2984,8 +2984,8 @@ class DarkPhoton():
 
         if text_on:
             plt.text(0.9e2,2.0e-14,r'{\bf Solar}',fontsize=fs,color='w',rotation=-44,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(1e3,2.3e-14,r'{\bf HB}',fontsize=fs,color='w',rotation=-35,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(1e4,0.58e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(2.5e3,0.7e-14,r'{\bf GCs}',fontsize=fs,color='w',rotation=-44,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            #plt.text(1e4,0.58e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
 
@@ -3586,16 +3586,14 @@ class DarkPhoton():
 
         return
     
-    def SynchronisedMagnetometers(ax,col='#b2413e',fs=13,text_on=True,lw=1):
+    def AMAILS(ax,col='#b2413e',fs=14,text_on=True,lw=1):
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/DarkPhoton/SynchronisedMagnetometers.txt")
+        dat = loadtxt("limit_data/DarkPhoton/AMAILS.txt")
         plt.fill_between(dat[::2,0],dat[::2,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
         plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=1,lw=lw)
 
         if text_on:
-            plt.text(1.5e-13,0.4e-2,r'{\bf Synchronised}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(1.5e-13,0.4e-2/3,r'{\bf magnetometers}',fontsize=fs,color='w',rotation=-40,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-
+            plt.text(0.35e-13,0.08e-2,r'{\bf AMAILS}',fontsize=fs,color='w',rotation=-47,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
     
     def SNIPE(ax,col='#851c34',fs=14,text_on=True,lw=1.5):
