@@ -283,6 +283,10 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
 
+    def NANOGrav(ax,text_label=r'{\bf NANOGrav}',text_pos=[0.15e-23,5.0e-6],rotation=0,col='#6b012a',text_col='w',fs=16,zorder=-10,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/NANOGrav.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
+        return
     
     # Projections
     def AEDGE(ax,text_label=r'{\bf AEDGE}',text_pos=[1e-16,0.1e-11],rotation=51,col='#eb4034',text_col='#eb4034',fs=20,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1.5):

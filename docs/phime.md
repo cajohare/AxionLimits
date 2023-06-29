@@ -42,13 +42,15 @@
 * Rb/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/RbQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 * Yb/Cs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/YbCs.txt), [reference](https://arxiv.org/abs/2212.05721)
 * LIGO O3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/LIGO.txt), [reference](https://arxiv.org/abs/2303.13088)
+* NANOGrav: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/NANOGrav.txt), [reference](https://arxiv.org/abs/2306.16219)
+
 
 
 ## Projected DM searches (dashed lines)
 * AEDGE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/AEDGE.txt), [reference](https://arxiv.org/abs/2108.02468)
 * AION: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/AION-km.txt), [reference](https://arxiv.org/abs/2108.02468)
 * DUAL: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/DUAL.txt), [reference](https://arxiv.org/abs/1508.01798)
-* IPTA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/IPTA.txt), [reference](https://arxiv.org/abs/2205.06817)
+* IPTA (now obsolete post-NANOGrav): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/IPTA.txt), [reference](https://arxiv.org/abs/2205.06817)
 * MAGIS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/MAGIS-km.txt), [reference](https://arxiv.org/abs/2104.02835)
 * Optical-microwave clock: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/OpticalMW.txt), [reference](https://arxiv.org/abs/1405.2925)
 * Optical cavities: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/CavityCavity.txt), [reference](https://arxiv.org/abs/1808.00540)
