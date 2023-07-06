@@ -39,4 +39,4 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Neutron star cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/NeutronStars.txt), [reference](https://arxiv.org/abs/2111.09892
-* SN1987 Cooling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/SN1987A.txt), [reference](https://arxiv.org/abs/1906.11844)
+* SN1987 Cooling+Events: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/SN1987A.txt), [reference](https://arxiv.org/abs/2306.01048)

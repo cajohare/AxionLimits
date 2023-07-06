@@ -2433,7 +2433,7 @@ class AxionProton():
         if DFSZ_on:
             plt.fill_between(m,g_x(DFSZ_l,m),y2=g_x(DFSZ_u,m),facecolor=facecolor,zorder=0,alpha=0.5)
             plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)/2,r'{\bf DFSZ models}',fontsize=fs,
-                    rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
+                    rotation=trans_angle,color=col_alpha(facecolor,0.5),ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=17,projection=True):
@@ -2512,21 +2512,22 @@ class AxionProton():
             AxionProton.ProtonStorageRing(ax)
         return
 
-    def StellarBounds(ax,fs=30):
+    def StellarBounds(ax,fs=23):
         y2 = ax.get_ylim()[1]
 
         # Stellar physics constraints
-        # SN1987A cooling nucleon-nucleon Bremsstrahlung arXiv:[1906.11844]
-        # SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
-        # plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#067034',zorder=0.01)
-        # plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.01)
-        # plt.text(0.8e-2,1.3e-5,r'{\bf SN1987A}',fontsize=fs,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+
+        # SN1987A cooling and trapping
+        SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
+        plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#3ba84d',zorder=0.01)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=-1)
+        plt.text(0.7e-3,6e-10,r'{\bf SN1987A}',fontsize=fs,color='#3ba84d',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         # NS cooling Buschmann et al.
         SN = loadtxt("limit_data/AxionProton/NeutronStars.txt")
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.02)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
-        plt.text(0.8e-2,0.8e-8,r'{\bf Neutron star cooling}',fontsize=fs-6,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
+        plt.text(0.8e-2,0.8e-8,r'{\bf Neutron star cooling}',fontsize=fs,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
 #==============================================================================#
 
 
