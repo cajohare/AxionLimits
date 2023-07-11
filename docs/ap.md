@@ -74,14 +74,27 @@
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)
+## Ultra-simplified plot
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_UltraSimple_FullParameterSpace.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 
 ## Data files and references
 
+### Bounds combined into one .txt file:
+
+* [Laboratory only limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_Laboratory.txt) (LSW + Collider)
+* [Astrophysical (non-DM) limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_Astro.txt)
+* [Astrophysical DM limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_DarkMatterAstro.txt)
+* [Haloscopes combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) (only micro-eV to meV haloscopes)
+* [Haloscope projections combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt)
+
 ### Haloscopes:
-
-Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) for a .txt file of all haloscopes combined (except ABRA and SHAFT)
-
-Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt) for .txt file of all haloscope **projections** combined
 
 * ABRACADABRA (Run 1): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt),  [reference](https://arxiv.org/abs/1810.12257)
 * ABRACADABRA (Run 2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA_run2.txt), [reference](https://arxiv.org/abs/2102.06722)
@@ -118,6 +131,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * HAYSTAC (2020): [limit (low res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020.txt), [limit (high res.)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2020_highres.txt), [reference](https://arxiv.org/abs/2008.01853)
 * HAYSTAC (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_2022.txt), [reference](https://arxiv.org/abs/2301.09721)
 * LAMPOST: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/LAMPOST.txt), [reference](https://arxiv.org/abs/1803.11455)
+* LIDA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LIDA.txt), [reference](https://arxiv.org/abs/2307.01365)
 * MADMAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/MADMAX.txt), [reference](https://arxiv.org/abs/2003.10894)
 * ORGAN (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
 * ORGAN-1a (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN-1a.txt),[reference](https://arxiv.org/abs/2203.12152)
@@ -232,6 +246,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * FASER (LLP): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FASER_LLP.txt), [reference](https://arxiv.org/abs/1811.12522)
 * LEP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LEP.txt), [reference](https://arxiv.org/abs/1509.00476)
 * LHC (pp): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LHC_pp.txt), [reference](https://arxiv.org/abs/1607.06083)
+* MiniBooNE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MiniBooNE.txt), [reference](https://arxiv.org/abs/2307.03878)
 * NOMAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NOMAD.txt), [reference](https://www.sciencedirect.com/science/article/abs/pii/S0370269300003750?via%3Dihub)
 * OPAL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OPAL.txt), [reference](https://arxiv.org/abs/1607.06083)
 * PrimEx: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PrimEx.txt), [reference](https://arxiv.org/abs/1903.03586)

@@ -1525,6 +1525,15 @@ class AxionPhoton():
             plt.text(text_shift[0]*0.3e8,text_shift[1]*1e-4,r'{\bf Beam dump}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
+    def MiniBooNE(ax,text_shift=[1,1],col='rebeccapurple',text_col='w',fs=13,zorder=0.5,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/MiniBooNE.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*0.15e8,text_shift[1]*0.2e-5,r'{\bf MiniBooNE}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
 
     def CMS_PbPb(ax,text_shift=[1,1],col='#851077',text_col='w',fs=17,zorder=0.2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/CMS_PbPb.txt")
@@ -1696,6 +1705,7 @@ class AxionPhoton():
         AxionPhoton.LEP(ax,text_on=text_on)
         AxionPhoton.BESIII(ax,text_on=text_on)
         AxionPhoton.OPAL(ax,text_on=text_on)
+        AxionPhoton.MiniBooNE(ax,text_on=text_on)
         return
 
     def LowMassAstroBounds(ax,projection=False,text_on=True,edgealpha=1,lw=0.75,GalacticSN=False):
