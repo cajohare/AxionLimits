@@ -89,8 +89,8 @@
 ### Bounds combined into one .txt file:
 
 * [Laboratory only limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_Laboratory.txt) (LSW + Collider)
-* [Astrophysical (non-DM) limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_Astro.txt)
-* [Astrophysical DM limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_DarkMatterAstro.txt)
+* [Astrophysical (non-DM) limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_Astro.txt) (including helioscopes, stellar bounds, axion-photon oscillation bounds, supernova bounds)
+* [Astrophysical DM limits combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Combined_DarkMatterAstro.txt) (indirect detection, birefringence etc.)
 * [Haloscopes combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) (only micro-eV to meV haloscopes)
 * [Haloscope projections combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt)
 
