@@ -202,6 +202,7 @@
 * SN1987A ALP decay to gammas: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_decay.txt), [reference](https://arxiv.org/abs/2304.01060), [see also](https://arxiv.org/abs/2212.09764)
 * SN1987A light ALP gamma-ray conversion: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_gamma.txt), [reference](https://arxiv.org/abs/2212.09764)
 * SN1987A neutrinos/cooling bound: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_HeavyALP_nu.txt), [reference](https://arxiv.org/abs/2201.09890)
+* SN1987A X-ray/gamma-ray PVO: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_PVO.txt), [reference](https://arxiv.org/abs/2303.11395)
 * SNe (low-energy) ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-decay.txt), [reference](https://arxiv.org/abs/2201.09890)
 * Super star clusters (NuSTAR Xray): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Xray-SuperStarClusters.txt), [reference](https://arxiv.org/abs/2008.03305)
 * White dwarf initial-final mass relation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2102.00379)
