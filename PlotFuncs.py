@@ -1221,7 +1221,7 @@ class AxionPhoton():
                 plt.text(text_shift[0]*3.5e-7,text_shift[1]*0.6e-11/0.35,r'{\bf MWD Pol.}',fontsize=11,color='w',rotation=40,ha='center',clip_on=True,path_effects=line_background(1,'k'))
         return
 
-    def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[1.9e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=0.005,text_on=True,lw=1.5,rotation=-11,edgealpha=1):
+    def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[2e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=0.005,text_on=True,lw=1.5,rotation=0,edgealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/PulsarPolarCap.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',rotation=rotation,edgealpha=edgealpha,path_effects=line_background(1,'k'))
         return
