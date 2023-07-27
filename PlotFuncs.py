@@ -1428,6 +1428,16 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
+    def SN1987_PVO(ax,text_pos=[7.5e7,0.1e-9],text_label=r'{\bf PVO}',col='#55732e',text_col='w',fs=13,zorder=0.02999,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/SN1987A_PVO.txt")
+        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            #plt.plot([])
+        return
+
 
     def GW170817(ax,text_pos=[1.2e9,0.03e-8],text_label=r'{\bf GW170817}',col='#35732e',text_col='#35732e',fs=12,zorder=0.01,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=None):
         dat = loadtxt("limit_data/AxionPhoton/GW170817.txt")
