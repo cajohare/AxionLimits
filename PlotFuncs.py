@@ -1273,7 +1273,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha,edgealpha=edgealpha)
         return
 
-    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.1e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
+    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.5e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (MUSE) [2009.01310]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
@@ -1297,9 +1297,14 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=edgealpha)
         return
 
-    def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.7e4,0.1e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=15,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
+    def SolarBasin(ax,text_label=r'{\bf Solar basin}',rotation=98,text_pos=[0.85e4,0.06e-11],col=[0.03, 0.42, 0.29],text_col='w',fs=15,zorder=0.01,text_on=True,lw=1.5,edgecolor='k'):
         dat = loadtxt("limit_data/AxionPhoton/SolarBasin.txt")
         dat = loadtxt("limit_data/AxionPhoton/SolarBasin_Beaufort.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1,path_effects=line_background(1,'k'))
+        return
+    
+    def StAB(ax,text_label=r'{\bf StAB}',rotation=5,text_pos=[0.9e4,6.3e-11],col=[0.03, 0.52, 0.22],text_col='w',fs=9,zorder=0.011,text_on=True,lw=1.5,edgecolor='k'):
+        dat = loadtxt("limit_data/AxionPhoton/StAB.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=edgecolor,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=1,path_effects=line_background(1,'k'))
         return
 
