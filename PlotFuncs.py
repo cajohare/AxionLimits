@@ -62,11 +62,11 @@ def line_background(lw,col):
 
 
 
-def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,\
+def FilledLimit(ax,dat,text_label='',col='ForestGreen',edgecolor='k',zorder=1,linestyle='-',\
                     lw=2,y2=1e0,edgealpha=0.6,text_on=False,text_pos=[0,0],\
                     ha='left',va='top',clip_on=True,fs=15,text_col='k',rotation=0,facealpha=1,path_effects=None,textalpha=1):
     plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,alpha=facealpha,zorder=zorder)
-    plt.plot(dat[:,0],dat[:,1],'-',color=edgecolor,alpha=edgealpha,zorder=zorder,lw=lw)
+    plt.plot(dat[:,0],dat[:,1],linestyle=linestyle,color=edgecolor,alpha=edgealpha,zorder=zorder,lw=lw)
     if text_on:
         plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,\
             ha=ha,va=va,clip_on=clip_on,rotation=rotation,rotation_mode='anchor',path_effects=path_effects,alpha=textalpha)
@@ -812,6 +812,25 @@ class AxionPhoton():
             else:
                 plt.text(text_shift[0]*3e-7,text_shift[1]*3e0,r'{\bf FLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
         return
+    
+    def BabyIAXO_RADES(ax,col='darkred',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
+        y2 = ax.get_ylim()[1]
+        if RescaleByMass:
+            rs1 = 1.0
+            rs2 = 0.0
+        else:
+            rs1 = 0.0
+            rs2 = 1.0
+        dat = loadtxt("limit_data/AxionPhoton/Projections/BabyIAXO_RADES.txt")
+        plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.3)
+        if text_on:
+            if rs1==0:
+                plt.text(text_shift[0]*2.5e-6,text_shift[1]*0.45e-16,r'{\bf FLASH}',fontsize=20,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                plt.plot([1.2e-6,2.5e-6],[5e-16,0.6e-16],'k-',lw=1.5)
+            else:
+                plt.text(text_shift[0]*3e-7,text_shift[1]*3e0,r'{\bf FLASH}',rotation=90,fontsize=fs,color=col,ha='left',va='top',rotation_mode='anchor',clip_on=True)
+        return
 
     def CADEx(ax,col='firebrick',fs=15,RescaleByMass=False,text_on=True,text_shift=[1,1]):
         y2 = ax.get_ylim()[1]
@@ -1125,8 +1144,7 @@ class AxionPhoton():
             plt.fill_between(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),y2=y2,edgecolor=None,facecolor=IAXO_col,zorder=0,alpha=0.3)
             if text_on==True:
                 if rs1==0:
-                    plt.text(1e-2,3.3e-13,r'{\bf IAXO}',fontsize=23,color='purple',rotation=0,clip_on=True)
-                    plt.plot([3e-3,0.8e-2],[4.0e-12,6e-13],'k-',lw=1.5)
+                    plt.text(0.5e-3,7.3e-12,r'{\bf IAXO}',fontsize=23,color='purple',rotation=0,clip_on=True)
                 else:
                     plt.text(0.7e-2,0.12e1,r'{\bf IAXO}',fontsize=fs,color=IAXO_col,rotation=-18,clip_on=True)
         return
@@ -1292,10 +1310,10 @@ class AxionPhoton():
         return
 
 
-    def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[7e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=0.1):
+    def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[7e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=0.05):
         # THESEUS 2008.08306
         dat = loadtxt("limit_data/AxionPhoton/Projections/THESEUS.txt")
-        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        FilledLimit(ax,dat,text_label,linestyle='--',text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
         plt.plot([8e2,1.4e3],[0.8e-17,1.3e-17],'k-',lw=2.5)
         plt.plot([8e2,1.4e3],[0.8e-17,1.3e-17],'-',lw=2,color=col)
         return
@@ -1635,35 +1653,20 @@ class AxionPhoton():
             plt.text(text_shift[0]*2.6e9,text_shift[1]*0.1e-2,r'{\bf OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True):
-        AxionPhoton.ADMX(ax,projection=projection,fs=fs,text_on=text_on)
-        AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on)
-        AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on)
-        AxionPhoton.SHAFT(ax,text_on=text_on)
-        AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,lw=0)
-        AxionPhoton.UPLOAD(ax,text_on=text_on)
-        AxionPhoton.TASEH(ax,text_on=False)
-        AxionPhoton.CASTCAPP(ax,text_on=False)
+    def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True,Projection_color='crimson',alpha=0.1):
+
 
         if projection:
-            AxionPhoton.CAPP(ax,fs=fs-4,text_on=False)
-            AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=False)
-            AxionPhoton.DMRadio(ax,text_on=text_on)
-            AxionPhoton.SRF(ax,text_on=text_on)
-            AxionPhoton.ALPHA(ax,text_on=text_on)
-            AxionPhoton.DALI(ax,text_on=text_on)
-            AxionPhoton.MADMAX(ax,text_on=text_on)
-            AxionPhoton.FLASH(ax,text_on=text_on)
-            AxionPhoton.TOORAD(ax,text_on=text_on)
-            AxionPhoton.BRASS(ax,text_on=text_on)
-            AxionPhoton.BREAD(ax,text_on=text_on)
-            AxionPhoton.CADEx(ax,text_on=text_on)
-            AxionPhoton.ADBC(ax,text_on=text_on)
-            AxionPhoton.DANCE(ax,text_on=text_on)
-            AxionPhoton.aLIGO(ax,text_on=text_on)
-            AxionPhoton.WISPLC(ax,text_on=text_on)
-            AxionPhoton.LAMPOST(ax)
-
+            AxionPhoton.ADMX(ax,fs=fs,text_on=False)
+            AxionPhoton.HAYSTAC(ax,text_on=False)
+            AxionPhoton.ABRACADABRA(ax,fs=fs,text_on=text_on)
+            AxionPhoton.SHAFT(ax,text_on=text_on)
+            AxionPhoton.ORGAN(ax,text_on=False,lw=0)
+            AxionPhoton.UPLOAD(ax,text_on=False)
+            AxionPhoton.TASEH(ax,text_on=False)
+            AxionPhoton.CASTCAPP(ax,text_on=False)
+            AxionPhoton.CAPP(ax,fs=fs-4,text_on=False,col='darkred')
+            AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=False,col='darkred')
             AxionPhoton.ADMX(ax,text_on=False,col='darkred')
             AxionPhoton.CAPP(ax,text_on=False,col='darkred')
             AxionPhoton.ORGAN(ax,text_on=False,col='darkred',lw=0)
@@ -1671,7 +1674,56 @@ class AxionPhoton():
             AxionPhoton.RBF_UF(ax,text_on=False,col='darkred')
             AxionPhoton.QUAX(ax,text_on=False,col='darkred')
             plt.text(0.5e-5,0.45e-12,r'{\bf Haloscopes}',color='w',rotation=90,fontsize=15)
+
+            col = Projection_color
+            dat = loadtxt("limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt")
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+
+            dat = loadtxt("limit_data/AxionPhoton/Projections/WISPLC.txt")
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+
+            dat = loadtxt("limit_data/AxionPhoton/Projections/ADBC.txt")
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+
+            dat = loadtxt("limit_data/AxionPhoton/Projections/DANCE.txt")
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+
+            dat = loadtxt("limit_data/AxionPhoton/Projections/aLIGO.txt")
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+
+            plt.text(1.8e-11,0.6e-12,r'{\bf ADBC}',rotation=26,fontsize=14,color=col,ha='left',va='top',clip_on=True)
+            plt.text(0.2e-9,0.35e-13,r'{\bf aLIGO}',rotation=0,fontsize=15,color=col,ha='left',va='top',clip_on=True)
+            plt.text(1.5e-12,1.7e-13,r'{\bf DANCE}',rotation=50,fontsize=14,color=col,ha='left',va='top',clip_on=True)
+            plt.text(1.5e-11,0.7e-18,r'{\bf SRF-m$^3$}',color=col,fontsize=20,rotation=-40,clip_on=True)
+            plt.text(2e-11,8e-16,r'{\bf WISPLC}',color=col,fontsize=15,rotation=14,clip_on=True)
+            plt.text(3e-9,1.5e-19,r'{\bf DMRadio}',color=col,fontsize=18,rotation=46,clip_on=True)
+            plt.text(2e-5,3.5e-16,r'{\bf QUAX}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(1e-5,1.5e-16,r'{\bf ADMX}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(0.5e-5,0.7e-16,r'{\bf BabyIAXO-RADES}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(0.3e-5,0.3e-16,r'{\bf FLASH}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(6e-5,9.5e-16,r'{\bf DALI}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(8e-5,2.0e-15,r'{\bf ALPHA}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(1.5e-4,4.3e-15,r'{\bf MADMAX}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(2.5e-4,8.3e-15,r'{\bf ORGAN}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(3.5e-4,5.3e-14,r'{\bf CADEx}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(4.5e-4,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
+            plt.text(2.55e-1,3.5e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
+
         else:
+            AxionPhoton.ADMX(ax,fs=fs,text_on=text_on)
+            AxionPhoton.HAYSTAC(ax,text_on=text_on)
+            AxionPhoton.ABRACADABRA(ax,fs=fs,text_on=text_on)
+            AxionPhoton.SHAFT(ax,text_on=text_on)
+            AxionPhoton.ORGAN(ax,text_on=text_on,lw=0)
+            AxionPhoton.UPLOAD(ax,text_on=text_on)
+            AxionPhoton.TASEH(ax,text_on=False)
+            AxionPhoton.CASTCAPP(ax,text_on=False)
             AxionPhoton.RBF_UF(ax,fs=fs-2,text_on=text_on)
             AxionPhoton.CAPP(ax,fs=fs-4,text_on=text_on)
             AxionPhoton.QUAX(ax,text_on=text_on)
