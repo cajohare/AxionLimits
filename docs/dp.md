@@ -118,6 +118,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * SQuAD (Superconducting Qubit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQuAD.txt), [reference](https://arxiv.org/abs/2008.12231)
 * SQMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SQMS.txt), [reference](https://arxiv.org/abs/2208.03183)
 * SRF scanning: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SRF_scanning.txt), [reference](https://arxiv.org/abs/2305.09711)
+* SUPAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SUPAX.txt), [reference](https://arxiv.org/abs/2308.08337)
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * SuperCDMS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/SuperCDMS.txt), [reference](https://link.springer.com/article/10.1007/JHEP06(2017)087)
 * SuperMAG: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SuperMAG.txt), [reference1](https://arxiv.org/abs/2106.00022), [reference2](https://arxiv.org/abs/2108.08852)

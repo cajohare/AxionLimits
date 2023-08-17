@@ -1,0 +1,6 @@
+# SUPAX proof of concept cavity
+# https://arxiv.org/pdf/2308.08337.pdf
+# DM density = 0.45 GeV/cc
+# mass [eV]  kinetic mixing
+34e-6 6.2e-14
+34e-6 6.2e-14
