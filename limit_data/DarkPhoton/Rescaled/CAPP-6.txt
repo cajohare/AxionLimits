@@ -1,4 +1,4 @@
-# CAPP-4 rescaled to fixed polarisation scenario 
+# CAPP-6 rescaled to fixed polarisation scenario 
 #  m_X [eV]	chi
 4.507781155015197250e-06 1.303575625478553057e+01
 4.507781155015197250e-06 1.102540786102879907e-14

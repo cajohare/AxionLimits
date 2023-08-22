@@ -471,6 +471,7 @@ class AxionPhoton():
         dat4 = loadtxt("limit_data/AxionPhoton/CAPP-4.txt")
         dat5 = loadtxt("limit_data/AxionPhoton/CAPP-5.txt")
         dat6 = loadtxt("limit_data/AxionPhoton/CAPP-6.txt")
+        dat7 = loadtxt("limit_data/AxionPhoton/CAPP-7.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -479,6 +480,7 @@ class AxionPhoton():
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
                 plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
@@ -497,6 +499,8 @@ class AxionPhoton():
             plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat5[:,0],dat5[:,1]/(rs1*2e-10*dat5[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col)
+
         return
 
     def QUAX(ax,col='crimson',fs=13,RescaleByMass=False,text_on=True,text_shift=[1,1],projection=False):
@@ -3005,6 +3009,8 @@ class DarkPhoton():
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-5.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-6.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-7.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAST-CAPP.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)

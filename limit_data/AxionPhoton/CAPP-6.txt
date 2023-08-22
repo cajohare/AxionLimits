@@ -1,4 +1,5 @@
-# CAPP (DFSZ)
+# CAPP 2022 (DFSZ paper)
+# https://arxiv.org/abs/2210.10961
 # mass [eV] photon coupling [GeV^-1]
 4.507781155015197250e-06 1e0
 4.507781155015197250e-06 8.457819895935293075e-16
