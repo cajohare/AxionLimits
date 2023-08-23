@@ -2585,6 +2585,17 @@ class AxionProton():
         plt.text(0.2e-21,0.4e-11,r'{\bf Proton storage ring}',fontsize=fs,color=col,ha='left',va='top',rotation=0,clip_on=True)
         return
 
+    def MnCO3(ax,col='red',fs=15):
+        y2 = ax.get_ylim()[1]
+        zo = -1
+        dat = loadtxt("limit_data/AxionProton/Projections/MnCO3.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo,alpha=0.1)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=0.7,zorder=zo,lw=2.3)
+        plt.text(2.5e-6,1.5e-10,r'{\bf MnCO$_3$}',fontsize=fs,color=col,ha='left',va='top',rotation=-90,clip_on=True)
+        return
+
+
+
     def Haloscopes(ax,projection=True,fs=20):
         AxionProton.NASDUCK(ax)
         AxionProton.ChangE(ax)
@@ -2593,6 +2604,7 @@ class AxionProton():
         if projection:
             AxionNeutron.CASPEr.wind(ax,fs=fs)
             AxionProton.ProtonStorageRing(ax)
+            AxionProton.MnCO3(ax)
         return
 
     def StellarBounds(ax,fs=23):
@@ -2609,7 +2621,7 @@ class AxionProton():
         # NS cooling Buschmann et al.
         SN = loadtxt("limit_data/AxionProton/NeutronStars.txt")
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='DarkGreen',zorder=0.02)
-        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=0.02)
+        plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=1.5,zorder=0.02)
         plt.text(0.8e-2,0.8e-8,r'{\bf Neutron star cooling}',fontsize=fs,color='w',ha='right',va='top',path_effects=line_background(1.5,'k'),clip_on=True)
 #==============================================================================#
 
