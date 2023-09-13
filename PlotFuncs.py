@@ -1723,8 +1723,6 @@ class AxionPhoton():
             plt.text(4.5e-4,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
             plt.text(2.55e-1,3.5e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
-            plt.text(0.04,6.5e-12,r'{\bf WISPFI}',rotation=90,fontsize=11,color=col,ha='left',va='top',clip_on=True)
-
 
         else:
             AxionPhoton.ADMX(ax,fs=fs,text_on=text_on)

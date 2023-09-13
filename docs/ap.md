@@ -154,7 +154,6 @@
 * UPLOAD (2019): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD.txt), [reference](https://arxiv.org/abs/1912.07751)
 * UPLOAD (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/UPLOAD-2.txt), [reference](https://arxiv.org/abs/2301.06778)
 * WISPLC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPLC.txt), [reference](https://arxiv.org/abs/2111.04541)
-* WISPFI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPFI.txt), [reference](https://arxiv.org/abs/2305.12969)
 
 ### Helioscopes/LSW
 * ALPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ALPS.txt), [reference](https://arxiv.org/abs/1004.1313)
@@ -169,6 +168,7 @@
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
 * SAPPHIRES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SAPPHIRES.txt), [reference](https://arxiv.org/abs/2208.09880)
+* WISPFI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPFI.txt), [reference](https://arxiv.org/abs/2305.12969)
 
 ### Astrophysical searches for axions (green)
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
