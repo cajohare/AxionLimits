@@ -1088,6 +1088,13 @@ class AxionPhoton():
                 if text_on: plt.text(1.5e-3*text_shift_x,3e-9*text_shift_y,r'{\bf ALPS-II}',rotation=61,fontsize=18,color='w',zorder=10,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
+    def WISPFI(ax,col='k',lw=2,zorder=0.001,text_on=True):
+        dat = loadtxt("limit_data/AxionPhoton/Projections/WISPFI.txt")
+        plt.plot(dat[:,0],dat[:,1],'k--',lw=lw,zorder=zorder,alpha=1)
+        if text_on:
+            plt.text(0.04,6.5e-12,r'{\bf WISPFI}',rotation=90,fontsize=11,color=col,ha='left',va='top',clip_on=True)
+        return
+
     def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.91,text_on=True,edgealpha=1,lw=1.5):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
@@ -1724,6 +1731,7 @@ class AxionPhoton():
             plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
             plt.text(2.55e-1,3.5e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
 
+
         else:
             AxionPhoton.ADMX(ax,fs=fs,text_on=text_on)
             AxionPhoton.HAYSTAC(ax,text_on=text_on)
@@ -1763,6 +1771,8 @@ class AxionPhoton():
         AxionPhoton.PVLAS(ax,text_on=text_on)
         AxionPhoton.OSQAR(ax,text_on=text_on)
         AxionPhoton.CROWS(ax,text_on=text_on)
+        if projection:
+            AxionPhoton.WISPFI(ax,text_on=text_on)
         return
 
     def ColliderBounds(ax,projection=False,text_on=True):
