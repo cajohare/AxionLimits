@@ -84,7 +84,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * HINODE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HINODE.txt), [reference](https://arxiv.org/abs/2211.00022)
 * LSW-AMDX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_ADMX.txt), [reference](https://arxiv.org/abs/1410.5244)
 * LSW-CERN: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_CERN.txt), [reference](https://arxiv.org/abs/1207.3275)
-* LSW-SPring-8: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SPring-8.txt), [reference](https://arxiv.org/abs/1502.04490)
+* LSW-SPring-8: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SPring-8.txt), [reference](https://arxiv.org/abs/1301.6557)
 * LSW-UWA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LSW_UWA.txt), [reference](https://arxiv.org/abs/1003.0964)
 * SHIPS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/SHIPS.txt), [reference](https://arxiv.org/abs/1502.04490)
 * STAX: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/STAX.txt), [reference](https://arxiv.org/abs/2212.01139)
