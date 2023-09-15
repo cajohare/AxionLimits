@@ -33,7 +33,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * Piezoaxionic effect (Projection) [N=1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect1.txt), [N=64](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect64.txt) [reference](https://arxiv.org/abs/2112.11466)
 * Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
 * CASPEr-electric (Projection): [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)
-* Polarisation haloscope (Projection): [projection (scanning)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PolarisationHaloscope_scan.txt), [projection (post-discovery)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PolarisationHaloscope_discover.txt) [reference](https://arxiv.org/abs/2209.12901)
+* Polarisation haloscope (Projection): [projection (scanning)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PolarisationHaloscope_scan.txt), [projection (post-discovery)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PolarisationHaloscope_discover.txt), [reference](https://arxiv.org/abs/2209.12901)
 
 ## Other bounds
 * Axinovae (assumes post-inflationary scenario and axion star formation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Axinovae.txt), [reference](https://arxiv.org/abs/2302.00685)

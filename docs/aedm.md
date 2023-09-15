@@ -29,7 +29,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * JEDI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/JEDI.txt), [reference](https://arxiv.org/abs/2208.07293)
 * nEDM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/nEDM.txt), [reference](https://arxiv.org/abs/1708.06367)
 * Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
-* Polarisation haloscope (Projection): [projection (scanning)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/PolarisationHaloscope_scan.txt), [projection (post-discovery)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/PolarisationHaloscope_discover.txt) [reference](https://arxiv.org/abs/2209.12901)
+* Polarisation haloscope (Projection): [projection (scanning)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/PolarisationHaloscope_scan.txt), [projection (post-discovery)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/Projections/PolarisationHaloscope_discover.txt), [reference](https://arxiv.org/abs/2209.12901)
 
 ## Astro bounds
 * BBN (axion assumed to be dark matter): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/BBN.txt), [reference](https://arxiv.org/abs/1401.6460)
