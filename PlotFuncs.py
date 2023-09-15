@@ -2756,7 +2756,13 @@ class AxionEDM():
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf JEDI}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
-
+    
+    def PolarisationHaloscope(ax,text_pos=[4.05e-7,5e-13],col='red',alpha=0.4,zorder=-20,text_rot=37,fs=14):
+        dat = loadtxt('limit_data/AxionEDM/Projections/PolarisationHaloscope_scan.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=2.5,color=col,zorder=zorder,alpha=0.4)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Polarisation \newline haloscope}',color=col,alpha=0.6,fontsize=fs,rotation=text_rot,clip_on=True)
+        return
 
 
 #==============================================================================#
@@ -2908,6 +2914,13 @@ class Axion_fa():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.text(text_pos[0],text_pos[1],r'{\bf Piezoaxionic}',color=col,alpha=0.6,fontsize=fs,rotation=text_rot,clip_on=True)
+        return
+    
+    def PolarisationHaloscope(ax,text_pos=[4.3e-7,0.8e-10],col='red',alpha=0.4,zorder=-20,text_rot=45,fs=14):
+        dat = loadtxt('limit_data/fa/Projections/PolarisationHaloscope_scan.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=2.5,color=col,zorder=zorder,alpha=0.4)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Polarisation \newline haloscope}',color=col,alpha=0.6,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 #==============================================================================#
 
