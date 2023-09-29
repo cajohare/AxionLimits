@@ -2285,14 +2285,20 @@ class AxionNeutron():
         plt.text(0.5e-19,3e-4,r'{\bf nEDM}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def ChangE(ax,col='#5e2220',fs=21,rotation=42):
+    def ChangE(ax,col='#5e2220',fs=21,rotation=46):
         y2 = ax.get_ylim()[1]
         zo = 0.31
         dat = loadtxt("limit_data/AxionNeutron/ChangE.txt")
         dat[:,1] *= 2*AxionNeutron.m_n
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(0.5e-13,5.0e-8,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+
+        dat = loadtxt("limit_data/AxionNeutron/ChangE-NMR.txt")
+        dat[:,1] *= 2*AxionNeutron.m_n
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo*0.99,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo*0.99)
+
+        plt.text(0.7e-13,6.0e-8,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=24,projection=True):
@@ -2580,6 +2586,11 @@ class AxionProton():
         dat[:,1] *= 2*AxionProton.m_p
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
+
+        dat = loadtxt("limit_data/AxionProton/ChangE-NMR.txt")
+        dat[:,1] *= 2*AxionProton.m_p
+        plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo*0.99,lw=3)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo*0.99)       
         plt.text(0.7e-15,2.0e-6,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
     
@@ -2924,6 +2935,86 @@ class Axion_fa():
         return
 #==============================================================================#
 
+
+
+class AxionTop():
+    
+    def ATLAS_direct(ax,text_shift=[1,1],col='#1ec9e3',text_col='w',fs=20,zorder=2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=0.5,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/ATLAS_direct.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,alpha=edgealpha,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='#531ee3',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
+    def ATLAS_indirect(ax,text_shift=[1,1],col='#ed61e1',text_col='w',fs=20,zorder=1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=0.75,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_nonresonant.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=3.0,color='#ad49a5',zorder=zorder)
+        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_resonant.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=4.0,color='#ad49a5',zorder=zorder,linestyle='dotted')
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
+    def CMS_indirect(ax,text_shift=[1,1],col='#dfe622',text_col='w',fs=20,zorder=2.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=0.9,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/CMS_ttbar_nonresonant.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='#95991c',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf CMS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def K_decay(ax,text_shift=[1,1],col='#55d649',text_col='w',fs=20,zorder=1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/kaon_decays.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='#37872f',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf Kaon decay}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def B_decay(ax,text_shift=[1,1],col='#2e5c29',text_col='w',fs=20,zorder=0.5,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/b_decays.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='#2e5c29',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf B decay}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
+    def indirect_zz(ax,text_shift=[1,1],col='#f52116',text_col='w',fs=20,zorder=3,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/indirect_diboson_zz.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='#8f110a',zorder=zorder)
+        dat = loadtxt("limit_data/AxionTop/indirect_diboson_zz_2.txt")
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=2,color='#8f110a',zorder=zorder,linestyle='dashed')
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf indirect diboson ZZ}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
+    def indirect_gamgam(ax,text_shift=[1,1],col='#e67207',text_col='w',fs=20,zorder=2.5,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/indirect_diboson_gamgam.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='#b55c09',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf indirect diboson ZZ}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
+    def indirect_zgam(ax,text_shift=[1,1],col='#e84c0e',text_col='w',fs=20,zorder=2.7,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/indirect_diboson_zgam.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='#b55c09',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf indirect diboson ZZ}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
 
 class DarkPhoton():
     def FigSetup(xlab=r'Dark photon mass [eV]',ylab='Kinetic mixing',\
