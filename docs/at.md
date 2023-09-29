@@ -11,7 +11,7 @@
 ### &nbsp;
 ---
 
-## Data files and references
+## Data files
 * ATLAS_direct: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_direct.txt)
 * ATLAS_ttbar_nonresonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_ttbar_nonresonant.txt)
 * ATLAS_ttbar_resonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_ttbar_resonant.txt)
