@@ -3265,12 +3265,12 @@ class DarkPhoton():
 
         y2 = interp(dat[:,0],m1,y1)
         dat[dat[:,1]>y2,1] = y2[dat[:,1]>y2]
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=10)
+        plt.fill_between(dat[::2,0],dat[::2,1],y2=y2[::2],edgecolor=None,facecolor=col,zorder=10)
         plt.plot(dat[::2,0],dat[::2,1],color='k',alpha=1,zorder=10,lw=lw)
 
         if text_on:
             plt.text(0.18e-2,1e-11,r'{\bf MuDHI}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
-            plt.plot([1.2e-2,1.5e0],[1e-11,4e-11],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'),zorder=10)
+            plt.plot([1.2e-2,1.5e0],[1.5e-11,4e-10],'-',lw=2.5,color=col,path_effects=line_background(3.5,'k'),zorder=10)
         return
 
 
