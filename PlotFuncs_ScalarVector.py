@@ -319,10 +319,10 @@ class ScalarElectron():
         plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
         dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Quartz.txt")
         plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
-        dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Helium.txt")
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
+        #dat = loadtxt("limit_data/ScalarElectron/Projections/Resonator-Helium.txt")
+        #plt.plot(dat[:,0],dat[:,1],'--',color=col,zorder=zorder,alpha=alpha,lw=lw)
 
-        ax.text(1.8e-11,2.5e-1,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
+        #ax.text(1.8e-11,2.5e-1,'Helium',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         ax.text(1.2e-10,1e-2,'Sapphire',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         ax.text(4e-9,0.5e-1,'Pillar',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
         ax.text(4.5e-7,0.8e3,'Quartz BAW',rotation=rotation2,fontsize=fs2,color=text_col,alpha=alpha)
@@ -348,6 +348,11 @@ class ScalarElectron():
     def IPTA(ax,text_label=r'{\bf IPTA}',text_pos=[5e-24,2e-7],rotation=0,col='#274f70',text_col='#274f70',fs=20,zorder=-1,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/ScalarElectron/IPTA.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+    
+    def HELIOS(ax,text_label=r'{\bf HELIOS}',text_pos=[3e-11,0.6e0],rotation=90,col='#4f061d',text_col='#4f061d',fs=15,zorder=0.1011,text_on=True,Projection=False,edgealpha=1,lw=2):
+        dat = loadtxt("limit_data/ScalarElectron/Projections/HELIOS.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
 class VectorBL():
@@ -450,4 +455,9 @@ class VectorBL():
     def TorsionBalance(ax,text_label=r'{\bf Torsion balance (future)}',text_pos=[1e-14,3e-29],rotation=63,col='gray',text_col='gray',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/TorsionBalance.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+
+    def HELIOS(ax,text_label=r'{\bf HELIOS}',text_pos=[2.3e-11,0.6e-21],rotation=90,col='#4f061d',text_col='#4f061d',fs=14,zorder=0.1011,text_on=True,Projection=False,edgealpha=1,lw=2):
+        dat = loadtxt("limit_data/VectorB-L/Projections/HELIOS.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return

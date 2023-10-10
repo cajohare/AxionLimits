@@ -41,6 +41,7 @@
 
 ## Projected DM searches
 * Asteroids: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/Asteroids.txt), [reference](https://arxiv.org/abs/2210.09324)
+* HELIOS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/HELIOS), [reference](https://arxiv.org/abs/2309.07995)
 * LISA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/LISA.txt), [reference](https://arxiv.org/abs/2210.09324)
 * MAGIS-100: [projection1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/MAGIS100-Initial.txt), [projection2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/MAGIS100-Upgrade.txt) [reference](https://iopscience.iop.org/article/10.1088/2058-9565/abf719)
 * Optomechanical membranes: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/OptomechanicalMembranes.txt), [reference](https://arxiv.org/abs/2007.04899)

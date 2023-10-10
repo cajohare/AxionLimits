@@ -50,6 +50,7 @@
 * AEDGE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/AEDGE.txt), [reference](https://arxiv.org/abs/2108.02468)
 * AION: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/AION-km.txt), [reference](https://arxiv.org/abs/2108.02468)
 * DUAL: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/DUAL.txt), [reference](https://arxiv.org/abs/1508.01798)
+* HELIOS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/HELIOS), [reference](https://arxiv.org/abs/2309.07995)
 * IPTA (now obsolete post-NANOGrav): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/IPTA.txt), [reference](https://arxiv.org/abs/2205.06817)
 * MAGIS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/MAGIS-km.txt), [reference](https://arxiv.org/abs/2104.02835)
 * Optical-microwave clock: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Projections/OpticalMW.txt), [reference](https://arxiv.org/abs/1405.2925)
