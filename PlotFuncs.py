@@ -3552,6 +3552,13 @@ class DarkPhoton():
 
     def DOSUE(ax,col='red',fs=9,text_on=True,edge_on=False,lw=0.8):
         y2 = ax.get_ylim()[1]
+        
+        dat = loadtxt("limit_data/DarkPhoton/DOSUE-RR-2.txt")
+        dat[:,1] = dat[:,1]*sqrt(2/3/0.29377804)*sqrt(0.39/0.45)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.201)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.202,lw=lw)
+
         dat = loadtxt("limit_data/DarkPhoton/DOSUE-RR.txt")
         dat[:,1] = dat[:,1]*sqrt(2/3/0.29377804)*sqrt(0.39/0.45)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.201)
