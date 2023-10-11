@@ -406,8 +406,13 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def LISAPathfinder(ax,text_label=r'{\bf LISA Pathfinder',text_pos=[3e-17,0.3e-15],rotation=70,col='#6b0a24',text_col='w',fs=17,zorder=0.21,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def LISAPathfinder(ax,text_label=r'{\bf LISA Pathfinder}',text_pos=[3e-17,0.3e-15],rotation=70,col='#6b0a24',text_col='w',fs=17,zorder=0.21,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/LISAPathfinder.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+    
+    def LISAPathfinderRelativeAcceleration(ax,text_label=r'{\bf LISA Pathfinder} (rel. acceleration)',text_pos=[1.4e-15,0.19e-21],rotation=90,col='#6b0a24',text_col='w',fs=17,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/LISAPathfinder-RelativeAcceleration.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
