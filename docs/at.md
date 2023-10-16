@@ -13,8 +13,7 @@
 
 ## Data files
 * ATLAS_direct: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_direct.txt)
-* ATLAS_ttbar_nonresonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_ttbar_nonresonant.txt)
-* ATLAS_ttbar_resonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_ttbar_resonant.txt)
+* ATLAS_ttbar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/ATLAS_ttbar.txt)
 * CMS_ttbar_nonresonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/CMS_ttbar_nonresonant.txt)
 * CMS_ttbar_resonant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/CMS_ttbar_resonant.txt)
 * indirect_diboson_gamgam: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/indirect_diboson_gamgam.txt)

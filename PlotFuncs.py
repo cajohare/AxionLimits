@@ -2952,12 +2952,13 @@ class AxionTop():
         return
     
     def ATLAS_indirect(ax,text_shift=[1,1],col='#ed61e1',text_col='w',fs=20,zorder=1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=0.75,path_effects=line_background(1.5,'k')):
-        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_nonresonant.txt")
+#        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_nonresonant.txt")
+        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar.txt")
         plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
         plt.plot(dat[:,0]*1e-9,dat[:,1],lw=3.0,color='#ad49a5',zorder=zorder)
-        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_resonant.txt")
-        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
-        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=4.0,color='#ad49a5',zorder=zorder,linestyle='dotted')
+#        dat = loadtxt("limit_data/AxionTop/ATLAS_ttbar_resonant.txt")
+#        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+#        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=4.0,color='#ad49a5',zorder=zorder,linestyle='dotted')
 
         if text_on:
             plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
