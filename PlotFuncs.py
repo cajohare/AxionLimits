@@ -3550,6 +3550,18 @@ class DarkPhoton():
             plt.text(9e-7,1.8e-12/1.2,r'{\bf DMX}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
 
         return
+    
+    def GigaBREAD(ax,col='tomato',fs=10,text_on=True,edge_on=False,lw=0.8):
+        # data file is for randomly polarised case (WARNING: THEY USE ALPHA = SQRT(1/3))
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/DarkPhoton/GigaBREAD.txt")
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.25364478)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=0)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.2)
+        if text_on:
+            plt.text(6.5e-5,0.5e-13,r'{\bf BREAD}',color=col,rotation=-90,fontsize=fs,clip_on=True)
+        return
 
     def DOSUE(ax,col='red',fs=9,text_on=True,edge_on=False,lw=0.8):
         y2 = ax.get_ylim()[1]
