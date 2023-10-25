@@ -1293,6 +1293,11 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
         return
 
+    def JWST(ax,text_label=r'{\bf JWST}',text_pos=[0.75,4e-11],col='blue',text_col='w',fs=10,zorder=0.01,text_on=True,lw=0,rotation=0,path_effects=line_background(1,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/JWST.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
+        return
+
     def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[10,0.22e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_VIMOS.txt")
@@ -1732,7 +1737,7 @@ class AxionPhoton():
             plt.text(3.5e-4,5.3e-14,r'{\bf CADEx}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(4.5e-4,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
-            plt.text(2.55e-1,3.5e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
+            plt.text(1.8e-1,1.8e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
 
 
         else:
@@ -1834,6 +1839,7 @@ class AxionPhoton():
         AxionPhoton.SN1987A_decay(ax,text_on=text_on)
         AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.MUSE(ax,text_on=text_on)
+        AxionPhoton.JWST(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
         AxionPhoton.HST(ax,text_on=text_on)
         AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
