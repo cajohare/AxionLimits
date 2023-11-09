@@ -214,6 +214,7 @@
 ### Astrophysical searches for axions as dark matter (blue)
 * Axion star explosions: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/AxionStarExplosions-1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/AxionStarExplosions-2.txt), [reference](https://arxiv.org/abs/2302.10206)
 * BICEP/KECK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BICEP-KECK.txt), [reference](https://arxiv.org/abs/2108.03316)
+* Black hole polarimetry [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BlackHolePolarimetry.txt), [reference](https://arxiv.org/abs/2311.02149)
 * Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
 * CMB-S4 (birefringence) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CMB-S4.txt), [reference](https://arxiv.org/abs/2203.16567)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CMB_Anisotropies.txt), [reference1](https://arxiv.org/abs/2303.07370), [reference2](https://arxiv.org/abs/2303.07426)
