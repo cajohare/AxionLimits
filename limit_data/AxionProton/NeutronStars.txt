@@ -1,7 +1,8 @@
 # Neutron Star cooling
+# Upper limit in mass is roughly the neutron star temperature. The trapping regime at large coupling is not included in this bound.
 # https://arxiv.org/abs/2111.09892
 # m_a [eV]  g_ap
 1e-30	 1.5e-9
-1e10	 1.5e-9
-1e10	 1e-4
+9e3	 1.5e-9
+9e3	 1e-4
 1e-30	 1e-4
