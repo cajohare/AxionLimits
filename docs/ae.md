@@ -25,7 +25,7 @@
 ### &nbsp;
 ---
 
-See [Berlin et al. 2023](https://arxiv.org/abs/2312.11601) for a summary of the physical effects of electron-coupled axions, where many of these projections were derived and/or corrected from previous literature. I thank Kevin Zhou and Alex Millar for discussions related to this plot.
+See [Berlin et al. 2023](https://arxiv.org/abs/2312.11601) for a summary of the physical effects of electron-coupled axions, where several of these limits and projections were compiled. I thank Kevin Zhou and Alex Millar for discussions related to this plot.
 
 # Data files and references
 

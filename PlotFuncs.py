@@ -2548,7 +2548,7 @@ class AxionNeutron():
 
         # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
         zo = 0.03
-        col = 'darkred'
+        col = '#396b46'
         dat = loadtxt("limit_data/AxionNeutron/SNO.txt")
         dat[:,1] *= AxionNeutron.m_n # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
@@ -2681,7 +2681,7 @@ class AxionProton():
 
         # SNO, axion-induced dissociation of deuterons  arXiv:[2004.02733]
         zo = 0.03
-        col = 'darkred'
+        col = '#396b46'
         dat = loadtxt("limit_data/AxionProton/SNO.txt")
         dat[:,1] *= AxionProton.m_p # Note that their notation defines their g_an as my g_an/m_n not g_an/2m_n as other use.
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
