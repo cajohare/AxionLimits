@@ -520,12 +520,12 @@ class AxionPhoton():
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
         dat2 = loadtxt("limit_data/AxionPhoton/QUAX2.txt")
-        dat3 = loadtxt("limit_data/AxionPhoton/QUAX3.txt")
+        dat3 = loadtxt("limit_data/AxionPhoton/QUAX4.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
-            plt.plot([dat3[0,0],dat3[0,0]],[dat3[0,1]/(rs1*2e-10*dat3[0,0]+rs2),y2/(rs1*2e-10*dat3[0,0]+rs2)],color=col,lw=2,zorder=zo)
+            plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[:,0]+rs2),y2=y2,color=col,lw=2,zorder=zo)
             if text_on:
                 plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.05e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
@@ -2204,6 +2204,15 @@ class AxionElectron():
             plt.text(0.3e-18,3.15e-13,r'{\bf Electron Storage Ring}',fontsize=fs,color=col,ha='center',va='top',clip_on=True)
 
         return
+    
+    def FermionicAxionInterferometer(ax,col='#870032',fs=13,text_on=True,zorder=10,lw=1.5,text_shift=[1,1],Projection=False,**kwargs):
+        dat = loadtxt("limit_data/AxionElectron/FermionicAxionInterferometer.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
+
+        if text_on:
+            plt.text(text_shift[0]*2.0e-8,text_shift[1]*6e-5,r'\begin{center} {\bf Fermionic axion \linebreak interferometer} \end{center}',fontsize=fs,color=col,ha='center',va='top',clip_on=True,path_effects=line_background(0.5,'k'))
+        return
 
     def TorsionPendulumDM(ax,col='#a83248',fs=19,text_on=True,zorder=1.9,lw=1.5,text_shift=[1,1],Projection=False,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/TorsionPendulum-DM.txt")
@@ -2228,7 +2237,7 @@ class AxionElectron():
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
 
         if text_on:
-            plt.text(text_shift[0]*0.065e-7,text_shift[1]*2e-7,r'\begin{center} {\bf Torsion pendulum} \linebreak (dipole-dipole force)\end{center}',fontsize=fs,color='w',ha='center',va='top',clip_on=True,path_effects=line_background(1,'k'))
+            plt.text(text_shift[0]*0.065e-7,text_shift[1]*1.6e-7,r'\begin{center} {\bf Torsion pendulum} \linebreak (dipole-dipole force)\end{center}',fontsize=fs,color='w',ha='center',va='top',clip_on=True,path_effects=line_background(1,'k'))
         return
     
     def Electron_gminus2(ax,col='gray',fs=19,text_on=True,zorder=1.9,lw=1.5,text_shift=[1,1],**kwargs):
@@ -3264,7 +3273,7 @@ class DarkPhoton():
         dat[0,1] = 1e0
         plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
-        dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX3.txt")
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX4.txt")
         dat[0,1] = 1e0
         plt.plot(dat[:,0],dat[:,1],zorder=0.2,color=col,lw=2)
 
@@ -3561,20 +3570,20 @@ class DarkPhoton():
             plt.text(1.95e-7,3e-14,r'{\bf LOFAR (Sun)}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
-    def Jupiter(ax,col='Green',fs=15,text_on=True,lw=1.5):
+    def Jupiter(ax,col='Green',fs=17,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/Jupiter.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=2)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=2,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.9)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.9,lw=lw)
         if text_on:
-            plt.text(0.1e-14,4.5e-1,r'{\bf Jupiter}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(0.1e-14,4.5e-2,r'{\bf Jupiter}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def Earth(ax,col='DarkGreen',fs=17,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/Earth.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.9)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.9,lw=lw)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=2.0)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=2.0,lw=lw)
         if text_on:
             plt.text(0.4e-13,2e-1,r'{\bf Earth}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
@@ -3921,8 +3930,8 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
 
         if text_on:
-            plt.text(1.5e-17,1e-1/1.4,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(1.5e-17,0.2e-1/1.4,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1.5e-17,1e-1/5,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+            plt.text(1.5e-17,0.2e-1/5,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
 
         return
     

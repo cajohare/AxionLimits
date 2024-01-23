@@ -30,6 +30,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * HfH+: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/HfH.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.171301)
 * JEDI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionEDM/JEDI.txt), [reference](https://arxiv.org/abs/2208.07293)
 * Rb/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/RbQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
+* Tritium decay (not shown, below 1e-20 eV in mass): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Tritium.txt), [reference](https://arxiv.org/abs/2303.09865)
 * Piezoaxionic effect (Projection) [N=1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect1.txt), [N=64](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect64.txt), [reference](https://arxiv.org/abs/2112.11466)
 * Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
 * CASPEr-electric (Projection): [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)
