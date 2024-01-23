@@ -32,6 +32,7 @@
 
 ## DM Searches (red)
 * AURIGA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/AURIGA.txt), [reference](https://arxiv.org/abs/1607.07327)
+* Cavities [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/Cavities.txt), [reference](https://arxiv.org/abs/2312.13723)
 * Cs/Cav: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/CsCav.txt), [reference](https://arxiv.org/abs/2201.02042)
 * DAMNED: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/DAMNED.txt), [reference](https://arxiv.org/abs/2006.07055)
 * GEO 600: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/GEO600.txt), [reference](https://arxiv.org/abs/2103.03783)

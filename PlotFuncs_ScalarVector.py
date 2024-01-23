@@ -262,6 +262,11 @@ class ScalarElectron():
         dat = loadtxt("limit_data/ScalarElectron/CsCav.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
+    
+    def Cavities(ax,text_label=r'{\bf Cavities}',text_pos=[0.5e-16,1.9e1],rotation=0,col='#ab333b',text_col='w',fs=18,zorder=0.109,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/ScalarElectron/Cavities.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
 
     def Holometer(ax,text_label=r'{\bf Holometer}',text_pos=[1.3e-9,3e4],rotation=0,col='#b53724',text_col='#b53724',fs=15,zorder=0.15,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Holometer.txt")

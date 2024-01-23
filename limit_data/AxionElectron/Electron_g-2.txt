@@ -1,0 +1,6 @@
+# Electron g-2
+# https://link.springer.com/article/10.1140/epjc/s10052-019-7442-8
+# High-mass extent not included, constraints should get worse around the electron mass
+# mass [eV] electron coupling
+1e-30   6.6e-6
+511e3   6.6e-6 

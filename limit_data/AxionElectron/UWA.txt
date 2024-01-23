@@ -1,0 +1,7 @@
+# UWA Ferromagnetic haloscope Flower et al.
+# https://arxiv.org/pdf/1811.09348.pdf
+# Mass [eV]   g_aee
+33.79e-6    1e0
+33.79e-6    3.7e-9
+33.94e-6    3.7e-9
+33.94e-6    1e0

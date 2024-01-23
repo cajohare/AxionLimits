@@ -25,7 +25,13 @@
 ### &nbsp;
 ---
 
+See [Berlin et al. 2023](https://arxiv.org/abs/2312.11601) for a summary of the physical effects of electron-coupled axions, where many of these projections were derived and/or corrected from previous literature. I thank Kevin Zhou and Alex Millar for discussions related to this plot.
+
 # Data files and references
+
+### Laboratory bounds
+* Electron g-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Electron_g-2.txt), [reference](https://link.springer.com/article/10.1140/epjc/s10052-019-7442-8)
+* Torsion pendulum (dipole-dipole force): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/TorsionPendulum-Spin.txt), [reference](https://arxiv.org/abs/1508.02463)
 
 ### Underground detectors
 * DARWIN: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/DARWIN.txt), [reference](https://arxiv.org/abs/1606.07001)
@@ -35,7 +41,9 @@
 * LUX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/LUX.txt), [reference](https://arxiv.org/abs/1704.02297)
 * LZ: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/LZ.txt), [reference](https://arxiv.org/abs/2102.11740)
 * PandaX-II: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/PandaX.txt), [reference](https://arxiv.org/abs/1707.07921)
-* Semiconductors (absorption): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/SemiconductorAbsorption.txt), [reference](https://arxiv.org/abs/1608.02123)
+* Semiconductors [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Semiconductors.txt), [reference](https://arxiv.org/abs/1608.01994)
+* Spin-orbit coupling [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/SpinOrbitCoupling.txt), [reference](https://arxiv.org/abs/2202.11716)
+* Superconductors [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Superconductors.txt), [reference](https://arxiv.org/abs/1604.06800)
 * SuperCDMS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/SuperCDMS.txt), [reference](https://arxiv.org/abs/1911.11905)
 * XENON1T (ALP DM search, S2 only): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S2.txt), [reference](https://arxiv.org/abs/1907.11485)
 * XENON1T (ALP DM search S1+S2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/XENON1T_DM_S1S2.txt), [reference](https://arxiv.org/abs/2006.09721)
@@ -46,11 +54,18 @@
 
 
 ### Haloscopes:
-* Axion-magnon conversion:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/Magnon.txt),  [reference](https://arxiv.org/abs/2005.10256)
+* Axion-wind multilayer:  [projection (SQL)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/AxionWindMultilayer.txt), [projection (Single photon)](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/AxionWindMultilayer_SinglePhoton.txt),  [reference](https://arxiv.org/abs/2312.11601)
 * Axion-magnon conversion (scanning):  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/MagnonScan.txt),  [reference1](https://arxiv.org/abs/2005.10256),  [reference2](https://arxiv.org/abs/2001.10666)
+* Electron Storage Ring: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/ElectronStorageRing.txt),  [reference](https://arxiv.org/abs/2211.08439)
 * Magnon quantum nondemolition:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Magnons.txt),  [reference](https://arxiv.org/abs/2102.08764)
-* NV Centers [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/NVCenters.txt), [reference](https://arxiv.org/abs/2302.12756)
+* NV Centers [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/NVCenters.txt), [reference](https://arxiv.org/abs/2302.12756)
+* Old comagnetometers:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/OldComagnetometers.txt),  [reference](https://arxiv.org/abs/1907.03767)
+* Future comagnetometers:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/FutureComagnetometers.txt),  [reference](https://arxiv.org/abs/1907.03767)
 * QUAX:  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/QUAX.txt),  [reference 2018](https://arxiv.org/abs/1806.00310), [reference 2020](https://arxiv.org/abs/2001.08940)
+* Torsion pendulum (DM search):  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/TorsionPendulum-DM.txt),  [reference](https://arxiv.org/abs/1902.04246)
+* Torsion pendulum (projection):  [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/TorsionPendulum-DM.txt),  [reference](https://arxiv.org/abs/1709.07852)
+* YIG:  [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/Projections/YIG.txt),  [reference](https://arxiv.org/abs/2001.10666)
+
 
 ### Astro bounds:
 * Freeze-in ALPs (irreducible axions): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionElectron/IrreducibleFreezeIn.txt), [reference](https://arxiv.org/abs/2209.06216)
