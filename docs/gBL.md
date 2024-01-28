@@ -29,8 +29,9 @@
 
 ## Astrophysical bounds
 * DM stability bound: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/DMStability.txt), [reference](https://arxiv.org/abs/2205.03617)
-* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/HorizontalBranch.txt), [reference](https://arxiv.org/abs/1611.05852)
-* Sun: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Sun.txt), [reference](https://arxiv.org/abs/1611.05852)
+* Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/HorizontalBranch.txt), [reference](https://arxiv.org/abs/2304.12907)
+* Red giant: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/RedGiant.txt), [reference](https://arxiv.org/abs/2304.12907)
+* Sun: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Sun.txt), [reference](https://arxiv.org/abs/2304.12907)
 
 ## DM searches
 * Eot-Wash: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/EotWashDM.txt), [reference](https://arxiv.org/abs/2109.08822)

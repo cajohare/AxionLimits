@@ -385,14 +385,20 @@ class VectorBL():
         dat = loadtxt("limit_data/VectorB-L/DMStability.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
-    
-    def Sun(ax,text_label=r'{\bf Sun}',text_pos=[0.6e2,2e-14],rotation=-45,col='forestgreen',text_col='w',fs=20,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.2):
+
+
+    def Sun(ax,text_label=r'{\bf Sun}',text_pos=[0.1e2,0.8e-11],rotation=0,col='forestgreen',text_col='w',fs=24,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.2):
         dat = loadtxt("limit_data/VectorB-L/Sun.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
-    
-    def HorizontalBranch(ax,text_label=r'{\bf HB}',text_pos=[6e2,1.5e-14],rotation=-45,col=[0.0, 0.66, 0.42],text_col='w',fs=20,zorder=0.19,text_on=True,Projection=False,edgealpha=1,lw=1.2):
+
+    def HorizontalBranch(ax,text_label=r'{\bf Horizontal branch}',text_pos=[0.7e-6,1e-10],rotation=0,col='seagreen',text_col='w',fs=19,zorder=0.19,text_on=True,Projection=False,edgealpha=1,lw=1.2):
         dat = loadtxt("limit_data/VectorB-L/HorizontalBranch.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
+    def RedGiant(ax,text_label=r'{\bf Red giants}',text_pos=[1e-4,2.2e-11],rotation=0,col=[0.0, 0.66, 0.42],text_col='w',fs=19,zorder=0.18,text_on=True,Projection=False,edgealpha=1,lw=1.2):
+        dat = loadtxt("limit_data/VectorB-L/RedGiant.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
