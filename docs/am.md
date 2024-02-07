@@ -50,6 +50,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * Klaer and Moore: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Klaer17.txt),  [reference](https://arxiv.org/abs/1708.07521)
 * Petreczky et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Petreczky16.txt),  [reference](https://arxiv.org/abs/1606.03145)
 * VISHnu.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/VISHnu.txt),  [reference](https://arxiv.org/abs/2206.11598)
+* Saikawa et al. (2024): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Saikawa24.txt),  [reference](https://arxiv.org/abs/2401.17253)
 * Saikawa et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/SaikawaDW_6_10.txt),  [reference](https://arxiv.org/abs/1412.0789)
 * Gorghetto et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/GorghettoDW_6.txt),  [reference](https://arxiv.org/abs/2007.04990)
 

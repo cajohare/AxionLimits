@@ -1,0 +1,3 @@
+# Post-inflation strings simulation extrapolation from 1100^3 box
+# https://arxiv.org/pdf/2401.17253.pdf
+95e-6  450e-6
