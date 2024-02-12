@@ -1557,7 +1557,7 @@ class AxionPhoton():
                 plt.plot([3.5e-7*text_shift[0],2e-5],[6e3*text_shift[1],8e3],lw=1.5,color=col,path_effects=line_background(2,'w'))
         return
 
-    def AxionStarExplosions(ax,text_label=r'{\bf Axion star explosions}',text_pos=[4e-11,1.8e-12],col='#016682',rotation=27,text_col='w',fs=12,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
+    def AxionStarExplosions(ax,text_label=r'{\bf AS explosions}',text_pos=[4e-11,2.4e-12],col='#016682',rotation=25,text_col='w',fs=9,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
         # Axion star explosions - assumes 100% dark matter and a certain core-soliton mass relation
         dat = loadtxt('limit_data/AxionPhoton/AxionStarExplosions-1.txt')
         plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
@@ -1566,8 +1566,7 @@ class AxionPhoton():
         plt.fill(dat[:,0],dat[:,1],color=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=zorder,alpha=edgealpha)
         if text_on:
-            plt.text(text_pos[0],text_pos[1],r'{\bf Axion star}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
-            plt.text(text_pos[0]*0.8,text_pos[1]/2,r'{\bf explosions}',fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def BeamDump(ax,text_shift=[1,1],col='purple',text_col='w',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
