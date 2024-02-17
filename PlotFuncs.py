@@ -1289,7 +1289,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha,edgealpha=edgealpha)
         return
 
-    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.5e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
+    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.2e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (MUSE) [2009.01310]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
@@ -1299,6 +1299,12 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/JWST.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
         return
+    
+    def WINERED(ax,text_label=r'{\bf WINERED}',text_pos=[0.25,1e-11],col='navy',text_col='navy',fs=9,zorder=0.01,text_on=True,lw=0,rotation=0,path_effects=None):
+        dat = loadtxt("limit_data/AxionPhoton/WINERED.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
+        return
+
 
     def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[10,0.22e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
@@ -1851,6 +1857,11 @@ class AxionPhoton():
         AxionPhoton.LeoT(ax,text_on=text_on)
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
+            AxionPhoton.WINERED(ax,text_on=False)
+        else:
+            AxionPhoton.WINERED(ax,text_on=True)
+
+
             #AxionPhoton.eROSITA(ax,text_on=text_on)
         return
         
@@ -1911,13 +1922,13 @@ class AxionPhoton():
             plt.text(text_shift[0]*7e-21,text_shift[1]*4.5e-13,r'{\bf Pulsar polarisation array}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def PPTA_QUIJOTE(ax,text_shift=[1,1],col='darkblue',text_col='darkblue',fs=15,zorder=1.2,text_on=True,lw=1.5,rotation=39,ha='center',edgealpha=1,path_effects=[]):
+    def PPTA_QUIJOTE(ax,text_shift=[1,1],col='darkblue',text_col='w',fs=15,zorder=1.2,text_on=True,lw=1.5,rotation=39,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/PPTA-QUIJOTE.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1.5e-22,text_shift[1]*0.9e-12,r'{\bf PPTA+QUIJOTE}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.2e-22,text_shift[1]*0.78e-12,r'{\bf PPTA}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def TwistedAnyonCavity(ax,text_shift=[1,1],col='crimson',text_col='crimson',fs=22,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
