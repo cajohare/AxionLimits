@@ -109,7 +109,7 @@
 * ADMX SLIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_SLIC.txt), [reference](https://arxiv.org/abs/1911.05772)
 * ADMX Projection: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ADMX_Projected.txt),  [reference](https://arxiv.org/abs/1612.08296)
 * aLIGO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/aLIGO.txt), [reference](https://arxiv.org/abs/1903.02017)
-* ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/PlasmaHaloscope.txt), [reference](https://arxiv.org/abs/1904.11872)
+* ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ALPHA), [reference](https://arxiv.org/abs/1904.11872)
 * BabyIAXO-RADES: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BabyIAXO_RADES.txt), [reference](https://arxiv.org/abs/2306.17243)
 * BASE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BASE.txt), [reference](https://arxiv.org/abs/2101.11290)
 * BRASS: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BRASS.txt), [reference](https://www1.physik.uni-hamburg.de/iexp/gruppe-horns/forschung/brass.html)
