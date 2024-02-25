@@ -2414,7 +2414,7 @@ class AxionNeutron():
         plt.text(0.5e-19,3e-4,r'{\bf nEDM}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def ChangE(ax,col='#5e2220',fs=21,rotation=46):
+    def ChangE(ax,col='#5e2220',fs=19,rotation=45):
         y2 = ax.get_ylim()[1]
         zo = 0.31
         dat = loadtxt("limit_data/AxionNeutron/ChangE.txt")
@@ -2427,7 +2427,7 @@ class AxionNeutron():
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo*0.99,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo*0.99)
 
-        plt.text(0.7e-13,6.0e-8,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(0.7e-13,5.0e-8,r'{\bf ChangE}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def NASDUCK(ax,col=[0.77, 0.1, 0.13],fs=24,projection=True):
@@ -2472,7 +2472,7 @@ class AxionNeutron():
         dat[:,1] *= 2*AxionNeutron.m_n/0.63 # last factor is to correct for missing spin fraction in that analysis
         plt.plot(dat[:,0],dat[:,1],'-',color='k',alpha=1,zorder=zo,lw=3)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zo)
-        plt.text(2.9e-15,9.2e-6,r'{\bf Hefei \newline \newline \newline \phantom{,}$^{129}$Xe}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(2.9e-15,4.2e-6,r'{\bf Hefei \newline \newline \newline \phantom{,}$^{129}$Xe}',rotation=rotation,fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SuperfluidHe3(ax,col='darkred',zo=-10):
