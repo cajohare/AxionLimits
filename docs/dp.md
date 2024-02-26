@@ -155,6 +155,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * CAPP-6: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-6.txt)
 * CAPP-7: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-7.txt)
 * CAPP-8: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-8.txt)
+* CAPP-MAX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAPP-MAX.txt)
 * CAST-CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/CAST-CAPP.txt)
 * Dark E-field: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/DarkEfield.txt)
 * DM Pathfinder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Rescaled/DM-Pathfinder.txt)

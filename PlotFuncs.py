@@ -473,6 +473,7 @@ class AxionPhoton():
         dat6 = loadtxt("limit_data/AxionPhoton/CAPP-6.txt")
         dat7 = loadtxt("limit_data/AxionPhoton/CAPP-7.txt")
         dat8 = loadtxt("limit_data/AxionPhoton/CAPP-8.txt")
+        dat9 = loadtxt("limit_data/AxionPhoton/CAPP-MAX.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -483,6 +484,7 @@ class AxionPhoton():
             plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat7[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat8[:,0],dat8[:,1]/(rs1*2e-10*dat8[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat9[:,0],dat9[:,1]/(rs1*2e-10*dat9[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
                 plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
@@ -503,6 +505,7 @@ class AxionPhoton():
             plt.fill_between(dat6[:,0],dat6[:,1]/(rs1*2e-10*dat6[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat7[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat8[:,0],dat8[:,1]/(rs1*2e-10*dat8[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat9[:,0],dat9[:,1]/(rs1*2e-10*dat9[0,0]+rs2),y2=y2,color=col)
 
         return
 
@@ -1157,8 +1160,8 @@ class AxionPhoton():
             # IAXO arXiv[1212.4633]
             IAXO_col = 'purple'
             IAXO = loadtxt("limit_data/AxionPhoton/Projections/IAXO.txt")
-            plt.plot(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),'--',linewidth=2.5,color=IAXO_col,zorder=0.001)
-            plt.fill_between(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),y2=y2,edgecolor=None,facecolor=IAXO_col,zorder=0,alpha=0.3)
+            plt.plot(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),'--',linewidth=2.5,color=IAXO_col,zorder=-1)
+            plt.fill_between(IAXO[:,0],IAXO[:,1]/(rs1*2e-10*IAXO[:,0]+rs2),y2=y2,edgecolor=None,facecolor=IAXO_col,zorder=-1,alpha=0.3)
             if text_on==True:
                 if rs1==0:
                     plt.text(0.5e-3,7.3e-12,r'{\bf IAXO}',fontsize=23,color='purple',rotation=0,clip_on=True)
@@ -1255,7 +1258,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*3.5e-7,text_shift[1]*0.6e-11/0.35,r'{\bf MWD Pol.}',fontsize=11,color='w',rotation=rotation,ha='center',clip_on=True,path_effects=line_background(1,'k'))
         return
 
-    def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[2e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=0.005,text_on=True,lw=1.5,rotation=0,edgealpha=1):
+    def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[2e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=-1,text_on=True,lw=1.5,rotation=0,edgealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/PulsarPolarCap.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',rotation=rotation,edgealpha=edgealpha,path_effects=line_background(1,'k'))
         return

@@ -65,7 +65,7 @@
 ### &nbsp;
 ### &nbsp;
 ---
-[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
 ## FIPs White Paper version (closeup)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_FIPS.pdf)
@@ -123,6 +123,7 @@
 * CAPP-6 (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-6.txt), [reference](https://arxiv.org/abs/2210.10961)
 * CAPP-7: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-7.txt), [reference](https://arxiv.org/abs/2308.09077)
 * CAPP-8 (KSVZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-8.txt), [reference](https://arxiv.org/abs/2312.11003)
+* CAPP-MAX (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-MAX.txt), [reference](https://arxiv.org/abs/2402.12892)
 * CAST-CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST-CAPP.txt), [reference](https://arxiv.org/abs/2211.02902)
 * DALI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DALI.txt), [reference](https://arxiv.org/abs/2303.03997)
 * DANCE concept: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
