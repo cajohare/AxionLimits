@@ -65,11 +65,11 @@
 ### &nbsp;
 ### &nbsp;
 ---
-[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_AltColours.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
 ## FIPs White Paper version (closeup)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
-### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_FIPS.pdf)
-### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_AltColours.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
