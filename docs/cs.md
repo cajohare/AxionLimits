@@ -8,8 +8,14 @@ Here you can find a sort of "cheatsheet" for converting between the dark matter 
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet.png)
 ### &nbsp;
 ### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
+### &nbsp;
 ---
-[<img align="right" height="500" src="../plots/plots_png/Cheatsheet_AxionOnly.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet_AxionOnly.png)
+[<img align="right" height="300" src="../plots/plots_png/Cheatsheet_AxionOnly.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet_AxionOnly.png)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Cheatsheet.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet_AxionOnly.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Cheatsheet_AxionOnly.png)
