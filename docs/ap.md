@@ -1,63 +1,63 @@
 # Axion-photon coupling
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png)
-## Basic plot with projections
+### Basic plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_with_Projections.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_IAXOCloseup.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png)
-## Helioscope closeup
+### Helioscope closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_IAXOCloseup.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_IAXOCloseup.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_AstroCloseUp.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png)
-## High energy astrophysics limits closeup
+### High energy astrophysics limits closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_AstroCloseUp.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_AstroCloseUp.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_RadioFreqCloseup.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
-## Haloscopes closeup
+### Haloscopes closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_RadioFreqCloseup.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_RadioFreqCloseup.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Ultralight_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
-## Ultralight axions
+### Ultralight axions
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Ultralight.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Ultralight_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Ultralight_with_Projections.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_HighMass.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass.png)
-## Heavy axions
+### Heavy axions
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_ColliderBounds.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_HighMass.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass.png)
 ### &nbsp;
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Simple_Wide.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
-## Simplified plot
+### Simplified plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/SimplifiedPlots.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Simple_Wide.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
-## FIPs White Paper version 
+### FIPs White Paper version 
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
@@ -66,7 +66,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_AltColours.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
-## FIPs White Paper version (closeup)
+### FIPs White Paper version (closeup)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_AltColours.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
@@ -75,7 +75,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)
-## Ultra-simplified plot
+### Ultra-simplified plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_UltraSimple_FullParameterSpace.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)

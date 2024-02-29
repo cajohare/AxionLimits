@@ -20,7 +20,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_ALPDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
-## Other DM predictions
+### Other DM predictions
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_ALPDM.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_ALPDM.png)
@@ -31,7 +31,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/Axion_fa_ALPDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_ALPDM.png)
-## Cosmological ALP scenarios and recasted constraints
+### Cosmological ALP scenarios and recasted constraints
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/Axion_fa_ALPDM.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_ALPDM.png)
