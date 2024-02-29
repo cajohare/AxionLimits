@@ -1,7 +1,7 @@
 # Gauged B-L vector boson limits
 ---
 [<img align="right" height="300" src="../plots/plots_png/VectorB-L.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Vectors.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L.png)
@@ -11,7 +11,7 @@
 
 ---
 [<img align="right" height="300" src="../plots/plots_png/VectorB-L_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png)
-## Plot with projections
+### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Vectors.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png)

@@ -1,7 +1,7 @@
 # Axion-proton coupling
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionProton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionProton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton.png)
@@ -9,7 +9,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionProton_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton_with_Projections.png)
-## Plot with projections
+### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionProton.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionProton_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionProton_with_Projections.png)

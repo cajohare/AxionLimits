@@ -1,7 +1,7 @@
 # Axion-neutron coupling
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionNeutron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionNeutron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron.png)
@@ -9,7 +9,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionNeutron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png)
-## Plot with projections
+### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionNeutron.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionNeutron_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionNeutron_with_Projections.png)

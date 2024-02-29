@@ -1,7 +1,7 @@
 # Axion-EDM coupling
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionEDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionEDM.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionEDM.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM.png)
@@ -9,7 +9,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/AxionEDM_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM_with_Projections.png)
-## Plot with projections
+### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionEDM.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionEDM_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionEDM_with_Projections.png)

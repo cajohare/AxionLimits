@@ -4,7 +4,7 @@ Alternate versions of the axion-photon and dark-photon plot for the FIPS Worksho
 
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
-## Axion-photon coupling
+### Axion-photon coupling
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
@@ -13,7 +13,7 @@ Alternate versions of the axion-photon and dark-photon plot for the FIPS Worksho
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
-## Axion-photon coupling closeup
+### Axion-photon coupling closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_FIPS.png)
@@ -22,7 +22,7 @@ Alternate versions of the axion-photon and dark-photon plot for the FIPS Worksho
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/DarkPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
-## Dark photon
+### Dark photon
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_FIPS.png)
@@ -31,7 +31,7 @@ Alternate versions of the axion-photon and dark-photon plot for the FIPS Worksho
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/DarkPhoton_Closeup_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)
-## Dark photon closeup
+### Dark photon closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/DarkPhoton_Closeup_FIPS.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/DarkPhoton_Closeup_FIPS.png)

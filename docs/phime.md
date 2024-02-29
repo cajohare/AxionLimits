@@ -1,7 +1,7 @@
 # Scalar-electron coupling limits
 ---
 [<img align="right" height="300" src="../plots/plots_png/ScalarElectron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Scalars.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElectron.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron.png)
@@ -11,7 +11,7 @@
 
 ---
 [<img align="right" height="300" src="../plots/plots_png/ScalarElectron_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron_with_Projections.png)
-## Plot with projections
+### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Scalars.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElectron_with_Projections.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarElectron_with_Projections.png)

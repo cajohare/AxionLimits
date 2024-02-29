@@ -19,7 +19,7 @@ These plots appeared in the paper [O'Hare & Vitagliano, PRD 102 115026 2021](htt
 
 ---
 [<img align="right" height="300" src="../plots/plots_png/ScalarNucleon.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png)
@@ -27,7 +27,7 @@ These plots appeared in the paper [O'Hare & Vitagliano, PRD 102 115026 2021](htt
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/MonopoleDipole_ElectronNucleon.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png)
@@ -35,7 +35,7 @@ These plots appeared in the paper [O'Hare & Vitagliano, PRD 102 115026 2021](htt
 ### &nbsp;
 ---
 [<img align="right" height="300" src="../plots/plots_png/MonopoleDipole_NucleonNucleon.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png)
-## Basic plot
+### Basic plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionCPV.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png)
