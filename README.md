@@ -27,7 +27,8 @@ Plot of dimensionless coupling with projections ([pdf](https://github.com/cajoha
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron.png))\
 Plot with projections ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionElectron_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionElectron_with_Projections.png))\
    &nbsp; \
-  &nbsp;
+  &nbsp; \
+  &nbsp; 
 
 ---
 
@@ -74,7 +75,9 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionTop_Co
 Plot for scalar nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/ScalarNucleon.png))\
 Plot for electron-electron coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_ElectronNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_ElectronNucleon.png))\
 Plot for nucleon-nucleon coupling ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/MonopoleDipole_NucleonNucleon.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/MonopoleDipole_NucleonNucleon.png))\
-  &nbsp;
+   &nbsp; \
+   &nbsp; \
+      &nbsp; 
 
 ---
 
@@ -157,6 +160,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/ScalarElect
 Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/VectorB-L_with_Projections.pdf), [png](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/VectorB-L_with_Projections.png))\
    &nbsp; \
   &nbsp; \
+    &nbsp; \
    &nbsp; 
 
 ---
@@ -194,7 +198,7 @@ Plot ([pdf](https://github.com/cajohare/AxionLimits/raw/master/plots/Cheatsheet.
 ---
 
 [<img align="right" width="300" src="plots/Wavy_Map.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.png)
-# **Experiment map**
+### **Experiment map**
 Work in progress (comments welcome)\
 Download [png image](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.png)\
 Download [keynote file](https://github.com/cajohare/AxionLimits/raw/master/plots/Wavy_Map.key)\
