@@ -1,7 +1,7 @@
 # Axion dark matter theory predictions
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionMass.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionMass.png)
-## QCD axion (axion-photon coupling)
+### QCD axion (axion-photon coupling)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionMass.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionMass.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionMass.png)
