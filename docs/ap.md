@@ -49,6 +49,13 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass.png)
 ### &nbsp;
 ---
+[<img align="right" height="250" src="../plots/plots_png/AxionPhoton_HeavyAxionDecayCloseUp.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HeavyAxionDecayCloseUp.png)
+### Haloscopes closeup
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_HeavyAxionDecayCloseUp.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HeavyAxionDecayCloseUp.png)
+### &nbsp;
+---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_Simple_Wide.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
 ### Simplified plot
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/SimplifiedPlots.ipynb)
@@ -223,6 +230,7 @@
 * Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
 * CMB-S4 (birefringence) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CMB-S4.txt), [reference](https://arxiv.org/abs/2203.16567)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CMB_Anisotropies.txt), [reference1](https://arxiv.org/abs/2303.07370), [reference2](https://arxiv.org/abs/2303.07426)
+* eROSITA early data release (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/eROSITA.txt), [reference](https://arxiv.org/pdf/2401.16747.pdf)
 * eROSITA (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/eROSITA.txt), [reference](https://arxiv.org/pdf/2103.13241.pdf)
 * Gamma-ray attenuation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GammaRayAttenuation.txt), [reference](https://arxiv.org/abs/2208.13794)
 * HST Cosmic optical background anisotropies (Nakayama and Yin): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST_Nakayama.txt), [reference](https://arxiv.org/abs/2205.01079)
@@ -246,6 +254,7 @@
 * THESEUS (ALP DM decay to Xrays): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/THESEUS.txt), [reference](https://arxiv.org/abs/2008.08306)
 * WINERED: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/WINERED.txt), [reference](https://arxiv.org/abs/2402.07976)
 * XMM-Newton (decaying DM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XMM-Newton.txt), [reference](https://arxiv.org/abs/2102.02207)
+* XRISM (decaying DM): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/XRISM.txt), [reference](https://arxiv.org/abs/2305.17160)
 * 2011 Compilation: [EBL](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EBL.txt), [X-rays](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/XRAY.txt), [x_ion](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/x_ion.txt), [reference](https://arxiv.org/abs/1110.2895)
 
 ### Collider, accelerator and beam dump bounds (purple)
