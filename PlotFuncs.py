@@ -1345,6 +1345,7 @@ class AxionPhoton():
         return
 
 
+
     def THESEUS(ax,text_label=r'{\bf THESEUS}',text_pos=[7e2,0.8e-17],col=[0.03, 0.57, 0.82],edgecolor=[0.03, 0.57, 0.82],text_col=[0.03, 0.57, 0.82],fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=0.05):
         # THESEUS 2008.08306
         dat = loadtxt("limit_data/AxionPhoton/Projections/THESEUS.txt")
@@ -1861,6 +1862,11 @@ class AxionPhoton():
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
             AxionPhoton.WINERED(ax,text_on=False)
+            
+            # 21 cm
+            PlotBound(ax,"limit_data/AxionPhoton/Projections/21cm.txt",edgecolor='deepskyblue',zorder=0.0,alpha=0.0,lw=1.5,linestyle=(6, (4, 1.5,4,1)),edgealpha=0.85)
+            plt.text(6e1,0.2e-15,r'{\bf 21 cm}',color='deepskyblue',fontsize=15,rotation=-50)
+
         else:
             AxionPhoton.WINERED(ax,text_on=True)
 
