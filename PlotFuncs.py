@@ -708,12 +708,15 @@ class AxionPhoton():
             zo = 0
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/RADES.txt")
+        dat2 = loadtxt("limit_data/AxionPhoton/RADES2.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
         else:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color='k',lw=4,zorder=zo)
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=3,zorder=zo)
+            plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=3,zorder=zo)
             if text_on:
                 plt.text(text_shift[0]*dat[0,0]*0.88,text_shift[1]*y2*1.2,r'{\bf RADES}',fontsize=fs,color=col,rotation=40,ha='left',rotation_mode='anchor')
             plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
@@ -978,6 +981,20 @@ class AxionPhoton():
         if text_on:
             plt.text(text_pos[0],text_pos[1],r'{\bf ADBC}',rotation=rotation,fontsize=fs,color=col,ha='left',va='top',clip_on=True)
         return
+    
+    def ADBC1(ax,col='red',fs=12,text_on=True,lw=1,text_pos=[0.3e-7,3e-8],rotation=90,zorder=0.8,edgealpha=1):
+        y2 = ax.get_ylim()[1]
+        dat = loadtxt("limit_data/AxionPhoton/ADBC.txt")
+        n = shape(dat)[0]
+        x = dat[arange(0,n,2),0]
+        y = dat[arange(0,n,2),1]
+        y[-1] = y2
+        plt.plot(x,y,'k-',lw=lw,zorder=1.81,alpha=edgealpha)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if text_on:
+            plt.text(text_pos[0],text_pos[1],r'{\bf ADBC}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
 
     def SHAFT(ax,col='red',fs=16,text_on=True,lw=1,text_pos=[0.8e-10,3e-10],rotation=0,zorder=1.8,edgealpha=1):
         # SHAFT arXiv:[2003.03348]
@@ -1701,6 +1718,7 @@ class AxionPhoton():
             AxionPhoton.HAYSTAC(ax,text_on=False)
             AxionPhoton.ABRACADABRA(ax,fs=fs,text_on=text_on)
             AxionPhoton.SHAFT(ax,text_on=text_on)
+            AxionPhoton.ADBC1(ax,text_on=text_on)
             AxionPhoton.ORGAN(ax,text_on=False,lw=0)
             AxionPhoton.UPLOAD(ax,text_on=False)
             AxionPhoton.TASEH(ax,text_on=False)
@@ -1761,6 +1779,7 @@ class AxionPhoton():
             AxionPhoton.HAYSTAC(ax,text_on=text_on)
             AxionPhoton.ABRACADABRA(ax,fs=fs,text_on=text_on)
             AxionPhoton.SHAFT(ax,text_on=text_on)
+            AxionPhoton.ADBC1(ax,text_on=text_on)
             AxionPhoton.ORGAN(ax,text_on=text_on,lw=0)
             AxionPhoton.UPLOAD(ax,text_on=text_on)
             AxionPhoton.TASEH(ax,text_on=False)
@@ -1780,6 +1799,7 @@ class AxionPhoton():
         AxionPhoton.HAYSTAC(ax,projection=projection,text_on=text_on,col=col)
         AxionPhoton.ABRACADABRA(ax,fs=fs,projection=False,text_on=text_on,col=col,lw=0.75)
         AxionPhoton.SHAFT(ax,text_on=text_on,col=col,lw=0.75)
+        AxionPhoton.ADBC1(ax,text_on=text_on)
         AxionPhoton.CAPP(ax,fs=fs-4,text_on=text_on,col=col)
         AxionPhoton.ORGAN(ax,projection=projection,text_on=text_on,col=col,lw=0)
         AxionPhoton.UPLOAD(ax,text_on=text_on,col=col)
@@ -2944,11 +2964,11 @@ class Axion_fa():
                  path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[20e-20,0.3e-14],col='darkred',text_col='w',text_rot=40,fs=23,zorder=-1.1):
+    def nEDM(ax,text_pos=[20e-20,0.2e-14],col='darkred',text_col='w',text_rot=40,fs=19,zorder=-1.1):
         # Already accounts for stochastic correction
         dat = loadtxt('limit_data/fa/nEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf nEDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -2964,6 +2984,13 @@ class Axion_fa():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf HfF}$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+    
+    def I2Ca(ax,text_pos=[2.3e-17,2e-13],col='#b1332e',text_col='w',text_rot=40,fs=22,zorder=-1.1):
+        dat = loadtxt('limit_data/fa/I2Ca.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'I$_2^+$/Ca$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[0.15e-16,0.5e-9],text_rot=35,col='#c11a4e',text_col='w',fs=20,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
@@ -2988,7 +3015,7 @@ class Axion_fa():
     def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col='#95bd93',text_col='k',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zo)
         plt.text(text_pos[0],text_pos[1],r'{\bf GW170817}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
@@ -2996,7 +3023,7 @@ class Axion_fa():
     def Pulsars(ax,text_pos=[3e-15,0.11e-16],linespacing_y=0.65,col='#30693d',text_col='#30693d',text_rot=0,fs=21,zo=-6.9):
         dat = loadtxt('limit_data/fa/Pulsar.txt')
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zo)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zo)
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
@@ -3010,7 +3037,7 @@ class Axion_fa():
     def BBN(ax,text_pos=[1.9e-17,0.95e-16],col='#1f4969',text_col='w',text_rot=15,fs=14,zorder=-6):
         dat = loadtxt('limit_data/fa/BBN.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf BBN}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -3024,25 +3051,25 @@ class Axion_fa():
     def NeutronStars(ax,text_pos=[0.5e-3,0.4e-12],col='#599967',text_col='#599967',text_rot=41,fs=29,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
 
     def Axinovae(ax,text_pos=[1.7e-20,0.02e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):
         dat = loadtxt('limit_data/fa/Axinovae.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Axinovae}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def Inspirals(ax,text_pos=[1e-16,2e-14],col='darkgreen',text_col='darkgreen',text_rot=0,fs=23,zorder=-10):
         dat = loadtxt('limit_data/fa/Projections/NSBH-Inspiral.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,alpha=1,zorder=zorder)
 
         dat = loadtxt('limit_data/fa/Projections/NSNS-Inspiral.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e-99,color=col,zorder=zorder,alpha=0.2)
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=3,alpha=1,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,alpha=1,zorder=zorder)
 
         plt.text(text_pos[0],text_pos[1],r'{\bf Inspirals}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True)
         return
@@ -3050,14 +3077,14 @@ class Axion_fa():
     def StorageRingEDM(ax,text_pos=[1e-11,1.5e-13],col='crimson',alpha=0.4,zorder=-10,text_rot=41,fs=20):
         dat = loadtxt('limit_data/fa/Projections/StorageRingEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.1,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=zorder,alpha=0.4)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=0.4)
         plt.text(text_pos[0],text_pos[1],r'{\bf Storage ring}',color=col,alpha=0.4,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
     def CASPEr(ax,text_pos=[5e-11,1e-19],col='crimson',alpha=0.1,zorder=-10,text_rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],'--',lw=3,color=col,zorder=-1,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=-1,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
@@ -3896,6 +3923,21 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
             plt.text(5e-3,0.3e-5,r'{\bf Hinode}',fontsize=fs,color='w',rotation=-59,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
+        return
+
+
+    def JWST(ax,col='#2d4d6e',fs=12,text_on=True,lw=1.5):
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/JWST.txt")
+
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.08)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.08,lw=lw)
+
+        if text_on:
+            plt.text(0.67,2e-11,r'{\bf JWST}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True,path_effects=line_background(1,'k'))
         return
 
     def SHIPS(ax,col='indianred',fs=20,text_on=True,lw=1.5):

@@ -181,11 +181,8 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Crab Nebula gamma rays (2008, DP-photon oscillations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab.txt), [reference](https://arxiv.org/abs/0810.5501)
 * Crab Nebula gamma rays (2020, photons scattering off DPDM): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Crab_2.txt), [reference](https://arxiv.org/abs/2002.01796)
 * Horizontal branch: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/HB.txt), [reference](https://arxiv.org/abs/2304.12907)
-* Gas cloud heating: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GasClouds.txt), [reference](https://arxiv.org/abs/1903.12190)
 * Globular clusters (R + R2 + TRGB): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GlobularClusters), [reference](https://arxiv.org/abs/2306.13335)
-* ISM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
 * Jupiter/Juno mission: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Jupiter.txt), [reference](https://arxiv.org/abs/2312.06746)
-* LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
 * Neutron Star Cooling (Cas A + NS1987A): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/NeutronStarCooling.txt), [reference](https://arxiv.org/abs/2012.05427)
 * Solar temperature/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar.txt), [reference](https://arxiv.org/abs/2304.12907)
 * Solar luminosity (global fit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Solar-Global.txt), [reference](https://arxiv.org/abs/1501.01639)
@@ -200,6 +197,10 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Witte et al. (homogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_homogeneous.txt), [reference](https://arxiv.org/abs/1911.05086)
 * Witte et al. (inhomogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_inhomogeneous.txt), [reference](https://arxiv.org/abs/2003.13698)
 * Caputo et al. (HeII reionisation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Caputo_HeII.txt), [reference](https://arxiv.org/abs/2002.05165)
+* Gas cloud heating: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GasClouds.txt), [reference](https://arxiv.org/abs/1903.12190)
+* ISM: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/IGM.txt), [reference](https://arxiv.org/abs/1509.00039)
+* JWST: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/JWST.txt), [reference](https://arxiv.org/abs/2402.17140)
+* LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
 
 ## Black hole superradiance
 * Cardoso et al: [reference](https://arxiv.org/abs/1801.01420)
