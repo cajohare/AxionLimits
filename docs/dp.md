@@ -92,6 +92,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 
 ## Experimental searches for DPDM
 ### All files are true to their *original* sources, i.e. without any rescaling
+* APEX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/APEX), [reference](https://arxiv.org/abs/2404.00908)
 * ALPHA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/ALPHA.txt), [reference](https://arxiv.org/abs/2006.06836)
 * AMAILS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/AMAILS), [reference](https://arxiv.org/abs/2305.00890)
 * BREAD: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/BREAD.txt), [reference](https://arxiv.org/abs/2111.12103)

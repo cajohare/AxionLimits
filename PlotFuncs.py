@@ -1275,6 +1275,11 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/MWDXrays.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
+    
+    def M82(ax,text_label=r'{\bf M82}',text_pos=[2.3e-11,1.3e-12],col='#277031',text_col='w',fs=12,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=1.5,path_effects=line_background(1,'k'),rotation=25):
+        dat = loadtxt("limit_data/AxionPhoton/M82.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=path_effects,rotation=rotation)
+        return
 
 
     def StarClusters(ax,text_pos=[2.2e-11,2.7e-11],col= [0.2, 0.54, 0.01],text_col='w',fs=13,zorder=0.22,rotation=45,text_on=True,edgealpha=1,lw=1.5):
@@ -1818,6 +1823,7 @@ class AxionPhoton():
         AxionPhoton.StarClusters(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.FermiQuasars(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.MAGIC(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        AxionPhoton.M82(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if projection:
             AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)

@@ -1,0 +1,6 @@
+# Athena/X − IFU NGC1275 optimal calibration
+# https://arxiv.org/pdf/2211.05136
+# mass [eV]  photon coupling [GeV^-1]
+1e-30   6.3e-14
+7e-13   6.3e-14
+7e-13   1.0

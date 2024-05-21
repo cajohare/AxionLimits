@@ -102,7 +102,6 @@
 * [Haloscope projections combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt)
 
 ### Haloscopes:
-
 * ABRACADABRA (Run 1): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt),  [reference](https://arxiv.org/abs/1810.12257)
 * ABRACADABRA (Run 2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA_run2.txt), [reference](https://arxiv.org/abs/2102.06722)
 * ABRACADABRA (Projection) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ABRACADABRA.txt), [reference](https://abracadabra.mit.edu/)
@@ -125,7 +124,7 @@
 * CAPP-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-1.txt), [reference](https://arxiv.org/abs/2001.05102)
 * CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-2.txt), [reference](https://arxiv.org/abs/2008.10141)
 * CAPP-3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-3.txt), [reference](https://arxiv.org/abs/2012.10764)
-* CAPP-4: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-4.txt), [reference](https://arxiv.org/abs/2206.08845)
+* CAPP-4: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-4.txt), [reference1](https://arxiv.org/abs/2206.08845) [reference2](https://arxiv.org/abs/2206.12271)
 * CAPP-5: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-5.txt), [reference](https://arxiv.org/abs/2207.13597)
 * CAPP-6 (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-6.txt), [reference](https://arxiv.org/abs/2210.10961)
 * CAPP-7: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-7.txt), [reference](https://arxiv.org/abs/2308.09077)
@@ -183,6 +182,7 @@
 * WISPFI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPFI.txt), [reference](https://arxiv.org/abs/2305.12969)
 
 ### Astrophysical searches for axions NOT as dark matter (green)
+* ATHENA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/limit_data/AxionPhoton/Projections/ATHENA.txt), [reference](https://arxiv.org/abs/2211.05136)
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
 * Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
@@ -205,6 +205,7 @@
 * GW170817 (fireball): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GW170817.txt), [reference](https://arxiv.org/abs/2305.10327)
 * HAWC (TeV Blazars): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAWC.txt), [reference](https://arxiv.org/abs/2203.04332)
 * HESS (PKS 2155-304): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HESS.txt), [reference](https://arxiv.org/abs/1311.3148)
+* M82 (NuSTAR): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/M82.txt), [reference](https://arxiv.org/abs/2404.14476)
 * MAGIC (Perseus galaxy cluster): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MAGIC.txt), [reference](https://arxiv.org/abs/2401.07798)
 * Magnetic white dwarf X-rays: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_electron_equals_photon.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_Wphobic.txt), [reference](https://arxiv.org/abs/2104.12772)
 * Magnetic white dwarf polarisation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation.txt), [reference](https://arxiv.org/abs/2203.04319)
