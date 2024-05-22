@@ -42,7 +42,7 @@
 * H/Si: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/HSi.txt), [reference](https://arxiv.org/abs/2008.08773)
 * Rb/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/RbQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 * Yb/Cs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/YbCs.txt), [reference](https://arxiv.org/abs/2212.05721)
-* LIGO O3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/LIGO.txt), [reference](https://arxiv.org/abs/2303.13088)
+* LIGO O3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/LIGO.txt), [reference](https://arxiv.org/abs/2401.18076)
 * NANOGrav: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarElectron/NANOGrav.txt), [reference](https://arxiv.org/abs/2306.16219)
 
 

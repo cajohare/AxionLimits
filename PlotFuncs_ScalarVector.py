@@ -128,7 +128,7 @@ class ScalarPhoton():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.53e-13,0.15e3],rotation=90,col='#c3151d',text_col='w',fs=15,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.73e-13,0.05e3],rotation=90,col='#c3151d',text_col='w',fs=19,zorder=0.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/LIGO.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -283,7 +283,7 @@ class ScalarElectron():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.53e-13,0.07e3],rotation=90,col='#c3151d',text_col='w',fs=15,zorder=0.101,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def LIGO(ax,text_label=r'{\bf LIGO}',text_pos=[0.73e-13,0.02e3],rotation=90,col='#c3151d',text_col='w',fs=19,zorder=0.101,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/LIGO.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return

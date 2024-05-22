@@ -39,7 +39,7 @@
 * Dy/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DyQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 * Dynamic Decoupling: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/DynamicDecoupling.txt), [reference](https://arxiv.org/abs/1902.02788)
 * GEO 600: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/GEO600.txt), [reference](https://arxiv.org/abs/2103.03783)
-* LIGO O3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/LIGO.txt), [reference](https://arxiv.org/abs/2303.13088)
+* LIGO O3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/LIGO.txt), [reference](https://arxiv.org/abs/2401.18076)
 * Holometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/Holometer.txt), [reference](https://arxiv.org/abs/2108.04746)
 * H/Quartz/Sapphire: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/HQuartzSapphire.txt), [reference](https://arxiv.org/abs/2010.08107)
 * PTB (Yb+, Sr): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/PTB.txt), [reference](https://arxiv.org/abs/2301.03433)
