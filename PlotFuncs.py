@@ -3605,6 +3605,21 @@ class DarkPhoton():
         if text_on:
             plt.text(7e-5,4e-14,r'{\bf SRF scanning}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
+    
+    def ParkerSolarProbe(ax,col='#052ea1',fs=14,text_on=True,lw=1.5,edge_on=True,zorder=0.11,rotation=20):
+        m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
+        dat = loadtxt("limit_data/DarkPhoton/ParkerSolarProbe.txt")
+
+        y2 = interp(dat[:,0],m1,y1)
+        dat[0,1] = y2[0]/1.1
+        dat[-1,1] = y2[-1]/1.1
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
+
+        if text_on:
+            plt.text(5e-9,1.65e-13,r'\begin{center}{\bf Parker Solar \linebreak Probe}\end{center}',fontsize=fs,color='w',rotation=rotation,rotation_mode='anchor',ha='center',va='center',clip_on=True,path_effects=line_background(1,'k'))
+        return
 
     def LOFAR(ax,col='red',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.11):
         # Solar corona bound
