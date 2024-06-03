@@ -101,6 +101,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * Dandelion: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/Dandelion.txt), [reference](https://arxiv.org/abs/2310.16505)
 * DarkSide-50: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkSide.txt), [reference](https://arxiv.org/abs/2207.11968)
 * Dark E-field Pilot: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkEfield.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DarkEfield.txt), [reference](https://arxiv.org/abs/2101.02805)
+* Dark E-field (2024): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DarkEfield2.txt), [reference](https://arxiv.org/abs/2405.20444)
 * DM-Radio: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/DMRadio.txt), [reference](https://irwinlab.sites.stanford.edu/dark-matter-radio-dmradio)
 * DM-Pathfinder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DM-Pathfinder.txt), [reference](https://arxiv.org/abs/1906.08814)
 * DOSUE-RR (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/DOSUE-RR.txt), [reference](https://arxiv.org/abs/2205.03679)
