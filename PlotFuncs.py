@@ -1198,9 +1198,9 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
-    def SN1987A_gamma(ax,text_label=r'{\bf SN1987A}',text_pos=[6e-11,0.4e-11],col='#067034',text_col='#067034',fs=15,zorder=0.21,text_on=True,edgealpha=1,lw=1.5):
-        # SN1987 gamma rays arXiv:[1410.3747]
-        dat = loadtxt("limit_data/AxionPhoton/SN1987A_gamma.txt")
+    def SN1987A_gamma(ax,text_label=r'{\bf SN1987A}',text_pos=[6e-11,0.4e-11],col='#067034',text_col='#067034',fs=15,zorder=0.001,text_on=True,edgealpha=1,lw=1.5):
+        dat = loadtxt('limit_data/AxionPhoton/SN1987A_gamma_ProgenitorBfield.txt')
+        #dat = loadtxt("limit_data/AxionPhoton/SN1987A_gamma.txt") # old limit
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
