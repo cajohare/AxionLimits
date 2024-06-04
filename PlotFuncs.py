@@ -3698,8 +3698,7 @@ class DarkPhoton():
     def DarkEfield(ax,col='darkred',fs=17,text_on=True,edge_on=False,lw=0.8):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/DarkEfield2.txt")
-        dat[:,1] = dat[:,1]*sqrt(1.64/5) # convert from 5 sigma CL to 95%
-        dat[:,1] = dat[:,1]*sqrt(0.3/0.45)*sqrt(1/3/0.129)
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.29)
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.01)
         if edge_on:
             plt.plot(dat[:,0],dat[:,1],'k-',lw=lw,zorder=0.01)
