@@ -3834,6 +3834,15 @@ class DarkPhoton():
         return
 
 
+    def Planck_unWISE(ax,col='#133421',text_on=True,lw=1.5):
+        y2 = ax.get_ylim()[1]
+        dat3 = loadtxt("limit_data/DarkPhoton/Planck_unWISE.txt")
+        plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.4999,alpha=1)
+        plt.plot(dat3[:,0],dat3[:,1],'k-',lw=lw,zorder=0.4999)
+        if text_on:
+            plt.text(0.8e-11,0.9e-7,r'\begin{center} {\bf Planck+} \linebreak {\bf unWISE}\end{center}',fontsize=12,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True,rotation=70)
+        return
+
     def COBEFIRAS(ax,col='#247840',text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat3 = loadtxt("limit_data/DarkPhoton/COBEFIRAS.txt",delimiter=',')

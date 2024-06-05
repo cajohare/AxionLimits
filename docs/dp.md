@@ -192,6 +192,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 ## Cosmological bounds on (non-DM) Dark photons
 * COBE/FIRAS (Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/2002.05165)
 * COBE/FIRAS (Witte et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/1911.05086)
+* Planck + unWISE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Planck_unWISE.txt), [reference](https://arxiv.org/abs/2406.02546)
 
 ## Cosmological/Astrophysical bounds on Dark Photons as Dark Matter (DPDM)
 * Arias et al.: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Arias.txt), [reference](https://arxiv.org/abs/1201.5902)
