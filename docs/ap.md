@@ -133,7 +133,7 @@
 * CAPP-MAX (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-MAX.txt), [reference](https://arxiv.org/abs/2402.12892)
 * CAST-CAPP: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST-CAPP.txt), [reference](https://arxiv.org/abs/2211.02902)
 * DALI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DALI.txt), [reference](https://arxiv.org/abs/2303.03997)
-* DANCE concept: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1911.05196)
+* DANCE concept: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DANCE.txt), [reference](https://arxiv.org/abs/1805.11753)
 * DANCE (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2303.03594)
 * DarkGEO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DarkGEO.txt), [reference](https://arxiv.org/abs/2401.11907)
 * DM-Radio: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DMRadio.txt), [reference](https://arxiv.org/abs/2204.13781)
