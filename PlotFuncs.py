@@ -952,7 +952,7 @@ class AxionPhoton():
         return
 
     # Low mass ALP haloscopes
-    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=14,text_on=True,text_pos=[1.5e-12,1.7e-13],linestyle='-',rotation=50):
+    def DANCE(ax,col=[0.8, 0.1, 0.2],fs=13,text_on=True,text_pos=[1.0e-12,3.7e-12],linestyle='-',rotation=50):
         # DANCE arXiv[1911.05196]
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/Projections/DANCE.txt")
@@ -1756,7 +1756,7 @@ class AxionPhoton():
 
             plt.text(1.8e-11,0.6e-12,r'{\bf ADBC}',rotation=26,fontsize=14,color=col,ha='left',va='top',clip_on=True)
             plt.text(0.2e-9,0.35e-13,r'{\bf aLIGO}',rotation=0,fontsize=15,color=col,ha='left',va='top',clip_on=True)
-            plt.text(1.5e-12,1.7e-13,r'{\bf DANCE}',rotation=50,fontsize=14,color=col,ha='left',va='top',clip_on=True)
+            plt.text(1.13e-12,6.2e-13,r'{\bf DANCE}',rotation=50,fontsize=11.5,color=col,ha='left',va='top',clip_on=True)
             plt.text(1.5e-11,0.7e-18,r'{\bf SRF-m$^3$}',color=col,fontsize=20,rotation=-40,clip_on=True)
             plt.text(2e-11,8e-16,r'{\bf WISPLC}',color=col,fontsize=15,rotation=14,clip_on=True)
             plt.text(3e-9,1.5e-19,r'{\bf DMRadio}',color=col,fontsize=18,rotation=46,clip_on=True)
