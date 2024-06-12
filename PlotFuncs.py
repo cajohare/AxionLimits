@@ -2799,7 +2799,7 @@ class AxionProton():
         SN = loadtxt("limit_data/AxionProton/SN1987A.txt")
         plt.fill_between(SN[:,0],SN[:,1],y2=y2,edgecolor=None,facecolor='#3ba84d',zorder=0.01)
         plt.plot(SN[:,0],SN[:,1],'k-',alpha=1,lw=2.5,zorder=-1)
-        plt.text(0.7e-3,6e-10,r'{\bf SN1987A}',fontsize=fs,color='#3ba84d',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(0.7e-3,5e-10,r'{\bf SN1987A}',fontsize=fs,color='#3ba84d',ha='right',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
 
         # NS cooling Buschmann et al.
         SN = loadtxt("limit_data/AxionProton/NeutronStars.txt")
