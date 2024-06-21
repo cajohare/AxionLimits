@@ -1,4 +1,5 @@
 # ADMX many phase projection
+# https://arxiv.org/abs/1602.00039
 # m_a [eV]  g_ap [GeV^-1]
 7.2589e-07	1.1635e-06
 7.2589e-07	2.6889e-17
