@@ -1,0 +1,3 @@
+# Kim string prediction lower mass bound
+# https://arxiv.org/pdf/2402.00741
+420e-6  1.0

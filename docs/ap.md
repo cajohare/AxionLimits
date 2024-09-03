@@ -215,6 +215,7 @@
 * Magnetic white dwarf polarisation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation.txt), [reference](https://arxiv.org/abs/2203.04319)
 * Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
 * Mrk 421 (MAGIC+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421-MAGIC.txt), [reference](https://arxiv.org/abs/2110.13636)
+* NuSTAR (Sun): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NuSTAR_Sun.txt), [reference](https://arxiv.org/abs/2407.03828)
 * Planck (BBN + N_eff): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BBN_Neff.txt), [reference](https://arxiv.org/abs/2002.08370)
 * Pulsar polar caps: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PulsarPolarCap.txt), [reference](https://arxiv.org/abs/2209.09917)
 * Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)

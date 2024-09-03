@@ -63,6 +63,7 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 * Saikawa et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/SaikawaDW_6_10.txt),  [reference](https://arxiv.org/abs/1412.0789)
 * Gorghetto et al. (N_DW=6).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/GorghettoDW_6.txt),  [reference](https://arxiv.org/abs/2007.04990)
 * Beyer et al. (DFSZ).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Beyer22.txt),  [reference](https://arxiv.org/abs/2211.14635)
+* Kim et al. (2024).: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Kim24.txt),  [reference](https://arxiv.org/abs/2402.00741)
 
 ### Other dark matter predictions
 Go to the [notebook](https://github.com/cajohare/AxionLimits/blob/master/ALPDarkMatter.ipynb) for details on plotting

@@ -519,7 +519,7 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-            zo = 0
+            zo = -2
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
         dat2 = loadtxt("limit_data/AxionPhoton/QUAX2.txt")
@@ -661,15 +661,15 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-            zo = 0
+            zo = -2
         dat = loadtxt("limit_data/AxionPhoton/ORGAN.txt")
-        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=col,facecolor=col,zorder=0.1,lw=1)
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=col,facecolor=col,zorder=zo,lw=1)
 
         dat2 = loadtxt("limit_data/AxionPhoton/ORGAN-1a.txt")
-        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=lw)
+        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=zo,lw=lw)
 
         dat2 = loadtxt("limit_data/AxionPhoton/ORGAN-1b.txt")
-        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=0.1,lw=lw)
+        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=zo,lw=lw)
 
         if projection:
             dat = loadtxt("limit_data/AxionPhoton/Projections/ORGAN_Projected.txt")
@@ -677,7 +677,7 @@ class AxionPhoton():
             plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=0,alpha=0.2)
             if text_on:
                 if rs1==0:
-                    plt.text(text_shift[0]*5e-4,text_shift[1]*1.15e-14,r'{\bf ORGAN}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
+                    plt.text(text_shift[0]*5e-4,text_shift[1]*1.15e-15,r'{\bf ORGAN}',fontsize=18,color=col,rotation=0,ha='left',va='top',clip_on=True)
                     plt.plot([5e-4,1.5e-4],[1.3e-14,6e-13],'k-',lw=1.5)
                 else:
                     plt.text(text_shift[0]*1.2e-4,text_shift[1]*1e3,r'{\bf ORGAN}',fontsize=18,color='darkred',rotation=-90,ha='left',va='top',clip_on=True)
@@ -690,7 +690,7 @@ class AxionPhoton():
                 plt.plot(dat[0,0],dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),'.',markersize=15,color=col,markeredgecolor='k',zorder=zo)
             if text_on:
                 if rs1==0:
-                    plt.text(text_shift[0]*110e-6,text_shift[1]*3e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
+                    plt.text(text_shift[0]*110e-6,text_shift[1]*1e-11,r'{\bf ORGAN}',fontsize=fs,color=col,rotation=-90,ha='left',va='top',clip_on=True)
                 else:
                     plt.text(text_shift[0]*dat[0,0]*1.1,text_shift[1]*y2*1.2,r'{\bf ORGAN}',fontsize=fs-3,color=col,rotation=40,ha='left',rotation_mode='anchor')
                     plt.text(text_shift[0]*6e-5,text_shift[1]*1e2,r'{\bf ORGAN}',fontsize=fs-6,color=col,rotation=90,ha='left',rotation_mode='anchor')
@@ -1208,6 +1208,11 @@ class AxionPhoton():
         # HYDRA-A arXiv:[1304.0989]
         dat = loadtxt("limit_data/AxionPhoton/Chandra_HYDRA_A.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
+        return
+    
+    def NuSTAR_Sun(ax,text_label=r'\quad {\bf NuSTAR}',text_pos=[1.4e-4,3.5e-11],col='#498c41',text_col='#498c41',fs=12,zorder=-1,text_on=True,edgealpha=1,lw=1.5,rotation=0):
+        dat = loadtxt("limit_data/AxionPhoton/NuSTAR_Sun.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation)
         return
 
     def M87(ax,text_label=r'\quad {\bf M87}',text_pos=[1.4e-12,4e-12],col='seagreen',text_col='w',fs=15,zorder=0.219,text_on=True,edgealpha=1,lw=1.5):
@@ -1844,6 +1849,7 @@ class AxionPhoton():
         AxionPhoton.FermiQuasars(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.MAGIC(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         AxionPhoton.M82(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        AxionPhoton.NuSTAR_Sun(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if projection:
             AxionPhoton.NGC1275(ax,text_on=text_on,edgealpha=edgealpha,lw=lw)
             AxionPhoton.H1821643(ax,text_on=False,edgealpha=edgealpha,lw=lw)
@@ -3012,11 +3018,11 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf White dwarfs}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col='#95bd93',text_col='k',text_rot=0,fs=23):
+    def GW170817(ax,text_pos=[7e-16,2e-17],zo=-7,linespacing_y=0.65,col='#95bd93',text_col='#5b735a',text_rot=0,fs=23):
         dat = loadtxt('limit_data/fa/GW170817.txt')
         plt.fill_between(dat[:,0],dat[:,1],color=col,zorder=zo,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zo)
-        plt.text(text_pos[0],text_pos[1],r'{\bf GW170817}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
+        plt.text(text_pos[0],text_pos[1],r'{\bf GW170817}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True,alpha=1)
         return
 
 
@@ -3267,6 +3273,8 @@ class DarkPhoton():
         return fig,ax
 
 
+
+
     def Haloscopes(ax,fs=17,projection=True,text_on=True,col='darkred'):
         y2 = ax.get_ylim()[1]
         zo = 0.3
@@ -3370,6 +3378,16 @@ class DarkPhoton():
             #plt.text(1e4,0.58e-14,r'{\bf RG}',fontsize=fs,color='w',rotation=-38,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
 
+
+    def INTEGRAL(ax,fs=14,text_on=True,lw=1.5):
+        y2 = ax.get_ylim()[1]
+        col = '#32a4a8'
+        dat = loadtxt("limit_data/DarkPhoton/INTEGRAL.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
+        if text_on:
+            plt.text(4e4,6e-10,r'{\bf INTEGRAL}',fontsize=fs,color=col,rotation=90,rotation_mode='anchor',ha='center',va='center',clip_on=True,path_effects=line_background(1,'k'))
+        return
 
     def Xenon(ax,col='crimson',fs=23,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
