@@ -344,6 +344,8 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2021.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        dat = loadtxt("limit_data/AxionPhoton/ADMX2024.txt")
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX_Sidecar.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
 
@@ -669,6 +671,9 @@ class AxionPhoton():
         plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=zo,lw=lw)
 
         dat2 = loadtxt("limit_data/AxionPhoton/ORGAN-1b.txt")
+        plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=zo,lw=lw)
+
+        dat2 = loadtxt("limit_data/AxionPhoton/ORGAN-Q.txt")
         plt.fill_between(dat2[:,0],dat2[:,1]/(rs1*2e-10*dat2[:,0]+rs2),y2=y2,edgecolor='k',facecolor=col,zorder=zo,lw=lw)
 
         if projection:
@@ -1908,7 +1913,7 @@ class AxionPhoton():
         
     # ULTRALIGHT AXIONS:
     def SuperMAG(ax,text_shift=[1,1],col='red',text_col='w',fs=18,zorder=3,text_on=True,lw=1.5,rotation=-48,ha='center',edgealpha=1,path_effects=line_background(2,'k')):
-        dat = loadtxt("limit_data/AxionPhoton/SuperMAG.txt")
+        dat = loadtxt("limit_data/AxionPhoton/SuperMAG_Combined.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
@@ -3060,6 +3065,13 @@ class Axion_fa():
         plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
+    
+    def NeutronStarCooling(ax,text_pos=[6e-7,6e-12],col='#385c42',text_col='w',text_rot=41,fs=22,zorder=-1.01):
+        dat = loadtxt('limit_data/fa/NeutronStarCooling.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf Neutron star cooling}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
 
     def Axinovae(ax,text_pos=[1.7e-20,0.02e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):
         dat = loadtxt('limit_data/fa/Axinovae.txt')
@@ -3290,6 +3302,8 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2021.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2024.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX_Sidecar.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
@@ -3324,6 +3338,10 @@ class DarkPhoton():
 
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ORGAN-1a.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.21)
+
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ORGAN-Q.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.21)
+
 
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/QUAX.txt")
         dat[0,1] = 1e0
@@ -3597,7 +3615,7 @@ class DarkPhoton():
     def BRASS(ax,col='darkred',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.01):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
         dat = loadtxt("limit_data/DarkPhoton/BRASS-p.txt")
-        dat[:,1] = dat[:,1]*sqrt(1/3/0.0245)*sqrt(0.3/0.45)
+        dat[:,1] = dat[:,1]*sqrt(1/3/0.26)*sqrt(0.3/0.45)
         y2 = interp(dat[:,0],m1,y1)
         dat[0,1] = y2[0]/1.1
         dat[-1,1] = y2[-1]/1.1
@@ -3782,6 +3800,20 @@ class DarkPhoton():
             plt.text(90e-6,0.26e-10,r'{\bf DOSUE-RR}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
 
+
+    def MADMAX(ax,col='red',fs=9,text_on=True,edge_on=False,lw=0.8):
+        y2 = ax.get_ylim()[1]
+
+        dat = loadtxt("limit_data/DarkPhoton/MADMAX.txt")
+        dat[:,1] = dat[:,1]*sqrt(0.3/0.45)
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.1)
+        if edge_on:
+            plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.1,lw=lw)
+
+        if text_on:
+            plt.text(90e-6,0.26e-10,r'{\bf MADMAX}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+        return
+    
 
     def SQuAD(ax,col=[0.7,0,0],fs=12,text_on=True,lw=0.5,point_on=False,ms=10):
         y2 = ax.get_ylim()[1]
@@ -4033,14 +4065,12 @@ class DarkPhoton():
 
     def SuperMAG(ax,col='#b5403e',fs=18,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/DarkPhoton/SuperMAG.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1)
-        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1,lw=lw)
+        dat = loadtxt("limit_data/DarkPhoton/SuperMAG_Combined.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0.89)
+        plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.89,lw=lw)
 
         if text_on:
-            plt.text(1.5e-17,1e-1/5,r'{\bf Super}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-            plt.text(1.5e-17,0.2e-1/5,r'{\bf MAG}',fontsize=fs,color='w',rotation=0,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
-
+            plt.text(1.3e-16,0.8e-4,r'{\bf SuperMAG}',fontsize=fs,color='w',rotation=-55,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1.5,'k'),clip_on=True)
         return
     
     def AMAILS(ax,col='#b2413e',fs=14,text_on=True,lw=1):
