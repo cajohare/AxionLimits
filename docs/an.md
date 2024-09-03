@@ -29,6 +29,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * ChangE-NMR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/ChangE-NMR.txt), [reference](https://arxiv.org/abs/2309.16600)
 * Hefei Xe129 spin-based amplifiers: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Hefei.txt), [reference](https://arxiv.org/abs/2102.01448)
 * JEDI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/JEDI.txt), [reference](https://arxiv.org/abs/2208.07293)
+* Mainz-Krakow (K-Rb-3He comagnetometers): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/Mainz_Krakow.txt), [reference](https://arxiv.org/abs/2408.02668)
 * nEDM (ultracold neutrons and mercury): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/nEDM.txt), [reference](https://arxiv.org/abs/1708.06367)
 * NASDUCK (Floquet): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NASDUCK.txt), [reference](https://arxiv.org/abs/2105.04603)
 * NASDUCK (SERF): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionNeutron/NASDUCK-SERF.txt), [reference](https://arxiv.org/abs/2209.13588)

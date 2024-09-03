@@ -240,6 +240,7 @@
 * BICEP/KECK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BICEP-KECK.txt), [reference](https://arxiv.org/abs/2108.03316)
 * Black hole polarimetry [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/BlackHolePolarimetry.txt), [reference](https://arxiv.org/abs/2311.02149)
 * Breakthrough Listen (Doppler): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BreakthroughListen.txt), [reference](https://arxiv.org/abs/2112.03439)
+* Cosmic optical, UV, X-ray backgrounds [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CosmicBackground.txt), [reference](https://arxiv.org/abs/2407.10618)
 * CMB-S4 (birefringence) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/CMB-S4.txt), [reference](https://arxiv.org/abs/2203.16567)
 * COBE/FIRAS + Planck spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CMB_Anisotropies.txt), [reference1](https://arxiv.org/abs/2303.07370), [reference2](https://arxiv.org/abs/2303.07426)
 * eROSITA early data release (ALP decay) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/eROSITA.txt), [reference](https://arxiv.org/pdf/2401.16747.pdf)

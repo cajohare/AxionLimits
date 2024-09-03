@@ -26,6 +26,7 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * CASPEr-ZULF-Sidechain: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/CASPEr_ZULF.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Projections/CASPEr_ZULF.txt), [reference](https://arxiv.org/abs/1902.04644)
 * ChangE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/ChangE.txt), [reference](https://arxiv.org/abs/2306.08039)
 * ChangE-NMR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/ChangE-NMR.txt), [reference](https://arxiv.org/abs/2309.16600)
+* Mainz-Krakow (K-Rb-3He comagnetometers): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Mainz_Krakow.txt), [reference](https://arxiv.org/abs/2408.02668)
 * MnCO3: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Projections/MnCO3.txt), [reference](https://arxiv.org/abs/2307.08577)
 * NASDUCK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/NASDUCK.txt), [reference](https://arxiv.org/abs/2105.04603)
 * NASDUCK (SERF): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/NASDUCK-SERF.txt), [reference](https://arxiv.org/abs/2209.13588)
