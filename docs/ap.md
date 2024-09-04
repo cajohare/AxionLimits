@@ -176,6 +176,7 @@
 * ALPS-II: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ALPS-II.txt), [reference](https://arxiv.org/abs/2009.14294)
 * CAST (2007): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST_highm.txt), [reference](https://arxiv.org/abs/hep-ex/0702006)
 * CAST (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST.txt), [reference](https://arxiv.org/abs/1705.02290)
+* CAST (2024): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAST.txt), [reference](https://arxiv.org/abs/2406.16840)
 * CROWS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CROWS.txt), [reference](https://arxiv.org/abs/1310.8098)
 * babyIAXO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/babyIAXO.txt), [reference](https://arxiv.org/abs/1904.09155)
 * EuXFL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/EuXFL.txt), [reference](https://arxiv.org/abs/2404.17333)

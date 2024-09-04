@@ -1232,7 +1232,7 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
 
-    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[4e-9,6e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True,edgealpha=1,lw=1.5):
+    def Mrk421(ax,text_label=r'{\bf Mrk 421}',text_pos=[4e-9,5e-11],col=[0.4, 0.6, 0.1],text_col='w',fs=12,zorder=0.26,text_on=True,edgealpha=1,lw=1.5):
         # Fermi
         dat = loadtxt("limit_data/AxionPhoton/Mrk421.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
@@ -1680,7 +1680,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*0.6e9,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=line_background(3,'w')):
+    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=None):
         dat = loadtxt("limit_data/AxionPhoton/PrimEx.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
@@ -1698,7 +1698,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*0.6e9,text_shift[1]*5e-3,r'{\bf Belle II}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def BESIII(ax,text_shift=[1,1],col='#7a2282',text_col='#7a2282',fs=15.5,zorder=0.0,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def BESIII(ax,text_shift=[1,1],col='#7a2282',text_col='#7a2282',fs=15.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/BESIII.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
@@ -1707,7 +1707,7 @@ class AxionPhoton():
             plt.text(text_shift[0]*0.66e9,text_shift[1]*0.3e-3,r'{\bf BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='#6a113d',fs=11.5,zorder=0.0,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='#6a113d',fs=11.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/OPAL.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
