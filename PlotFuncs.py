@@ -1126,7 +1126,7 @@ class AxionPhoton():
             plt.text(0.04,6.5e-12,r'{\bf WISPFI}',rotation=90,fontsize=11,color=col,ha='left',va='top',clip_on=True)
         return
 
-    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-57,text_pos=[1.4e-2,1e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.91,text_on=True,edgealpha=1,lw=1.5):
+    def SAPPHIRES(ax,text_label=r'{\bf SAPPHIRES}',rotation=-60,text_pos=[1e-2,0.2e-1],col=[0.8, 0.2, 0.25],text_col='w',fs=20,zorder=1.91,text_on=True,edgealpha=1,lw=1.5):
         # SAPPHIRES arXiv:[2105.01224]
         dat = loadtxt("limit_data/AxionPhoton/SAPPHIRES.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,rotation=rotation,path_effects=line_background(1.5,'k'))

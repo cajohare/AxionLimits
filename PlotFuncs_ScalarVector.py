@@ -468,7 +468,7 @@ class VectorBL():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
     
-    def TorsionBalance(ax,text_label=r'{\bf Torsion balance (future)}',text_pos=[1e-14,3e-29],rotation=63,col='gray',text_col='gray',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=2):
+    def TorsionBalance(ax,text_label=r'\begin{center}{\bf Torsion\linebreak \vspace{-3em} balance}\end{center}',text_pos=[0.5e-15,3e-29],rotation=63,col='gray',text_col='gray',fs=15,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/TorsionBalance.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -476,4 +476,14 @@ class VectorBL():
     def HELIOS(ax,text_label=r'{\bf HELIOS}',text_pos=[2.3e-11,0.6e-21],rotation=90,col='#4f061d',text_col='#4f061d',fs=14,zorder=0.1011,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/HELIOS.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
+        return
+    
+    def POLONAISE(ax,text_label=r'{\bf POLONAISE}',text_pos=[3e-13,7e-13],rotation=-90,col='pink',text_col='pink',fs=13,zorder=1.0,edgecolor='pink',text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/POLONAISE.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,edgecolor=edgecolor,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
+    def POLONAISE_Projection(ax,text_label=r'{\bf POLONAISE}',text_pos=[0.4e-13,0.7e-27],rotation=39,col='r',text_col='r',fs=13,zorder=-1,text_on=True,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/Projections/POLONAISE.txt")
+        UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return

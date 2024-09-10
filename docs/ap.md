@@ -185,7 +185,7 @@
 * IAXO (Galactic SN): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/IAXO_plus_SN_Spica1.txt), [reference](https://arxiv.org/abs/2008.03924)
 * OSQAR: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/OSQAR.txt), [reference](https://arxiv.org/abs/1506.08082)
 * PVLAS: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PVLAS.txt), [reference](https://arxiv.org/abs/1510.08052)
-* SAPPHIRES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SAPPHIRES.txt), [reference](https://arxiv.org/abs/2208.09880)
+* SAPPHIRES: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SAPPHIRES.txt), [reference](https://arxiv.org/abs/2409.01805)
 * WISPFI: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/WISPFI.txt), [reference](https://arxiv.org/abs/2305.12969)
 
 ### Astrophysical searches for axions NOT as dark matter (green)
