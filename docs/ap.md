@@ -126,7 +126,7 @@
 * CAPP-1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-1.txt), [reference](https://arxiv.org/abs/2001.05102)
 * CAPP-2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-2.txt), [reference](https://arxiv.org/abs/2008.10141)
 * CAPP-3: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-3.txt), [reference](https://arxiv.org/abs/2012.10764)
-* CAPP-4: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-4.txt), [reference1](https://arxiv.org/abs/2206.08845) [reference2](https://arxiv.org/abs/2206.12271)
+* CAPP-4: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-4.txt), [reference1](https://arxiv.org/abs/2206.08845), [reference2](https://arxiv.org/abs/2206.12271)
 * CAPP-5: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-5.txt), [reference](https://arxiv.org/abs/2207.13597)
 * CAPP-6 (DFSZ): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-6.txt), [reference](https://arxiv.org/abs/2210.10961)
 * CAPP-7: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CAPP-7.txt), [reference](https://arxiv.org/abs/2308.09077)
