@@ -1417,6 +1417,11 @@ class AxionPhoton():
             plt.plot([0.8e4,8e4],[1.9e-19,2.3e-19],'-',lw=2,color=col,path_effects=line_background(3,'k'))
         return
 
+    def GammaRayDecayCompilation(ax,text_label='',text_pos=[0.7e4,2.7e-19],col='#6a919e',edgecolor='k',text_col='#6a919e',fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/GammaRayDecayCompilation.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        return
+
 
 
     def IrreducibleFreezeIn(ax,text_label=r'{\bf Freeze-in}',text_pos=[1.3e6,7e-14],col='#376631',edgecolor='k',text_col='w',fs=24,zorder=0.009,text_on=True,lw=1.5,facealpha=1,rotation=-55,edgealpha=1):
@@ -1812,6 +1817,7 @@ class AxionPhoton():
         AxionPhoton.HST(ax,text_on=text_on)
         #AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
+        AxionPhoton.GammaRayDecayCompilation(ax,text_on=text_on)
         AxionPhoton.INTEGRAL(ax,text_on=text_on)
         AxionPhoton.NuSTAR(ax,text_on=text_on)
         AxionPhoton.LeoT(ax,text_on=text_on)
