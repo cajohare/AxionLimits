@@ -149,7 +149,7 @@
 * ORGAN (2017): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ORGAN_Projected.txt), [reference](https://arxiv.org/abs/1706.00209)
 * ORGAN-1a (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN-1a.txt),[reference](https://arxiv.org/abs/2203.12152)
 * ORGAN-1b (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN-1b.txt),[reference](https://arxiv.org/abs/2310.00904)
-* ORGAN-Q (2024): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN-1b.txt),[reference](https://arxiv.org/abs/2407.18586)
+* ORGAN-Q (2024): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ORGAN-Q.txt),[reference](https://arxiv.org/abs/2407.18586)
 * QUAX (2019): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX.txt), [reference](https://arxiv.org/abs/1903.06547)
 * QUAX (2020): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX2.txt), [reference](https://arxiv.org/abs/2012.09498)
 * QUAX (2022): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/QUAX3.txt), [reference](https://arxiv.org/abs/2208.12670)
