@@ -1226,6 +1226,11 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
+    def Planck_unWISE(ax,text_label=r'\quad {\bf CMB}',text_pos=[1e-13,1e-11],col='#133421',text_col='w',fs=15,zorder=0.20,text_on=True,edgealpha=1,lw=1.5,rotation=0):
+        dat = loadtxt("limit_data/AxionPhoton/Planck_unWISE.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,rotation=rotation,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
+        return
+
     def HESS(ax,text_label=r'{\bf HESS}',text_pos=[1.4e-8,1.6e-11],col='#2a5736',text_col='#2a5736',fs=14,zorder=0.255,text_on=True,edgealpha=1,lw=1.5):
         # HESS arXiv:[1304.0700]
         dat = loadtxt("limit_data/AxionPhoton/HESS.txt")
