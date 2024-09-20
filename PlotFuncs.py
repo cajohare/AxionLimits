@@ -3955,7 +3955,7 @@ class DarkPhoton():
 
     def COBEFIRAS(ax,col='#247840',text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
-        dat3 = loadtxt("limit_data/DarkPhoton/COBEFIRAS.txt",delimiter=',')
+        dat3 = loadtxt("limit_data/DarkPhoton/COBEFIRAS_SpectralDistortions.txt")
         plt.fill_between(dat3[:,0],dat3[:,1],y2=y2,edgecolor='k',facecolor=col,zorder=0.5,alpha=1)
         plt.plot(dat3[:,0],dat3[:,1],'k-',lw=lw,zorder=0.5)
         if text_on:
