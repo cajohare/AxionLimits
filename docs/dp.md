@@ -194,9 +194,11 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * Red giants: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/RG.txt), [reference](https://arxiv.org/abs/2304.12907)
 
 ## Cosmological bounds on (non-DM) Dark photons
+* Complete COBE/FIRAS bound combined: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS_SpectralDistortions.txt)
 * COBE/FIRAS (Caputo et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/2002.05165)
 * COBE/FIRAS (Witte et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS.txt), [reference](https://arxiv.org/abs/1911.05086)
-* COBE/FIRAS + Spectral distortions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS_SpectralDistortions.txt), [reference](https://arxiv.org/abs/2409.12940), [see also](https://arxiv.org/abs/2409.12115)
+* COBE/FIRAS Spectral distortions (Chluba et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS_Chluba.txt), [reference](https://arxiv.org/abs/2409.12115)
+* COBE/FIRAS Spectral distortions (Arsenadze et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/COBEFIRAS_Arsenadze.txt), [reference](https://arxiv.org/abs/2409.12940)
 * Planck + unWISE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Planck_unWISE.txt), [reference](https://arxiv.org/abs/2406.02546)
 
 ## Cosmological/Astrophysical bounds on Dark Photons as Dark Matter (DPDM)
