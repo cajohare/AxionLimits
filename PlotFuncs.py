@@ -4051,7 +4051,7 @@ class DarkPhoton():
 
     def Hinode(ax,col='#700606',fs=16,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
-        dat = loadtxt("limit_data/DarkPhoton/Hinode.txt")
+        dat = loadtxt("limit_data/DarkPhoton/HINODE.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
