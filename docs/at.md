@@ -1,6 +1,6 @@
 # Axion-top coupling
 
-## Notebook and data courtesy of Maria Ubiali, taken from [Fesser et al.](https://arxiv.org/abs/2303.17634)
+## Notebook and data courtesy of Maria Ubiali, taken from Esser et al. [2023](https://arxiv.org/abs/2303.17634) and [2024](https://arxiv.org/abs/2404.08062)
 
 ---
 [<img align="right" height="250" src="../plots/plots_png/AxionTop_Collider.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionTop_Collider.png)
@@ -20,4 +20,5 @@
 * indirect_diboson_zgam: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/indirect_diboson_zgam.txt)
 * indirect_diboson_zz_2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/indirect_diboson_zz_2.txt)
 * indirect_diboson_zz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/indirect_diboson_zz.txt)
+* indirect_hhz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/indirect_hhz.txt)
 * kaon_decays: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionTop/kaon_decays.txt)

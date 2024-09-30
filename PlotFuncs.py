@@ -3265,6 +3265,16 @@ class AxionTop():
         if text_on:
             plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf indirect diboson ZZ}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
+    
+    def indirect_hhz(ax,text_shift=[1,1],col='#fff39a',text_col='w',fs=20,zorder=2.05,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionTop/indirect_hhz.txt")
+        plt.fill_between(dat[:,0]*1e-9,dat[:,1],y2=1e0,edgecolor=None,facecolor=col,alpha=edgealpha,zorder=zorder)
+        plt.plot(dat[:,0]*1e-9,dat[:,1],lw=lw,color='black',zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf indirect diboson ZZ}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+    
 
 class DarkPhoton():
     def FigSetup(xlab=r'Dark photon mass [eV]',ylab='Kinetic mixing',\
