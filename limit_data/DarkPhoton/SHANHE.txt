@@ -1,4 +1,4 @@
-# SRF scanning haloscope
+# SRF scanning haloscope SHANHE
 # 2305.09711
 # random polarisation and DM density = 0.45 GeV/cc, 100 s integration time
 # mass [eV] kinetic mixing

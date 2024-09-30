@@ -3697,9 +3697,9 @@ class DarkPhoton():
             plt.text(7e-5,4e-14,r'{\bf BRASS}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
     
-    def SRF_scanning(ax,col='darkred',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.01):
+    def SHANHE(ax,col='darkred',fs=10,text_on=False,lw=1.5,edge_on=False,zorder=0.01):
         m1,y1 = loadtxt("limit_data/DarkPhoton/DM_combined.txt",unpack=True)
-        dat = loadtxt("limit_data/DarkPhoton/SRF_scanning.txt")
+        dat = loadtxt("limit_data/DarkPhoton/SHANHE.txt")
         dat[:,1] = dat[:,1]*sqrt(1/3/0.02472551)
         y2 = interp(dat[:,0],m1,y1)
         dat[0,1] = y2[0]/1.1
@@ -3709,7 +3709,7 @@ class DarkPhoton():
             plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=zorder,lw=lw)
 
         if text_on:
-            plt.text(7e-5,4e-14,r'{\bf SRF scanning}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
+            plt.text(7e-5,4e-14,r'{\bf SHANHE}',fontsize=fs,color=col,rotation=-90,rotation_mode='anchor',ha='center',va='center',clip_on=True)
         return
     
     def ParkerSolarProbe(ax,col='#052ea1',fs=14,text_on=True,lw=1.5,edge_on=True,zorder=0.11,rotation=20):
