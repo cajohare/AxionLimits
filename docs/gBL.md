@@ -35,12 +35,14 @@
 
 ## DM searches
 * Eot-Wash: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/EotWashDM.txt), [reference](https://arxiv.org/abs/2109.08822)
+* KAGRA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/KAGRA.txt), [reference](https://arxiv.org/abs/2403.03004)
 * LIGO O1: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/LIGO-O1.txt), [reference](https://arxiv.org/abs/2105.13085)
 * LIGO/Virgo: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/LIGOVirgo.txt), [reference](https://arxiv.org/abs/2105.13085)
 * LISA Pathfinder: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/LISAPathfinder.txt), [reference](https://arxiv.org/abs/2301.08736)
 * LISA Pathfinder (relative acceleration): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/LISAPathfinder-RelativeAcceleration.txt), [reference](https://arxiv.org/abs/2310.06017)
 * PPTA: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/PPTA.txt), [reference](https://arxiv.org/abs/2112.07687)
 * POLONAISE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/POLONAISE.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/POLONAISE.txt), [reference](https://arxiv.org/abs/2409.03814)
+
 
 ## Projected DM searches
 * Asteroids: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/VectorB-L/Projections/Asteroids.txt), [reference](https://arxiv.org/abs/2210.09324)

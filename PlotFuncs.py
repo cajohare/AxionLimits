@@ -526,11 +526,14 @@ class AxionPhoton():
         dat = loadtxt("limit_data/AxionPhoton/QUAX.txt")
         dat2 = loadtxt("limit_data/AxionPhoton/QUAX2.txt")
         dat3 = loadtxt("limit_data/AxionPhoton/QUAX4.txt")
+        dat4 = loadtxt("limit_data/AxionPhoton/QUAX5.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,lw=2,zorder=zo)
             plt.plot([dat2[0,0],dat2[0,0]],[dat2[0,1]/(rs1*2e-10*dat2[0,0]+rs2),y2/(rs1*2e-10*dat2[0,0]+rs2)],color=col,lw=2,zorder=zo)
             plt.fill_between(dat3[:,0],dat3[:,1]/(rs1*2e-10*dat3[:,0]+rs2),y2=y2,color=col,lw=2,zorder=zo)
+            plt.fill_between(dat4[:,0],dat4[:,1]/(rs1*2e-10*dat4[:,0]+rs2),y2=y2,color=col,lw=2,zorder=zo)
+
             if text_on:
                 plt.text(text_shift[0]*6.3e-5,text_shift[1]*0.05e-11,r'{\bf QUAX}',fontsize=fs,color=col,rotation=-90,ha='center',va='top',clip_on=True)
         else:
@@ -2921,7 +2924,7 @@ class AxionEDM():
              path_effects=line_background(1.4,'k'))
         return
 
-    def nEDM(ax,text_pos=[3e-20,5e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1,lw=1.5):
+    def nEDM(ax,text_pos=[3e-20,5e-18],col='darkred',text_col='w',text_rot=0,fs=30,zorder=-1.2,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/nEDM.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -2935,7 +2938,7 @@ class AxionEDM():
         plt.text(text_pos[0],text_pos[1],r'{\bf Beam EDM}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def HfF(ax,text_pos=[0.7e-19,1.5e-14],col='#a3435e',text_col='w',text_rot=33,fs=22,zorder=-1,lw=1.5):
+    def HfF(ax,text_pos=[0.7e-19,1.5e-14],col='#a3435e',text_col='w',text_rot=33,fs=22,zorder=-0.9,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/HfF.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -2945,6 +2948,13 @@ class AxionEDM():
     def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[0.15e-16,2e-12],text_rot=28,col='#c11a4e',text_col='w',fs=20,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/AxionEDM/RbQuartz.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=text_rot,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
+    def ONIX(ax,text_pos=[0.13e-19,0.7e-16],col='#8c193c',text_col='w',text_rot=20,fs=19,zorder=-1.01):
+        dat = loadtxt('limit_data/AxionEDM/ONIX.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf ONIX}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def SN1987A(ax,text_pos=[2e-10,1.2e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
@@ -3063,6 +3073,14 @@ class Axion_fa():
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
         plt.text(text_pos[0],text_pos[1],r'I$_2^+$/Ca$^+$',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
+    
+    def ONIX(ax,text_pos=[0.13e-19,2e-14],col='#8c193c',text_col='w',text_rot=24,fs=20,zorder=-1.01):
+        dat = loadtxt('limit_data/fa/ONIX.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+        plt.text(text_pos[0],text_pos[1],r'{\bf ONIX}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        return
+
 
     def RbQuartz(ax,text_label=r'{\bf Rb/Quartz}',text_pos=[0.15e-16,0.5e-9],text_rot=35,col='#c11a4e',text_col='w',fs=20,zorder=0.10999,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/fa/RbQuartz.txt")
@@ -3133,7 +3151,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron star cooling}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def Axinovae(ax,text_pos=[1.7e-20,0.02e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):
+    def Axinovae(ax,text_pos=[1.1e-20,0.01e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):
         dat = loadtxt('limit_data/fa/Axinovae.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
@@ -3935,15 +3953,19 @@ class DarkPhoton():
         dat2 = loadtxt("limit_data/DarkPhoton/Cosmology_Witte_inhomogeneous.txt")
         dat4 = loadtxt("limit_data/DarkPhoton/Cosmology_Caputo_HeII.txt",delimiter=',')
         dat5 = loadtxt("limit_data/DarkPhoton/Cosmology_Arias.txt")
+        dat6 = loadtxt("limit_data/DarkPhoton/LymanAlpha.txt")
+
 
         plt.fill_between(dat2[:,0],dat2[:,1],y2=y2,edgecolor='k',facecolor=Witte_col,zorder=0.305,alpha=0.8)
         plt.fill_between(dat4[:,0],dat4[:,1],y2=y2,edgecolor='k',facecolor=Caputo_col,zorder=0.305,alpha=0.8)
         plt.fill_between(dat5[:,0],dat5[:,1],y2=y2,edgecolor='k',facecolor=Arias_col,zorder=0.306,alpha=1)
+        plt.fill_between(dat6[1:-1,0],dat6[1:-1,1],y2=y2,edgecolor='k',facecolor=Caputo_col,zorder=0.3049,alpha=1)
 
         if text_on:
             plt.gcf().text(0.295,0.42-0.04,r'{\bf DPDM} HeII',fontsize=15,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
             plt.gcf().text(0.295,0.4-0.04,r'Reionisation',fontsize=15,color='w',ha='center',clip_on=True)
-            plt.gcf().text(0.295,0.38-0.04,r'(Caputo et al.)',fontsize=13,color='w',ha='center',clip_on=True)
+            plt.gcf().text(0.295,0.38-0.04,r'(Caputo et al.,',fontsize=13,color='w',ha='center',clip_on=True)
+            plt.gcf().text(0.295,0.36-0.04,r'Trost et al.)',fontsize=13,color='w',ha='center',clip_on=True)
 
             plt.gcf().text(0.365,0.37,r'{\bf DPDM}',fontsize=17,color='w',ha='center',path_effects=line_background(1.5,'k'),clip_on=True)
             plt.gcf().text(0.365,0.35,r'(Witte et al.)',fontsize=13,color='w',ha='center',clip_on=True)

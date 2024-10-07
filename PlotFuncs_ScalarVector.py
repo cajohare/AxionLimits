@@ -407,12 +407,18 @@ class VectorBL():
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
         
+
+    def KAGRA(ax,text_label=r'{\bf KAGRA}',text_pos=[0.3e-12,9.5e-19],rotation=90,col='#8c193c',text_col='w',fs=20,zorder=0.5,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+        dat = loadtxt("limit_data/VectorB-L/KAGRA.txt")
+        FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
+        return
+
     def LIGO(ax,text_label='',text_pos=[1e-13,3e-20],rotation=90,col='crimson',text_col='w',fs=17,zorder=0.21,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/LIGO-O1.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
     
-    def LIGOVirgo(ax,text_label=r'{\bf LIGO/Virgo (DM)}',text_pos=[0.5e-12,2e-21],rotation=90,col='crimson',text_col='w',fs=20,zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def LIGOVirgo(ax,text_pos=[0.1e-12,2e-21],fs=18,rotation=0,text_label=r'\begin{center} {\bf LIGO/\linebreak VIRGO} \end{center}',col='crimson',text_col='w',zorder=0.2,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/VectorB-L/LIGOVirgo.txt")
         FilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,col=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1.5,'k'))
         return
@@ -443,7 +449,7 @@ class VectorBL():
         return
     
 
-    def STE_QUEST(ax,text_label=r'{\bf STE-QUEST}',text_pos=[1.5e-22,0.9e-26],rotation=0,col='#752b29',text_col='#752b29',fs=13,zorder=0.25,text_on=True,Projection=False,edgealpha=1,lw=2):
+    def STE_QUEST(ax,text_label=r'{\bf STE-QUEST}',text_pos=[1.5e-22,0.9e-26],rotation=0,col='#752b29',text_col='#752b29',fs=13,zorder=0.0,text_on=True,Projection=False,edgealpha=1,lw=2):
         dat = loadtxt("limit_data/VectorB-L/Projections/STE-QUEST.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
