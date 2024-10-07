@@ -207,6 +207,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 
 ## Cosmological/Astrophysical bounds on Dark Photons as Dark Matter (DPDM)
 * Arias et al.: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Arias.txt), [reference](https://arxiv.org/abs/1201.5902)
+* Blazars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Blazars.txt), [reference](https://arxiv.org/abs/2407.16628)
 * Witte et al. (homogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_homogeneous.txt), [reference](https://arxiv.org/abs/1911.05086)
 * Witte et al. (inhomogeneous plasma): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Witte_inhomogeneous.txt), [reference](https://arxiv.org/abs/2003.13698)
 * Caputo et al. (HeII reionisation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Cosmology_Caputo_HeII.txt), [reference](https://arxiv.org/abs/2002.05165)

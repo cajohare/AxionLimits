@@ -1690,7 +1690,16 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.6e9,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.3e10,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def GlueX(ax,text_shift=[1,1],col='#582078',text_col='w',fs=15,zorder=1.0,text_on=True,lw=1.5,rotation=90,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/GlueX.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*3.2e8,text_shift[1]*0.3,r'{\bf GlueX}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=None):
@@ -1702,13 +1711,13 @@ class AxionPhoton():
             plt.text(text_shift[0]*1.4e8,text_shift[1]*0.99e-3,r'{\bf PrimEx}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def BelleII(ax,text_shift=[1,1],col='#7a4282',text_col='w',fs=13.5,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def BelleII(ax,text_shift=[1,1],col='#7a4282',text_col='w',fs=13.0,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/BelleII.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.6e9,text_shift[1]*5e-3,r'{\bf Belle II}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.2e9,text_shift[1]*5.5e-3,r'{\bf Belle II}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def BESIII(ax,text_shift=[1,1],col='#7a2282',text_col='#7a2282',fs=15.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
@@ -1717,16 +1726,16 @@ class AxionPhoton():
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.66e9,text_shift[1]*0.3e-3,r'{\bf BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.66e9,text_shift[1]*0.2e-3,r'{\bf BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='#6a113d',fs=11.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='w',fs=11.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/OPAL.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*2.6e9,text_shift[1]*0.1e-2,r'{\bf OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.5e8,text_shift[1]*4e-3,r'{\bf OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True,Projection_color='crimson',alpha=0.1):
@@ -1879,6 +1888,7 @@ class AxionPhoton():
         AxionPhoton.LHC_pp(ax,text_on=text_on)
         AxionPhoton.BelleII(ax,text_on=text_on)
         AxionPhoton.PrimEx(ax,text_on=text_on)
+        AxionPhoton.GlueX(ax,text_on=text_on)
         AxionPhoton.LEP(ax,text_on=text_on)
         AxionPhoton.BESIII(ax,text_on=text_on)
         AxionPhoton.OPAL(ax,text_on=text_on)
