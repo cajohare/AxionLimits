@@ -4118,7 +4118,6 @@ class DarkPhoton():
     def SHIPS(ax,col='indianred',fs=20,text_on=True,lw=1.5):
         y2 = ax.get_ylim()[1]
         dat = loadtxt("limit_data/DarkPhoton/SHIPS.txt")
-        dat[:,1] = dat[:,1]/dat[:,0]
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.09)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.09,lw=lw)
 

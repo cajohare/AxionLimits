@@ -49,6 +49,13 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass.png)
 ### &nbsp;
 ---
+[<img align="right" height="250" src="../plots/plots_png/AxionPhoton_HighMass_CloseUp.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass_CloseUp.png)
+### Heavy axions closeup
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_ColliderBounds.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_HighMass_CloseUp.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HighMass_CloseUp.png)
+### &nbsp;
+---
 [<img align="right" height="250" src="../plots/plots_png/AxionPhoton_HeavyAxionDecayCloseUp.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_HeavyAxionDecayCloseUp.png)
 ### Axion decay bounds closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/AxionPhoton_Closeups.ipynb)
