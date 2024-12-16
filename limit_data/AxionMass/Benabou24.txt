@@ -1,0 +1,5 @@
+# Predicted axion masses (in eV) from Benabou et al. 2024  https://arxiv.org/pdf/2412.08699
+# Post-inflation PQ era simulation with strings and AMR
+# Supersedes Buschmann et al. 2021 (i.e. same technique, smaller error)
+# eV
+45e-6	65e-6

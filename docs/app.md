@@ -37,7 +37,8 @@ Note: CASPEr and nEDM limits account for stochastic correction reported in [1905
 * Torsion balance: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/TorsionBalance.txt), [reference](https://arxiv.org/abs/hep-ph/0611223)
 
 ## Other experiments
-* SNO (deuterium dissasociation): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/SNO.txt), [reference](https://arxiv.org/abs/2004.02733)
+* SNO solar axions: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/SNO.txt), [reference](https://arxiv.org/abs/2004.02733)
+* Super-Kamiokande, diffuse supernova axions (at higher masses not shown): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/SuperKamiokande.txt), [reference](https://arxiv.org/abs/2412.09595)
 
 ## Astro bounds
 * Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)

@@ -217,7 +217,7 @@ These have been recast using the scheme detailed in [arXiv:2105.04565](https://a
 * JWST: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/JWST.txt), [reference](https://arxiv.org/abs/2402.17140)
 * LeoT: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LeoT.txt), [reference](https://arxiv.org/abs/1903.12190)
 * Parker Solar Probe: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/ParkerSolarProbe.txt), [reference](https://arxiv.org/abs/2405.12285)
-* INTEGRAL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2406.19445)
+* INTEGRAL: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/INTEGRAL.txt), [reference1](https://arxiv.org/abs/2406.19445), [reference2](https://arxiv.org/abs/2412.00180)
 
 ## Black hole superradiance
 * Cardoso et al: [reference](https://arxiv.org/abs/1801.01420)

@@ -1,0 +1,5 @@
+# Predicted axion masses (in eV) from Benabou et al. 2024  https://arxiv.org/pdf/2412.08699
+# Post-inflation PQ era simulation with strings and AMR
+# Estimated extension to the mass range from the hypothesised contribution from domain walls
+# eV
+45e-6	300e-6

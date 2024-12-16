@@ -55,6 +55,7 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * Black hole spins (Baryakhtar et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Baryakhtar.txt), [reference](https://arxiv.org/abs/2011.11646)
 * Black hole spins (Unal et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Unal.txt), [reference](https://arxiv.org/abs/2012.12790)
 * Black hole spins (Hoof et al.) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Hoof.txt), [reference](https://arxiv.org/abs/2406.10337)
+* Black hole spins (Witte and Mummery) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Witte.txt), [reference](https://arxiv.org/abs/2412.03655)
 * *Binary pulsars: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Pulsar.txt), [reference](https://arxiv.org/abs/1708.08464)
 * GW170817 [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/GW170817.txt), [reference](https://arxiv.org/abs/2105.13963)
 * *Neutron stars: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/NeutronStars.txt), [reference](https://arxiv.org/abs/1708.08464)

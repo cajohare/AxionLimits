@@ -1248,6 +1248,10 @@ class AxionPhoton():
         # MAGIC
         dat = loadtxt("limit_data/AxionPhoton/Mrk421-MAGIC.txt")
         FilledLimit(ax,dat,None,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
+
+        # Fermi+HAWC
+        dat = loadtxt("limit_data/AxionPhoton/Mrk421-Fermi-HAWC.txt")
+        FilledLimit(ax,dat,None,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder-0.1,text_on=text_on,edgealpha=edgealpha,lw=lw,path_effects=line_background(1,'k'))
         return
 
     def NGC1275(ax,text_label=r'{\bf Chandra}',text_pos=[1.1e-12,1.5e-12],col='#195e3a',text_col='w',fs=11,zorder=0.1,text_on=True,edgealpha=1,lw=1.5):
@@ -1348,6 +1352,11 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
         return
 
+    def HST_dwarfs(ax,text_label=r'{\bf HST}',text_pos=[20,1.4e-13],col='#1b2259',text_col='#1b2259',fs=15,zorder=0.01,text_on=True,lw=0):
+        dat = loadtxt("limit_data/AxionPhoton/HST_dwarfs.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=-90,lw=lw,edgealpha=0)
+        return
+
 
     def VIMOS(ax,text_label=r'{\bf VIMOS}',text_pos=[10,0.22e-11],col='#2b2259',text_col='#2b2259',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (VIMOS) [astro-ph/0611502]
@@ -1428,6 +1437,13 @@ class AxionPhoton():
     def GammaRayDecayCompilation(ax,text_label='',text_pos=[0.7e4,2.7e-19],col='#6a919e',edgecolor='k',text_col='#6a919e',fs=17,zorder=0.00001,text_on=True,lw=1.5,facealpha=1):
         dat = loadtxt("limit_data/AxionPhoton/GammaRayDecayCompilation.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,edgecolor=edgecolor,edgealpha=1,fs=fs,zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha)
+        return
+
+    def M82_decay(ax,text_label=r'{\bf M82}',text_pos=[0.4e6,7e-12],col='#105631',edgecolor='k',text_col='w',fs=17,zorder=0.008,text_on=True,lw=1.5,facealpha=1,rotation=-55,edgealpha=1):
+        dat = loadtxt("limit_data/AxionPhoton/M82_decay.txt")
+        FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,
+                    rotation=rotation,edgecolor=edgecolor,fs=fs,
+                    zorder=zorder,text_on=text_on,lw=lw,ha='right',facealpha=facealpha,edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
 
@@ -1831,6 +1847,7 @@ class AxionPhoton():
         AxionPhoton.MUSE(ax,text_on=text_on)
         AxionPhoton.JWST(ax,text_on=text_on)
         AxionPhoton.VIMOS(ax,text_on=text_on)
+        AxionPhoton.HST_dwarfs(ax,text_on=text_on)
         AxionPhoton.HST(ax,text_on=text_on)
         #AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
         AxionPhoton.XMMNewton(ax,text_on=text_on)
@@ -1941,6 +1958,7 @@ class AxionPhoton():
         AxionPhoton.SN1987A_decay(ax,text_on=text_on)
         AxionPhoton.SN1987A_HeavyALP_nu(ax,text_on=text_on)
         AxionPhoton.IrreducibleFreezeIn(ax)
+        AxionPhoton.M82_decay(ax,text_on=text_on)
         AxionPhoton.BBN_10MeV(ax,text_pos=[0.2e7,6e-12],rotation=-45,text_col='w',path_effects=line_background(1,'k'))
 
         return

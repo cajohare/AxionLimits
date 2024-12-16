@@ -48,6 +48,8 @@ Click [here](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Axion
 
 ### QCD Axion masses:
 * Ballesteros et al. (SMASH): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Ballesteros16.txt),  [reference](https://arxiv.org/abs/1608.05414)
+* Benabou et al. (2024): [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Benabou24.txt),  [reference](https://arxiv.org/abs/2412.08699)
+* Benabou et al. (2024), with estimated domain wall contribution: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Benabou24_DW.txt),  [reference](https://arxiv.org/abs/2412.08699)
 * Berkowitz et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Berkowitz15.txt),  [reference](https://arxiv.org/abs/1505.07455)
 * Bonati et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Bonati16.txt),  [reference](https://arxiv.org/abs/1512.06746)
 * Borsanyi et al.: [prediction](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionMass/Borsanyi16.txt),  [reference](https://arxiv.org/abs/1606.07494)
