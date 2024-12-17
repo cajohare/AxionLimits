@@ -1,4 +1,6 @@
-# SN1987A electric dipole moment portal 2203.15812
+# SN1987A electric dipole moment portal 
+# from https://arxiv.org/pdf/2410.19902 
+# see 2203.15812 for earlier bound
 # Mass [eV]	1/fa [GeV^-1]
-1e-30 1.8e-6
-1e3 1.8e-6
+1e-30 1.9999999999999997e-08
+1e3 1.9999999999999997e-08

@@ -1,4 +1,6 @@
-# SN1987A https://arxiv.org/abs/2203.15812
-# Mass [eV]	C_{a-gamma-n} [GeV^-2]
-1e-30 6.7e-9
-1e3 6.7e-9
+# SN1987A EDM portal
+# from https://arxiv.org/pdf/2410.19902 
+# see https://arxiv.org/abs/2203.15812 for earlier bound
+# Mass [eV]	C_{a-gamma-n} [GeV^-2] 
+1e-30 7.399999999999999e-11
+1e3 7.399999999999999e-11

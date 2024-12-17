@@ -2985,7 +2985,7 @@ class AxionEDM():
         plt.text(text_pos[0],text_pos[1],r'{\bf ONIX}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SN1987A(ax,text_pos=[2e-10,1.2e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
+    def SN1987A(ax,text_pos=[2e-10,0.3e-9],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=1.5):
         dat = loadtxt('limit_data/AxionEDM/SN1987A.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -3144,11 +3144,11 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1]*(1-linespacing_y),r'{\bf Pulsars}',color=text_col,rotation=text_rot,fontsize=fs,ha='center',clip_on=True)
         return
 
-    def PlanckBAO(ax,text_pos=[8e-3,1.5e-7],col='#136919',text_col='w',text_rot=0,fs=27,zorder=0.8,lw=1.5):
+    def PlanckBAO(ax,text_pos=[5e0,2.5e-9],col='#136919',text_col='#136919',text_rot=0,fs=23,zorder=0.8,lw=1.5):
         dat = loadtxt('limit_data/fa/PlanckBAO.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
-        plt.text(text_pos[0],text_pos[1],r'{\bf Planck+BAO}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(text_pos[0],text_pos[1],r'\begin{center}{\bf Planck/ \linebreak BAO}\end{center}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def BBN(ax,text_pos=[1.9e-17,0.95e-16],col='#1f4969',text_col='w',text_rot=15,fs=14,zorder=-6):
@@ -3158,7 +3158,7 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf BBN}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SN1987A(ax,text_pos=[7e-3,0.4e-5],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=2):
+    def SN1987A(ax,text_pos=[1e-9,5e-8],col='#067034',text_col='w',text_rot=0,fs=33,zorder=1,lw=2):
         dat = loadtxt('limit_data/fa/SN1987A.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=lw,alpha=1,zorder=zorder)
@@ -3172,10 +3172,15 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
         return
     
-    def NeutronStarCooling(ax,text_pos=[6e-7,6e-12],col='#385c42',text_col='w',text_rot=41,fs=22,zorder=-1.01):
+    def NeutronStarCooling(ax,text_pos=[2e-7,2e-12],col='#385c42',text_col='w',text_rot=41,fs=22,zorder=-1.01):
+        dat = loadtxt('limit_data/fa/NeutronStarCooling_Kumamoto.txt')
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+
         dat = loadtxt('limit_data/fa/NeutronStarCooling.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
+
         plt.text(text_pos[0],text_pos[1],r'{\bf Neutron star cooling}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -3208,7 +3213,7 @@ class Axion_fa():
     def CASPEr(ax,text_pos=[5e-11,1e-19],col='crimson',alpha=0.1,zorder=-10,text_rot=57,fs=23):
         dat = loadtxt('limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=alpha,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=-1,alpha=1)
+        plt.plot(dat[:,0],dat[:,1],'--',lw=1.5,color=col,zorder=zorder,alpha=1)
         plt.text(text_pos[0],text_pos[1],r'{\bf CASPEr-electric}',color=col,alpha=1,fontsize=fs,rotation=text_rot,clip_on=True)
         return
 
@@ -4097,7 +4102,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
-            plt.text(0.9e4,0.4e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(0.9e4,0.2e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def CAST(ax,col='maroon',fs=19,text_on=True,lw=1.5):
