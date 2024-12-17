@@ -71,7 +71,7 @@
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_AltColours.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
-### FIPs White Paper version (closeup)
+### Haloscope closeup
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_Closeup_AltColours.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
@@ -145,6 +145,7 @@
 * DANCE (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2303.03594)
 * DarkGEO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DarkGEO.txt), [reference](https://arxiv.org/abs/2401.11907)
 * DM-Radio: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DMRadio.txt), [reference](https://arxiv.org/abs/2204.13781)
+* EQC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/EQC.txt), [reference](https://arxiv.org/abs/2410.05549)
 * FLASH: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FLASH.txt), [reference](https://indico.cern.ch/event/1115163/)
 * GrAHal: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GrAHal.txt), [reference](https://arxiv.org/abs/2110.14406)
 * HAYSTAC Phase I: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_PhaseI.txt), [reference1](https://arxiv.org/abs/1610.02580), [reference2](https://arxiv.org/abs/1803.03690)

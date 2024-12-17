@@ -1812,8 +1812,9 @@ class AxionPhoton():
             plt.text(8e-5,2.0e-15,r'{\bf ALPHA}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(1.5e-4,4.3e-15,r'{\bf MADMAX}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(2.5e-4,8.3e-15,r'{\bf ORGAN}',color=col,fontsize=15,rotation=0,clip_on=True)
-            plt.text(3.5e-4,5.3e-14,r'{\bf CADEx}',color=col,fontsize=15,rotation=0,clip_on=True)
-            plt.text(4.5e-4,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(7.5e-4,5.0e-14,r'{\bf CADEx}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(5.5e-4,2.3e-14,r'{\bf EQC}',color=col,fontsize=15,rotation=0,clip_on=True)
+            plt.text(1.4e-3,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
             plt.text(1.8e-1,1.8e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
 
