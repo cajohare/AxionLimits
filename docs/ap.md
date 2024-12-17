@@ -70,15 +70,6 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Simple_Wide.png)
 ### &nbsp;
 ---
-[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FIPS.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
-### FIPs White Paper version 
-### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
-### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FIPS.pdf)
-### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FIPS.png)
-### &nbsp;
-### &nbsp;
-### &nbsp;
----
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_Closeup_AltColours.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_Closeup_AltColours.png)
 ### FIPs White Paper version (closeup)
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/FIPS.ipynb)
@@ -88,8 +79,17 @@
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/AxionPhoton_FullParameterSpace.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FullParameterSpace.png)
+### Full panorama
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_FullParameterSpace.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_FullParameterSpace.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 [<img align="right" height="350" src="../plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)
-### Ultra-simplified plot
+### Ultra-simplified panorama
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/AxionPhoton_UltraSimple_FullParameterSpace.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/AxionPhoton_UltraSimple_FullParameterSpace.png)
