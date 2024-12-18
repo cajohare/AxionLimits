@@ -109,6 +109,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 * FAST radio antenna: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/FAST.txt), [reference](https://arxiv.org/abs/2207.05767)
 * FUNK: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/FUNK.txt), [reference](https://arxiv.org/abs/2003.13144)
 * GigaBREAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/GigaBREAD.txt), [reference](https://arxiv.org/abs/2310.13891)
+* Hefei haloscope: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Hefei.txt), [reference](https://arxiv.org/abs/2310.13891)
 * LAMPOST (limit): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LAMPOST.txt), [reference](https://arxiv.org/abs/2110.01582)
 * LAMPOST (projection): [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/Projections/LAMPOST.txt), [reference](https://arxiv.org/abs/1803.11455)
 * LOFAR (solar corona): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/DarkPhoton/LOFAR.txt), [reference](https://arxiv.org/abs/2301.03622)

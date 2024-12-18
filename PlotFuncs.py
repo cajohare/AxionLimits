@@ -2148,7 +2148,7 @@ class AxionElectron():
             plt.text(text_pos[0],text_pos[1],r'{\bf LUX (Solar axions)}',fontsize=fs,color='w',ha='left',va='top',clip_on=True,path_effects=line_background(1,'k'),**kwargs)
         return
 
-    def PandaX(ax,col='firebrick',fs=10,text_on=True,lw=1.5,text_pos=[1.2e3,4.5e-13],zorder=0.53,rotation=20,**kwargs):
+    def PandaX(ax,col='firebrick',fs=15,text_on=True,lw=1.5,text_pos=[2.2e3,5.5e-13],zorder=0.53,rotation=20,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/PandaX.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],'k-',alpha=1,zorder=zorder,lw=lw)
