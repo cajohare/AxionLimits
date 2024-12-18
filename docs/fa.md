@@ -8,8 +8,6 @@
 ### &nbsp;
 ### &nbsp;
 ---
-
----
 [<img align="right" height="300" src="../plots/plots_png/Axion_fa_with_Projections.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
 ### Plot with projections
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/Axion_fa.ipynb)
@@ -17,8 +15,6 @@
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_with_Projections.png)
 ### &nbsp;
 ### &nbsp;
----
-
 ---
 [<img align="right" height="300" src="../plots/plots_png/Axion_fa_ALPDM.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/Axion_fa_ALPDM.png)
 ### Cosmological ALP scenarios and recasted constraints
