@@ -3166,15 +3166,8 @@ class Axion_fa():
         plt.text(text_pos[0],text_pos[1],r'{\bf SN1987A}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def NeutronStars(ax,text_pos=[0.5e-3,0.4e-12],col='#599967',text_col='#599967',text_rot=41,fs=29,zorder=-10):
-        dat = loadtxt('limit_data/fa/Projections/NeutronStars.txt')
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=0.1)
-        plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,alpha=1,zorder=zorder)
-        plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,ha='right',clip_on=True)
-        return
-    
-    def NeutronStarCooling(ax,text_pos=[2e-7,2e-12],col='#385c42',text_col='w',text_rot=41,fs=22,zorder=-1.01):
-        dat = loadtxt('limit_data/fa/NeutronStarCooling_Kumamoto.txt')
+    def NeutronStars(ax,text_pos=[2e-7,2e-12],col='#385c42',text_col='w',text_rot=41,fs=28,zorder=-1.01):
+        dat = loadtxt('limit_data/fa/NeutronStars_Kumamoto.txt')
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
 
@@ -3182,7 +3175,7 @@ class Axion_fa():
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,zorder=zorder,alpha=1)
         plt.plot(dat[:,0],dat[:,1],color='k',lw=1.5,alpha=1,zorder=zorder)
 
-        plt.text(text_pos[0],text_pos[1],r'{\bf Neutron star cooling}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
+        plt.text(text_pos[0],text_pos[1],r'{\bf Neutron stars}',color=text_col,rotation=text_rot,fontsize=fs,clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
     def Axinovae(ax,text_pos=[1.1e-20,0.01e-13],col='navy',text_col='w',text_rot=44,fs=20,zorder=-1.01):

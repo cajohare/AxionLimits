@@ -1,4 +1,4 @@
-# Neutron star cooling Kumamoto et al.
+# Combined bound from neutron star cooling, crust, and pulsar glitches Kumamoto et al.
 # https://arxiv.org/pdf/2410.21590
 # mass [eV]     fa^-1 [GeV^-1]
 0.0004720400910133852	9.99016473256288e-8
