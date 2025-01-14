@@ -200,7 +200,6 @@
 
 ### Astrophysical searches for axions NOT as dark matter (green)
 * ATHENA: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/limit_data/AxionPhoton/Projections/ATHENA.txt), [reference](https://arxiv.org/abs/2211.05136)
-* Astrophysical Black hole spins: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/BlackHoleSpins_Mehta.txt), [reference](https://arxiv.org/abs/2011.08693)
 * Betelgeuse (NuStar X-ray obs.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Betelgeuse.txt), [reference](https://arxiv.org/abs/2009.09059)
 * Bullet Cluster (Radio): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BulletCluster.txt), [reference](https://arxiv.org/abs/2109.11734)
 * Cosmic IR background (axion hint): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/CIBER.txt), [reference](https://arxiv.org/abs/1704.05189)
@@ -235,7 +234,7 @@
 * NuSTAR (Sun): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NuSTAR_Sun.txt), [reference](https://arxiv.org/abs/2407.03828)
 * Planck (BBN + N_eff): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/BBN_Neff.txt), [reference](https://arxiv.org/abs/2002.08370)
 * Pulsar polar caps: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/PulsarPolarCap.txt), [reference](https://arxiv.org/abs/2209.09917)
-* Solar neutrinos: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
+* Solar neutrinos/luminosity: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarNu.txt), [reference](https://arxiv.org/abs/1501.01639)
 * Solar basin, DeRocco et al. (NuSTAR): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarBasin.txt), [reference](https://arxiv.org/abs/2205.05700)
 * Solar basin, Beaufort et al. (NuSTAR and SPHINX): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SolarBasin_Beaufort.txt), [reference](https://arxiv.org/abs/2303.06968)
 * StAB (stellar axion background): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/StAB.txt), [reference](https://arxiv.org/abs/2307.11216)
