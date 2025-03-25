@@ -2445,7 +2445,7 @@ class AxionNeutron():
     # this makes essentially no observable difference to the plot but it useful to remember.
     m_n = 0.93957
 
-    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,edgecolor='goldenrod',facecolor='gold',alpha=0.04,nlevels=50,fs=25,Mpl_lab=False,DFSZ_label_mass=1e-7,KSVZ_label_mass=1e-6):
+    def QCDAxion(ax,C_logwidth=10,KSVZ_on=True,DFSZ_on=True,edgecolor='goldenrod',facecolor='gold',alpha=0.04,nlevels=50,fs=25,Mpl_lab=False,DFSZ_label_mass=1e-7,KSVZ_label_mass=1e-6,text_on=True):
         ## QCD Axion band:
         g_min,g_max = ax.get_ylim()
         m_min,m_max = ax.get_xlim()
@@ -2475,13 +2475,15 @@ class AxionNeutron():
         if KSVZ_on:
             plt.plot(m,g_x(KSVZ,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(KSVZ,m),'-',lw=2,zorder=0,color=edgecolor)
-            plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)/2,r'{\bf KSVZ}',fontsize=fs,
+            if text_on:
+                plt.text(KSVZ_label_mass,g_x(KSVZ,KSVZ_label_mass)/2,r'{\bf KSVZ}',fontsize=fs,
             rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
 
         if DFSZ_on:
             plt.plot(m,g_x(DFSZ_u,m),'k-',lw=3.5,zorder=0)
             plt.plot(m,g_x(DFSZ_u,m),'-',lw=2,zorder=0,color=edgecolor)
-            plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ models}',fontsize=fs,
+            if text_on:
+                plt.text(DFSZ_label_mass,g_x(DFSZ_l,DFSZ_label_mass)*10,r'{\bf DFSZ models}',fontsize=fs,
             rotation=trans_angle,color=edgecolor,ha='left',va='top',rotation_mode='anchor',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
@@ -3550,7 +3552,7 @@ class DarkPhoton():
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.5,lw=lw)
 
 
-        dat = loadtxt("limit_data/DarkPhoton/XENON1T_Solar_SE.txt")
+        dat = loadtxt("limit_data/DarkPhoton/XENON1T_Solar_S2.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=0)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=0.0,lw=lw)
 
@@ -3561,7 +3563,7 @@ class DarkPhoton():
 
         if text_on:
             plt.text(1.5e3,2.5e-17,r'{\bf XENON}',fontsize=fs,color=col,rotation=0,rotation_mode='anchor',ha='center',va='center',clip_on=True)
-            plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color='w',rotation=-41,fontsize=15,path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(0.65e-3,2.4e-11,r'{\bf XENON1T}',color=col,rotation=-41,fontsize=15,path_effects=line_background(1,'k'),clip_on=True)
 
 
         return
