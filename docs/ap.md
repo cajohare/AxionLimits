@@ -229,6 +229,7 @@
 * MAGIC (Perseus galaxy cluster): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MAGIC.txt), [reference](https://arxiv.org/abs/2401.07798)
 * Magnetic white dwarf X-rays: [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_electron_equals_photon.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Chandra_WhiteDwarfs_Wphobic.txt), [reference](https://arxiv.org/abs/2104.12772)
 * Magnetic white dwarf polarisation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation.txt), [reference](https://arxiv.org/abs/2203.04319)
+* Magnetic white dwarf polarisation (Keck/Lick observations): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MWDPolarisation_KeckLick.txt), [reference](https://arxiv.org/abs/2504.12377)
 * Mrk 421 (ARGO-YBJ+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421.txt), [reference](https://arxiv.org/abs/2008.09464)
 * Mrk 421 (MAGIC+Fermi): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421-MAGIC.txt), [reference](https://arxiv.org/abs/2110.13636)
 * Mrk 421 (Fermi+HAWC): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Mrk421-Fermi-HAWC.txt), [reference](https://arxiv.org/abs/2406.00387)

@@ -1301,12 +1301,12 @@ class AxionPhoton():
         return
 
 
-    def MWDPolarisation(ax,text_shift=[1,0.35],col='#32a852',text_col='#32a852',fs=14,zorder=0.01,projection=False,text_on=True,edgealpha=1,lw=1.5,rotation=40):
-        # Upper limit on the axion-photon coupling from magnetic white dwarf polarization arXiv:[2203.04319]s
-        dat = loadtxt("limit_data/AxionPhoton/MWDPolarisation.txt")
+    def MWDPolarisation(ax,text_shift=[1,0.35],col='#32a852',text_col='#32a852',fs=14,zorder=-100,projection=False,text_on=True,edgealpha=1,lw=1.5,rotation=0):
+        # Keck/Lick observations Benabou 2025 supersede former bound
+        dat = loadtxt("limit_data/AxionPhoton/MWDPolarisation_KeckLick.txt")
         FilledLimit(ax,dat,col=col,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         if text_on:
-            plt.text(text_shift[0]*3.5e-7,text_shift[1]*0.6e-11/0.35,r'{\bf MWD Pol.}',fontsize=11,color='w',rotation=rotation,ha='center',clip_on=True,path_effects=line_background(1,'k'))
+            plt.text(text_shift[0]*1.3e-8,text_shift[1]*5.5e-12,r'{\bf MWD Pol.}',fontsize=11,color='w',rotation=rotation,ha='center',clip_on=True,path_effects=line_background(1,'k'))
         return
 
     def PulsarPolarCap(ax,text_label=r'{\bf Pulsars}',text_pos=[2e-7,4e-12],col='#039614',text_col='w',fs=13,zorder=-1,text_on=True,lw=1.5,rotation=0,edgealpha=1):
