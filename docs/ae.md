@@ -24,6 +24,15 @@
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/COSTActionSummaryPlot_AxionElectron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_AxionElectron.png)
+### European particle physics strategy version
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/COSTActionSummaryPlot_AxionElectron.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_AxionElectron.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 
 See [Berlin et al. 2023](https://arxiv.org/abs/2312.11601) for a summary of the physical effects of electron-coupled axions, where several of these limits and projections were compiled. I thank Kevin Zhou and Alex Millar for discussions related to this plot.
 

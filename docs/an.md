@@ -16,6 +16,15 @@
 ### &nbsp;
 ### &nbsp;
 ---
+[<img align="right" height="350" src="../plots/plots_png/COSTActionSummaryPlot_AxionNeutron.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_AxionNeutron.png)
+### European particle physics strategy version
+### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
+### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/COSTActionSummaryPlot_AxionNeutron.pdf)
+### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_AxionNeutron.png)
+### &nbsp;
+### &nbsp;
+### &nbsp;
+---
 
 # Data files and references
 

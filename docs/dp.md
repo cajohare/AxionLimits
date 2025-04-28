@@ -58,7 +58,7 @@ These plots appeared in the paper [Caputo et al. 2021](https://arxiv.org/abs/210
 ### &nbsp;
 ---
 [<img align="right" height="350" src="../plots/plots_png/COSTActionSummaryPlot_DarkPhoton.png">](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_DarkPhoton.png)
-### European particle physics strategy version (closeup - EU experiments highlighted)
+### European particle physics strategy version
 ### [View Notebook (.ipynb)](https://github.com/cajohare/AxionLimits/blob/master/UltraSimplifiedPlots.ipynb)
 ### [Download (.pdf)](https://github.com/cajohare/AxionLimits/raw/master/plots/COSTActionSummaryPlot_DarkPhoton.pdf)
 ### [Download (.png)](https://github.com/cajohare/AxionLimits/raw/master/plots/plots_png/COSTActionSummaryPlot_DarkPhoton.png)
