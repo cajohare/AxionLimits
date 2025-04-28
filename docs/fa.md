@@ -25,7 +25,7 @@
 ### &nbsp;
 ---
 
-It must be noted that this plot and the 1/fa plot are, at best, challenging to interpret from any theoretical point of view. They should not be taken any more seriously than simply a comparison of experimental/observational sensitivities. The area outside of the QCD line here requires significant (and rarely natural) model-building. In essence one needs a "QCD" axion whose mass is different from than the mass arising just from the anomalous gluon coupling of the axion (which defines 1/f_a). There are very few models that achieve this naturally, such as the Z_N axion model of Hook (https://arxiv.org/abs/1802.10093), developed phenomenologically by Di Luzio et al. (https://arxiv.org/pdf/2102.00012.pdf)
+It must be noted that this plot and the 1/fa plot are, at best, challenging to interpret from any theoretical point of view. They should not be taken any more seriously than simply a comparison of experimental/observational sensitivities. The area outside of the QCD line here requires significant (and rarely natural) model-building. In essence one needs a "QCD" axion whose mass is different from than the mass arising just from the anomalous gluon coupling of the axion (which defines 1/f_a). There are very few models that achieve this naturally, such as the Z_N axion model of Hook (https://arxiv.org/abs/1802.10093), developed phenomenologically by Di Luzio et al. (https://arxiv.org/abs/2102.00012.pdf)
 
 
 # Data files and references
@@ -36,10 +36,12 @@ It must be noted that this plot and the 1/fa plot are, at best, challenging to i
 * HfH+: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/HfH.txt), [reference](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.171301)
 * I2+/Ca: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/I2Ca.txt), [reference](https://arxiv.org/abs/2404.00616)
 * JEDI: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/JEDI.txt), [reference](https://arxiv.org/abs/2208.07293)
+* MICROSCOPE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/MICROSCOPE.txt), [reference](https://arxiv.org/abs/2504.00720)
 * ONIX: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/ONIX.txt), [reference](https://arxiv.org/abs/2410.02218)
 * Rb/Quartz: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/RbQuartz.txt), [reference](https://arxiv.org/abs/2212.04413)
 * Tritium decay (not shown, below 1e-20 eV in mass): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Tritium.txt), [reference](https://arxiv.org/abs/2303.09865)
-* Potassium-40 decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/K40.txt), [reference](https://arxiv.org/pdf/2412.20932)
+* Potassium-40 decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/K40.txt), [reference](https://arxiv.org/abs/2412.20932)
+* Yb+: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Yb.txt), [reference](https://arxiv.org/abs/2301.10784)
 * Piezoaxionic effect (Projection) [N=1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect1.txt), [N=64](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/PiezoaxionicEffect64.txt), [reference](https://arxiv.org/abs/2112.11466)
 * Storage Ring EDM (Projection): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/StorageRingEDM.txt), [reference](https://arxiv.org/abs/1710.05271)
 * CASPEr-electric (Projection): [phase III](https://github.com/cajohare/AxionLimits/raw/master/limit_data/fa/Projections/CASPEr-electric-PhaseIII.txt), [reference](https://arxiv.org/abs/1711.08999)

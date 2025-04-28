@@ -1,4 +1,4 @@
-# Sr, Yb atomic clock comparisons (Sussex group)
+# Sr, Yb atomic clock comparisons (Sussex group - QSNET) 
 # https://arxiv.org/pdf/2302.04565.pdf
 # mass [eV] d_gamma
 1.0794990393642023e-20	1e20

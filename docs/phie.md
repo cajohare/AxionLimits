@@ -46,7 +46,8 @@
 * I2: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/I2.txt), [reference](https://arxiv.org/abs/2111.06883)
 * Rb/Cs: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/RbCs.txt), [reference](https://arxiv.org/abs/1604.08514)
 * Sr/Si: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/SrSi.txt), [reference](https://arxiv.org/abs/2008.08773)
-* Yb+/Sr: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/YbSr.txt), [reference](https://arxiv.org/abs/2302.04565)
+* QSNET (Yb+/Sr): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/QSNET.txt), [reference](https://arxiv.org/abs/2302.04565)
+* QSNET: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/Projections/ScalarPhoton/QSNET.txt), [reference](https://arxiv.org/abs/2112.10618)
 
 ## Projected DM searches (dashed lines)
 * AEDGE: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ScalarPhoton/Projections/AEDGE.txt), [reference](https://arxiv.org/abs/2108.02468)
