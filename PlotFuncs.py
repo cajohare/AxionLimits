@@ -346,6 +346,8 @@ class AxionPhoton():
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX2024.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
+        dat = loadtxt("limit_data/AxionPhoton/ADMX2025.txt")
+        plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
         dat = loadtxt("limit_data/AxionPhoton/ADMX_Sidecar.txt")
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,edgecolor=None,facecolor=col,zorder=zorder)
 
@@ -1348,18 +1350,18 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,rotation=rotation,facealpha=facealpha,edgealpha=edgealpha)
         return
 
-    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[1.5,0.2e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
+    def MUSE(ax,text_label=r'{\bf MUSE}',text_pos=[3.0,0.02e-12],col='royalblue',text_col='royalblue',fs=15,zorder=0.01,text_on=True,lw=0):
         # Telescopes (MUSE) [2009.01310]
         dat = loadtxt("limit_data/AxionPhoton/Telescopes_MUSE.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=90,lw=lw,edgealpha=0)
         return
 
-    def JWST(ax,text_label=r'{\bf JWST}',text_pos=[0.75,4e-11],col='blue',text_col='w',fs=10,zorder=0.01,text_on=True,lw=0,rotation=0,path_effects=line_background(1,'k')):
-        dat = loadtxt("limit_data/AxionPhoton/JWST.txt")
+    def JWST(ax,text_label=r'{\bf JWST}',text_pos=[0.4,7.0e-12],col='cadetblue',text_col='w',fs=15,zorder=0.001,text_on=True,lw=0,rotation=-30,path_effects=line_background(1,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/JWST_Pinetti.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
         return
     
-    def WINERED(ax,text_label=r'{\bf WINERED}',text_pos=[0.25,1e-11],col='navy',text_col='navy',fs=9,zorder=0.01,text_on=True,lw=0,rotation=0,path_effects=None):
+    def WINERED(ax,text_label=r'{\bf WINERED}',text_pos=[0.2,4e-11],col='navy',text_col='navy',fs=9,zorder=0.01,text_on=True,lw=0,rotation=0,path_effects=None):
         dat = loadtxt("limit_data/AxionPhoton/WINERED.txt")
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,edgecolor=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,rotation=rotation,lw=lw,edgealpha=0,path_effects=path_effects)
         return
@@ -1547,7 +1549,7 @@ class AxionPhoton():
         return
 
     def SNe_decay(ax,text_pos=[4.5e7,0.3e-8],text_label=r'{\bf Low-E SNe}',col='#15732e',text_col='w',fs=19,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
-        dat = loadtxt("limit_data/AxionPhoton/SNe-decay.txt")
+        dat = loadtxt("limit_data/AxionPhoton/SNe-decay-Fiorillo.txt")
         plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
         plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
@@ -1833,7 +1835,7 @@ class AxionPhoton():
             plt.text(5.5e-4,2.3e-14,r'{\bf EQC}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(1.4e-3,9.3e-14,r'{\bf BRASS}',color=col,fontsize=15,rotation=0,clip_on=True)
             plt.text(4.6e-3,3.9e-13,r'{\bf BREAD}',color=col,fontsize=15,rotation=56,clip_on=True)
-            plt.text(1.8e-1,1.8e-11,r'{\bf LAMPOST}',rotation=55,fontsize=13,color=col,ha='left',va='top',clip_on=True)
+            plt.text(4.2e-2,0.4e-12,r'{\bf LAMPOST}',rotation=0,fontsize=13,color=col,ha='left',va='top',clip_on=True)
 
 
         else:
@@ -1867,6 +1869,7 @@ class AxionPhoton():
         AxionPhoton.JWST(ax,text_on=text_on)
         AxionPhoton.DESI(ax,text_on=text_on)
         #AxionPhoton.VIMOS(ax,text_on=text_on)
+        AxionPhoton.WINERED(ax,text_on=text_on)
         AxionPhoton.HST_dwarfs(ax,text_on=text_on)
         AxionPhoton.HST(ax,text_on=text_on)
         #AxionPhoton.GammaRayAttenuation(ax,text_on=text_on)
@@ -1877,14 +1880,10 @@ class AxionPhoton():
         AxionPhoton.LeoT(ax,text_on=text_on)
         if projection:
             AxionPhoton.THESEUS(ax,text_on=text_on)
-            AxionPhoton.WINERED(ax,text_on=False)
             
             # 21 cm
             PlotBound(ax,"limit_data/AxionPhoton/Projections/21cm.txt",edgecolor='deepskyblue',zorder=0.0,alpha=0.0,lw=1.5,linestyle=(6, (4, 1.5,4,1)),edgealpha=0.85)
             plt.text(6e1,0.2e-15,r'{\bf 21 cm}',color='deepskyblue',fontsize=15,rotation=-50)
-
-        else:
-            AxionPhoton.WINERED(ax,text_on=True)
 
 
             #AxionPhoton.eROSITA(ax,text_on=text_on)
@@ -3468,6 +3467,8 @@ class DarkPhoton():
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2021.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2024.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX2025.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/ADMX_Sidecar.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)

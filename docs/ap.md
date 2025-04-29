@@ -108,7 +108,7 @@
 * [Haloscopes combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Haloscopes_Combined_microeV-meV.txt) (only micro-eV to meV haloscopes)
 * [Haloscope projections combined](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/HaloscopeProjections_Combined.txt)
 
-### Haloscopes:
+### Haloscopes/direct detection:
 * ABRACADABRA (Run 1): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA.txt),  [reference](https://arxiv.org/abs/1810.12257)
 * ABRACADABRA (Run 2): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ABRACADABRA_run2.txt), [reference](https://arxiv.org/abs/2102.06722)
 * ABRACADABRA (Projection) [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/ABRACADABRA.txt), [reference](https://abracadabra.mit.edu/)
@@ -119,6 +119,7 @@
 * ADMX (2019): [limit1](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_1.txt), [limit2](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2019_2.txt), [reference](https://arxiv.org/abs/1910.08638)
 * ADMX (2021): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2021.txt), [reference](https://arxiv.org/abs/2110.06096)
 * ADMX (2024): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2024.txt), [reference](https://arxiv.org/abs/2408.15227)
+* ADMX (2025): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX2025.txt), [reference](https://arxiv.org/abs/2504.07279)
 * ADMX Sidecar: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_Sidecar.txt), [reference](https://arxiv.org/abs/1901.00920)
 * ADMX Sidecar (JTWPA): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/ADMX_Sidecar_JTWPA.txt), [reference](https://arxiv.org/abs/2110.10262)
 * ADMX SLIC: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/ADMX_SLIC.txt), [reference](https://arxiv.org/abs/1911.05772)
@@ -145,6 +146,7 @@
 * DANCE (2023): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/DANCE.txt), [reference](https://arxiv.org/abs/2303.03594)
 * DarkGEO: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DarkGEO.txt), [reference](https://arxiv.org/abs/2401.11907)
 * DM-Radio: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/DMRadio.txt), [reference](https://arxiv.org/abs/2204.13781)
+* Eskdalemuir: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Eskdalemuir.txt), [reference](https://arxiv.org/abs/2504.07559)
 * EQC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/EQC.txt), [reference](https://arxiv.org/abs/2410.05549)
 * FLASH: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FLASH.txt), [reference](https://arxiv.org/abs/2309.00351)
 * GrAHal: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GrAHal.txt), [reference](https://arxiv.org/abs/2110.14406)
@@ -246,6 +248,7 @@
 * SN1987A neutrinos/cooling bound: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_HeavyALP_nu.txt), [reference](https://arxiv.org/abs/2201.09890)
 * SN1987A X-ray/gamma-ray PVO: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SN1987A_PVO.txt), [reference](https://arxiv.org/abs/2303.11395)
 * SNe (low-energy) ALP decay: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-decay.txt), [reference](https://arxiv.org/abs/2201.09890)
+* SNe (low-energy) ALP decay - Fiorillo et al. 2025 update: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/SNe-decay-Fiorillo.txt), [reference](https://arxiv.org/abs/2503.13653)
 * Super star clusters (NuSTAR Xray): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Xray-SuperStarClusters.txt), [reference](https://arxiv.org/abs/2008.03305)
 * White dwarf initial-final mass relation: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/WhiteDwarfs.txt), [reference](https://arxiv.org/abs/2102.00379)
 
@@ -268,7 +271,9 @@
 * HST Cosmic optical background anisotropies (Carenza et al.): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST.txt), [reference](https://arxiv.org/abs/2301.06560)
 * HST (dwarfs): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HST_dwarfs.txt), [reference](https://arxiv.org/abs/2412.02543)
 * INTEGRAL (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2209.06299)
-* JWST Blank sky (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST.txt), [reference](https://arxiv.org/abs/2310.15395)
+* JWST Blank sky (ALP decay) - Janish 2023: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST.txt), [reference](https://arxiv.org/abs/2310.15395)
+* JWST Blank sky (ALP decay) - Pinetti 2025: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST_Pinetti.txt), [reference](https://arxiv.org/abs/2503.11753)
+* JWST Blank sky (ALP decay) - Saha 2025: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST_Saha.txt), [reference](https://arxiv.org/abs/2503.14582)
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
 * MOJAVE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MOJAVE.txt), [reference](https://arxiv.org/abs/1811.10997)
 * Neutron stars (breakthrough listen) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
