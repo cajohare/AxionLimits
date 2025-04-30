@@ -480,7 +480,8 @@ class AxionPhoton():
         dat6 = loadtxt("limit_data/AxionPhoton/CAPP-6.txt")
         dat7 = loadtxt("limit_data/AxionPhoton/CAPP-7.txt")
         dat8 = loadtxt("limit_data/AxionPhoton/CAPP-8.txt")
-        dat9 = loadtxt("limit_data/AxionPhoton/CAPP-MAX.txt")
+        dat9 = loadtxt("limit_data/AxionPhoton/CAPP-9.txt")
+        dat10 = loadtxt("limit_data/AxionPhoton/CAPP-MAX.txt")
 
         if rs1==0:
             plt.plot([dat[0,0],dat[0,0]],[dat[0,1]/(rs1*2e-10*dat[0,0]+rs2),y2/(rs1*2e-10*dat[0,0]+rs2)],color=col,zorder=zo,lw=3)
@@ -492,6 +493,7 @@ class AxionPhoton():
             plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat7[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat8[:,0],dat8[:,1]/(rs1*2e-10*dat8[0,0]+rs2),y2=y2,color=col,zorder=zo)
             plt.fill_between(dat9[:,0],dat9[:,1]/(rs1*2e-10*dat9[0,0]+rs2),y2=y2,color=col,zorder=zo)
+            plt.fill_between(dat10[:,0],dat10[:,1]/(rs1*2e-10*dat10[0,0]+rs2),y2=y2,color=col,zorder=zo)
 
             if text_on:
                 plt.text(text_shift[0]*0.8e-5,text_shift[1]*0.1e-13,r'{\bf CAPP}',fontsize=fs,color=col,rotation=90,ha='center',va='top',clip_on=True)
@@ -513,6 +515,7 @@ class AxionPhoton():
             plt.fill_between(dat7[:,0],dat7[:,1]/(rs1*2e-10*dat7[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat8[:,0],dat8[:,1]/(rs1*2e-10*dat8[0,0]+rs2),y2=y2,color=col)
             plt.fill_between(dat9[:,0],dat9[:,1]/(rs1*2e-10*dat9[0,0]+rs2),y2=y2,color=col)
+            plt.fill_between(dat10[:,0],dat10[:,1]/(rs1*2e-10*dat10[0,0]+rs2),y2=y2,color=col)
 
         return
 
@@ -2375,22 +2378,30 @@ class AxionElectron():
         if text_on:
             plt.text(text_shift[0]*1e0,text_shift[1]*3.5e-5,r'{\bf Electron $g-2$}',fontsize=fs,color='w',ha='center',va='top',clip_on=True,path_effects=line_background(1,'k'))
         return
-    
-    def AxionWindMultilayer(ax,col='crimson',fs=13,text_on=True,zorder=-1,lw=1.5,text_shift=[1,1],rotation=50,SinglePhoton=True,**kwargs):
+
+    def AxionWindMultilayer(ax,col='crimson',fs=13,text_on=True,zorder=-1,lw=1.5,text_shift=[1,1],SinglePhoton=True,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/Projections/AxionWindMultilayer.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,alpha=0.05,facecolor=col,zorder=zorder-0.01,lw=0)
         plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1,zorder=zorder-0.01,lw=lw)
         if text_on:
-            plt.text(0.5e-5,1.15e-13,r'\begin{center}{\bf  Axion wind \linebreak multilayer}\end{center}',rotation=rotation,fontsize=fs,color=col,ha='center',va='top',clip_on=True)
+            plt.text(2e-7,0.09e-14,r'\begin{center}{\bf  Axion wind \linebreak multilayer}\end{center}',rotation=0,fontsize=fs,color=col,ha='center',va='top',clip_on=True)
 
         if SinglePhoton:
             dat = loadtxt("limit_data/AxionElectron/Projections/AxionWindMultilayer_SinglePhoton.txt")
             plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=1,zorder=zorder-0.01,lw=lw)
             if text_on:
-                plt.text(0.7e-5,1.2e-15,r'\begin{center}{\bf  Axion wind multilayer \linebreak (single photon)}\end{center}',rotation=rotation,fontsize=fs*0.9,color=col,ha='center',va='top',clip_on=True)
+                plt.text(0.7e-5,1.2e-15,r'\begin{center}{\bf  Axion wind multilayer \linebreak (single photon)}\end{center}',rotation=50,fontsize=fs*0.9,color=col,ha='center',va='top',clip_on=True)
 
         return
     
+    def MOSAIC(ax,col='#231735',fs=13,text_on=True,text_shift=[1,1],lw=1.5,zorder=-0.5,rotation=0,**kwargs):
+        dat = loadtxt("limit_data/AxionElectron/Projections/MOSAIC.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,color=col,alpha=0.2,zorder=zorder)
+        plt.plot(dat[:,0],dat[:,1],'--',color=col,alpha=0.7,zorder=zorder,lw=lw)
+        if text_on:
+            plt.text(text_shift[0]*0.7e-5,text_shift[1]*5e-14,r'{\bf MOSAIC}',rotation=rotation,alpha=0.7,fontsize=fs-1,color=col,ha='center',va='top',clip_on=True,**kwargs)
+        return
+
 
     def Semiconductors(ax,col='#3d1d01',fs=12,text_on=True,text_pos=[0.7e0,6.7e-9],lw=2,rotation=-88,zorder=1,**kwargs):
         dat = loadtxt("limit_data/AxionElectron/Projections/Semiconductors.txt")
@@ -3496,6 +3507,12 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-7.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-8.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-9.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
+        dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAPP-MAX.txt")
+        plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
         dat = loadtxt("limit_data/DarkPhoton/Rescaled/CAST-CAPP.txt")
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,facecolor=col,zorder=0.1)
 
@@ -4147,7 +4164,7 @@ class DarkPhoton():
         plt.fill_between(dat[:,0],dat[:,1],y2=y2,edgecolor=None,facecolor=col,zorder=1.1001)
         plt.plot(dat[:,0],dat[:,1],color='k',alpha=1,zorder=1.1001,lw=lw)
         if text_on:
-            plt.text(0.9e4,0.2e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
+            plt.text(0.9e4,0.4e-6,r'{\bf Neutron stars}',fontsize=fs,color='w',rotation=-45,rotation_mode='anchor',ha='center',va='center',path_effects=line_background(1,'k'),clip_on=True)
         return
 
     def CAST(ax,col='maroon',fs=19,text_on=True,lw=1.5):

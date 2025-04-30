@@ -1,0 +1,7 @@
+# CASPEr-gradient
+# https://arxiv.org/pdf/2504.16044
+# mass [eV]     g_aP [GeV^-1]
+5.576741e-9 1.0
+5.576741e-9 3e-2
+5.577733e-9 3e-2
+5.577733e-9 1.0

@@ -21,6 +21,7 @@
 
 ## Haloscopes
 Note: CASPEr and nEDM limits account for stochastic correction reported in [1905.13650](https://arxiv.org/abs/1905.13650)
+* CASPEr-gradient: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/CASPEr-gradient.txt), [reference](https://arxiv.org/abs/2504.16044)
 * CASPEr-wind: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Projections/CASPEr_wind.txt), [reference](https://arxiv.org/abs/1711.08999)
 * CASPEr-ZULF-Comagnetometer: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/CASPEr_Comagnetometer.txt), [reference](https://arxiv.org/abs/1901.10843)
 * CASPEr-ZULF-Sidechain: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/CASPEr_ZULF.txt), [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionProton/Projections/CASPEr_ZULF.txt), [reference](https://arxiv.org/abs/1902.04644)
