@@ -1802,8 +1802,8 @@ class AxionPhoton():
             plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
 
             dat = loadtxt("limit_data/AxionPhoton/Projections/WISPLC.txt")
-            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)
-            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-10)
+            plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-500)
+            plt.plot(dat[:,0],dat[:,1],'--',color=col,lw=1.5,zorder=-500)
 
             dat = loadtxt("limit_data/AxionPhoton/Projections/ADBC.txt")
             plt.fill_between(dat[:,0],dat[:,1],y2=1,lw=0,color=col,alpha=alpha,zorder=-10)

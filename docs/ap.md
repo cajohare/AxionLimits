@@ -149,6 +149,7 @@
 * Eskdalemuir: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Eskdalemuir.txt), [reference](https://arxiv.org/abs/2504.07559)
 * EQC: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/EQC.txt), [reference](https://arxiv.org/abs/2410.05549)
 * FLASH: [projection](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/Projections/FLASH.txt), [reference](https://arxiv.org/abs/2309.00351)
+* GigaBREAD: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GigaBREAD.txt), [reference](https://arxiv.org/abs/2501.17119)
 * GrAHal: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/GrAHal.txt), [reference](https://arxiv.org/abs/2110.14406)
 * HAYSTAC Phase I: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_PhaseI.txt), [reference1](https://arxiv.org/abs/1610.02580), [reference2](https://arxiv.org/abs/1803.03690)
 * HAYSTAC Phase II-a/b: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/HAYSTAC_PhaseII_ab.txt), [reference1](https://arxiv.org/abs/2008.01853), [reference2](https://arxiv.org/abs/2301.09721)
