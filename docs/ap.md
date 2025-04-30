@@ -275,7 +275,7 @@
 * INTEGRAL (ALP decay): [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/INTEGRAL.txt), [reference](https://arxiv.org/abs/2209.06299)
 * JWST Blank sky (ALP decay) - Janish 2023: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST.txt), [reference](https://arxiv.org/abs/2310.15395)
 * JWST Blank sky (ALP decay) - Pinetti 2025: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST_Pinetti.txt), [reference](https://arxiv.org/abs/2503.11753)
-* JWST Blank sky (ALP decay) - Saha 2025: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST_Saha.txt), [reference](https://arxiv.org/abs/2503.14582)
+* JWST - Saha 2025: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/JWST_Saha.txt), [reference](https://arxiv.org/abs/2503.14582)
 * Leo T gas temperature: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/LeoT.txt), [reference](https://arxiv.org/abs/2111.08025)
 * MOJAVE: [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/MOJAVE.txt), [reference](https://arxiv.org/abs/1811.10997)
 * Neutron stars (breakthrough listen) [limit](https://github.com/cajohare/AxionLimits/raw/master/limit_data/AxionPhoton/NeutronStars_BreakthroughListen.txt), [reference](https://arxiv.org/abs/2202.08274)
