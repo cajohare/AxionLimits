@@ -1,0 +1,7 @@
+# Princeton axion search
+# https://indico.slac.stanford.edu/event/9065/contributions/9796/attachments/4462/11862/PXSUpdate_08062024_v0.pdf
+# mass [eV] photon coupling [GeV^-1]
+8.411604348178511e-7	 1.0
+8.411604348178511e-7	 1.0939493497831137e-16
+0.0000018473916063760997	 2.43885864482816e-16
+0.0000018473916063760997	 1.0
