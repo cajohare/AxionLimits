@@ -943,7 +943,7 @@ class AxionPhoton():
         else:
             rs1 = 0.0
             rs2 = 1.0
-        dat = loadtxt("limit_data/AxionPhoton/Projections/TOORAD.txt")
+        dat = loadtxt("limit_data/AxionPhoton/Projections/TOORAD_2025.txt")
         dat[:,0] *= 1e-3
         plt.plot(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),'-',linewidth=1.5,color=col,zorder=0)
         plt.fill_between(dat[:,0],dat[:,1]/(rs1*2e-10*dat[:,0]+rs2),y2=y2,facecolor=col,zorder=0,alpha=0.1)
