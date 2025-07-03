@@ -163,6 +163,7 @@ class ScalarPhoton():
         return
 
 
+
     def QSNET_Projection(ax,text_label=r'{\bf QSNET}',text_pos=[1e-20,6.5e-10],rotation=28,col='#a11b33',text_col='#a11b33',fs=18,zorder=-1.1,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarPhoton/Projections/QSNET.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
@@ -315,7 +316,7 @@ class ScalarElectron():
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return    
 
-    def QSNET_Projection(ax,text_label=r'{\bf QSNET}',text_pos=[1.3e-20,6.0e-9],rotation=30,col='#a11b33',text_col='#a11b33',fs=18,zorder=-100,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def QSNET_Projection(ax,text_label=r'{\bf QSNET}',text_pos=[0.8e-20,3.0e-9],rotation=30,col='#a11b33',text_col='#a11b33',fs=18,zorder=-100,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Projections/QSNET.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
@@ -346,7 +347,7 @@ class ScalarElectron():
 
         return
     
-    def OpticalMW(ax,text_label=r'{\bf Optical-MW clock}',text_pos=[3e-22,7e-8],rotation=29,col='#703e41',text_col='#703e41',fs=20,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
+    def OpticalMW(ax,text_label=r'{\bf Optical-MW clock}',text_pos=[1e-22,3e-8],rotation=29,col='#703e41',text_col='#703e41',fs=18,zorder=0,text_on=True,Projection=False,edgealpha=1,lw=1.5):
         dat = loadtxt("limit_data/ScalarElectron/Projections/OpticalMW.txt")
         UnfilledLimit(ax,dat,text_label,y2=1e20,rotation=rotation,text_pos=text_pos,text_col=text_col,linestyle='--',edgecolor=col,fs=fs,zorder=zorder,text_on=text_on,edgealpha=edgealpha,lw=lw)
         return
