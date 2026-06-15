@@ -194,7 +194,6 @@ def FigSetup(xlab=r'$m_a$ [eV]',ylab='',\
 
     ax.set_xlabel(xlab,fontsize=lfs,labelpad=x_labelpad)
     ax.set_ylabel(ylab,fontsize=lfs,labelpad=y_labelpad)
-
     ax.tick_params(which='major',direction=tickdir,width=2.5,length=majorticklength,right=TopAndRightTicks,top=TopAndRightTicks,pad=tick_pad)
     ax.tick_params(which='minor',direction=tickdir,width=1,length=minorticklength,right=TopAndRightTicks,top=TopAndRightTicks)
 
@@ -1542,28 +1541,28 @@ class AxionPhoton():
         FilledLimit(ax,dat,text_label,text_pos=text_pos,col=col,text_col=text_col,fs=fs,zorder=zorder,text_on=text_on,lw=lw,va='center',edgealpha=edgealpha,path_effects=line_background(1.5,'k'))
         return
 
-    def DiffuseGammaRays(ax,text_label=r'{\bf Diffuse}-$\gamma$',text_pos=[1.5e5,2.5e-10],col='#318c49',text_col='w',fs=18,zorder=0.0299,text_on=True,lw=1.5,rotation=0):
+    def DiffuseGammaRays(ax,text_label=r'{Diffuse}-$\gamma$',text_pos=[1.5e5,2.5e-10],col='lightgrey',text_col='w',fs=18,zorder=0.0299,text_on=True,lw=1.5,rotation=0):
         # https://arxiv.org/pdf/2109.03244.pdf
         dat = loadtxt("limit_data/AxionPhoton/DiffuseGammaRays.txt")
-        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=1,zorder=zorder)
+        plt.fill(dat[:,0]/(1e9),dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=1,zorder=zorder)
         if text_on:
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='left',va='top',clip_on=True,path_effects=line_background(1.5,'k'))
         return
 
-    def SNe_decay(ax,text_pos=[4.5e7,0.3e-8],text_label=r'{\bf Low-E SNe}',col='#15732e',text_col='w',fs=19,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def SNe_decay(ax,text_pos=[4.5e7,0.3e-8],text_label=r'{Low-E SNe}',col='lightgrey',text_col='k',fs=19,zorder=0.03,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/SNe-decay-Fiorillo.txt")
-        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill(dat[:,0]/(1e9),dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_pos[0]*1e-09,text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def SN1987_PVO(ax,text_pos=[7.5e7,0.1e-9],text_label=r'{\bf PVO}',col='#55732e',text_col='w',fs=13,zorder=0.02999,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def SN1987_PVO(ax,text_pos=[7.5e7,0.1e-9],text_label=r'{\bf PVO}',col='lightgrey',text_col='k',fs=13,zorder=0.02999,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/SN1987A_PVO.txt")
-        plt.fill(dat[:,0],dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill(dat[:,0]/(1e9),dat[:,1],edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
@@ -1657,50 +1656,59 @@ class AxionPhoton():
             plt.text(text_pos[0],text_pos[1],text_label,fontsize=fs,color=text_col,rotation=rotation,ha='center',rotation_mode='anchor',path_effects=line_background(1,'k'),clip_on=True)
         return
 
-    def BeamDump(ax,text_shift=[1,1],col='purple',text_col='w',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def BeamDump(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=21,zorder=1.1,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/BeamDump.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.3e8,text_shift[1]*1e-4,r'{\bf Beam dump}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.3e-1,text_shift[1]*1e-4,r'{Beam dump}',fontsize=fs,color='k',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def MiniBooNE(ax,text_shift=[1,1],col='rebeccapurple',text_col='w',fs=13,zorder=0.5,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def MiniBooNE(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=13,zorder=0.5,text_on=True,lw=1.5,rotation=-30,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/MiniBooNE.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.15e8,text_shift[1]*0.2e-5,r'{\bf MiniBooNE}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.15e-1,text_shift[1]*0.2e-5,r'{MiniBooNE}',fontsize=fs,color='k',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
 
-    def CMS_PbPb(ax,text_shift=[1,1],col='#851077',text_col='w',fs=17,zorder=0.2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def CMS_PbPb(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=17,zorder=0.2,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/CMS_PbPb.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1.5e10,text_shift[1]*7e-4,r'{\bf CMS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.5e1,text_shift[1]*7e-4,r'{CMS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def ATLAS_PbPb(ax,text_shift=[1,1],col='#9732a8',text_col='#9732a8',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def CMS_TOTEM(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=17,zorder=0.2,text_on=False,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+        dat = loadtxt("limit_data/AxionPhoton/CMS_TOTEM.txt")
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+
+        if text_on:
+            plt.text(text_shift[0]*1.5e1,text_shift[1]*7e-4,r'{CMS TOTEM}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+        return
+
+    def ATLAS_PbPb(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/ATLAS_PbPb.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
         
         if text_on:
-            plt.text(text_shift[0]*1.3e10,text_shift[1]*4e-5,r'{\bf ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.3e1,text_shift[1]*4e-5,r'{ATLAS}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def LHC_pp(ax,text_shift=[1,1],col='#a11366',text_col='#a11366',fs=17,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/LHC_pp.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor='lightgrey',zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*4.5e11,text_shift[1]*2.15e-5,r'{\bf LHC ($pp$)}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*4.5e2,text_shift[1]*2.15e-5,r'{ LHC ($pp$)}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def NOMAD(ax,text_shift=[1,1],col='#96062a',text_col='w',fs=20,zorder=1.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
@@ -1712,67 +1720,67 @@ class AxionPhoton():
             plt.text(text_shift[0]*1e1,text_shift[1]*8e-4,r'{\bf NOMAD}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def BaBar(ax,text_shift=[1,1],col='#7a113d',text_col='w',fs=25,zorder=1.65,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def BaBar(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=25,zorder=1.65,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/BaBar.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1e6,text_shift[1]*0.5e-2,r'{\bf BaBar}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1e-3,text_shift[1]*0.5e-2,r'{BaBar}',fontsize=fs,color='w',rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def LEP(ax,text_shift=[1,1],col='#824271',text_col='w',fs=25,zorder=0.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def LEP(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=25,zorder=0.9,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/LEP.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.3e10,text_shift[1]*2e-1,r'{\bf LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.3e1,text_shift[1]*2e-1,r'{LEP}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def GlueX(ax,text_shift=[1,1],col='#582078',text_col='w',fs=15,zorder=1.0,text_on=True,lw=1.5,rotation=90,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def GlueX(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=15,zorder=1.0,text_on=True,lw=1.5,rotation=90,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/GlueX.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*3.2e8,text_shift[1]*0.3,r'{\bf GlueX}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*3.2e-1,text_shift[1]*0.3,r'{GlueX}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def PrimEx(ax,text_shift=[1,1],col='#582078',text_col='#582078',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=None):
+    def PrimEx(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=15,zorder=0.1,text_on=True,lw=1.5,rotation=-70,ha='center',edgealpha=1,path_effects=None):
         dat = loadtxt("limit_data/AxionPhoton/PrimEx.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*1.4e8,text_shift[1]*0.99e-3,r'{\bf PrimEx}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*1.4e-1,text_shift[1]*0.99e-3,r'{PrimEx}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def BelleII(ax,text_shift=[1,1],col='#7a4282',text_col='w',fs=13.0,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
+    def BelleII(ax,text_shift=[1,1],col='lightgrey',text_col='w',fs=13.0,zorder=0.1,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=line_background(1.5,'k')):
         dat = loadtxt("limit_data/AxionPhoton/BelleII.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
             plt.text(text_shift[0]*1.2e9,text_shift[1]*5.5e-3,r'{\bf Belle II}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def BESIII(ax,text_shift=[1,1],col='#7a2282',text_col='#7a2282',fs=15.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def BESIII(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=15.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/BESIII.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.66e9,text_shift[1]*0.2e-3,r'{\bf BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.66e0,text_shift[1]*0.2e-3,r'{BESIII}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
-    def OPAL(ax,text_shift=[1,1],col='#6a113d',text_col='w',fs=11.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
+    def OPAL(ax,text_shift=[1,1],col='lightgrey',text_col='k',fs=11.5,zorder=0.0021,text_on=True,lw=1.5,rotation=0,ha='center',edgealpha=1,path_effects=[]):
         dat = loadtxt("limit_data/AxionPhoton/OPAL.txt")
-        plt.fill_between(dat[:,0],dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
-        plt.plot(dat[:,0],dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
+        plt.fill_between(dat[:,0]/(1e9),dat[:,1],y2=1e0,edgecolor=None,facecolor=col,zorder=zorder)
+        plt.plot(dat[:,0]/(1e9),dat[:,1],lw=lw,color='k',alpha=edgealpha,zorder=zorder)
 
         if text_on:
-            plt.text(text_shift[0]*0.5e8,text_shift[1]*4e-3,r'{\bf OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
+            plt.text(text_shift[0]*0.5e-1,text_shift[1]*4e-3,r'{OPAL}',fontsize=fs,color=text_col,rotation=rotation,ha='center',va='top',clip_on=True,path_effects=path_effects)
         return
 
     def Haloscopes(ax,projection=False,fs=20,text_on=True,BASE_arrow_on=True,Projection_color='crimson',alpha=0.1):
